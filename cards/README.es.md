@@ -4,7 +4,7 @@
 
 ## Descripción
 
-Este proyecto publica el código de preparación de datos, modelo, entrenamiento, evaluación, recuperación y optimización de un LLM denso centrado en coreano. La versión contiene fuentes y registros de experimentos; textos, tokens binarios, bases y pesos se distribuyen por separado.
+Este proyecto publica preparación de datos, modelo, entrenamiento, evaluación, recuperación y optimización de un LLM denso centrado en coreano. La edición contiene fuentes y experimentos, sin textos, tokens binarios, bases ni pesos del modelo. Las publicaciones de datos HF se enlazan abajo.
 
 El idioma de traducción no implica datos de entrenamiento en ese idioma. Predominan coreano e inglés; web, matemáticas y código pueden contener otros.
 
@@ -74,14 +74,14 @@ No se garantizan deduplicación aproximada global, eliminación total de PII/sec
 [GitHub](https://github.com/pathcosmos/korean-dense-llm/blob/main/cards/README.es.md) · [README](https://github.com/pathcosmos/korean-dense-llm)
 [GH / Uso](https://github.com/pathcosmos/korean-dense-llm/blob/main/docs/PUBLIC_GUIDE.md) · [GH / Optimización y mediciones](https://github.com/pathcosmos/korean-dense-llm/blob/main/experiments/README.md) · [GH / Validación](https://github.com/pathcosmos/korean-dense-llm/blob/main/docs/PUBLIC_VALIDATION.md)
 
-- [korean-pretrain-corpus](https://huggingface.co/datasets/pathcosmos/korean-pretrain-corpus)
-- [korean-pretrain-training-data](https://huggingface.co/datasets/pathcosmos/korean-pretrain-training-data)
-- [korean-pretrain-wikipedia](https://huggingface.co/datasets/pathcosmos/korean-pretrain-wikipedia)
-- [korean-pretrain-fineweb2](https://huggingface.co/datasets/pathcosmos/korean-pretrain-fineweb2)
-- [korean-pretrain-hplt2](https://huggingface.co/datasets/pathcosmos/korean-pretrain-hplt2)
-- [korean-pretrain-fineweb-edu](https://huggingface.co/datasets/pathcosmos/korean-pretrain-fineweb-edu)
-- [korean-pretrain-math](https://huggingface.co/datasets/pathcosmos/korean-pretrain-math)
-- [korean-pretrain-code](https://huggingface.co/datasets/pathcosmos/korean-pretrain-code)
+- [korean-pretrain-corpus](https://huggingface.co/datasets/pathcosmos/korean-pretrain-corpus/blob/main/cards/README.es.md)
+- [korean-pretrain-training-data](https://huggingface.co/datasets/pathcosmos/korean-pretrain-training-data/blob/main/cards/README.es.md)
+- [korean-pretrain-wikipedia](https://huggingface.co/datasets/pathcosmos/korean-pretrain-wikipedia/blob/main/cards/README.es.md)
+- [korean-pretrain-fineweb2](https://huggingface.co/datasets/pathcosmos/korean-pretrain-fineweb2/blob/main/cards/README.es.md)
+- [korean-pretrain-hplt2](https://huggingface.co/datasets/pathcosmos/korean-pretrain-hplt2/blob/main/cards/README.es.md)
+- [korean-pretrain-fineweb-edu](https://huggingface.co/datasets/pathcosmos/korean-pretrain-fineweb-edu/blob/main/cards/README.es.md)
+- [korean-pretrain-math](https://huggingface.co/datasets/pathcosmos/korean-pretrain-math/blob/main/cards/README.es.md)
+- [korean-pretrain-code](https://huggingface.co/datasets/pathcosmos/korean-pretrain-code/blob/main/cards/README.es.md)
 
 - [wiki_ko/](https://huggingface.co/datasets/pathcosmos/korean-pretrain-corpus/tree/main/wiki_ko)
 - [fineweb2_ko/](https://huggingface.co/datasets/pathcosmos/korean-pretrain-corpus/tree/main/fineweb2_ko)

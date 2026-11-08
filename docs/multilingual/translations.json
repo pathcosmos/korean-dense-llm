@@ -17,7 +17,7 @@
   "paragraphs": {
     "ko": [
       "개요|구성과 규모|처리와 분리|사용법|모델과 학습|최적화·벤치마크|검증|출처와 라이선스|한계|관련 저장소",
-      "한국어 중심 Dense LLM을 직접 구현하며 사용한 데이터 준비·모델·학습·평가·복구·최적화 탐색 코드를 공개합니다. 소스와 실험 기록 배포이며 데이터 본문·토큰 바이너리·DB·모델 가중치는 별도로 제공합니다.",
+      "한국어 중심 Dense LLM을 직접 구현하며 사용한 데이터 준비·모델·학습·평가·복구·최적화 탐색 코드를 공개합니다. 소스와 실험 기록 배포이며 데이터 본문·토큰 바이너리·DB·모델 가중치는 포함하지 않습니다. 데이터는 HF의 별도 배포본으로 연결합니다.",
       "현재 3B 본학습 설정이 참조하는 실제 토큰 입력입니다. train 726파일과 고정 평가 6파일의 원래 바이트·순서·소스 가중치·seed·sampler v2를 보존했습니다. 이미 소비한 토큰만 추출한 로그나 사전에 섞은 단일 시퀀스가 아닙니다. 샘플링은 복원추출입니다.",
       "이 저장소는 아래에 표시한 한 소스의 정제·분리 자료를 제공합니다. 동일 소스의 전체 파일은 통합 corpus의 해당 폴더에서도 받을 수 있습니다. 데이터의 고정 버전과 문서의 갱신 버전은 구분합니다.",
       "웹은 공백 정리, 길이·반복·언어 휴리스틱, 일부 개인정보 패턴 마스킹을 거칩니다. 초기 샤드 내부 hash와 최종 웹 NFC SHA256의 기준은 다릅니다. 코드 정제는 대소문자·들여쓰기·원문 Unicode를 보존하고 경로·라이선스 표기·생성 코드·일부 비밀정보 패턴을 검사합니다. 동일 본문·웹 NFC 동등 본문·코드 저장소의 연결 그룹을 train/eval로 분리합니다.",
@@ -33,7 +33,7 @@
     ],
     "en": [
       "Overview|Contents and scale|Processing and splits|Usage|Model and training|Optimization and benchmarks|Validation|Sources and licensing|Limitations|Related repositories",
-      "This release publishes the data preparation, model, training, evaluation, recovery and optimization code used to build a Korean-centered dense LLM. It contains source and experiment records; corpus text, token binaries, databases and model weights are distributed separately.",
+      "This release publishes the data preparation, model, training, evaluation, recovery and optimization code used to build a Korean-centered dense LLM. It contains source and experiment records, excluding corpus text, token binaries, databases and model weights. Separate HF data releases are linked below.",
       "These are the actual token inputs referenced by the current 3B training configuration. The original bytes, order, source weights, seed and sampler v2 are preserved for726 training files and6 fixed evaluation files. This is neither a log of only consumed tokens nor a single pre-shuffled sequence. Sampling is with replacement.",
       "This repository provides the cleaned, split material for the single source identified below. The same source files are also available in its directory within the unified corpus. Pinned data versions and documentation revisions are distinct.",
       "Web processing applies whitespace cleanup, length/repetition/language heuristics and selected PII-pattern masking. Initial within-shard hashes differ from final web NFC SHA256. Code filtering preserves case, indentation and original Unicode while checking paths, license labels, generated code and selected secret patterns. Connected groups of identical bodies, NFC-equivalent web bodies and code repositories are assigned to train/eval.",
@@ -49,7 +49,7 @@
     ],
     "zh-CN": [
       "概览|组成与规模|处理与划分|使用方法|模型与训练|优化与基准|验证|来源与许可|局限|相关仓库",
-      "本项目公开构建韩语为中心的稠密大语言模型时使用的数据准备、模型、训练、评估、恢复与优化代码。此版本提供源码和实验记录；原文、词元二进制、数据库和模型权重另行分发。",
+      "本项目公开构建韩语为中心的稠密大语言模型时使用的数据准备、模型、训练、评估、恢复与优化代码。此版本提供源码和实验记录，不包含原文、词元二进制、数据库或模型权重；下方链接提供独立HF数据发布。",
       "这是当前3B训练配置实际引用的词元输入。726个训练文件和6个固定评估文件保留原始字节、顺序、来源权重、seed及sampler v2。它不是仅记录已消费词元的日志，也不是预混合的单一序列；采样允许重复。",
       "此仓库提供下表指定单一来源的清洗与划分数据。同一来源文件也可在统一语料库对应目录获取。固定数据版本与文档修订版本分别标明。",
       "网页处理包括空白整理、长度/重复/语言启发式和部分个人信息模式掩码。最初分片内哈希与最终网页NFC SHA256标准不同。代码过滤保留大小写、缩进及原始Unicode，并检查路径、许可标签、生成代码与部分密钥模式。相同正文、NFC等价网页及代码仓库的连通组被分配到train/eval。",
@@ -65,7 +65,7 @@
     ],
     "zh-TW": [
       "概覽|組成與規模|處理與切分|使用方法|模型與訓練|最佳化與基準|驗證|來源與授權|限制|相關儲存庫",
-      "本專案公開建立韓語為中心的稠密大型語言模型時使用的資料準備、模型、訓練、評估、復原及最佳化程式碼。此版本提供原始碼與實驗紀錄；原文、詞元二進位、資料庫及模型權重另行發布。",
+      "本專案公開建立韓語為中心的稠密大型語言模型時使用的資料準備、模型、訓練、評估、復原及最佳化程式碼。此版本提供原始碼及實驗紀錄，不包含原文、詞元二進位、資料庫或模型權重；下方連結提供獨立HF資料發布。",
       "這是目前3B訓練設定實際引用的詞元輸入。726個訓練檔和6個固定評估檔保留原始位元組、順序、來源權重、seed與sampler v2。它不是僅記錄已使用詞元的日誌，也不是預先混合的單一序列；抽樣允許重複。",
       "此儲存庫提供下表指定單一來源的清理與切分資料。同一來源檔案也可於統整語料庫對應目錄取得。固定資料版本與文件修訂版本分別標示。",
       "網頁處理包含空白整理、長度/重複/語言啟發式與部分個資模式遮罩。最初分片內雜湊和最終網頁NFC SHA256標準不同。程式碼過濾保留大小寫、縮排及原始Unicode，並檢查路徑、授權標籤、產生的程式碼與部分金鑰模式。相同正文、NFC等價網頁及程式碼儲存庫的連通群組分配至train/eval。",
@@ -81,7 +81,7 @@
     ],
     "ja": [
       "概要|構成と規模|処理と分割|使い方|モデルと学習|最適化とベンチマーク|検証|出典とライセンス|制限|関連リポジトリ",
-      "韓国語中心のDense LLMを実装する際に使用した、データ準備・モデル・学習・評価・復旧・最適化のコードを公開します。ソースと実験記録の配布であり、本文・トークンバイナリ・DB・モデル重みは別配布です。",
+      "韓国語中心のDense LLMを実装する際のデータ準備・モデル・学習・評価・復旧・最適化コードを公開します。この版はソースと実験記録であり、本文・トークンバイナリ・DB・モデル重みを含みません。HFの別データ配布は下記リンクから利用できます。",
       "現在の3B学習設定が実際に参照するトークン入力です。学習726ファイルと固定評価6ファイルの元バイト列・順序・ソース重み・seed・sampler v2を保持します。消費済みトークンだけのログや事前混合した単一列ではなく、復元抽出でサンプリングします。",
       "このリポジトリは下表の単一ソースについて、整形・分割した資料を提供します。同じファイルは統合コーパスの対応フォルダーでも取得できます。固定データ版と説明文の改訂版を区別します。",
       "ウェブは空白整理、長さ・反復・言語のヒューリスティック、一部PIIパターンのマスキングを適用します。初期シャード内ハッシュと最終ウェブNFC SHA256は基準が異なります。コードは大文字小文字・字下げ・元Unicodeを保持し、パス・ライセンス表示・生成コード・一部秘密情報パターンを検査します。同一本文、NFC等価ウェブ、コードリポジトリの連結グループをtrain/evalに分けます。",
@@ -97,7 +97,7 @@
     ],
     "fr": [
       "Présentation|Contenu et volume|Traitement et séparation|Utilisation|Modèle et entraînement|Optimisation et mesures|Vérification|Sources et licences|Limites|Dépôts associés",
-      "Ce projet publie le code de préparation des données, du modèle, de l’entraînement, de l’évaluation, de la reprise et des recherches d’optimisation d’un LLM dense centré sur le coréen. Cette édition contient les sources et les expériences ; textes, tokens binaires, bases et poids sont distribués séparément.",
+      "Ce projet publie le code de préparation des données, du modèle, de l’entraînement, de l’évaluation, de la reprise et de l’optimisation d’un LLM dense centré sur le coréen. Cette édition contient les sources et expériences, sans textes du corpus, tokens binaires, bases ni poids. Les distributions de données HF sont liées ci-dessous.",
       "Il s’agit des entrées tokenisées réellement référencées par la configuration3B :726 fichiers d’entraînement et6 d’évaluation fixe. Octets, ordre, poids des sources, seed et sampler v2 sont conservés. Ce n’est ni un journal des seuls tokens consommés ni une séquence unique prémélangée ; l’échantillonnage se fait avec remise.",
       "Ce dépôt fournit les données nettoyées et séparées de l’unique source indiquée ci-dessous. Les mêmes fichiers figurent aussi dans son dossier du corpus unifié. La version figée des données et la révision documentaire sont distinctes.",
       "Le web subit nettoyage des espaces, heuristiques de longueur/répétition/langue et masquage de certains motifs de données personnelles. Le hash initial interne aux fragments diffère du SHA256 NFC final. Le code conserve casse, indentation et Unicode original ; chemins, licences déclarées, code généré et certains secrets sont filtrés. Les groupes connectés de textes identiques, de textes web équivalents en NFC et de dépôts de code sont répartis en train/eval.",
@@ -113,7 +113,7 @@
     ],
     "de": [
       "Überblick|Inhalt und Umfang|Verarbeitung und Aufteilung|Verwendung|Modell und Training|Optimierung und Benchmarks|Validierung|Quellen und Lizenzen|Grenzen|Verwandte Repositories",
-      "Dieses Projekt veröffentlicht Datenvorbereitung, Modell-, Trainings-, Evaluations-, Wiederherstellungs- und Optimierungscode für ein koreanisch zentriertes Dense LLM. Die Ausgabe enthält Quellcode und Versuchsberichte; Korpustexte, Tokenbinärdateien, Datenbanken und Gewichte werden separat bereitgestellt.",
+      "Dieses Projekt veröffentlicht Datenvorbereitung, Modell-, Trainings-, Evaluations-, Wiederherstellungs- und Optimierungscode für ein koreanisch zentriertes Dense LLM. Enthalten sind Quellen und Versuchsberichte, keine Korpustexte, Tokenbinärdateien, Datenbanken oder Modellgewichte. Separate HF-Datenveröffentlichungen sind unten verlinkt.",
       "Dies sind die tatsächlichen Tokeneingaben der aktuellen3B-Konfiguration:726 Trainingsdateien und6 feste Evaluationsdateien. Bytes, Reihenfolge, Quellengewichte, Seed und Sampler v2 bleiben erhalten. Es ist weder ein Protokoll ausschließlich verbrauchter Tokens noch eine vorgemischte Einzelsequenz; Stichproben erfolgen mit Zurücklegen.",
       "Dieses Repository enthält die bereinigten und aufgeteilten Daten der unten angegebenen einzelnen Quelle. Dieselben Dateien sind auch im zugehörigen Ordner des Gesamtkorpus verfügbar. Fixierte Datenversion und Dokumentationsrevision sind getrennt.",
       "Webverarbeitung bereinigt Leerraum, nutzt Längen-/Wiederholungs-/Sprachheuristiken und maskiert ausgewählte personenbezogene Muster. Der anfängliche shardinterne Hash unterscheidet sich vom abschließenden NFC-SHA256. Code behält Großschreibung, Einrückung und ursprüngliches Unicode; Pfade, Lizenzangaben, generierter Code und ausgewählte Geheimnismuster werden geprüft. Verbundene Gruppen gleicher Texte, NFC-äquivalenter Webtexte und Code-Repositories werden train/eval zugeteilt.",
@@ -129,7 +129,7 @@
     ],
     "es": [
       "Descripción|Contenido y escala|Procesamiento y división|Uso|Modelo y entrenamiento|Optimización y mediciones|Validación|Fuentes y licencias|Limitaciones|Repositorios relacionados",
-      "Este proyecto publica el código de preparación de datos, modelo, entrenamiento, evaluación, recuperación y optimización de un LLM denso centrado en coreano. La versión contiene fuentes y registros de experimentos; textos, tokens binarios, bases y pesos se distribuyen por separado.",
+      "Este proyecto publica preparación de datos, modelo, entrenamiento, evaluación, recuperación y optimización de un LLM denso centrado en coreano. La edición contiene fuentes y experimentos, sin textos, tokens binarios, bases ni pesos del modelo. Las publicaciones de datos HF se enlazan abajo.",
       "Son las entradas tokenizadas realmente referenciadas por la configuración3B:726 archivos de entrenamiento y6 de evaluación fija. Se conservan bytes, orden, pesos, seed y sampler v2. No es un registro de solo tokens consumidos ni una secuencia única premezclada; el muestreo permite reemplazo.",
       "Este repositorio ofrece los datos limpiados y divididos de la única fuente indicada abajo. Los mismos archivos están en su carpeta del corpus unificado. La versión fijada de datos y la revisión documental son distintas.",
       "La web pasa por limpieza de espacios, heurísticas de longitud/repetición/idioma y enmascaramiento de algunos patrones personales. El hash inicial por fragmento difiere del SHA256 NFC final. El código conserva mayúsculas, sangría y Unicode original; se filtran rutas, etiquetas de licencia, código generado y algunos secretos. Grupos conectados de texto idéntico, web equivalente en NFC y repositorios de código se asignan a train/eval.",
@@ -145,7 +145,7 @@
     ],
     "pt-BR": [
       "Visão geral|Conteúdo e escala|Processamento e divisão|Uso|Modelo e treinamento|Otimização e medições|Validação|Fontes e licenças|Limitações|Repositórios relacionados",
-      "Este projeto publica o código de preparação de dados, modelo, treinamento, avaliação, recuperação e otimização de um LLM denso centrado em coreano. A edição contém fontes e registros de experimentos; textos, tokens binários, bancos e pesos são distribuídos separadamente.",
+      "Este projeto publica preparação de dados, modelo, treinamento, avaliação, recuperação e otimização de um LLM denso centrado em coreano. A edição contém fontes e experimentos, sem textos, tokens binários, bancos ou pesos do modelo. As publicações de dados HF estão vinculadas abaixo.",
       "Estas são as entradas tokenizadas realmente referenciadas pela configuração3B:726 arquivos de treino e6 de avaliação fixa. Bytes, ordem, pesos, seed e sampler v2 são preservados. Não é um registro somente de tokens consumidos nem sequência única pré-misturada; a amostragem usa reposição.",
       "Este repositório fornece dados limpos e divididos da única fonte indicada abaixo. Os mesmos arquivos estão na pasta correspondente do corpus unificado. A versão fixada dos dados e a revisão da documentação são distintas.",
       "A web passa por limpeza de espaços, heurísticas de tamanho/repetição/idioma e mascaramento de alguns padrões pessoais. O hash inicial por shard difere do SHA256 NFC final. Código preserva maiúsculas, indentação e Unicode original; verificam-se caminhos, rótulos de licença, código gerado e alguns segredos. Grupos conectados de textos iguais, web equivalente em NFC e repositórios de código são divididos em train/eval.",
@@ -161,7 +161,7 @@
     ],
     "ru": [
       "Обзор|Состав и объём|Обработка и разделение|Использование|Модель и обучение|Оптимизация и измерения|Проверка|Источники и лицензии|Ограничения|Связанные репозитории",
-      "Проект публикует код подготовки данных, модели, обучения, оценки, восстановления и оптимизации плотной LLM с упором на корейский язык. Выпуск содержит исходники и записи экспериментов; тексты, бинарные токены, базы и веса распространяются отдельно.",
+      "Проект публикует код подготовки данных, модели, обучения, оценки, восстановления и оптимизации плотной LLM с упором на корейский язык. Выпуск содержит исходники и эксперименты, без текстов, бинарных токенов, баз и весов модели. Отдельные публикации данных HF доступны по ссылкам ниже.",
       "Это реальные токенизированные входы текущей конфигурации3B:726 обучающих файлов и6 файлов фиксированной оценки. Сохранены байты, порядок, веса источников, seed и sampler v2. Это не журнал только потреблённых токенов и не единая заранее смешанная последовательность; выборка выполняется с возвращением.",
       "Репозиторий предоставляет очищенные и разделённые данные одного источника, указанного ниже. Те же файлы есть в соответствующей папке общего корпуса. Фиксированная версия данных и редакция документации различаются.",
       "Веб-обработка включает очистку пробелов, эвристики длины/повторов/языка и маскирование отдельных персональных шаблонов. Начальный хеш внутри шарда отличается от итогового NFC SHA256. Код сохраняет регистр, отступы и исходный Unicode; проверяются пути, лицензии, сгенерированный код и отдельные секреты. Связные группы одинаковых текстов, NFC-эквивалентных веб-текстов и кодовых репозиториев делятся на train/eval.",
@@ -177,7 +177,7 @@
     ],
     "hi": [
       "परिचय|सामग्री और आकार|प्रसंस्करण और विभाजन|उपयोग|मॉडल और प्रशिक्षण|अनुकूलन और मापन|सत्यापन|स्रोत और लाइसेंस|सीमाएँ|संबंधित रिपॉज़िटरी",
-      "यह परियोजना कोरियाई-केंद्रित Dense LLM के डेटा तैयार करने, मॉडल, प्रशिक्षण, मूल्यांकन, पुनर्प्राप्ति और अनुकूलन का कोड प्रकाशित करती है। इस संस्करण में स्रोत और प्रयोग रिकॉर्ड हैं; मूल पाठ, टोकन बाइनरी, डेटाबेस और मॉडल वज़न अलग वितरित होते हैं।",
+      "यह परियोजना कोरियाई-केंद्रित Dense LLM के डेटा तैयार करने, मॉडल, प्रशिक्षण, मूल्यांकन, पुनर्प्राप्ति और अनुकूलन का कोड प्रकाशित करती है। संस्करण में स्रोत और प्रयोग रिकॉर्ड हैं, मूल पाठ,टोकन बाइनरी,डेटाबेस या मॉडल वज़न नहीं। अलग HF डेटा प्रकाशन नीचे जुड़े हैं।",
       "ये वर्तमान3B कॉन्फ़िगरेशन के वास्तविक टोकन इनपुट हैं:726 प्रशिक्षण फ़ाइलें और6 निश्चित मूल्यांकन फ़ाइलें। मूल बाइट्स, क्रम, स्रोत भार, seed और sampler v2 सुरक्षित हैं। यह केवल इस्तेमाल हो चुके टोकनों का लॉग या पहले से मिलाया एक क्रम नहीं है; नमूना प्रतिस्थापन सहित लिया जाता है।",
       "यह रिपॉज़िटरी नीचे बताए एक स्रोत की साफ़ और विभाजित सामग्री देती है। यही फ़ाइलें एकीकृत कॉर्पस के संबंधित फ़ोल्डर में भी हैं। निश्चित डेटा संस्करण और दस्तावेज़ संशोधन अलग हैं।",
       "वेब प्रसंस्करण में खाली स्थान सुधार, लंबाई/दोहराव/भाषा नियम और कुछ व्यक्तिगत पैटर्न छिपाना शामिल है। शुरुआती shard के भीतर hash अंतिम वेब NFC SHA256 से अलग है। कोड में अक्षरों का case, indentation और मूल Unicode सुरक्षित हैं; पथ, लाइसेंस लेबल, generated code और कुछ secret पैटर्न जाँचे जाते हैं। समान पाठ, NFC-समतुल्य वेब पाठ और code repository के जुड़े समूह train/eval में बाँटे जाते हैं।",
@@ -193,7 +193,7 @@
     ],
     "ar": [
       "نظرة عامة|المحتوى والحجم|المعالجة والتقسيم|الاستخدام|النموذج والتدريب|التحسين والقياسات|التحقق|المصادر والتراخيص|القيود|المستودعات المرتبطة",
-      "ينشر المشروع شيفرة إعداد البيانات والنموذج والتدريب والتقييم والاستعادة وتجارب التحسين لنموذج لغوي كثيف يركز على الكورية. يحتوي الإصدار على المصادر وسجلات التجارب؛ أما النصوص والرموز الثنائية وقواعد البيانات والأوزان فتوزع بشكل منفصل.",
+      "ينشر المشروع شيفرة إعداد البيانات والنموذج والتدريب والتقييم والاستعادة والتحسين لنموذج لغوي كثيف يركز على الكورية. يتضمن الإصدار المصادر وسجلات التجارب دون نصوص المجموعة أو الرموز الثنائية أو قواعد البيانات أو أوزان النموذج. روابط إصدارات بيانات HF المنفصلة أدناه.",
       "هذه مدخلات الرموز الفعلية التي يشير إليها إعداد3B الحالي:726 ملف تدريب و6 ملفات تقييم ثابت. حُفظت البايتات والترتيب وأوزان المصادر وseed وsampler v2. ليست سجلاً للرموز المستهلكة فقط ولا تسلسلاً واحداً مخلوطاً مسبقاً؛ أخذ العينات يتم مع الإرجاع.",
       "يوفر هذا المستودع البيانات المنظفة والمقسمة للمصدر الواحد المحدد أدناه. توجد الملفات نفسها في مجلده داخل المجموعة الموحدة. إصدار البيانات المثبت ومراجعة التوثيق أمران منفصلان.",
       "تشمل معالجة الويب تنظيف الفراغات وقواعد الطول/التكرار/اللغة وإخفاء أنماط محددة من المعلومات الشخصية. تختلف بصمة الجزء الأولية عن NFC SHA256 النهائي للويب. تحافظ تصفية الشيفرة على حالة الأحرف والمسافات البادئة وUnicode الأصلي، وتفحص المسارات وتسميات الترخيص والشيفرة المولدة وبعض أنماط الأسرار. توزع المجموعات المتصلة للنصوص المتطابقة ونصوص الويب المكافئة في NFC ومستودعات الشيفرة على train/eval.",
@@ -209,7 +209,7 @@
     ],
     "he": [
       "סקירה|תוכן והיקף|עיבוד וחלוקה|שימוש|מודל ואימון|מיטוב ומדידות|אימות|מקורות ורישיונות|מגבלות|מאגרים קשורים",
-      "הפרויקט מפרסם קוד להכנת נתונים,מודל,אימון,הערכה,שחזור וניסויי מיטוב של מודל שפה צפוף המתמקד בקוריאנית. גרסה זו כוללת מקורות ורשומות ניסוי;טקסטים,קובצי טוקנים בינריים,מסדי נתונים ומשקלים מופצים בנפרד.",
+      "הפרויקט מפרסם קוד להכנת נתונים,מודל,אימון,הערכה,שחזור ומיטוב של מודל שפה צפוף המתמקד בקוריאנית. הגרסה כוללת מקורות וניסויים,ללא טקסטים,טוקנים בינריים,מסדי נתונים או משקלי מודל. פרסומי נתוני HF נפרדים מקושרים בהמשך.",
       "אלו קלטי הטוקנים האמיתיים שאליהם מפנה תצורת3B הנוכחית:726 קובצי אימון ו6 קובצי הערכה קבועה. הבתים,הסדר,משקלי המקורות,seed וsampler v2 נשמרו. אין זה יומן של הטוקנים שנצרכו בלבד או רצף יחיד שעורבב מראש;הדגימה נעשית עם החזרה.",
       "מאגר זה מציע את הנתונים המנוקים והמחולקים של המקור היחיד המצוין להלן. אותם קבצים זמינים בתיקייה המתאימה בקורפוס המאוחד. גרסת הנתונים המקובעת ועדכון התיעוד נפרדים.",
       "עיבוד הרשת כולל ניקוי רווחים,כללי אורך/חזרה/שפה ומיסוך דפוסים מסוימים של מידע אישי. הגיבוב הראשוני בתוך מקטע שונה מNFC SHA256 הסופי. סינון הקוד שומר אותיות גדולות/קטנות,הזחה וUnicode מקורי,ובודק נתיבים,תוויות רישיון,קוד שנוצר ודפוסי סודות מסוימים. קבוצות מחוברות של טקסט זהה,טקסט רשת שקול בNFC ומאגרי קוד מחולקות לtrain/eval.",

@@ -31,7 +31,7 @@
     "standalone": "v1.0.0"
   },
   "documentation_version": "v0.1.1",
-  "same_language_links_final": false,
+  "same_language_links_final": true,
   "weights": {
     "wiki_ko": 0.005,
     "fineweb2_ko": 0.29464577095297395,
