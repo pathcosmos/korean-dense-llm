@@ -6,6 +6,10 @@ A source-only research release of a Korean-centered dense language-model project
 
 Version 0.1.0 publishes code and the observations available at the snapshot date. It does not bundle corpus text, token binaries, SQLite databases, checkpoints, or tokenizer vocabulary. Main training was still running at the snapshot; this is not a claim of final model quality, completed official benchmarks, SFT, or a supported Hugging Face model export.
 
+## Verified checks
+
+Independent local suite:284 passed/9 skipped. Fresh GitHub CPU environment:258 passed/35 skipped. Skips require original-run manifests or a second filesystem. An unauthenticated clone passed manifest verification and the end-to-end quickstart. See the [validation evidence](docs/PUBLIC_VALIDATION.md).
+
 ## CPU quickstart
 
 From the repository root, with Python 3.11 or 3.12:

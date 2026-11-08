@@ -24,13 +24,13 @@
     },
     {
       "path": "README.en.md",
-      "bytes": 2424,
-      "sha256": "456c222317dea985a4abcc8ae9c26c912f35a935fc7775cf087a126a083b4e7d"
+      "bytes": 2747,
+      "sha256": "e480d6715000e70ecfa182968d29e2ee1fff078152e116185cae0fe7aacd11db"
     },
     {
       "path": "README.md",
-      "bytes": 4163,
-      "sha256": "eb9ca2d13e9e342ac2221d667853b8f6a7a259f2a5975c008d844da72f24c987"
+      "bytes": 4514,
+      "sha256": "b9edc72f59765fcfee35f43a903c87bf986481a6e6d78b732c0ddfa24c3bc4ac"
     },
     {
       "path": "common/data_contracts.py",
@@ -249,8 +249,8 @@
     },
     {
       "path": "docs/PUBLIC_VALIDATION.md",
-      "bytes": 3453,
-      "sha256": "1640dd39e63df24bd6cfa74bfb3ae60b002626be096f6c45794528b419f373ff"
+      "bytes": 4216,
+      "sha256": "bed33eb89df950456937eb8ea565c5bd773832387f5e542d3dff576853dedfc7"
     },
     {
       "path": "docs/RUNBOOK.md",
@@ -1619,8 +1619,8 @@
     },
     {
       "path": "release/validation.json",
-      "bytes": 5363,
-      "sha256": "5b8701361f69a40a58811d7a206e7a0b3c5c3107fefd407971b017d5c7b9b265"
+      "bytes": 5946,
+      "sha256": "aec42267fd4cf2ce60e83c892012ab675969e738c6adcd18f55d5c87980e13b2"
     },
     {
       "path": "requirements-bench.txt",

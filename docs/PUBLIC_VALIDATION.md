@@ -13,7 +13,7 @@ Snapshot: 2026-11-08. Source-only v0.1.0. Machine-readable evidence: [validation
 
 Nine integration tests require original training/validation checkpoint metadata or dataset-publication manifests excluded from this source-only repository. They remain in the source and are skipped by default with individual reasons. `--run-original-integrations` is only for an independently restored integration environment. Synthetic optimizer-map rejection and supervisor native-pruning rejection remain enabled; they were separated from the original-run checks.
 
-The tested installed NVIDIA PyTorch build is recorded in [tested_environment.json](../release/tested_environment.json); this local result does **not** certify a fresh standard-wheel installation. Public CI tests the documented CPU installation separately. The quickstart uses a simple CPU checkpoint; distributed checkpoint/RNG behavior has additional CPU tests. New 8GPU/full3B training was not run for this release.
+The tested installed NVIDIA PyTorch build is recorded in [tested_environment.json](../release/tested_environment.json); this local result alone does **not** certify a fresh standard-wheel installation. The separate public CI result below verifies that installation. The quickstart uses a simple CPU checkpoint; distributed checkpoint/RNG behavior has additional CPU tests. New 8GPU/full3B training was not run for this release.
 
 Initial packaging runs revealed missing local run-directory prerequisites and original-run dependencies; these were addressed in the public-only test setup. The initial quickstart requested more BPE merges than its small synthetic vocabulary supported and used an output path outside the portable-mix root; the final example uses vocab272 and checkout-owned outputs. Initial failures are not counted as passes.
 
@@ -25,4 +25,6 @@ Original and public result hashes differ when paths/content fields are sanitized
 
 ## Publication checks
 
-Remote CI and anonymous clone results are recorded after first publication; local success alone is not a remote-publication success claim. Use the GitHub Actions run and release verification record for final status.
+The first published code commit `3ea7171e4dfc7adb6582a9fb7484c30283ea28c9` passed [fresh GitHub CPU CI](https://github.com/pathcosmos/korean-dense-llm/actions/runs/42451765321): **258 passed, 35 skipped, 0 failed**, plus the end-to-end quickstart. This used a new Python3.12 environment and standard `torch2.7.0+cpu`. The additional26 skips are the explicitly declared two-filesystem retention tests on the single-filesystem runner; the local NFS/local validation above exercised those fixtures.
+
+An unauthenticated clone with system/global Git configuration and credential helpers disabled verified all531 manifest payload files and passed the CPU quickstart in4.03s. These checks apply to the published implementation; subsequent release-finalization changes update documentation and checksums only. Exact final tag/commit and the final workflow are in the [v0.1.0 release verification attachment](https://github.com/pathcosmos/korean-dense-llm/releases/tag/v0.1.0).

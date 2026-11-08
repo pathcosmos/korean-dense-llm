@@ -130,10 +130,28 @@
     }
   },
   "not_executed": [
-    "fresh package installation",
     "new eight-GPU training or full corpus reproduction",
-    "official language-ability benchmarks",
-    "remote CI (pending first public push)",
-    "anonymous public clone (pending publication)"
-  ]
+    "official language-ability benchmarks"
+  ],
+  "public_verification": {
+    "tested_code_commit": "3ea7171e4dfc7adb6582a9fb7484c30283ea28c9",
+    "fresh_cpu_ci": {
+      "conclusion": "success",
+      "headSha": "3ea7171e4dfc7adb6582a9fb7484c30283ea28c9",
+      "status": "completed",
+      "url": "https://github.com/pathcosmos/korean-dense-llm/actions/runs/42451765321",
+      "pytest": {
+        "passed": 258,
+        "skipped": 35,
+        "failed": 0
+      },
+      "skip_explanation": "9 original-run integrations plus26 tests needing two distinct filesystems"
+    },
+    "anonymous_clone": {
+      "credentials_disabled": true,
+      "manifest_files_verified": 531,
+      "quickstart": "passed",
+      "elapsed_seconds": 4.0296355141326785
+    }
+  }
 }
