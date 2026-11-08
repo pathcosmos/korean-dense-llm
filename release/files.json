@@ -1,5 +1,5 @@
 {
-  "version": "0.1.0",
+  "version": "0.1.1",
   "scope": "All tracked source-release files except this self-referential manifest",
   "files": [
     {
@@ -24,13 +24,78 @@
     },
     {
       "path": "README.en.md",
-      "bytes": 2747,
-      "sha256": "e480d6715000e70ecfa182968d29e2ee1fff078152e116185cae0fe7aacd11db"
+      "bytes": 8988,
+      "sha256": "25c1de7882beca05687c4d63cd4581fd76fa5cd7e3cc0f77696e19cba2536507"
     },
     {
       "path": "README.md",
-      "bytes": 4514,
-      "sha256": "b9edc72f59765fcfee35f43a903c87bf986481a6e6d78b732c0ddfa24c3bc4ac"
+      "bytes": 14571,
+      "sha256": "034bfee8d86907bc912a01bab4019b0c80cde1f0ff8dc823d7151c09302e208a"
+    },
+    {
+      "path": "cards/README.ar.md",
+      "bytes": 10345,
+      "sha256": "a9c5e7735acec8558021d8e170b6f3b93e215300c8b75dfa72e6b04548bcd1ca"
+    },
+    {
+      "path": "cards/README.de.md",
+      "bytes": 9098,
+      "sha256": "d1a7350e8086028e1d40a0f1a01ea3459df3b44ebd5c9b469c7d075103cc6d53"
+    },
+    {
+      "path": "cards/README.en.md",
+      "bytes": 8988,
+      "sha256": "25c1de7882beca05687c4d63cd4581fd76fa5cd7e3cc0f77696e19cba2536507"
+    },
+    {
+      "path": "cards/README.es.md",
+      "bytes": 8853,
+      "sha256": "82c742141d6dd2dae3663f4ebb849bf8c8f77f566675cf3445ae3ddb4f3935ce"
+    },
+    {
+      "path": "cards/README.fr.md",
+      "bytes": 9224,
+      "sha256": "6f92fd0308b70f7e094606995b338e4a31d18750c403c0137c91527f50e54144"
+    },
+    {
+      "path": "cards/README.he.md",
+      "bytes": 9664,
+      "sha256": "452045653a4145d00dec599c4f1d621fc2cb891c9fe3ce1ebf1eb77422c35097"
+    },
+    {
+      "path": "cards/README.hi.md",
+      "bytes": 12171,
+      "sha256": "5390c4f1da0542238c3d33f554a1818aefa9223635ca7504d1198a4d3600266c"
+    },
+    {
+      "path": "cards/README.ja.md",
+      "bytes": 9002,
+      "sha256": "206e339d1214cf2b559e7fc778fe4517fa9c2dfa8ee51742d6adfd4936b6b667"
+    },
+    {
+      "path": "cards/README.ko.md",
+      "bytes": 9283,
+      "sha256": "8e34cb77d28eacd11316424cdbb9e771ad423a76970437e74c3dbb71ba15ca3d"
+    },
+    {
+      "path": "cards/README.pt-BR.md",
+      "bytes": 8752,
+      "sha256": "59a803d87ded4926bc9b5c6dc9f74f4ccc8a19727ee2877578a6e6e206bd6afe"
+    },
+    {
+      "path": "cards/README.ru.md",
+      "bytes": 10819,
+      "sha256": "9ab539cb2cac1ca6341cb77c329f3722d3eb9c66a619a70332b668af6fcab284"
+    },
+    {
+      "path": "cards/README.zh-CN.md",
+      "bytes": 8359,
+      "sha256": "d5b7ebbd15c87412a9da8acb3a29eaddc72280746752d452925738ffc5eaa9eb"
+    },
+    {
+      "path": "cards/README.zh-TW.md",
+      "bytes": 8365,
+      "sha256": "f2dda1c40782fedb9e68d5a9eb6ed50b21bf34fcfdf55ee980648cb21848374d"
     },
     {
       "path": "common/data_contracts.py",
@@ -261,6 +326,21 @@
       "path": "docs/data_provenance_v1/source_registry.json",
       "bytes": 12070,
       "sha256": "c03d276bd500616ba25b5d33906e6f47c7887620ee33686c039cd3e6b06a386f"
+    },
+    {
+      "path": "docs/multilingual/manifest.json",
+      "bytes": 1232,
+      "sha256": "d8926411ad8405d8254042c6722868f2689f6aae769c0dbaefd47ee5fa2f2f58"
+    },
+    {
+      "path": "docs/multilingual/translations.json",
+      "bytes": 68057,
+      "sha256": "2a84a1d311479bd77829a5588c2f4b8a5439c2feb56fc202ed402944b5e89b23"
+    },
+    {
+      "path": "docs/multilingual/validation.json",
+      "bytes": 306,
+      "sha256": "f7095e51d4317a18e9b5b0b8e45690385666a1e2fb92b4147ff0240c3ec6d4e1"
     },
     {
       "path": "docs/reviews/frankenstallm/acceptance_cases.json",
@@ -1604,8 +1684,8 @@
     },
     {
       "path": "release/public_changes.json",
-      "bytes": 17976,
-      "sha256": "8cc8a1972f04c0906819012a44922ec6ac7cf6f0275e688424391419715c0925"
+      "bytes": 18180,
+      "sha256": "ed021338d958960c62b72ca35d129f42539c54510a111fe4caa9ebdfb9c320b4"
     },
     {
       "path": "release/source_inventory.json",
@@ -1751,6 +1831,11 @@
       "path": "scripts/check_gpu_numerics.py",
       "bytes": 2535,
       "sha256": "ab26d3da4f7287ca2cf84fbd6e4a256a1e07623853bff4035a6b242232756bc7"
+    },
+    {
+      "path": "scripts/check_multilingual_readmes.py",
+      "bytes": 1041,
+      "sha256": "9f29133a52115a9d5b69b7c5fdcb4844399af2bbe6a915fc1b069c90e778995f"
     },
     {
       "path": "scripts/check_public_corpus_consumer.py",

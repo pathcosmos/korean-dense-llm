@@ -1,18 +1,32 @@
-# Korean Dense LLM
+# Korean Dense LLM — English
 
-A source-only research release of a Korean-centered dense language-model project: data acquisition and cleaning, deduplication, audited splits, train-only tokenization, a PyTorch model/FSDP2 trainer, evaluation, recovery, and measured optimization experiments.
+[한국어](https://github.com/pathcosmos/korean-dense-llm/blob/main/cards/README.ko.md) · [English](https://github.com/pathcosmos/korean-dense-llm/blob/main/cards/README.en.md) · [简体中文](https://github.com/pathcosmos/korean-dense-llm/blob/main/cards/README.zh-CN.md) · [繁體中文](https://github.com/pathcosmos/korean-dense-llm/blob/main/cards/README.zh-TW.md) · [日本語](https://github.com/pathcosmos/korean-dense-llm/blob/main/cards/README.ja.md) · [Français](https://github.com/pathcosmos/korean-dense-llm/blob/main/cards/README.fr.md) · [Deutsch](https://github.com/pathcosmos/korean-dense-llm/blob/main/cards/README.de.md) · [Español](https://github.com/pathcosmos/korean-dense-llm/blob/main/cards/README.es.md) · [Português (Brasil)](https://github.com/pathcosmos/korean-dense-llm/blob/main/cards/README.pt-BR.md) · [हिन्दी](https://github.com/pathcosmos/korean-dense-llm/blob/main/cards/README.hi.md) · [العربية](https://github.com/pathcosmos/korean-dense-llm/blob/main/cards/README.ar.md) · [עברית](https://github.com/pathcosmos/korean-dense-llm/blob/main/cards/README.he.md) · [Русский](https://github.com/pathcosmos/korean-dense-llm/blob/main/cards/README.ru.md)
 
-[한국어](README.md) · [Guide](docs/PUBLIC_GUIDE.md) · [Experiments](experiments/README.md) · [Validation](docs/PUBLIC_VALIDATION.md)
+## Overview
 
-Version 0.1.0 publishes code and the observations available at the snapshot date. It does not bundle corpus text, token binaries, SQLite databases, checkpoints, or tokenizer vocabulary. Main training was still running at the snapshot; this is not a claim of final model quality, completed official benchmarks, SFT, or a supported Hugging Face model export.
+This release publishes the data preparation, model, training, evaluation, recovery and optimization code used to build a Korean-centered dense LLM. It contains source and experiment records; corpus text, token binaries, databases and model weights are distributed separately.
 
-## Verified checks
+Translation languages do not imply training-data coverage in those languages. The principal natural languages are Korean and English; web, math and code may contain other languages.
 
-Independent local suite:284 passed/9 skipped. Fresh GitHub CPU environment:258 passed/35 skipped. Skips require original-run manifests or a second filesystem. An unauthenticated clone passed manifest verification and the end-to-end quickstart. See the [validation evidence](docs/PUBLIC_VALIDATION.md).
+## Contents and scale
 
-## CPU quickstart
+| | |
+|---|---:|
+| common/, data/ | Processing and splits |
+| tokenizer/ | Processing and splits |
+| model/, train/, eval/ | Model and training |
+| scripts/ | Optimization and benchmarks |
+| tests/, examples/ | Validation |
+| experiments/ | 47 / 99 |
 
-From the repository root, with Python 3.11 or 3.12:
+
+## Processing and splits
+
+Web processing applies whitespace cleanup, length/repetition/language heuristics and selected PII-pattern masking. Initial within-shard hashes differ from final web NFC SHA256. Code filtering preserves case, indentation and original Unicode while checking paths, license labels, generated code and selected secret patterns. Connected groups of identical bodies, NFC-equivalent web bodies and code repositories are assigned to train/eval.
+
+## Usage
+
+Run commands below from the repository root. Use new output/download directories and check scope, size and pinned revision first. The synthetic CPU example downloads no external data. Select only the needed files from the separate data releases and verify sizes/SHA256 against CHECKSUMS.json or the source manifests.
 
 ```bash
 python -m venv .venv
@@ -23,10 +37,57 @@ OMP_NUM_THREADS=2 MKL_NUM_THREADS=2 RAYON_NUM_THREADS=2 python examples/quicksta
 OMP_NUM_THREADS=2 MKL_NUM_THREADS=2 RAYON_NUM_THREADS=2 python -m pytest -q tests
 ```
 
-The offline example generates synthetic input and runs cleaning, exact deduplication, audit/finalization, grouped splitting, a small train-only BPE, tokenization, micro-model training/evaluation and exact model/optimizer resume. Use a new `--output-dir runs/demo` to retain outputs; otherwise temporary outputs are cleaned up.
 
-Measured package versions and the distinction between an isolated source checkout and a fresh package installation are in [release/tested_environment.json](release/tested_environment.json). Original-run integrations are explicitly skipped without the excluded manifests. Retention tests require separate filesystems; missing prerequisites are reported as skips, not passes.
+## Model and training
 
-The original trainer and real measured 3B settings are included. Read the guide before a GPU run: the operational wrappers are bound to explicit manifests/contracts and some are historical, run-specific research utilities. The quickstart's simple CPU checkpoint is distinct from the FSDP distributed checkpoint path, which has separate CPU DCP tests and historical GPU evidence.
+The model is a plain PyTorch dense decoder with RMSNorm, RoPE, GQA and SwiGLU. The actual3B path uses FSDP2,8GPUs and eager execution: context4096, micro batch4, global batch2,097,152tokens, peak LR3e-4 and target57,000steps. The CPU micro demonstration differs from distributed training. Exact resume requires model, optimizer, RNG and input/configuration contracts.
 
-Original code: MIT. Original prose: CC BY 4.0. Third-party materials and data retain their own terms; see [NOTICE](NOTICE.md).
+[examples/3b.observed.json](https://github.com/pathcosmos/korean-dense-llm/blob/main/examples/3b.observed.json) · [examples/3b.fresh.json](https://github.com/pathcosmos/korean-dense-llm/blob/main/examples/3b.fresh.json)
+
+```bash
+python scripts/hardware_profile.py --output runs/hardware.json
+torchrun --standalone --nproc_per_node=8 --module train.deterministic_train --config examples/3b.fresh.json
+```
+
+## Optimization and benchmarks
+
+Experiments compare workers, threads, batches, SQLite caches, RAM, local/NFS storage, eager/compile execution, precision and GPU memory. Total time, throughput, peak memory and content/numerical equivalence accompany adoption or rejection decisions.47 campaigns and99 result JSON files are included. Speed alone does not justify a numerically failing candidate, and a small sample does not establish a full-scale optimum.
+
+[47 / 99](https://github.com/pathcosmos/korean-dense-llm/blob/main/experiments/README.md)
+
+## Validation
+
+The GH source release passed284 independent CPU tests with9 skips; fresh GitHub CPU CI passed258 with35 skips. Skips require original-run records or a second filesystem. The synthetic quickstart uses120documents, train100/eval20, vocab272 and a108,864parameter model, verifying exact model/optimizer resume. Dataset content-hash, split and reader checks are separate from full independent3B reproduction.
+
+## Sources and licensing
+
+Original project code is MIT and original prose is CC BY4.0. These grants do not replace original-content rights. Consult source.json, LICENSE-SCOPE.md and provenance documents for source-specific conditions, attribution, notices and known unresolved items. Unrestricted commercial redistribution of every original text is not asserted.
+
+[NOTICE.md](https://github.com/pathcosmos/korean-dense-llm/blob/main/NOTICE.md) · [LICENSE](https://github.com/pathcosmos/korean-dense-llm/blob/main/LICENSE)
+
+## Limitations
+
+Global near-duplicate removal, complete PII/secret removal, contamination-free official evaluation and final model quality are not guaranteed. Main training was ongoing at the publication snapshot; SFT, model export and official language benchmarks are not completed features.11 historical code references/9unique hashes lack a recovered snapshot. Some operational tools require original-run manifests.
+
+## Related repositories
+
+[GitHub](https://github.com/pathcosmos/korean-dense-llm/blob/main/cards/README.en.md) · [README](https://github.com/pathcosmos/korean-dense-llm)
+[GH / Usage](https://github.com/pathcosmos/korean-dense-llm/blob/main/docs/PUBLIC_GUIDE.md) · [GH / Optimization and benchmarks](https://github.com/pathcosmos/korean-dense-llm/blob/main/experiments/README.md) · [GH / Validation](https://github.com/pathcosmos/korean-dense-llm/blob/main/docs/PUBLIC_VALIDATION.md)
+
+- [korean-pretrain-corpus](https://huggingface.co/datasets/pathcosmos/korean-pretrain-corpus)
+- [korean-pretrain-training-data](https://huggingface.co/datasets/pathcosmos/korean-pretrain-training-data)
+- [korean-pretrain-wikipedia](https://huggingface.co/datasets/pathcosmos/korean-pretrain-wikipedia)
+- [korean-pretrain-fineweb2](https://huggingface.co/datasets/pathcosmos/korean-pretrain-fineweb2)
+- [korean-pretrain-hplt2](https://huggingface.co/datasets/pathcosmos/korean-pretrain-hplt2)
+- [korean-pretrain-fineweb-edu](https://huggingface.co/datasets/pathcosmos/korean-pretrain-fineweb-edu)
+- [korean-pretrain-math](https://huggingface.co/datasets/pathcosmos/korean-pretrain-math)
+- [korean-pretrain-code](https://huggingface.co/datasets/pathcosmos/korean-pretrain-code)
+
+- [wiki_ko/](https://huggingface.co/datasets/pathcosmos/korean-pretrain-corpus/tree/main/wiki_ko)
+- [fineweb2_ko/](https://huggingface.co/datasets/pathcosmos/korean-pretrain-corpus/tree/main/fineweb2_ko)
+- [hplt_ko/](https://huggingface.co/datasets/pathcosmos/korean-pretrain-corpus/tree/main/hplt_ko)
+- [fineweb_edu/](https://huggingface.co/datasets/pathcosmos/korean-pretrain-corpus/tree/main/fineweb_edu)
+- [owm/](https://huggingface.co/datasets/pathcosmos/korean-pretrain-corpus/tree/main/owm)
+- [github_code_v1/](https://huggingface.co/datasets/pathcosmos/korean-pretrain-corpus/tree/main/github_code_v1)
+
+[한국어](https://github.com/pathcosmos/korean-dense-llm/blob/main/cards/README.ko.md) · [English](https://github.com/pathcosmos/korean-dense-llm/blob/main/cards/README.en.md) · [简体中文](https://github.com/pathcosmos/korean-dense-llm/blob/main/cards/README.zh-CN.md) · [繁體中文](https://github.com/pathcosmos/korean-dense-llm/blob/main/cards/README.zh-TW.md) · [日本語](https://github.com/pathcosmos/korean-dense-llm/blob/main/cards/README.ja.md) · [Français](https://github.com/pathcosmos/korean-dense-llm/blob/main/cards/README.fr.md) · [Deutsch](https://github.com/pathcosmos/korean-dense-llm/blob/main/cards/README.de.md) · [Español](https://github.com/pathcosmos/korean-dense-llm/blob/main/cards/README.es.md) · [Português (Brasil)](https://github.com/pathcosmos/korean-dense-llm/blob/main/cards/README.pt-BR.md) · [हिन्दी](https://github.com/pathcosmos/korean-dense-llm/blob/main/cards/README.hi.md) · [العربية](https://github.com/pathcosmos/korean-dense-llm/blob/main/cards/README.ar.md) · [עברית](https://github.com/pathcosmos/korean-dense-llm/blob/main/cards/README.he.md) · [Русский](https://github.com/pathcosmos/korean-dense-llm/blob/main/cards/README.ru.md)

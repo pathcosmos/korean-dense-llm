@@ -1,0 +1,44 @@
+{
+  "languages": {
+    "ko": "한국어",
+    "en": "English",
+    "zh-CN": "简体中文",
+    "zh-TW": "繁體中文",
+    "ja": "日本語",
+    "fr": "Français",
+    "de": "Deutsch",
+    "es": "Español",
+    "pt-BR": "Português (Brasil)",
+    "hi": "हिन्दी",
+    "ar": "العربية",
+    "he": "עברית",
+    "ru": "Русский"
+  },
+  "github": "https://github.com/pathcosmos/korean-dense-llm",
+  "hf_repositories": [
+    "pathcosmos/korean-pretrain-corpus",
+    "pathcosmos/korean-pretrain-training-data",
+    "pathcosmos/korean-pretrain-wikipedia",
+    "pathcosmos/korean-pretrain-fineweb2",
+    "pathcosmos/korean-pretrain-hplt2",
+    "pathcosmos/korean-pretrain-fineweb-edu",
+    "pathcosmos/korean-pretrain-math",
+    "pathcosmos/korean-pretrain-code"
+  ],
+  "data_versions": {
+    "corpus": "v1.1.0",
+    "training": "v1.0.1",
+    "standalone": "v1.0.0"
+  },
+  "documentation_version": "v0.1.1",
+  "same_language_links_final": false,
+  "weights": {
+    "wiki_ko": 0.005,
+    "fineweb2_ko": 0.29464577095297395,
+    "hplt_ko": 0.20035422904702602,
+    "fineweb_edu": 0.3,
+    "owm": 0.1,
+    "github_code_v1": 0.1
+  },
+  "scope": "Documentation languages do not change dataset language metadata"
+}

@@ -236,5 +236,10 @@
     ".github/workflows/cpu.yml"
   ],
   "production_sources_unchanged": true,
-  "scope": "Public-only documentation, synthetic example, manifests, benchmark summaries and test portability support; model/trainer/data implementation copied unchanged."
+  "scope": "Public-only documentation, synthetic example, manifests, benchmark summaries and test portability support; model/trainer/data implementation copied unchanged.",
+  "documentation_update": {
+    "version": "v0.1.1",
+    "scope": "Complete Korean then English roots,13-language cards and GH/HF reciprocal links",
+    "training_data_and_model_code_changed": false
+  }
 }
