@@ -1,0 +1,15 @@
+{
+  "exact": true,
+  "tensors": 1020,
+  "model_tensors": 255,
+  "optimizer_tensors": 765,
+  "rng_ranks": 8,
+  "elapsed_seconds": 37.49774906807579,
+  "status": "passed_existing_actual3b_cpu_full_state_comparison",
+  "left": "${PROJECT_ROOT}/runs/actual_train_validation_v1/3b_validated_checkpoint",
+  "right": "${LOCAL_SCRATCH}",
+  "fresh_payload_sha_both": true,
+  "peak_rss_bytes": 78357827584,
+  "total_seconds": 48.94500866299495,
+  "scope": "Current new comparator on existing actual3B model/optimizer and8rank RNG; not final57000 or a new8GPU update/resume execution."
+}

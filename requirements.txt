@@ -1,0 +1,14 @@
+# versions verified on the original dev box (Python 3.11, CUDA 12.6 wheels). Newer torch is fine; re-run scripts/check_env.py.
+torch==2.7.0
+numpy==2.1.2
+tokenizers==0.22.0
+sentencepiece==0.2.1
+transformers==4.56.1
+huggingface_hub[hf_transfer]
+datasets
+pyarrow
+xxhash
+datasketch
+fasttext-wheel
+zstandard
+wandb

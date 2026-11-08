@@ -1,0 +1,22 @@
+{
+  "version": 2,
+  "source_manifest": "data/datasets/final_v1.ready.json",
+  "source_sha256": "b8de4875c54e01c3f180259586d053462aa16e8cb4840d226919dae37992b199",
+  "source_snapshot": "c94a72dd7afc2c1d55e2545790a1e9c09b7fd56a20f05a31a6d1dd8e35fb498b",
+  "seed": 1234,
+  "eval_fraction": 0.01,
+  "sqlite_cache_mib": 131072,
+  "hash_workers": 32,
+  "output": "data/datasets/final_v2.split",
+  "run": "runs/f4_full_v2",
+  "code": {
+    "scripts/publish_local_split.py": "905a2448b12e19c23c032d352b3a17e1ebefee19334703d90ca76ddfbc1523c4",
+    "data/split_manifest.py": "3869b7ed1d54c10c9f689fe3e0eb7efda03d2989f03e1dc2ccc8adec3e15ce56",
+    "common/data_contracts.py": "9b7af55f00602532e369f5880bd5da2bfc80290c19a387aad2862f2a6052ac63",
+    "common/source_inventory.py": "89865829d78904e8b242976c1e78b1942a2dbad79e438db747857ee3a4f3416d",
+    "scripts/run_local_split.py": "9734816a8b28923f1f177983c78e7d655db8c727684254d9a597cc2397da3273",
+    "scripts/hardware_profile.py": "497d25545a42d7129cd2024d99539b8734642075f6ec53d737e33c29d1fc6c9b",
+    "scripts/run_with_resources.py": "4ee83444158e6b8f5ebf289c9c259ce9f78fc5f211f9b6b35e1050203dfe6a76"
+  },
+  "recovery": "resume local transaction; rebuild from sources if local lost before durable staging"
+}

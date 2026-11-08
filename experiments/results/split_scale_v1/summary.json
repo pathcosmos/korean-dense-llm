@@ -1,0 +1,31 @@
+{
+  "status": "bounded_synthetic_verified",
+  "cases": [
+    {
+      "documents": 10000,
+      "build_seconds": 4.092220605816692,
+      "verification_seconds": 1.6057393469382077,
+      "documents_per_second": 2443.6610249667324,
+      "database_bytes": 8101888,
+      "counts": {
+        "eval": 974,
+        "train": 9026
+      },
+      "contract_id": "b30f59a610f483a0d1218787e6c4c0cf4db175b84066fae1bdfd9bc2b8b5f258"
+    },
+    {
+      "documents": 100000,
+      "build_seconds": 116.7620441110339,
+      "verification_seconds": 12.906585479853675,
+      "documents_per_second": 856.4426972938726,
+      "database_bytes": 81776640,
+      "counts": {
+        "eval": 9897,
+        "train": 90103
+      },
+      "contract_id": "5b5e4ad65320810c7baa49c819b49b942dc02e13375f26773f981a87456ce424"
+    }
+  ],
+  "scope": "Short synthetic text, repository groups and cross-source duplicates. Not real corpus throughput or full-scale storage validation.",
+  "code_sha256": "f5c6b6a7ce2f6f9828609cd96612832a45ef360587a6dbaf54756ec713056ba6"
+}

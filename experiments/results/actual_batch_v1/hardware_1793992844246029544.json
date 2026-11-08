@@ -1,0 +1,165 @@
+{
+  "utc": "2026-11-06T19:20:42.656657+00:00",
+  "cpu": {
+    "affinity": [
+      64,
+      65,
+      66,
+      67,
+      68,
+      69,
+      70,
+      71,
+      72,
+      73,
+      74,
+      75,
+      76,
+      77,
+      78,
+      79,
+      80,
+      81,
+      82,
+      83,
+      84,
+      85,
+      86,
+      87,
+      88,
+      89,
+      90,
+      91,
+      92,
+      93,
+      94,
+      95
+    ],
+    "effective": 32.0,
+    "quota": "max 100000"
+  },
+  "memory": {
+    "limit_bytes": 2061584302080,
+    "current_bytes": 1273642012672,
+    "file_cache_bytes": 1131045068800,
+    "reserve_bytes": 137438953472,
+    "conservative_headroom_gib": 605.828441619873
+  },
+  "gpus": [
+    "0, NVIDIA H200, 143771",
+    "1, NVIDIA H200, 143771",
+    "2, NVIDIA H200, 143771",
+    "3, NVIDIA H200, 143771",
+    "4, NVIDIA H200, 143771",
+    "5, NVIDIA H200, 143771",
+    "6, NVIDIA H200, 143771",
+    "7, NVIDIA H200, 143771"
+  ],
+  "storage": {
+    "project": {
+      "path": "${PROJECT_ROOT}",
+      "fstype": "nfs",
+      "target": "${PRIVATE_PATH}",
+      "device": 49,
+      "total_bytes": 2000000024576,
+      "free_bytes": 866665824256,
+      "network": true
+    },
+    "scratch_parent": {
+      "path": "${LOCAL_SCRATCH}",
+      "fstype": "overlay",
+      "target": "/",
+      "device": 66,
+      "total_bytes": 3148091097088,
+      "free_bytes": 2593431465984,
+      "network": false
+    },
+    "scratch_dir": "${LOCAL_SCRATCH}"
+  },
+  "presets": {
+    "cpu_effective": 32.0,
+    "reserved_cpu": 4,
+    "launch_permitted": true,
+    "minimum_memory_headroom_gib": 4,
+    "stages": {
+      "cpu-prep": {
+        "start_workers": 7,
+        "max_workers": 14,
+        "arrow_threads": 2,
+        "env": {
+          "OMP_NUM_THREADS": "1",
+          "NUMEXPR_NUM_THREADS": "2",
+          "RAYON_NUM_THREADS": "1"
+        },
+        "job_memory_budget_gib": 454.3713312149048,
+        "worker_candidates": [
+          4,
+          8,
+          16,
+          32
+        ]
+      },
+      "tokenization": {
+        "start_workers": 3,
+        "max_workers": 4,
+        "arrow_threads": 2,
+        "env": {
+          "OMP_NUM_THREADS": "1",
+          "NUMEXPR_NUM_THREADS": "2",
+          "RAYON_NUM_THREADS": "5",
+          "TOKENIZERS_PARALLELISM": "true"
+        },
+        "job_memory_budget_gib": 256
+      },
+      "tokenizer-train": {
+        "start_workers": 1,
+        "max_workers": 1,
+        "arrow_threads": 8,
+        "env": {
+          "OMP_NUM_THREADS": "2",
+          "NUMEXPR_NUM_THREADS": "2",
+          "RAYON_NUM_THREADS": "28",
+          "TOKENIZERS_PARALLELISM": "true"
+        },
+        "job_memory_budget_gib": 454.3713312149048,
+        "rayon_candidates": [
+          8,
+          16,
+          32,
+          64
+        ]
+      },
+      "sqlite": {
+        "start_workers": 1,
+        "max_workers": 1,
+        "arrow_threads": 4,
+        "env": {
+          "OMP_NUM_THREADS": "2",
+          "NUMEXPR_NUM_THREADS": "2"
+        },
+        "validated_cache_mib": 131072,
+        "validated_cache_candidates_mib": [
+          512,
+          8192,
+          131072
+        ],
+        "hash_workers": 28,
+        "candidate_note": "3M same-input cache sweep verified logical identity; 128GiB is a capacity ceiling for the estimated100GiB full DB, not proof of full-scale speed or resident128GiB usage. Use fresh RSS headroom and runtime guards.",
+        "job_memory_budget_gib": 384
+      },
+      "gpu": {
+        "start_workers": 1,
+        "max_workers": 1,
+        "arrow_threads": 4,
+        "env": {
+          "OMP_NUM_THREADS": "2",
+          "NUMEXPR_NUM_THREADS": "2",
+          "TORCHINDUCTOR_COMPILE_THREADS": "3"
+        },
+        "job_memory_budget_gib": 256,
+        "gpu_policy": "Use available required GPUs for compatible kernels/training. Eight-GPU main training still requires user confirmation and numerical gates."
+      }
+    }
+  },
+  "policy": "Measured-container limits, not host core counts. Current memory includes reclaimable file cache. No global kernel/mount/GPU clock changes. Worker and memory budgets are planning values, not automatically enforced by arbitrary child commands."
+}

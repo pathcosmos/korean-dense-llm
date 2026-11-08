@@ -1,0 +1,312 @@
+{
+  "status": "passed_actual_monitored_3b",
+  "counts": {
+    "contract_id": "8e47dc2bcce3d3d119c0c30af6361dcd24300a6ece63c8f41d6e547f1d434db3",
+    "source_tokens": {
+      "wiki_ko": 61440,
+      "fineweb2_ko": 2441216,
+      "hplt_ko": 1662976,
+      "fineweb_edu": 2490368,
+      "github_code_v1": 876544,
+      "owm": 856064
+    },
+    "source_fractions": {
+      "wiki_ko": 0.00732421875,
+      "fineweb2_ko": 0.291015625,
+      "hplt_ko": 0.1982421875,
+      "fineweb_edu": 0.296875,
+      "github_code_v1": 0.1044921875,
+      "owm": 0.10205078125
+    },
+    "committed_tokens": 8388608,
+    "attempted_committed_tokens_including_replays": 8388608,
+    "replayed_tokens": 0,
+    "generation_sha256_by_step": {
+      "2": "e37c379fb77269c24f06108cbceea3185587b4d1889649e12aaa8ca48b0cc41b",
+      "4": "11ce40d0f4a0133822c2c86e5d7da7b37ca450d630389bc08e82805e9c4a1815"
+    },
+    "scope": "Exact source counts of unique optimizer-committed step/rank batches; replayed successful updates counted separately."
+  },
+  "curves": {
+    "train_points": 4,
+    "eval_points": 2,
+    "trained_tokens": 8388608,
+    "early_median_loss": null,
+    "late_median_loss": null,
+    "loss_decreased": null,
+    "first_source_losses": {
+      "wiki_ko": 11.604377999901772,
+      "fineweb2_ko": 11.632120341062546,
+      "hplt_ko": 11.54437243938446,
+      "fineweb_edu": 11.55145289003849,
+      "owm": 11.595358490943909,
+      "github_code_v1": 11.637907966971397
+    },
+    "last_source_losses": {
+      "wiki_ko": 11.313242390751839,
+      "fineweb2_ko": 11.431628346443176,
+      "hplt_ko": 11.214829310774803,
+      "fineweb_edu": 11.179314911365509,
+      "owm": 11.290713354945183,
+      "github_code_v1": 11.48391868174076
+    },
+    "first_category_losses": {
+      "ko": 11.593623593449593,
+      "en": 11.55145289003849,
+      "math": 11.595358490943909,
+      "code": 11.637907966971397
+    },
+    "last_category_losses": {
+      "ko": 11.319900015989939,
+      "en": 11.179314911365509,
+      "math": 11.290713354945183,
+      "code": 11.48391868174076
+    },
+    "max_gradient_norm": 3.623058319091797,
+    "generation_sha256_by_step": {
+      "2": "e37c379fb77269c24f06108cbceea3185587b4d1889649e12aaa8ca48b0cc41b",
+      "4": "11ce40d0f4a0133822c2c86e5d7da7b37ca450d630389bc08e82805e9c4a1815"
+    },
+    "scope": "Actual effective update/source curves. Logged first interval after resume and intervals containing eval/save are not steady-state performance."
+  },
+  "checkpoint_certificates": {
+    "ckpt_0000002": {
+      "status": "passed_actual_checkpoint_storage",
+      "checkpoint": "${LOCAL_SCRATCH}",
+      "step": 2,
+      "training_contract_id": "8e47dc2bcce3d3d119c0c30af6361dcd24300a6ece63c8f41d6e547f1d434db3",
+      "files": [
+        {
+          "path": ".complete",
+          "bytes": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "path": ".metadata",
+          "bytes": 1236880,
+          "sha256": "7abce71387ff9d5c2b671df3cc15a9bee508fb844045dd20d1b4a5d86a2c7c0f"
+        },
+        {
+          "path": "__0_0.distcp",
+          "bytes": 4833154269,
+          "sha256": "e305370d034075bfa9a3d879d53fdbcc6477fd17156a65396c8d31291d6e77e9"
+        },
+        {
+          "path": "__1_0.distcp",
+          "bytes": 4833209132,
+          "sha256": "9993e362013f9ee2c33891cf423ee394167beeccac87261a3d0b67ad49a12d2c"
+        },
+        {
+          "path": "__2_0.distcp",
+          "bytes": 4833206279,
+          "sha256": "76b7b85d03f17218a895da11c633aca0131a56176d11b37d75eaafd21a37a63b"
+        },
+        {
+          "path": "__3_0.distcp",
+          "bytes": 4833206279,
+          "sha256": "a5888b88688d62fcd3f17c8cd576239b4b7b75270da046381861675e0f720008"
+        },
+        {
+          "path": "__4_0.distcp",
+          "bytes": 4833209146,
+          "sha256": "ff1a6cb10b91c0730cbb92bd9782a71a3f1ded0163be357099e8e09a9648ff6e"
+        },
+        {
+          "path": "__5_0.distcp",
+          "bytes": 4833209146,
+          "sha256": "205acd8b266702931e9ceef3f264048027c15d7b2ac7d8d239ac0becdc04c611"
+        },
+        {
+          "path": "__6_0.distcp",
+          "bytes": 4833209146,
+          "sha256": "8cd27f24ef539ca3ae218a1dd3ca0facc024424cff6f713ed5cb7d673a779f86"
+        },
+        {
+          "path": "__7_0.distcp",
+          "bytes": 4833215098,
+          "sha256": "b823e08a2b61cf492fffb97ab53ac467dc3b3fc502f6d22595ed8d11dc2419f8"
+        },
+        {
+          "path": "meta.json",
+          "bytes": 274565,
+          "sha256": "f2f645a26570ba7f0ee5635c7d245ac76f5ea2f85659417ec2c30943f69da045"
+        },
+        {
+          "path": "rng_rank0.pt",
+          "bytes": 6699,
+          "sha256": "5eeae8fa569098b47bc7cfb9ec6fcdd212aa7efd0d5d05b4a65d229350f8b542"
+        },
+        {
+          "path": "rng_rank1.pt",
+          "bytes": 6699,
+          "sha256": "fee1ca983d104da4d524fe5cc3805047916ee3366ebfd017fae1e1b5903ba2e9"
+        },
+        {
+          "path": "rng_rank2.pt",
+          "bytes": 6699,
+          "sha256": "c7df9d6f8ab2c36ef64be162b5aecea6b3954b50139df00ed30e2df8e5f5a62b"
+        },
+        {
+          "path": "rng_rank3.pt",
+          "bytes": 6699,
+          "sha256": "c033c18f4fd4d3bb00bd7d95e6897ac018b128b1cbfa437f75cc4d6c884abbbd"
+        },
+        {
+          "path": "rng_rank4.pt",
+          "bytes": 6699,
+          "sha256": "6ab4739ef458236770347678c86236763ab683e3b88afa5e552705d5e53674ce"
+        },
+        {
+          "path": "rng_rank5.pt",
+          "bytes": 6699,
+          "sha256": "c49819a50df600c1f8484dbf58fedc258fd0239c8dbe0d1ffff29e3fa006d01d"
+        },
+        {
+          "path": "rng_rank6.pt",
+          "bytes": 6699,
+          "sha256": "a99b6cce5a2b1adc28581eb636c478f80b95bdb2e2d4c7815a94bb68909ffb93"
+        },
+        {
+          "path": "rng_rank7.pt",
+          "bytes": 6699,
+          "sha256": "5e82d432cb0a37fe4190751aff2b97650e770f4e2c5fa6a3e395537dfda22b05"
+        }
+      ],
+      "bytes": 38667183532,
+      "scope": "Local bounded3B monitoring integration checkpoint; not a production checkpoint."
+    },
+    "ckpt_0000004": {
+      "status": "passed_actual_checkpoint_storage",
+      "checkpoint": "${LOCAL_SCRATCH}",
+      "step": 4,
+      "training_contract_id": "8e47dc2bcce3d3d119c0c30af6361dcd24300a6ece63c8f41d6e547f1d434db3",
+      "files": [
+        {
+          "path": ".complete",
+          "bytes": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "path": ".metadata",
+          "bytes": 1236880,
+          "sha256": "3f3b3256eb2b7178007ec738f2e2df4dbe3b234de1b3d4f989715130bbc1dd6c"
+        },
+        {
+          "path": "__0_0.distcp",
+          "bytes": 4833154269,
+          "sha256": "5ef71f59d3423ed6d4c631b2075733760617781aa23d430e955ba15c2af94ee0"
+        },
+        {
+          "path": "__1_0.distcp",
+          "bytes": 4833209132,
+          "sha256": "e3d877e42923486cd1b64421cf36805196c0cd605680ac6bd75a580745191368"
+        },
+        {
+          "path": "__2_0.distcp",
+          "bytes": 4833206279,
+          "sha256": "89a6c1b3994a379068222973f4bd8ebf3143846adf0b8dad114baf7a5db0e6a2"
+        },
+        {
+          "path": "__3_0.distcp",
+          "bytes": 4833206279,
+          "sha256": "a726dfb961c4a21f20ed4b38d130ad15df779fd7b0d4a2fa715400f26ab9e9c1"
+        },
+        {
+          "path": "__4_0.distcp",
+          "bytes": 4833209146,
+          "sha256": "aec8d52de61b3a26582dc5040f92bd52350f394b7caf49efa205ca6cc9c483eb"
+        },
+        {
+          "path": "__5_0.distcp",
+          "bytes": 4833209146,
+          "sha256": "7cd1b021477612588c4b31e08d9324af762f05dd4d91e60687527124e1ff27aa"
+        },
+        {
+          "path": "__6_0.distcp",
+          "bytes": 4833209146,
+          "sha256": "e968cc2546990a11c8c4978c27fffedf6e370f98562532b01237ecb1c2b3e8bb"
+        },
+        {
+          "path": "__7_0.distcp",
+          "bytes": 4833215098,
+          "sha256": "dd966fad43587739802cb75e07ce7237a223a4a29eed0d1d872d83e6e0d773b3"
+        },
+        {
+          "path": "meta.json",
+          "bytes": 274568,
+          "sha256": "f8d9d08f651a838f929de515439dedecedbaa34b23243f9738808ffb5a227f73"
+        },
+        {
+          "path": "rng_rank0.pt",
+          "bytes": 6699,
+          "sha256": "5eeae8fa569098b47bc7cfb9ec6fcdd212aa7efd0d5d05b4a65d229350f8b542"
+        },
+        {
+          "path": "rng_rank1.pt",
+          "bytes": 6699,
+          "sha256": "fee1ca983d104da4d524fe5cc3805047916ee3366ebfd017fae1e1b5903ba2e9"
+        },
+        {
+          "path": "rng_rank2.pt",
+          "bytes": 6699,
+          "sha256": "c7df9d6f8ab2c36ef64be162b5aecea6b3954b50139df00ed30e2df8e5f5a62b"
+        },
+        {
+          "path": "rng_rank3.pt",
+          "bytes": 6699,
+          "sha256": "c033c18f4fd4d3bb00bd7d95e6897ac018b128b1cbfa437f75cc4d6c884abbbd"
+        },
+        {
+          "path": "rng_rank4.pt",
+          "bytes": 6699,
+          "sha256": "6ab4739ef458236770347678c86236763ab683e3b88afa5e552705d5e53674ce"
+        },
+        {
+          "path": "rng_rank5.pt",
+          "bytes": 6699,
+          "sha256": "c49819a50df600c1f8484dbf58fedc258fd0239c8dbe0d1ffff29e3fa006d01d"
+        },
+        {
+          "path": "rng_rank6.pt",
+          "bytes": 6699,
+          "sha256": "a99b6cce5a2b1adc28581eb636c478f80b95bdb2e2d4c7815a94bb68909ffb93"
+        },
+        {
+          "path": "rng_rank7.pt",
+          "bytes": 6699,
+          "sha256": "5e82d432cb0a37fe4190751aff2b97650e770f4e2c5fa6a3e395537dfda22b05"
+        }
+      ],
+      "bytes": 38667183535,
+      "scope": "Local bounded3B monitoring integration checkpoint; not a production checkpoint."
+    }
+  },
+  "elapsed_seconds": 26966.632668945007,
+  "peak_host_rss_bytes": 32758644736,
+  "evidence": {
+    "/tmp/llm-dense-d7135f5715/monitored_3b_validation_v1/training/log.jsonl": "964bbf9ad05fa6e49ac40bfc9481a21227d19b423c187beb69e7117fe59c647a",
+    "/tmp/llm-dense-d7135f5715/monitored_3b_validation_v1/training/training_contract.json": "a8434fa162c61b00ae17cf658124f2342193c512e4883410af985a45daa48fe5",
+    "runs/monitored_3b_validation_v1/ledgers/early-1794029728597944021-rank5.json": "75dc8d485135c292aa3d863b9b1a9ff100636ea5588fd9bc2115c0116d36daa5",
+    "runs/monitored_3b_validation_v1/ledgers/early-1794029728597944021-rank0.json": "4ba45cbc6f08bc41e591b1e5123fb545fedf2fd1e0572c55dda2169008eabc62",
+    "runs/monitored_3b_validation_v1/ledgers/early-1794029728597944021-rank1.json": "bee920a8022b5e477aa7daa45271020db5adfdd000e512934527e5166d97dcf4",
+    "runs/monitored_3b_validation_v1/ledgers/early-1794029728597944021-rank2.json": "2cb35e4d8d23f4611ac83bbdf464e6c7cf0015260398cd8ede0f388dbc0fe77d",
+    "runs/monitored_3b_validation_v1/ledgers/early-1794029728597944021-rank7.json": "4d424c6751e2b46cf751f5dcb30dab309bb91b5850a4307f1a4f8e92862d4709",
+    "runs/monitored_3b_validation_v1/ledgers/early-1794029728597944021-rank6.json": "137940d9acf92823850bbf7f1d226591b79244c4e8b02d69c60595b2a4ca0e31",
+    "runs/monitored_3b_validation_v1/ledgers/early-1794029728597944021-rank3.json": "eb1dba8ae67455472610373dae18bd0280f64b919987e4b42869936264465cf9",
+    "runs/monitored_3b_validation_v1/ledgers/early-1794029728597944021-rank4.json": "258efdb8927444a053ba64a3dfa9cd717b357aeb18647297d7c4cc7af3227491",
+    "runs/monitored_3b_validation_v1/ledgers/main-1794029836333467667-rank0.json": "3dbe0968ff0bcd5cc84c65011c8376ac54ab0aa6c6e662d23f6cc1bb11125b9d",
+    "runs/monitored_3b_validation_v1/ledgers/main-1794029836333467667-rank4.json": "51ecdade819a738eca4a18880b57cd346ac2fa188217dacfabe3c2b445ed86e1",
+    "runs/monitored_3b_validation_v1/ledgers/main-1794029836333467667-rank7.json": "5fd814e3dfa5c58b85f395bbbdba14e6eeb4d381d23b31f43e654f05c372abac",
+    "runs/monitored_3b_validation_v1/ledgers/main-1794029836333467667-rank5.json": "e72db67c019e0b6dbba301e44fcdae1a11d9129233d06c361e98ab0b86a46525",
+    "runs/monitored_3b_validation_v1/ledgers/main-1794029836333467667-rank1.json": "7f5c3b9f81037e79ed8f552f7f82d7c91c4e10f1ae750416d5310b85d926ba03",
+    "runs/monitored_3b_validation_v1/ledgers/main-1794029836333467667-rank6.json": "1a81aeb6ec2e4a830192d48b7a70a4a4556a0f27f8b15cf234805fc302adedc0",
+    "runs/monitored_3b_validation_v1/ledgers/main-1794029836333467667-rank2.json": "ee48c9e40bf153c32f35c42468ac1b11ba6dc5a1b8728c163c2256f236ced763",
+    "runs/monitored_3b_validation_v1/ledgers/main-1794029836333467667-rank3.json": "55690981e207af9c3eb74dacc06fe4bd21204ca5b886030b2ef92a0321bc52fc",
+    "runs/monitored_3b_validation_v1/checkpoint_certificates/ckpt_0000002.json": "505ea14fe4bbdbe5eef2e8fedf78dac007b687c812cd631907b7a1b4fca7f21a",
+    "runs/monitored_3b_validation_v1/checkpoint_certificates/ckpt_0000004.json": "1fe43e0381836cef6c0c48963e1864b6962b529ad9d239c4e3e541682df6b78e"
+  },
+  "actual_local_bytes": 77334654123,
+  "actual_durable_bytes": 195157,
+  "scope": "Actual3B source/gen/checkpoint/resume monitoring integration only4updates; preserves all outputs locally. Main training remains unauthorized.",
+  "limitation": "Monitoring hooks actual3B early2/resume4 verified; core exact model/optimizer/RNG resume is separate F7 evidence. No long3B convergence or main training performed."
+}

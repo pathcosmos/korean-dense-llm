@@ -1,0 +1,45 @@
+{
+  "status": "passed_actual_checkpoint_copy_and_cpu_state_restore",
+  "worker_comparison": [
+    {
+      "workers": 4,
+      "copy_seconds": 5.037870374973863,
+      "destination_verify_fsync_seconds": 1.450730737997219,
+      "total_seconds": 6.488602263154462,
+      "bytes": 12347362448,
+      "output": "${LOCAL_SCRATCH}"
+    },
+    {
+      "workers": 8,
+      "copy_seconds": 4.066269773989916,
+      "destination_verify_fsync_seconds": 1.424617197131738,
+      "total_seconds": 5.490888049127534,
+      "bytes": 12347362448,
+      "output": "${LOCAL_SCRATCH}"
+    }
+  ],
+  "selected_copy_workers": 8,
+  "worker_selection_scope": "One actual1B copy per candidate, not a universal optimum",
+  "actual3b_copy": {
+    "copy_seconds": 12.62124544614926,
+    "destination_verify_fsync_seconds": 4.11089229490608,
+    "total_seconds": 16.732138337101787,
+    "bytes": 38666920859
+  },
+  "actual3b_output": "${LOCAL_SCRATCH}",
+  "cpu_restored_tensors": 1020,
+  "cpu_restored_elements": 9664201983,
+  "model_tensors": 255,
+  "optimizer_tensors": 765,
+  "cpu_state_exact": true,
+  "all8_original_cpu_cuda_rng_exact": true,
+  "cpu_restore_seconds": 37.21252563595772,
+  "actual_peak_rss_bytes": 78369423360,
+  "local_output_bytes": 63361645755,
+  "elapsed_seconds": 65.99621141585521,
+  "evidence": {
+    "runs/1b_rehearsal_final_v3/checkpoint_certificates/ckpt_0001000.json": "2f6ed19ae8e4a3477f47471ccdb931f68a9671fe35a7aaace8047fccc266f539",
+    "runs/actual_train_validation_v1/3b_validated_checkpoint/publication.json": "e5d3e49aa31a4e187fa9179a6c05015933b1fbf49b4cf2c5a40c8f4b04b8dc64"
+  },
+  "scope": "Full actual3B CPU state equality and all original rank RNG; not a new8GPU optimizer-update/resume validation or25 full-size checkpoint endurance test. Source deletion0, external upload0, main launch0. Experimental copies preserved."
+}

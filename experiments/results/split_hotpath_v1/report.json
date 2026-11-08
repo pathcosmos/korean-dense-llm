@@ -1,0 +1,26 @@
+{
+  "status": "measurement_complete",
+  "build_seconds": 283.5599600658752,
+  "verify_seconds": 21.32667995803058,
+  "build_and_verify_seconds": 304.8866400239058,
+  "counts": {
+    "eval": 301351,
+    "train": 2698649
+  },
+  "logical_rows": 3000000,
+  "logical_sha256": "da7e3cf699bc86f86bbe61b5d5c5f32027f8b09cc0b323a813169d68244003c2",
+  "max_rss_kib": 3216640,
+  "phase_first_seconds": {
+    "verify_source:web": 0.0002886459697037935,
+    "verify_source:code": 0.012471921974793077,
+    "ingest_pending": 0.042601082008332014,
+    "ingest": 0.04422999685630202,
+    "assign": 183.96601345506497,
+    "finalize_pending": 261.87886526901275,
+    "finalize": 263.4439311828464,
+    "publish_db": 281.4720853988547,
+    "publish_report": 283.55022477102466
+  },
+  "manifest_sha256": "12c4d4e58f2f768827c8eecbbcacfe24973a8a7576fa1efad4be3bbb1513a55a",
+  "scope": "Avoid repeated identical NFC union/find only; raw/code grouping unchanged. Shared host comparison to cache sweep, not production adoption."
+}

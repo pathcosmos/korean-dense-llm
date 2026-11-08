@@ -1,0 +1,273 @@
+{
+  "status": "passed_bounded_actual_training",
+  "scope": "Actual final-tokenizer whole-file pilot; deterministic eager four-step selected-batch finite/eval/checkpoint/RNG/resume checks only. Not main training.",
+  "results": [
+    {
+      "model": "1b",
+      "trajectory": {
+        "loss_max_abs": 0.0,
+        "updates": 4,
+        "scope": "Fixed eager four-step resume trajectory; logged tok_s includes prior eval/checkpoint time and is not a steady-state throughput benchmark."
+      },
+      "checkpoint_comparison": {
+        "tensors": 657,
+        "max_abs": 0.0,
+        "exact": true
+      },
+      "published_checkpoint": {
+        "path": "runs/actual_train_validation_v1/1b_validated_checkpoint",
+        "bytes": 12347096835,
+        "publication_sha256": "a8c6825db055839ac7d6758f210859c2a8c76d25abaad32d1abc1a3697c00827"
+      },
+      "uneven_evaluation": [
+        [
+          {
+            "count": 1,
+            "reference_error": 0.0,
+            "holdout_loss": 13.49632453918457,
+            "nll_sum": 55280.9453125,
+            "valid_tokens": 4096,
+            "windows": 1,
+            "forwards_per_rank": 1
+          },
+          {
+            "count": 7,
+            "reference_error": 0.0,
+            "holdout_loss": 13.775762149265834,
+            "nll_sum": 394978.65234375,
+            "valid_tokens": 28672,
+            "windows": 7,
+            "forwards_per_rank": 1
+          },
+          {
+            "count": 9,
+            "reference_error": 0.0,
+            "holdout_loss": 13.74369388156467,
+            "nll_sum": 506647.53125,
+            "valid_tokens": 36864,
+            "windows": 9,
+            "forwards_per_rank": 2
+          }
+        ],
+        [
+          {
+            "count": 1,
+            "reference_error": 0.0,
+            "holdout_loss": 12.192548751831055,
+            "nll_sum": 49940.6796875,
+            "valid_tokens": 4096,
+            "windows": 1,
+            "forwards_per_rank": 1
+          },
+          {
+            "count": 7,
+            "reference_error": 0.0,
+            "holdout_loss": 11.894156319754464,
+            "nll_sum": 341029.25,
+            "valid_tokens": 28672,
+            "windows": 7,
+            "forwards_per_rank": 1
+          },
+          {
+            "count": 9,
+            "reference_error": 0.0,
+            "holdout_loss": 11.875524308946398,
+            "nll_sum": 437779.328125,
+            "valid_tokens": 36864,
+            "windows": 9,
+            "forwards_per_rank": 2
+          }
+        ]
+      ],
+      "local_checkpoint_directory": "${LOCAL_SCRATCH}"
+    },
+    {
+      "model": "3b",
+      "trajectory": {
+        "loss_max_abs": 0.0,
+        "updates": 4,
+        "scope": "Fixed eager four-step resume trajectory; logged tok_s includes prior eval/checkpoint time and is not a steady-state throughput benchmark."
+      },
+      "checkpoint_comparison": {
+        "tensors": 1020,
+        "max_abs": 0.0,
+        "exact": true
+      },
+      "published_checkpoint": {
+        "path": "runs/actual_train_validation_v1/3b_validated_checkpoint",
+        "bytes": 38666917916,
+        "publication_sha256": "e5d3e49aa31a4e187fa9179a6c05015933b1fbf49b4cf2c5a40c8f4b04b8dc64"
+      },
+      "uneven_evaluation": [
+        [
+          {
+            "count": 1,
+            "reference_error": 0.0,
+            "holdout_loss": 13.87719440460205,
+            "nll_sum": 56840.98828125,
+            "valid_tokens": 4096,
+            "windows": 1,
+            "forwards_per_rank": 1
+          },
+          {
+            "count": 7,
+            "reference_error": 0.0,
+            "holdout_loss": 14.14478519984654,
+            "nll_sum": 405559.28125,
+            "valid_tokens": 28672,
+            "windows": 7,
+            "forwards_per_rank": 1
+          },
+          {
+            "count": 9,
+            "reference_error": 0.0,
+            "holdout_loss": 14.684706899854872,
+            "nll_sum": 541337.03515625,
+            "valid_tokens": 36864,
+            "windows": 9,
+            "forwards_per_rank": 2
+          }
+        ],
+        [
+          {
+            "count": 1,
+            "reference_error": 0.0,
+            "holdout_loss": 15.549385070800781,
+            "nll_sum": 63690.28125,
+            "valid_tokens": 4096,
+            "windows": 1,
+            "forwards_per_rank": 1
+          },
+          {
+            "count": 7,
+            "reference_error": 0.0,
+            "holdout_loss": 15.508112907409668,
+            "nll_sum": 444648.61328125,
+            "valid_tokens": 28672,
+            "windows": 7,
+            "forwards_per_rank": 1
+          },
+          {
+            "count": 9,
+            "reference_error": 0.0,
+            "holdout_loss": 15.618213229709202,
+            "nll_sum": 575749.8125,
+            "valid_tokens": 36864,
+            "windows": 9,
+            "forwards_per_rank": 2
+          }
+        ]
+      ],
+      "local_checkpoint_directory": "${LOCAL_SCRATCH}"
+    }
+  ],
+  "cases": [
+    {
+      "case": "1b_continuous",
+      "returncode": 0,
+      "elapsed_seconds": 60.42374480003491,
+      "peak_rss_bytes": 21916708864,
+      "expected_error": null
+    },
+    {
+      "case": "1b_stop_at2",
+      "returncode": 0,
+      "elapsed_seconds": 42.37905357615091,
+      "peak_rss_bytes": 21590880256,
+      "expected_error": null
+    },
+    {
+      "case": "1b_resume",
+      "returncode": 0,
+      "elapsed_seconds": 44.704770429991186,
+      "peak_rss_bytes": 21831487488,
+      "expected_error": null
+    },
+    {
+      "case": "1b_checkpoint_compare",
+      "returncode": 0,
+      "elapsed_seconds": 149.78233183501288,
+      "peak_rss_bytes": 34590093312,
+      "expected_error": null
+    },
+    {
+      "case": "1b_reject_changed_tokenizer",
+      "returncode": 1,
+      "elapsed_seconds": 20.20689598401077,
+      "peak_rss_bytes": 10122129408,
+      "expected_error": "Training identity mismatch"
+    },
+    {
+      "case": "1b_nan_loss",
+      "returncode": 0,
+      "elapsed_seconds": 34.38471227604896,
+      "peak_rss_bytes": 21697699840,
+      "expected_error": null
+    },
+    {
+      "case": "1b_nan_gradient",
+      "returncode": 0,
+      "elapsed_seconds": 40.510665144072846,
+      "peak_rss_bytes": 21767000064,
+      "expected_error": null
+    },
+    {
+      "case": "3b_continuous",
+      "returncode": 0,
+      "elapsed_seconds": 121.87410468794405,
+      "peak_rss_bytes": 30063652864,
+      "expected_error": null
+    },
+    {
+      "case": "3b_stop_at2",
+      "returncode": 0,
+      "elapsed_seconds": 75.17776713799685,
+      "peak_rss_bytes": 29608828928,
+      "expected_error": null
+    },
+    {
+      "case": "3b_resume",
+      "returncode": 0,
+      "elapsed_seconds": 77.3781738190446,
+      "peak_rss_bytes": 30027628544,
+      "expected_error": null
+    },
+    {
+      "case": "3b_checkpoint_compare",
+      "returncode": 0,
+      "elapsed_seconds": 485.83788654301316,
+      "peak_rss_bytes": 121340313600,
+      "expected_error": null
+    },
+    {
+      "case": "3b_reject_changed_tokenizer",
+      "returncode": 1,
+      "elapsed_seconds": 20.380456833168864,
+      "peak_rss_bytes": 10100449280,
+      "expected_error": "Training identity mismatch"
+    },
+    {
+      "case": "3b_nan_loss",
+      "returncode": 0,
+      "elapsed_seconds": 57.10649174498394,
+      "peak_rss_bytes": 29634523136,
+      "expected_error": null
+    },
+    {
+      "case": "3b_nan_gradient",
+      "returncode": 0,
+      "elapsed_seconds": 71.39571802294813,
+      "peak_rss_bytes": 29784944640,
+      "expected_error": null
+    }
+  ],
+  "elapsed_seconds": 1520.4221087570768,
+  "actual_local_bytes": 408079959408,
+  "actual_durable_bytes": 51014078376,
+  "remaining": [
+    "Actual full-mix input verification",
+    "Native ko/en full-coverage PPL and fixed generation",
+    "1B10B-token rehearsal",
+    "Final pretraining readiness review"
+  ]
+}

@@ -1,0 +1,30 @@
+{
+  "status": "measurement_complete_optimization_candidates",
+  "summary_sha256": "4fa6508dbc3c123c6410aa594109b38fab1a279211e3b048f53641c6b954234f",
+  "gains_percent": {
+    "compile_1b_b2": 31.290885097982056,
+    "compile_3b_b2": 22.95590706565762,
+    "batch_2_to_4_compiled_3b": 7.1387768355808845,
+    "combined_3b": 31.733454877239154
+  },
+  "candidate": {
+    "model": "3b",
+    "compile": true,
+    "micro_bsz": 4,
+    "seq_len": 4096,
+    "global_tokens_measured": 131072
+  },
+  "not_production_approved": true,
+  "limitations": [
+    "Single short synthetic run per configuration, 40 steps / discard first 10; shared host source audit active",
+    "Model convergence/quality not measured; repetitive synthetic data",
+    "3B final loss eager/compiled differs: batch2 8.6916/9.0611, batch4 2.5712/1.6354; verify same-weight full-model logits/gradients/one-step updates before adoption",
+    "Microbatch changes sampler inputs; loss across batch sizes is not paired",
+    "Actual token data, global batch ~2M, long run/resume and checkpoint I/O still pending"
+  ],
+  "unmeasured_candidates": [
+    "Pinned host buffers and prefetch for MixSampler -> CUDA, measure benefit before adoption",
+    "Profile per-parameter finite-gradient kernels/collectives; preserve all-rank fail-before-update semantics",
+    "Evaluate cross-entropy/logits memory before fused or chunked changes; preserve loss/gradient equivalence"
+  ]
+}

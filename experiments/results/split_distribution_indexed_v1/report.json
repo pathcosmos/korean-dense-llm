@@ -1,0 +1,514 @@
+{
+  "status": "passed_bounded_distribution",
+  "reference_seconds": 0.7733320230618119,
+  "results": [
+    {
+      "split_contract_id": "0ca6e8decac12c91e8fc677e0a1a6d70dcc2ace015e98c9c6ce520c33b795b19",
+      "source_sha256": "defe09d1dca5d1df7d8195c117c8708dbc4c1dd5e2c7c72da7488961b1ad9513",
+      "split_manifest_sha256": "f7287bbf96f333562bc60f8d9204d99ea747a4bba816f01c24a65c482109e88a",
+      "database": {
+        "path": "runs/next_stage_optimization_v1/prepare/split/split.sqlite",
+        "sha256": "44fa4892e4edab99cd656aed9e5e966f8062ddd84fd39e5b51ecf4b1cfcec362"
+      },
+      "counts": {
+        "train": 119384,
+        "eval": 12921
+      },
+      "sources": {
+        "perf_fineweb2_ko": {
+          "splits": {
+            "train": {
+              "documents": 64701,
+              "groups": 64701
+            },
+            "eval": {
+              "documents": 7082,
+              "groups": 7082
+            }
+          },
+          "largest_components": [
+            {
+              "group_id": "text:ffff3b5828aed1989e1de5030e1e219eb2ff85d63cb513f9d09670136846d902",
+              "documents": 1
+            },
+            {
+              "group_id": "text:fffefea296dfc116edecc71e899d2562d25c075f7835b9be22b8854adb868189",
+              "documents": 1
+            },
+            {
+              "group_id": "text:fffe77fb377055041342b140397225fe0c69fcda6ca176f53b741ee3d6655f82",
+              "documents": 1
+            },
+            {
+              "group_id": "text:fffd8a5b975e152f96d4de9acaa91bc9364ed632a10a07f84c0321a93222f3e5",
+              "documents": 1
+            },
+            {
+              "group_id": "text:fffd48b2755ee42c48bf58124f5ddeada1de700850c48716d5c7aa497a1e93c2",
+              "documents": 1
+            }
+          ],
+          "eval_document_fraction": 0.0986584567376677
+        },
+        "perf_fineweb_edu": {
+          "splits": {
+            "eval": {
+              "documents": 4203,
+              "groups": 4203
+            },
+            "train": {
+              "documents": 39413,
+              "groups": 39413
+            }
+          },
+          "largest_components": [
+            {
+              "group_id": "text:fffef8c5f81c212628f27af9b4373a4d3b96d17a1ed5bdc724ccfcaa5ebbe8af",
+              "documents": 1
+            },
+            {
+              "group_id": "text:fffdcb36fb37af1c516a507030761e70e69982703fb92e6057ffbb630995ea77",
+              "documents": 1
+            },
+            {
+              "group_id": "text:fffd48642185be6905ecf362241b44d82675845f0f91af13ec3ccfc3a479c4fa",
+              "documents": 1
+            },
+            {
+              "group_id": "text:fff9d214c83c5f2897bbe5f04596637a86d1e59bde0454a1c107e7f04d2c80c8",
+              "documents": 1
+            },
+            {
+              "group_id": "text:fff7c60497498500c1684d619ba9651ebec4612eb5ec33f573f9192db195aaec",
+              "documents": 1
+            }
+          ],
+          "eval_document_fraction": 0.09636371973587675
+        },
+        "perf_github_code_v1": {
+          "splits": {
+            "train": {
+              "documents": 8162,
+              "groups": 1025
+            },
+            "eval": {
+              "documents": 816,
+              "groups": 102
+            }
+          },
+          "largest_components": [
+            {
+              "group_id": "repo:perf/repo2_15",
+              "documents": 16
+            },
+            {
+              "group_id": "repo:perf/repo9_92",
+              "documents": 8
+            },
+            {
+              "group_id": "repo:perf/repo9_91",
+              "documents": 8
+            },
+            {
+              "group_id": "repo:perf/repo9_90",
+              "documents": 8
+            },
+            {
+              "group_id": "repo:perf/repo9_9",
+              "documents": 8
+            }
+          ],
+          "eval_document_fraction": 0.09088883938516373
+        },
+        "perf_owm": {
+          "splits": {
+            "train": {
+              "documents": 7108,
+              "groups": 7108
+            },
+            "eval": {
+              "documents": 820,
+              "groups": 820
+            }
+          },
+          "largest_components": [
+            {
+              "group_id": "text:ffff8e263410288f991e2a537989a303a481e0dae8560367877b43308974606c",
+              "documents": 1
+            },
+            {
+              "group_id": "text:ffeb2e18e58e810dc4edf1603fbcf3e4f7cebebf7db2fc1cad0e1510068e6d4d",
+              "documents": 1
+            },
+            {
+              "group_id": "text:ffdd1877ae59672289ced9d133d72b92fef39026d251c86ae8435ed0ae9366d2",
+              "documents": 1
+            },
+            {
+              "group_id": "text:ffd7f049ccd17176731468ec2b276a9ff7a9986a4864c00fc818cc63ded1e01d",
+              "documents": 1
+            },
+            {
+              "group_id": "text:ffd7043095b1c035b1ca203315fdce718195e5fa6ed77aea354da7adca127109",
+              "documents": 1
+            }
+          ],
+          "eval_document_fraction": 0.10343087790111
+        }
+      },
+      "global_groups": 124454,
+      "largest_components": [
+        {
+          "group_id": "repo:perf/repo2_15",
+          "documents": 16,
+          "sources": 1
+        },
+        {
+          "group_id": "repo:perf/repo9_92",
+          "documents": 8,
+          "sources": 1
+        },
+        {
+          "group_id": "repo:perf/repo9_91",
+          "documents": 8,
+          "sources": 1
+        },
+        {
+          "group_id": "repo:perf/repo9_90",
+          "documents": 8,
+          "sources": 1
+        },
+        {
+          "group_id": "repo:perf/repo9_9",
+          "documents": 8,
+          "sources": 1
+        },
+        {
+          "group_id": "repo:perf/repo9_89",
+          "documents": 8,
+          "sources": 1
+        },
+        {
+          "group_id": "repo:perf/repo9_88",
+          "documents": 8,
+          "sources": 1
+        },
+        {
+          "group_id": "repo:perf/repo9_87",
+          "documents": 8,
+          "sources": 1
+        },
+        {
+          "group_id": "repo:perf/repo9_86",
+          "documents": 8,
+          "sources": 1
+        },
+        {
+          "group_id": "repo:perf/repo9_85",
+          "documents": 8,
+          "sources": 1
+        }
+      ],
+      "elapsed_seconds": 17.11768117104657,
+      "workers": 1,
+      "worker_cache_mib": 64,
+      "range_coverage": [
+        [
+          null,
+          "text:0"
+        ],
+        [
+          "text:0",
+          "text:2"
+        ],
+        [
+          "text:2",
+          "text:4"
+        ],
+        [
+          "text:4",
+          "text:6"
+        ],
+        [
+          "text:6",
+          "text:8"
+        ],
+        [
+          "text:8",
+          "text:a"
+        ],
+        [
+          "text:a",
+          "text:c"
+        ],
+        [
+          "text:c",
+          "text:e"
+        ],
+        [
+          "text:e",
+          null
+        ]
+      ],
+      "rows_scanned": 132305,
+      "validation": "Fresh verified parent context; disjoint group ranges; global and per-source row totals rechecked.",
+      "tie_order": "documents descending, then group ID descending",
+      "limitation": "Document/group distribution only; byte/token distribution requires source/token pilot."
+    },
+    {
+      "split_contract_id": "0ca6e8decac12c91e8fc677e0a1a6d70dcc2ace015e98c9c6ce520c33b795b19",
+      "source_sha256": "defe09d1dca5d1df7d8195c117c8708dbc4c1dd5e2c7c72da7488961b1ad9513",
+      "split_manifest_sha256": "f7287bbf96f333562bc60f8d9204d99ea747a4bba816f01c24a65c482109e88a",
+      "database": {
+        "path": "runs/next_stage_optimization_v1/prepare/split/split.sqlite",
+        "sha256": "44fa4892e4edab99cd656aed9e5e966f8062ddd84fd39e5b51ecf4b1cfcec362"
+      },
+      "counts": {
+        "train": 119384,
+        "eval": 12921
+      },
+      "sources": {
+        "perf_fineweb2_ko": {
+          "splits": {
+            "train": {
+              "documents": 64701,
+              "groups": 64701
+            },
+            "eval": {
+              "documents": 7082,
+              "groups": 7082
+            }
+          },
+          "largest_components": [
+            {
+              "group_id": "text:ffff3b5828aed1989e1de5030e1e219eb2ff85d63cb513f9d09670136846d902",
+              "documents": 1
+            },
+            {
+              "group_id": "text:fffefea296dfc116edecc71e899d2562d25c075f7835b9be22b8854adb868189",
+              "documents": 1
+            },
+            {
+              "group_id": "text:fffe77fb377055041342b140397225fe0c69fcda6ca176f53b741ee3d6655f82",
+              "documents": 1
+            },
+            {
+              "group_id": "text:fffd8a5b975e152f96d4de9acaa91bc9364ed632a10a07f84c0321a93222f3e5",
+              "documents": 1
+            },
+            {
+              "group_id": "text:fffd48b2755ee42c48bf58124f5ddeada1de700850c48716d5c7aa497a1e93c2",
+              "documents": 1
+            }
+          ],
+          "eval_document_fraction": 0.0986584567376677
+        },
+        "perf_fineweb_edu": {
+          "splits": {
+            "eval": {
+              "documents": 4203,
+              "groups": 4203
+            },
+            "train": {
+              "documents": 39413,
+              "groups": 39413
+            }
+          },
+          "largest_components": [
+            {
+              "group_id": "text:fffef8c5f81c212628f27af9b4373a4d3b96d17a1ed5bdc724ccfcaa5ebbe8af",
+              "documents": 1
+            },
+            {
+              "group_id": "text:fffdcb36fb37af1c516a507030761e70e69982703fb92e6057ffbb630995ea77",
+              "documents": 1
+            },
+            {
+              "group_id": "text:fffd48642185be6905ecf362241b44d82675845f0f91af13ec3ccfc3a479c4fa",
+              "documents": 1
+            },
+            {
+              "group_id": "text:fff9d214c83c5f2897bbe5f04596637a86d1e59bde0454a1c107e7f04d2c80c8",
+              "documents": 1
+            },
+            {
+              "group_id": "text:fff7c60497498500c1684d619ba9651ebec4612eb5ec33f573f9192db195aaec",
+              "documents": 1
+            }
+          ],
+          "eval_document_fraction": 0.09636371973587675
+        },
+        "perf_github_code_v1": {
+          "splits": {
+            "train": {
+              "documents": 8162,
+              "groups": 1025
+            },
+            "eval": {
+              "documents": 816,
+              "groups": 102
+            }
+          },
+          "largest_components": [
+            {
+              "group_id": "repo:perf/repo2_15",
+              "documents": 16
+            },
+            {
+              "group_id": "repo:perf/repo9_92",
+              "documents": 8
+            },
+            {
+              "group_id": "repo:perf/repo9_91",
+              "documents": 8
+            },
+            {
+              "group_id": "repo:perf/repo9_90",
+              "documents": 8
+            },
+            {
+              "group_id": "repo:perf/repo9_9",
+              "documents": 8
+            }
+          ],
+          "eval_document_fraction": 0.09088883938516373
+        },
+        "perf_owm": {
+          "splits": {
+            "train": {
+              "documents": 7108,
+              "groups": 7108
+            },
+            "eval": {
+              "documents": 820,
+              "groups": 820
+            }
+          },
+          "largest_components": [
+            {
+              "group_id": "text:ffff8e263410288f991e2a537989a303a481e0dae8560367877b43308974606c",
+              "documents": 1
+            },
+            {
+              "group_id": "text:ffeb2e18e58e810dc4edf1603fbcf3e4f7cebebf7db2fc1cad0e1510068e6d4d",
+              "documents": 1
+            },
+            {
+              "group_id": "text:ffdd1877ae59672289ced9d133d72b92fef39026d251c86ae8435ed0ae9366d2",
+              "documents": 1
+            },
+            {
+              "group_id": "text:ffd7f049ccd17176731468ec2b276a9ff7a9986a4864c00fc818cc63ded1e01d",
+              "documents": 1
+            },
+            {
+              "group_id": "text:ffd7043095b1c035b1ca203315fdce718195e5fa6ed77aea354da7adca127109",
+              "documents": 1
+            }
+          ],
+          "eval_document_fraction": 0.10343087790111
+        }
+      },
+      "global_groups": 124454,
+      "largest_components": [
+        {
+          "group_id": "repo:perf/repo2_15",
+          "documents": 16,
+          "sources": 1
+        },
+        {
+          "group_id": "repo:perf/repo9_92",
+          "documents": 8,
+          "sources": 1
+        },
+        {
+          "group_id": "repo:perf/repo9_91",
+          "documents": 8,
+          "sources": 1
+        },
+        {
+          "group_id": "repo:perf/repo9_90",
+          "documents": 8,
+          "sources": 1
+        },
+        {
+          "group_id": "repo:perf/repo9_9",
+          "documents": 8,
+          "sources": 1
+        },
+        {
+          "group_id": "repo:perf/repo9_89",
+          "documents": 8,
+          "sources": 1
+        },
+        {
+          "group_id": "repo:perf/repo9_88",
+          "documents": 8,
+          "sources": 1
+        },
+        {
+          "group_id": "repo:perf/repo9_87",
+          "documents": 8,
+          "sources": 1
+        },
+        {
+          "group_id": "repo:perf/repo9_86",
+          "documents": 8,
+          "sources": 1
+        },
+        {
+          "group_id": "repo:perf/repo9_85",
+          "documents": 8,
+          "sources": 1
+        }
+      ],
+      "elapsed_seconds": 3.2835676791146398,
+      "workers": 8,
+      "worker_cache_mib": 64,
+      "range_coverage": [
+        [
+          null,
+          "text:0"
+        ],
+        [
+          "text:0",
+          "text:2"
+        ],
+        [
+          "text:2",
+          "text:4"
+        ],
+        [
+          "text:4",
+          "text:6"
+        ],
+        [
+          "text:6",
+          "text:8"
+        ],
+        [
+          "text:8",
+          "text:a"
+        ],
+        [
+          "text:a",
+          "text:c"
+        ],
+        [
+          "text:c",
+          "text:e"
+        ],
+        [
+          "text:e",
+          null
+        ]
+      ],
+      "rows_scanned": 132305,
+      "validation": "Fresh verified parent context; disjoint group ranges; global and per-source row totals rechecked.",
+      "tie_order": "documents descending, then group ID descending",
+      "limitation": "Document/group distribution only; byte/token distribution requires source/token pilot."
+    }
+  ],
+  "scope": "Independent completed132k-row fixture only; full-corpus performance unproven.",
+  "production_adoption": "pending"
+}

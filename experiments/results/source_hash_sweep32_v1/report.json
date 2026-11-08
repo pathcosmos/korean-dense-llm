@@ -1,0 +1,49 @@
+{
+  "status": "measurement_complete",
+  "selected_files": 32,
+  "bytes_per_pass": 109703791324,
+  "cases": [
+    {
+      "workers": 16,
+      "seconds": 7.614749384112656,
+      "cpu_seconds": 94.245828245,
+      "gib_per_second": 13.417331579436171,
+      "all_hashes_verified": true,
+      "hashes_identity": "4fc151595e27139a344113db2aee74390ebfcf5a2e8c1eee5702fecc51ff9f91",
+      "cumulative_process_peak_rss_kib": 804608
+    },
+    {
+      "workers": 32,
+      "seconds": 4.460538842016831,
+      "cpu_seconds": 97.980006077,
+      "gib_per_second": 22.905218629314955,
+      "all_hashes_verified": true,
+      "hashes_identity": "4fc151595e27139a344113db2aee74390ebfcf5a2e8c1eee5702fecc51ff9f91",
+      "cumulative_process_peak_rss_kib": 1320704
+    },
+    {
+      "workers": 32,
+      "seconds": 4.334256204776466,
+      "cpu_seconds": 97.39425666400001,
+      "gib_per_second": 23.572583749976115,
+      "all_hashes_verified": true,
+      "hashes_identity": "4fc151595e27139a344113db2aee74390ebfcf5a2e8c1eee5702fecc51ff9f91",
+      "cumulative_process_peak_rss_kib": 1562624
+    },
+    {
+      "workers": 16,
+      "seconds": 7.773672661045566,
+      "cpu_seconds": 94.55170815999998,
+      "gib_per_second": 13.14303056429507,
+      "all_hashes_verified": true,
+      "hashes_identity": "4fc151595e27139a344113db2aee74390ebfcf5a2e8c1eee5702fecc51ff9f91",
+      "cumulative_process_peak_rss_kib": 1562624
+    }
+  ],
+  "median_seconds": {
+    "16": 7.694211022579111,
+    "32": 4.3973975233966485
+  },
+  "fastest_workers": 32,
+  "scope": "Largest selected audited files, existing host cache, repeated worker configurations. Shared host with local SQLite sweep; not cold-storage or all-source throughput."
+}

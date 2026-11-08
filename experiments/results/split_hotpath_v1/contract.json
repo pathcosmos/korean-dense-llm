@@ -1,0 +1,11 @@
+{
+  "code": {
+    "data/split_manifest_candidate.py": "3869b7ed1d54c10c9f689fe3e0eb7efda03d2989f03e1dc2ccc8adec3e15ce56",
+    "scripts/benchmark_split_hotpath.py": "178a276dd460ae93cab6b0dbf50b0ee56036a0f43a5a6c846b0926980219b902",
+    "common/data_contracts.py": "9b7af55f00602532e369f5880bd5da2bfc80290c19a387aad2862f2a6052ac63",
+    "common/source_inventory.py": "89865829d78904e8b242976c1e78b1942a2dbad79e438db747857ee3a4f3416d"
+  },
+  "sources_sha256": "79214354c7f11fad5ec790a470bec39ed720e9d665d266be6505cf27ce762271",
+  "cache_mib": 8192,
+  "scope": "Avoid repeated identical NFC union/find only; raw/code grouping unchanged. Shared host comparison to cache sweep, not production adoption."
+}

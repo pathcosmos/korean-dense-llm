@@ -1,0 +1,140 @@
+{
+  "status": "candidate_selected",
+  "scope": "Final-tokenizer pilot actual eager8GPU throughput only; selected exact geometry requires full finite/eval/RNG/checkpoint/resume validation.",
+  "results": [
+    {
+      "status": "passed",
+      "model": "1b",
+      "micro_bsz": 4,
+      "aggregate_tok_s": 346845.73398157273,
+      "median_tok_s": 347764.6704347865,
+      "timed_seconds": 36.278122425079346,
+      "timed_tokens": 12582912,
+      "timed_steps": 6,
+      "max_allocated_gib": 42.49126386642456,
+      "max_reserved_gib": 45.220703125,
+      "first_step_seconds": 6.812266588211059,
+      "final_loss": 10.386262893676758,
+      "wall_seconds": 70.54056885489263,
+      "peak_host_rss_bytes": 16490348544,
+      "repeat": false
+    },
+    {
+      "status": "passed",
+      "model": "1b",
+      "micro_bsz": 8,
+      "aggregate_tok_s": 370158.7099230634,
+      "median_tok_s": 369942.5974104635,
+      "timed_seconds": 33.99328899383545,
+      "timed_tokens": 12582912,
+      "timed_steps": 6,
+      "max_allocated_gib": 79.50402021408081,
+      "max_reserved_gib": 88.45703125,
+      "first_step_seconds": 6.344690322875977,
+      "final_loss": 10.35643482208252,
+      "wall_seconds": 66.58402304211631,
+      "peak_host_rss_bytes": 16614105088,
+      "repeat": false
+    },
+    {
+      "status": "passed",
+      "model": "1b",
+      "micro_bsz": 8,
+      "aggregate_tok_s": 369915.75795479736,
+      "median_tok_s": 369965.99547490734,
+      "timed_seconds": 34.01561498641968,
+      "timed_tokens": 12582912,
+      "timed_steps": 6,
+      "max_allocated_gib": 79.50402021408081,
+      "max_reserved_gib": 88.45703125,
+      "first_step_seconds": 6.380740880966187,
+      "final_loss": 10.35643482208252,
+      "wall_seconds": 66.67441149801016,
+      "peak_host_rss_bytes": 16649031680,
+      "repeat": true
+    },
+    {
+      "status": "passed",
+      "model": "3b",
+      "micro_bsz": 2,
+      "aggregate_tok_s": 126812.66659078715,
+      "median_tok_s": 126966.02424261556,
+      "timed_seconds": 99.22440981864929,
+      "timed_tokens": 12582912,
+      "timed_steps": 6,
+      "max_allocated_gib": 51.75289964675903,
+      "max_reserved_gib": 57.23828125,
+      "first_step_seconds": 17.753347396850586,
+      "final_loss": 11.199702262878418,
+      "wall_seconds": 153.7722470879089,
+      "peak_host_rss_bytes": 16568999936,
+      "repeat": false
+    },
+    {
+      "status": "passed",
+      "model": "3b",
+      "micro_bsz": 4,
+      "aggregate_tok_s": 138511.05573562847,
+      "median_tok_s": 138531.58046019496,
+      "timed_seconds": 90.84409856796265,
+      "timed_tokens": 12582912,
+      "timed_steps": 6,
+      "max_allocated_gib": 85.96960496902466,
+      "max_reserved_gib": 90.15234375,
+      "first_step_seconds": 16.15189838409424,
+      "final_loss": 10.597366333007812,
+      "wall_seconds": 143.81220644712448,
+      "peak_host_rss_bytes": 16586788864,
+      "repeat": false
+    },
+    {
+      "status": "passed",
+      "model": "3b",
+      "micro_bsz": 4,
+      "aggregate_tok_s": 138461.70009862378,
+      "median_tok_s": 138468.54532767588,
+      "timed_seconds": 90.87648057937622,
+      "timed_tokens": 12582912,
+      "timed_steps": 6,
+      "max_allocated_gib": 85.96960496902466,
+      "max_reserved_gib": 90.15234375,
+      "first_step_seconds": 16.132356643676758,
+      "final_loss": 10.597366333007812,
+      "wall_seconds": 143.86641847505234,
+      "peak_host_rss_bytes": 16623288320,
+      "repeat": true
+    }
+  ],
+  "selected_model_settings": {
+    "1b": {
+      "micro_bsz": 8,
+      "global_tokens": 2097152,
+      "lr": 0.0006
+    },
+    "3b": {
+      "micro_bsz": 4,
+      "global_tokens": 2097152,
+      "lr": 0.0003
+    }
+  },
+  "repeat_numerics": {
+    "1b": {
+      "max_absolute_difference": {
+        "loss": 0.0,
+        "gnorm": 0.0
+      },
+      "passed": true,
+      "scope": "Independent same-seed eight-update repetitions; full checkpoint/RNG resume validation remains required."
+    },
+    "3b": {
+      "max_absolute_difference": {
+        "loss": 0.0,
+        "gnorm": 0.0
+      },
+      "passed": true,
+      "scope": "Independent same-seed eight-update repetitions; full checkpoint/RNG resume validation remains required."
+    }
+  },
+  "selected_model_settings_sha256": "c176f54dbb7f7f7d209f5914871f7cad7f4108252fac22035626e1329fcd7180",
+  "remaining": "Actual exact-geometry/LR4step finite/eval/checkpoint/RNG/resume validation and native PPL are mandatory before rehearsal. Compile not adopted."
+}

@@ -1,0 +1,57 @@
+{
+  "source_counts": {
+    "wiki_ko": {
+      "train_docs": 450929,
+      "holdout_docs": 4468,
+      "tokens": 293092049,
+      "holdout_tokens": 2847194
+    },
+    "fineweb2_ko": {
+      "train_docs": 58077534,
+      "holdout_docs": 586880,
+      "tokens": 42314104743,
+      "holdout_tokens": 428868206
+    },
+    "hplt_ko": {
+      "train_docs": 27159019,
+      "holdout_docs": 275213,
+      "tokens": 28772888225,
+      "holdout_tokens": 290954178
+    },
+    "fineweb_edu": {
+      "train_docs": 34357395,
+      "holdout_docs": 347441,
+      "tokens": 36049603025,
+      "holdout_tokens": 364507519
+    },
+    "owm": {
+      "train_docs": 5394603,
+      "holdout_docs": 54317,
+      "tokens": 9738184520,
+      "holdout_tokens": 98186477
+    },
+    "github_code_v1": {
+      "train_docs": 2125938,
+      "holdout_docs": 22521,
+      "tokens": 4006737196,
+      "holdout_tokens": 42420481
+    }
+  },
+  "category_holdout_tokens": {
+    "ko": 722669578,
+    "en": 364507519,
+    "code": 42420481,
+    "math": 98186477
+  },
+  "tokenizer_sha256": "050f9b43cf964f0c3b29ae443a1c2eae46cb2ee0022cc010bcfea3d26acf1706",
+  "full_report_sha256": "e2d74ef239bc11e52f02dc6646091889676a5294467c84c5a582735ab44b038f",
+  "proposed_weights": {
+    "wiki_ko": 0.001685337824546005,
+    "fineweb2_ko": 0.3042118283748641,
+    "hplt_ko": 0.19410283380058987,
+    "fineweb_edu": 0.3,
+    "github_code_v1": 0.1,
+    "owm": 0.1
+  },
+  "proposal_scope": "Category targets50/30/10/10; within-Korean byte weights are a proposal only. Review actual token counts/exposures before adoption."
+}

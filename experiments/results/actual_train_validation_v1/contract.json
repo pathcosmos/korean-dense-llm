@@ -1,0 +1,253 @@
+{
+  "version": 1,
+  "hardware": {
+    "utc": "2026-11-06T19:48:58.972787+00:00",
+    "cpu": {
+      "affinity": [
+        64,
+        65,
+        66,
+        67,
+        68,
+        69,
+        70,
+        71,
+        72,
+        73,
+        74,
+        75,
+        76,
+        77,
+        78,
+        79,
+        80,
+        81,
+        82,
+        83,
+        84,
+        85,
+        86,
+        87,
+        88,
+        89,
+        90,
+        91,
+        92,
+        93,
+        94,
+        95
+      ],
+      "effective": 32.0,
+      "quota": "max 100000"
+    },
+    "memory": {
+      "limit_bytes": 2061584302080,
+      "current_bytes": 1484737617920,
+      "file_cache_bytes": 1215735779328,
+      "reserve_bytes": 137438953472,
+      "conservative_headroom_gib": 409.23033905029297
+    },
+    "gpus": [
+      "0, NVIDIA H200, 143771",
+      "1, NVIDIA H200, 143771",
+      "2, NVIDIA H200, 143771",
+      "3, NVIDIA H200, 143771",
+      "4, NVIDIA H200, 143771",
+      "5, NVIDIA H200, 143771",
+      "6, NVIDIA H200, 143771",
+      "7, NVIDIA H200, 143771"
+    ],
+    "storage": {
+      "project": {
+        "path": "${PROJECT_ROOT}",
+        "fstype": "nfs",
+        "target": "${PRIVATE_PATH}",
+        "device": 49,
+        "total_bytes": 2000000024576,
+        "free_bytes": 789992570880,
+        "network": true
+      },
+      "scratch_parent": {
+        "path": "${LOCAL_SCRATCH}",
+        "fstype": "overlay",
+        "target": "/",
+        "device": 66,
+        "total_bytes": 3148091097088,
+        "free_bytes": 2585562382336,
+        "network": false
+      },
+      "scratch_dir": "${LOCAL_SCRATCH}"
+    },
+    "presets": {
+      "cpu_effective": 32.0,
+      "reserved_cpu": 4,
+      "launch_permitted": true,
+      "minimum_memory_headroom_gib": 4,
+      "stages": {
+        "cpu-prep": {
+          "start_workers": 7,
+          "max_workers": 14,
+          "arrow_threads": 2,
+          "env": {
+            "OMP_NUM_THREADS": "1",
+            "NUMEXPR_NUM_THREADS": "2",
+            "RAYON_NUM_THREADS": "1"
+          },
+          "job_memory_budget_gib": 306.9227542877197,
+          "worker_candidates": [
+            4,
+            8,
+            16,
+            32
+          ]
+        },
+        "tokenization": {
+          "start_workers": 3,
+          "max_workers": 4,
+          "arrow_threads": 2,
+          "env": {
+            "OMP_NUM_THREADS": "1",
+            "NUMEXPR_NUM_THREADS": "2",
+            "RAYON_NUM_THREADS": "5",
+            "TOKENIZERS_PARALLELISM": "true"
+          },
+          "job_memory_budget_gib": 256
+        },
+        "tokenizer-train": {
+          "start_workers": 1,
+          "max_workers": 1,
+          "arrow_threads": 8,
+          "env": {
+            "OMP_NUM_THREADS": "2",
+            "NUMEXPR_NUM_THREADS": "2",
+            "RAYON_NUM_THREADS": "28",
+            "TOKENIZERS_PARALLELISM": "true"
+          },
+          "job_memory_budget_gib": 306.9227542877197,
+          "rayon_candidates": [
+            8,
+            16,
+            32,
+            64
+          ]
+        },
+        "sqlite": {
+          "start_workers": 1,
+          "max_workers": 1,
+          "arrow_threads": 4,
+          "env": {
+            "OMP_NUM_THREADS": "2",
+            "NUMEXPR_NUM_THREADS": "2"
+          },
+          "validated_cache_mib": 131072,
+          "validated_cache_candidates_mib": [
+            512,
+            8192,
+            131072
+          ],
+          "hash_workers": 28,
+          "candidate_note": "3M same-input cache sweep verified logical identity; 128GiB is a capacity ceiling for the estimated100GiB full DB, not proof of full-scale speed or resident128GiB usage. Use fresh RSS headroom and runtime guards.",
+          "job_memory_budget_gib": 306.9227542877197
+        },
+        "gpu": {
+          "start_workers": 1,
+          "max_workers": 1,
+          "arrow_threads": 4,
+          "env": {
+            "OMP_NUM_THREADS": "2",
+            "NUMEXPR_NUM_THREADS": "2",
+            "TORCHINDUCTOR_COMPILE_THREADS": "3"
+          },
+          "job_memory_budget_gib": 256,
+          "gpu_policy": "Use available required GPUs for compatible kernels/training. Eight-GPU main training still requires user confirmation and numerical gates."
+        }
+      }
+    },
+    "policy": "Measured-container limits, not host core counts. Current memory includes reclaimable file cache. No global kernel/mount/GPU clock changes. Worker and memory budgets are planning values, not automatically enforced by arbitrary child commands."
+  },
+  "framework": {
+    "torch": "2.7.0a0+7c8ec84dab.nv25.03",
+    "cuda": "12.8"
+  },
+  "diagnostic_input": "runs/actual_pilot_input_v1",
+  "mix_sha256": "167b31c782bc892b067b51f8365bdcb9b263643817855031e929d4b9a685d024",
+  "batch_geometry": {
+    "1b": {
+      "micro_bsz": 8,
+      "global_tokens": 2097152,
+      "lr": 0.0006
+    },
+    "3b": {
+      "micro_bsz": 4,
+      "global_tokens": 2097152,
+      "lr": 0.0003
+    }
+  },
+  "code": {
+    "scripts/validate_deterministic_training.py": "4f39e674502dd94f4d0d9ed69a654ce7a2fedf3904352efd9fd55a27ae9d65f1",
+    "scripts/validate_actual_training.py": "da754614019b51ec90e30c3e504e9a7d910e7839aa3ae85d0f45eb1bc9ea6178",
+    "train/deterministic_train.py": "c8bf0e5f207f771668ebf86f7a430667bcb28764c2b7dd108ef9e4b21192da47",
+    "scripts/validate_distributed.py": "ab2ec754bbbbe7dfa980faaab23c6927a4976222bdd81d8a5c8e5930a74ac5e0",
+    "data/pilot_mix.py": "76e4476fbaa8e269eb6103a8f906525a6369d1af8859f3b0b154f7f44b084086",
+    "model/model.py": "719cc0d69b35620e36cba817df1b11dd0e322da529f3cafc30130f6a45b5fee9",
+    "train/train.py": "c4a948e5701cd5d3f61dc0903ef9506b8af1149a3ab3df36a706417a21a61904",
+    "train/runtime.py": "56a918a827d4b16dc924e3e32b86e7546eacdeebb3c7f90c47ffc2c074afa0ba",
+    "train/data.py": "0988f6dc71cc65895c5ec949429c47fd97098e1381ee51cc02fba12d983d54d4",
+    "train/__init__.py": "8bb42da44245b0429dd428a496f54124644466e204be93155b4c400a20dbd542"
+  },
+  "models": [
+    "1b",
+    "3b"
+  ],
+  "world": 8,
+  "sequence": 4096,
+  "steps": 4,
+  "compile": false,
+  "deterministic_algorithms": true,
+  "cublas_workspace_config": ":4096:8",
+  "max_case_seconds": 900,
+  "host_rss_gib": 256,
+  "local_budget_gib": 512,
+  "durable_budget_gib": 96,
+  "reserve_gib": 200,
+  "cpu_affinity": [
+    64,
+    65,
+    66,
+    67,
+    68,
+    69,
+    70,
+    71,
+    72,
+    73,
+    74,
+    75,
+    76,
+    77,
+    78,
+    79,
+    80,
+    81,
+    82,
+    83,
+    84,
+    85,
+    86,
+    87,
+    88,
+    89,
+    90,
+    91,
+    92,
+    93,
+    94,
+    95
+  ],
+  "checkpoint_tolerance": {
+    "atol": 1e-06,
+    "rtol": 1e-05
+  },
+  "loss_resume_atol": 1e-06,
+  "scope": "Actual final-tokenizer whole-file pilot; deterministic eager four-step selected-batch finite/eval/checkpoint/RNG/resume checks only. Not main training."
+}

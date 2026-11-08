@@ -1,0 +1,42 @@
+{
+  "status": "needs_review",
+  "source_summary_sha256": "da2eebbba3e57c0140500819c310a51b1a061fb9875b83bde8f36309bc9398fb",
+  "measurement_complete": true,
+  "production_compile_adoption": "pending",
+  "large_global_batch_probe": "deferred_due_to_pair_review",
+  "profile_mean_rank_seconds": {
+    "h2d": 0.0003119323422045757,
+    "forward": 0.2362393751682248,
+    "loss_check": 0.003077040756276498,
+    "backward": 0.5211603662755806,
+    "gradient_check": 0.021263268815043073,
+    "clip": 0.0060399203600051505,
+    "norm_check": 0.0008454313016651819,
+    "optimizer": 0.007038367902471994
+  },
+  "profile_mean_rank_percent": {
+    "h2d": 0.03918867637035773,
+    "forward": 29.67921939088778,
+    "loss_check": 0.3865747088740054,
+    "backward": 65.47440636225002,
+    "gradient_check": 2.671346466607013,
+    "clip": 0.7588071266292191,
+    "norm_check": 0.10621320456920896,
+    "optimizer": 0.8842440638123817
+  },
+  "scope": "Paired seq32, one seed/batch, fresh AdamW uniform decay0.1; not production norm-no-decay groups. Profile seq4096, 3 instrumented steps, synchronization overhead and collective costs included.",
+  "findings": [
+    "Eager repeats identical in all checked ranks/cases",
+    "Micro passes bounded tolerances; 1B/3B optimizer-update relative L2 exceeds10%; 3B FSDP also exceeds logits3%/gradient5% thresholds",
+    "Do not infer total weight percentage or long-training failure from update-relative metric",
+    "In this synthetic profile H2D is only0.039%; no evidence to prioritize prefetch optimization",
+    "Forward+backward95.15%, finite-gradient check2.67%; preserve finite/error checks"
+  ],
+  "next": [
+    "Compare full model FP32 eager/compiled then bf16 to isolate precision/fusion effects",
+    "Collect per-layer and gradient-magnitude-conditioned differences, including clipped gradients and optimizer state; test production parameter groups",
+    "Validate same-input seq4096 and multiple seeds before production compile adoption",
+    "Profile attention/MLP/output+CE inside dominant forward/backward stages",
+    "After numerical decision, measure ~2M global batch bounded synthetic and actual token input"
+  ]
+}

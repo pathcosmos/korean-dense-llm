@@ -1,0 +1,12 @@
+{
+  "1b": {
+    "micro_bsz": 8,
+    "global_tokens": 2097152,
+    "lr": 0.0006
+  },
+  "3b": {
+    "micro_bsz": 4,
+    "global_tokens": 2097152,
+    "lr": 0.0003
+  }
+}

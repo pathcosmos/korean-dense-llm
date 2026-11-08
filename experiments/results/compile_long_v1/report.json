@@ -1,0 +1,1733 @@
+{
+  "status": "needs_review",
+  "cases": [
+    {
+      "case": "w1_s512_seed711",
+      "reports": [
+        {
+          "status": "passed_bounded_pair",
+          "model": "3b",
+          "sequence": 512,
+          "seed": 711,
+          "rank": 0,
+          "world": 1,
+          "tolerances": {
+            "logits_rel_l2": 0.03,
+            "gradient_rel_l2": 0.05,
+            "update_rel_l2": 0.1,
+            "loss_abs": 0.03
+          },
+          "eager_repeat": {
+            "logits": {
+              "rel_l2": 0.0,
+              "max_abs": 0.0,
+              "finite": true
+            },
+            "gradient": {
+              "rel_l2": 0.010289914201642483,
+              "max_abs": 0.0019734688103199005,
+              "finite": true
+            },
+            "update": {
+              "rel_l2": 0.049245014843307844,
+              "max_abs": 0.0005988891934975982,
+              "finite": true
+            },
+            "loss_abs": 0.0
+          },
+          "compiled_vs_eager": {
+            "logits": {
+              "rel_l2": 0.0,
+              "max_abs": 0.0,
+              "finite": true
+            },
+            "gradient": {
+              "rel_l2": 0.011733627795376822,
+              "max_abs": 0.00244140625,
+              "finite": true
+            },
+            "update": {
+              "rel_l2": 0.0560288903545308,
+              "max_abs": 0.000599161721765995,
+              "finite": true
+            },
+            "loss_abs": 0.0
+          },
+          "profiles": {
+            "eager": {
+              "step_seconds": [
+                0.14165140106342733,
+                0.1414460870437324,
+                0.14147304999642074
+              ],
+              "mean_seconds": 0.14152351270119348,
+              "tokens_per_second": 3617.7734019435643
+            },
+            "candidate": {
+              "step_seconds": [
+                0.15377088100649416,
+                0.15401639114134014,
+                0.15247138193808496
+              ],
+              "mean_seconds": 0.15341955136197308,
+              "tokens_per_second": 3337.2539252966785
+            }
+          },
+          "input_sha256": "75980607b59e73dd96e633077c721f37f686bc8dd5318601774bd6c300188584",
+          "candidate": "cast preservation + eager RMSNorm + eager Attention",
+          "production_modified": false,
+          "optimizer": "production ndim>=2 wd.1 / ndim<2 wd0, AdamW fused .9/.95 eps1e-8 lr3e-4 clip1",
+          "torch": "2.7.0a0+7c8ec84dab.nv25.03",
+          "max_allocated_gib": 49.44060468673706,
+          "max_reserved_gib": 53.158203125,
+          "scope": "Fixed synthetic paired one-step numerics plus 2warm/3timed steps. No actual-token checkpoint/resume or multi-step convergence approval."
+        }
+      ],
+      "execution": {
+        "cases": [
+          "w1_s512_seed711",
+          "w1_s512_seed712"
+        ],
+        "elapsed_seconds": 395.89262845600024,
+        "sampled_peak_rss_bytes": 146891161600,
+        "main_before": {
+          "unix": 1793964369.978676,
+          "phase": "ingest",
+          "rows": 27080655,
+          "main_state": "running",
+          "main_peak_rss_bytes": 22642548736
+        },
+        "main_after": {
+          "unix": 1793964765.8583698,
+          "phase": "ingest",
+          "rows": 30685017,
+          "main_state": "running",
+          "main_peak_rss_bytes": 25432518656
+        },
+        "main_rows_per_second": 9104.690280748351
+      }
+    },
+    {
+      "case": "w1_s512_seed712",
+      "reports": [
+        {
+          "status": "passed_bounded_pair",
+          "model": "3b",
+          "sequence": 512,
+          "seed": 712,
+          "rank": 0,
+          "world": 1,
+          "tolerances": {
+            "logits_rel_l2": 0.03,
+            "gradient_rel_l2": 0.05,
+            "update_rel_l2": 0.1,
+            "loss_abs": 0.03
+          },
+          "eager_repeat": {
+            "logits": {
+              "rel_l2": 0.0,
+              "max_abs": 0.0,
+              "finite": true
+            },
+            "gradient": {
+              "rel_l2": 0.010267560214958532,
+              "max_abs": 0.0021486878395080566,
+              "finite": true
+            },
+            "update": {
+              "rel_l2": 0.04919598584472209,
+              "max_abs": 0.0005989661440253258,
+              "finite": true
+            },
+            "loss_abs": 0.0
+          },
+          "compiled_vs_eager": {
+            "logits": {
+              "rel_l2": 0.0,
+              "max_abs": 0.0,
+              "finite": true
+            },
+            "gradient": {
+              "rel_l2": 0.011689653960546938,
+              "max_abs": 0.0028846152126789093,
+              "finite": true
+            },
+            "update": {
+              "rel_l2": 0.056059573627606954,
+              "max_abs": 0.0005991240032017231,
+              "finite": true
+            },
+            "loss_abs": 0.0
+          },
+          "profiles": {
+            "eager": {
+              "step_seconds": [
+                0.14390078093856573,
+                0.1426985329017043,
+                0.1416737709660083
+              ],
+              "mean_seconds": 0.14275769493542612,
+              "tokens_per_second": 3586.496687492706
+            },
+            "candidate": {
+              "step_seconds": [
+                0.15368077903985977,
+                0.15519411978311837,
+                0.1526980008929968
+              ],
+              "mean_seconds": 0.1538576332386583,
+              "tokens_per_second": 3327.7516963087846
+            }
+          },
+          "input_sha256": "8bdd025c73cdec1a3bbc8539fafa92320b0b676ec56c9923ebeb8e84974ed69c",
+          "candidate": "cast preservation + eager RMSNorm + eager Attention",
+          "production_modified": false,
+          "optimizer": "production ndim>=2 wd.1 / ndim<2 wd0, AdamW fused .9/.95 eps1e-8 lr3e-4 clip1",
+          "torch": "2.7.0a0+7c8ec84dab.nv25.03",
+          "max_allocated_gib": 49.44060468673706,
+          "max_reserved_gib": 53.158203125,
+          "scope": "Fixed synthetic paired one-step numerics plus 2warm/3timed steps. No actual-token checkpoint/resume or multi-step convergence approval."
+        }
+      ],
+      "execution": {
+        "cases": [
+          "w1_s512_seed711",
+          "w1_s512_seed712"
+        ],
+        "elapsed_seconds": 395.89262845600024,
+        "sampled_peak_rss_bytes": 146891161600,
+        "main_before": {
+          "unix": 1793964369.978676,
+          "phase": "ingest",
+          "rows": 27080655,
+          "main_state": "running",
+          "main_peak_rss_bytes": 22642548736
+        },
+        "main_after": {
+          "unix": 1793964765.8583698,
+          "phase": "ingest",
+          "rows": 30685017,
+          "main_state": "running",
+          "main_peak_rss_bytes": 25432518656
+        },
+        "main_rows_per_second": 9104.690280748351
+      }
+    },
+    {
+      "case": "w1_s4096_seed711",
+      "reports": [
+        {
+          "status": "passed_bounded_pair",
+          "model": "3b",
+          "sequence": 4096,
+          "seed": 711,
+          "rank": 0,
+          "world": 1,
+          "tolerances": {
+            "logits_rel_l2": 0.03,
+            "gradient_rel_l2": 0.05,
+            "update_rel_l2": 0.1,
+            "loss_abs": 0.03
+          },
+          "eager_repeat": {
+            "logits": {
+              "rel_l2": 0.0,
+              "max_abs": 0.0,
+              "finite": true
+            },
+            "gradient": {
+              "rel_l2": 0.009850616621936379,
+              "max_abs": 0.000457763671875,
+              "finite": true
+            },
+            "update": {
+              "rel_l2": 0.049974563272021454,
+              "max_abs": 0.0005985788302496076,
+              "finite": true
+            },
+            "loss_abs": 0.0
+          },
+          "compiled_vs_eager": {
+            "logits": {
+              "rel_l2": 0.0,
+              "max_abs": 0.0,
+              "finite": true
+            },
+            "gradient": {
+              "rel_l2": 0.011367179108581949,
+              "max_abs": 0.00054931640625,
+              "finite": true
+            },
+            "update": {
+              "rel_l2": 0.05726291653063806,
+              "max_abs": 0.0005985661409795284,
+              "finite": true
+            },
+            "loss_abs": 0.0
+          },
+          "profiles": {
+            "eager": {
+              "step_seconds": [
+                0.29545601713471115,
+                0.2962418058887124,
+                0.2945847709197551
+              ],
+              "mean_seconds": 0.29542753131439287,
+              "tokens_per_second": 13864.652294850112
+            },
+            "candidate": {
+              "step_seconds": [
+                0.28792032203637064,
+                0.2886701861862093,
+                0.28659653291106224
+              ],
+              "mean_seconds": 0.28772901371121407,
+              "tokens_per_second": 14235.616864523248
+            }
+          },
+          "input_sha256": "931636a0f3111ce5a2e0d4902af3e128a49160b68f5c380bdd1f2798a3971581",
+          "candidate": "cast preservation + eager RMSNorm + eager Attention",
+          "production_modified": false,
+          "optimizer": "production ndim>=2 wd.1 / ndim<2 wd0, AdamW fused .9/.95 eps1e-8 lr3e-4 clip1",
+          "torch": "2.7.0a0+7c8ec84dab.nv25.03",
+          "max_allocated_gib": 62.601155281066895,
+          "max_reserved_gib": 66.16796875,
+          "scope": "Fixed synthetic paired one-step numerics plus 2warm/3timed steps. No actual-token checkpoint/resume or multi-step convergence approval."
+        }
+      ],
+      "execution": {
+        "cases": [
+          "w1_s4096_seed711",
+          "w1_s4096_seed712"
+        ],
+        "elapsed_seconds": 382.05378443491645,
+        "sampled_peak_rss_bytes": 150218342400,
+        "main_before": {
+          "unix": 1793964765.8751202,
+          "phase": "ingest",
+          "rows": 30685017,
+          "main_state": "running",
+          "main_peak_rss_bytes": 25432518656
+        },
+        "main_after": {
+          "unix": 1793965147.9235024,
+          "phase": "ingest",
+          "rows": 34229301,
+          "main_state": "running",
+          "main_peak_rss_bytes": 28170674176
+        },
+        "main_rows_per_second": 9277.055379288284
+      }
+    },
+    {
+      "case": "w1_s4096_seed712",
+      "reports": [
+        {
+          "status": "passed_bounded_pair",
+          "model": "3b",
+          "sequence": 4096,
+          "seed": 712,
+          "rank": 0,
+          "world": 1,
+          "tolerances": {
+            "logits_rel_l2": 0.03,
+            "gradient_rel_l2": 0.05,
+            "update_rel_l2": 0.1,
+            "loss_abs": 0.03
+          },
+          "eager_repeat": {
+            "logits": {
+              "rel_l2": 0.0,
+              "max_abs": 0.0,
+              "finite": true
+            },
+            "gradient": {
+              "rel_l2": 0.00986032693113904,
+              "max_abs": 0.000457763671875,
+              "finite": true
+            },
+            "update": {
+              "rel_l2": 0.049979256024534714,
+              "max_abs": 0.0005987127660773695,
+              "finite": true
+            },
+            "loss_abs": 0.0
+          },
+          "compiled_vs_eager": {
+            "logits": {
+              "rel_l2": 0.0,
+              "max_abs": 0.0,
+              "finite": true
+            },
+            "gradient": {
+              "rel_l2": 0.01137346548418302,
+              "max_abs": 0.00048828125,
+              "finite": true
+            },
+            "update": {
+              "rel_l2": 0.05726095979012499,
+              "max_abs": 0.0005986739415675402,
+              "finite": true
+            },
+            "loss_abs": 0.0
+          },
+          "profiles": {
+            "eager": {
+              "step_seconds": [
+                0.296382863773033,
+                0.2949941400438547,
+                0.2955200229771435
+              ],
+              "mean_seconds": 0.2956323422646771,
+              "tokens_per_second": 13855.047010833769
+            },
+            "candidate": {
+              "step_seconds": [
+                0.28955930285155773,
+                0.28709378000348806,
+                0.2873012190684676
+              ],
+              "mean_seconds": 0.2879847673078378,
+              "tokens_per_second": 14222.974493722548
+            }
+          },
+          "input_sha256": "c80de3b0ef4385464537e79a102a7de4aea1a2c4732085087ed1f9a0df1e7c6c",
+          "candidate": "cast preservation + eager RMSNorm + eager Attention",
+          "production_modified": false,
+          "optimizer": "production ndim>=2 wd.1 / ndim<2 wd0, AdamW fused .9/.95 eps1e-8 lr3e-4 clip1",
+          "torch": "2.7.0a0+7c8ec84dab.nv25.03",
+          "max_allocated_gib": 62.601155281066895,
+          "max_reserved_gib": 66.16796875,
+          "scope": "Fixed synthetic paired one-step numerics plus 2warm/3timed steps. No actual-token checkpoint/resume or multi-step convergence approval."
+        }
+      ],
+      "execution": {
+        "cases": [
+          "w1_s4096_seed711",
+          "w1_s4096_seed712"
+        ],
+        "elapsed_seconds": 382.05378443491645,
+        "sampled_peak_rss_bytes": 150218342400,
+        "main_before": {
+          "unix": 1793964765.8751202,
+          "phase": "ingest",
+          "rows": 30685017,
+          "main_state": "running",
+          "main_peak_rss_bytes": 25432518656
+        },
+        "main_after": {
+          "unix": 1793965147.9235024,
+          "phase": "ingest",
+          "rows": 34229301,
+          "main_state": "running",
+          "main_peak_rss_bytes": 28170674176
+        },
+        "main_rows_per_second": 9277.055379288284
+      }
+    },
+    {
+      "case": "w8_s4096_seed711",
+      "reports": [
+        {
+          "status": "passed_bounded_pair",
+          "model": "3b",
+          "sequence": 4096,
+          "seed": 711,
+          "rank": 0,
+          "world": 8,
+          "tolerances": {
+            "logits_rel_l2": 0.03,
+            "gradient_rel_l2": 0.05,
+            "update_rel_l2": 0.1,
+            "loss_abs": 0.03
+          },
+          "eager_repeat": {
+            "logits": {
+              "rel_l2": 0.0,
+              "max_abs": 0.0,
+              "finite": true
+            },
+            "gradient": {
+              "rel_l2": 0.016427345302133113,
+              "max_abs": 0.00018739700317382812,
+              "finite": true
+            },
+            "update": {
+              "rel_l2": 0.07516977769813522,
+              "max_abs": 0.0005989419296383858,
+              "finite": true
+            },
+            "loss_abs": 0.0
+          },
+          "compiled_vs_eager": {
+            "logits": {
+              "rel_l2": 0.0,
+              "max_abs": 0.0,
+              "finite": true
+            },
+            "gradient": {
+              "rel_l2": 0.0179190314089275,
+              "max_abs": 0.0002155303955078125,
+              "finite": true
+            },
+            "update": {
+              "rel_l2": 0.08196717006624629,
+              "max_abs": 0.0005990436766296625,
+              "finite": true
+            },
+            "loss_abs": 0.0
+          },
+          "profiles": {
+            "eager": {
+              "step_seconds": [
+                0.2814416470937431,
+                0.28044543415308,
+                0.2808216910343617
+              ],
+              "mean_seconds": 0.28090292409372825,
+              "tokens_per_second": 116652.3990653311
+            },
+            "candidate": {
+              "step_seconds": [
+                0.28288856195285916,
+                0.2810411921236664,
+                0.28349132486619055
+              ],
+              "mean_seconds": 0.28247369298090536,
+              "tokens_per_second": 116003.72287487688
+            }
+          },
+          "input_sha256": "931636a0f3111ce5a2e0d4902af3e128a49160b68f5c380bdd1f2798a3971581",
+          "candidate": "cast preservation + eager RMSNorm + eager Attention",
+          "production_modified": false,
+          "optimizer": "production ndim>=2 wd.1 / ndim<2 wd0, AdamW fused .9/.95 eps1e-8 lr3e-4 clip1",
+          "torch": "2.7.0a0+7c8ec84dab.nv25.03",
+          "max_allocated_gib": 22.957847595214844,
+          "max_reserved_gib": 27.830078125,
+          "scope": "Fixed synthetic paired one-step numerics plus 2warm/3timed steps. No actual-token checkpoint/resume or multi-step convergence approval."
+        },
+        {
+          "status": "passed_bounded_pair",
+          "model": "3b",
+          "sequence": 4096,
+          "seed": 711,
+          "rank": 1,
+          "world": 8,
+          "tolerances": {
+            "logits_rel_l2": 0.03,
+            "gradient_rel_l2": 0.05,
+            "update_rel_l2": 0.1,
+            "loss_abs": 0.03
+          },
+          "eager_repeat": {
+            "logits": {
+              "rel_l2": 0.0,
+              "max_abs": 0.0,
+              "finite": true
+            },
+            "gradient": {
+              "rel_l2": 0.016427345302133113,
+              "max_abs": 0.00018739700317382812,
+              "finite": true
+            },
+            "update": {
+              "rel_l2": 0.07516977769813522,
+              "max_abs": 0.0005989419296383858,
+              "finite": true
+            },
+            "loss_abs": 0.0
+          },
+          "compiled_vs_eager": {
+            "logits": {
+              "rel_l2": 0.0,
+              "max_abs": 0.0,
+              "finite": true
+            },
+            "gradient": {
+              "rel_l2": 0.0179190314089275,
+              "max_abs": 0.0002155303955078125,
+              "finite": true
+            },
+            "update": {
+              "rel_l2": 0.08196717006624629,
+              "max_abs": 0.0005990436766296625,
+              "finite": true
+            },
+            "loss_abs": 0.0
+          },
+          "profiles": {
+            "eager": {
+              "step_seconds": [
+                0.2814416470937431,
+                0.28044543415308,
+                0.2808216910343617
+              ],
+              "mean_seconds": 0.28090292409372825,
+              "tokens_per_second": 116652.3990653311
+            },
+            "candidate": {
+              "step_seconds": [
+                0.28288856195285916,
+                0.2810411921236664,
+                0.28349132486619055
+              ],
+              "mean_seconds": 0.28247369298090536,
+              "tokens_per_second": 116003.72287487688
+            }
+          },
+          "input_sha256": "c80de3b0ef4385464537e79a102a7de4aea1a2c4732085087ed1f9a0df1e7c6c",
+          "candidate": "cast preservation + eager RMSNorm + eager Attention",
+          "production_modified": false,
+          "optimizer": "production ndim>=2 wd.1 / ndim<2 wd0, AdamW fused .9/.95 eps1e-8 lr3e-4 clip1",
+          "torch": "2.7.0a0+7c8ec84dab.nv25.03",
+          "max_allocated_gib": 22.957847595214844,
+          "max_reserved_gib": 27.830078125,
+          "scope": "Fixed synthetic paired one-step numerics plus 2warm/3timed steps. No actual-token checkpoint/resume or multi-step convergence approval."
+        },
+        {
+          "status": "passed_bounded_pair",
+          "model": "3b",
+          "sequence": 4096,
+          "seed": 711,
+          "rank": 2,
+          "world": 8,
+          "tolerances": {
+            "logits_rel_l2": 0.03,
+            "gradient_rel_l2": 0.05,
+            "update_rel_l2": 0.1,
+            "loss_abs": 0.03
+          },
+          "eager_repeat": {
+            "logits": {
+              "rel_l2": 0.0,
+              "max_abs": 0.0,
+              "finite": true
+            },
+            "gradient": {
+              "rel_l2": 0.016427345302133113,
+              "max_abs": 0.00018739700317382812,
+              "finite": true
+            },
+            "update": {
+              "rel_l2": 0.07516977769813522,
+              "max_abs": 0.0005989419296383858,
+              "finite": true
+            },
+            "loss_abs": 0.0
+          },
+          "compiled_vs_eager": {
+            "logits": {
+              "rel_l2": 0.0,
+              "max_abs": 0.0,
+              "finite": true
+            },
+            "gradient": {
+              "rel_l2": 0.0179190314089275,
+              "max_abs": 0.0002155303955078125,
+              "finite": true
+            },
+            "update": {
+              "rel_l2": 0.08196717006624629,
+              "max_abs": 0.0005990436766296625,
+              "finite": true
+            },
+            "loss_abs": 0.0
+          },
+          "profiles": {
+            "eager": {
+              "step_seconds": [
+                0.2814416470937431,
+                0.28044543415308,
+                0.2808216910343617
+              ],
+              "mean_seconds": 0.28090292409372825,
+              "tokens_per_second": 116652.3990653311
+            },
+            "candidate": {
+              "step_seconds": [
+                0.28288856195285916,
+                0.2810411921236664,
+                0.28349132486619055
+              ],
+              "mean_seconds": 0.28247369298090536,
+              "tokens_per_second": 116003.72287487688
+            }
+          },
+          "input_sha256": "7d732fc22996741d39fdc13c44db9711746357c6fe464f24a1b3e6f0af790522",
+          "candidate": "cast preservation + eager RMSNorm + eager Attention",
+          "production_modified": false,
+          "optimizer": "production ndim>=2 wd.1 / ndim<2 wd0, AdamW fused .9/.95 eps1e-8 lr3e-4 clip1",
+          "torch": "2.7.0a0+7c8ec84dab.nv25.03",
+          "max_allocated_gib": 22.957847595214844,
+          "max_reserved_gib": 27.830078125,
+          "scope": "Fixed synthetic paired one-step numerics plus 2warm/3timed steps. No actual-token checkpoint/resume or multi-step convergence approval."
+        },
+        {
+          "status": "passed_bounded_pair",
+          "model": "3b",
+          "sequence": 4096,
+          "seed": 711,
+          "rank": 3,
+          "world": 8,
+          "tolerances": {
+            "logits_rel_l2": 0.03,
+            "gradient_rel_l2": 0.05,
+            "update_rel_l2": 0.1,
+            "loss_abs": 0.03
+          },
+          "eager_repeat": {
+            "logits": {
+              "rel_l2": 0.0,
+              "max_abs": 0.0,
+              "finite": true
+            },
+            "gradient": {
+              "rel_l2": 0.016427345302133113,
+              "max_abs": 0.00018739700317382812,
+              "finite": true
+            },
+            "update": {
+              "rel_l2": 0.07516977769813522,
+              "max_abs": 0.0005989419296383858,
+              "finite": true
+            },
+            "loss_abs": 0.0
+          },
+          "compiled_vs_eager": {
+            "logits": {
+              "rel_l2": 0.0,
+              "max_abs": 0.0,
+              "finite": true
+            },
+            "gradient": {
+              "rel_l2": 0.0179190314089275,
+              "max_abs": 0.0002155303955078125,
+              "finite": true
+            },
+            "update": {
+              "rel_l2": 0.08196717006624629,
+              "max_abs": 0.0005990436766296625,
+              "finite": true
+            },
+            "loss_abs": 0.0
+          },
+          "profiles": {
+            "eager": {
+              "step_seconds": [
+                0.2814416470937431,
+                0.28044543415308,
+                0.2808216910343617
+              ],
+              "mean_seconds": 0.28090292409372825,
+              "tokens_per_second": 116652.3990653311
+            },
+            "candidate": {
+              "step_seconds": [
+                0.28288856195285916,
+                0.2810411921236664,
+                0.28349132486619055
+              ],
+              "mean_seconds": 0.28247369298090536,
+              "tokens_per_second": 116003.72287487688
+            }
+          },
+          "input_sha256": "1d6f24c75857c42b98feec1a686c953c645dfbe47765f6a965e42717070cdcc7",
+          "candidate": "cast preservation + eager RMSNorm + eager Attention",
+          "production_modified": false,
+          "optimizer": "production ndim>=2 wd.1 / ndim<2 wd0, AdamW fused .9/.95 eps1e-8 lr3e-4 clip1",
+          "torch": "2.7.0a0+7c8ec84dab.nv25.03",
+          "max_allocated_gib": 22.957847595214844,
+          "max_reserved_gib": 27.830078125,
+          "scope": "Fixed synthetic paired one-step numerics plus 2warm/3timed steps. No actual-token checkpoint/resume or multi-step convergence approval."
+        },
+        {
+          "status": "passed_bounded_pair",
+          "model": "3b",
+          "sequence": 4096,
+          "seed": 711,
+          "rank": 4,
+          "world": 8,
+          "tolerances": {
+            "logits_rel_l2": 0.03,
+            "gradient_rel_l2": 0.05,
+            "update_rel_l2": 0.1,
+            "loss_abs": 0.03
+          },
+          "eager_repeat": {
+            "logits": {
+              "rel_l2": 0.0,
+              "max_abs": 0.0,
+              "finite": true
+            },
+            "gradient": {
+              "rel_l2": 0.016427345302133113,
+              "max_abs": 0.00018739700317382812,
+              "finite": true
+            },
+            "update": {
+              "rel_l2": 0.07516977769813522,
+              "max_abs": 0.0005989419296383858,
+              "finite": true
+            },
+            "loss_abs": 0.0
+          },
+          "compiled_vs_eager": {
+            "logits": {
+              "rel_l2": 0.0,
+              "max_abs": 0.0,
+              "finite": true
+            },
+            "gradient": {
+              "rel_l2": 0.0179190314089275,
+              "max_abs": 0.0002155303955078125,
+              "finite": true
+            },
+            "update": {
+              "rel_l2": 0.08196717006624629,
+              "max_abs": 0.0005990436766296625,
+              "finite": true
+            },
+            "loss_abs": 0.0
+          },
+          "profiles": {
+            "eager": {
+              "step_seconds": [
+                0.2814416470937431,
+                0.28044543415308,
+                0.2808216910343617
+              ],
+              "mean_seconds": 0.28090292409372825,
+              "tokens_per_second": 116652.3990653311
+            },
+            "candidate": {
+              "step_seconds": [
+                0.28288856195285916,
+                0.2810411921236664,
+                0.28349132486619055
+              ],
+              "mean_seconds": 0.28247369298090536,
+              "tokens_per_second": 116003.72287487688
+            }
+          },
+          "input_sha256": "621b4e66cf597160debe066ceb12dac015f2a7ad4e53e1cd34c40881a74626a8",
+          "candidate": "cast preservation + eager RMSNorm + eager Attention",
+          "production_modified": false,
+          "optimizer": "production ndim>=2 wd.1 / ndim<2 wd0, AdamW fused .9/.95 eps1e-8 lr3e-4 clip1",
+          "torch": "2.7.0a0+7c8ec84dab.nv25.03",
+          "max_allocated_gib": 22.957847595214844,
+          "max_reserved_gib": 27.830078125,
+          "scope": "Fixed synthetic paired one-step numerics plus 2warm/3timed steps. No actual-token checkpoint/resume or multi-step convergence approval."
+        },
+        {
+          "status": "passed_bounded_pair",
+          "model": "3b",
+          "sequence": 4096,
+          "seed": 711,
+          "rank": 5,
+          "world": 8,
+          "tolerances": {
+            "logits_rel_l2": 0.03,
+            "gradient_rel_l2": 0.05,
+            "update_rel_l2": 0.1,
+            "loss_abs": 0.03
+          },
+          "eager_repeat": {
+            "logits": {
+              "rel_l2": 0.0,
+              "max_abs": 0.0,
+              "finite": true
+            },
+            "gradient": {
+              "rel_l2": 0.016427345302133113,
+              "max_abs": 0.00018739700317382812,
+              "finite": true
+            },
+            "update": {
+              "rel_l2": 0.07516977769813522,
+              "max_abs": 0.0005989419296383858,
+              "finite": true
+            },
+            "loss_abs": 0.0
+          },
+          "compiled_vs_eager": {
+            "logits": {
+              "rel_l2": 0.0,
+              "max_abs": 0.0,
+              "finite": true
+            },
+            "gradient": {
+              "rel_l2": 0.0179190314089275,
+              "max_abs": 0.0002155303955078125,
+              "finite": true
+            },
+            "update": {
+              "rel_l2": 0.08196717006624629,
+              "max_abs": 0.0005990436766296625,
+              "finite": true
+            },
+            "loss_abs": 0.0
+          },
+          "profiles": {
+            "eager": {
+              "step_seconds": [
+                0.2814416470937431,
+                0.28044543415308,
+                0.2808216910343617
+              ],
+              "mean_seconds": 0.28090292409372825,
+              "tokens_per_second": 116652.3990653311
+            },
+            "candidate": {
+              "step_seconds": [
+                0.28288856195285916,
+                0.2810411921236664,
+                0.28349132486619055
+              ],
+              "mean_seconds": 0.28247369298090536,
+              "tokens_per_second": 116003.72287487688
+            }
+          },
+          "input_sha256": "a09da6becaaa0d2288132c0401e51ef7f9d2dd1cce0ec3d3ebc97a3cdc275988",
+          "candidate": "cast preservation + eager RMSNorm + eager Attention",
+          "production_modified": false,
+          "optimizer": "production ndim>=2 wd.1 / ndim<2 wd0, AdamW fused .9/.95 eps1e-8 lr3e-4 clip1",
+          "torch": "2.7.0a0+7c8ec84dab.nv25.03",
+          "max_allocated_gib": 22.957847595214844,
+          "max_reserved_gib": 27.830078125,
+          "scope": "Fixed synthetic paired one-step numerics plus 2warm/3timed steps. No actual-token checkpoint/resume or multi-step convergence approval."
+        },
+        {
+          "status": "passed_bounded_pair",
+          "model": "3b",
+          "sequence": 4096,
+          "seed": 711,
+          "rank": 6,
+          "world": 8,
+          "tolerances": {
+            "logits_rel_l2": 0.03,
+            "gradient_rel_l2": 0.05,
+            "update_rel_l2": 0.1,
+            "loss_abs": 0.03
+          },
+          "eager_repeat": {
+            "logits": {
+              "rel_l2": 0.0,
+              "max_abs": 0.0,
+              "finite": true
+            },
+            "gradient": {
+              "rel_l2": 0.016427345302133113,
+              "max_abs": 0.00018739700317382812,
+              "finite": true
+            },
+            "update": {
+              "rel_l2": 0.07516977769813522,
+              "max_abs": 0.0005989419296383858,
+              "finite": true
+            },
+            "loss_abs": 0.0
+          },
+          "compiled_vs_eager": {
+            "logits": {
+              "rel_l2": 0.0,
+              "max_abs": 0.0,
+              "finite": true
+            },
+            "gradient": {
+              "rel_l2": 0.0179190314089275,
+              "max_abs": 0.0002155303955078125,
+              "finite": true
+            },
+            "update": {
+              "rel_l2": 0.08196717006624629,
+              "max_abs": 0.0005990436766296625,
+              "finite": true
+            },
+            "loss_abs": 0.0
+          },
+          "profiles": {
+            "eager": {
+              "step_seconds": [
+                0.2814416470937431,
+                0.28044543415308,
+                0.2808216910343617
+              ],
+              "mean_seconds": 0.28090292409372825,
+              "tokens_per_second": 116652.3990653311
+            },
+            "candidate": {
+              "step_seconds": [
+                0.28288856195285916,
+                0.2810411921236664,
+                0.28349132486619055
+              ],
+              "mean_seconds": 0.28247369298090536,
+              "tokens_per_second": 116003.72287487688
+            }
+          },
+          "input_sha256": "4a8e0a05a634ce9986b8804fea63ef9a1744a0d63725221db41e8119b6d3ebd9",
+          "candidate": "cast preservation + eager RMSNorm + eager Attention",
+          "production_modified": false,
+          "optimizer": "production ndim>=2 wd.1 / ndim<2 wd0, AdamW fused .9/.95 eps1e-8 lr3e-4 clip1",
+          "torch": "2.7.0a0+7c8ec84dab.nv25.03",
+          "max_allocated_gib": 22.957847595214844,
+          "max_reserved_gib": 27.830078125,
+          "scope": "Fixed synthetic paired one-step numerics plus 2warm/3timed steps. No actual-token checkpoint/resume or multi-step convergence approval."
+        },
+        {
+          "status": "passed_bounded_pair",
+          "model": "3b",
+          "sequence": 4096,
+          "seed": 711,
+          "rank": 7,
+          "world": 8,
+          "tolerances": {
+            "logits_rel_l2": 0.03,
+            "gradient_rel_l2": 0.05,
+            "update_rel_l2": 0.1,
+            "loss_abs": 0.03
+          },
+          "eager_repeat": {
+            "logits": {
+              "rel_l2": 0.0,
+              "max_abs": 0.0,
+              "finite": true
+            },
+            "gradient": {
+              "rel_l2": 0.016427345302133113,
+              "max_abs": 0.00018739700317382812,
+              "finite": true
+            },
+            "update": {
+              "rel_l2": 0.07516977769813522,
+              "max_abs": 0.0005989419296383858,
+              "finite": true
+            },
+            "loss_abs": 0.0
+          },
+          "compiled_vs_eager": {
+            "logits": {
+              "rel_l2": 0.0,
+              "max_abs": 0.0,
+              "finite": true
+            },
+            "gradient": {
+              "rel_l2": 0.0179190314089275,
+              "max_abs": 0.0002155303955078125,
+              "finite": true
+            },
+            "update": {
+              "rel_l2": 0.08196717006624629,
+              "max_abs": 0.0005990436766296625,
+              "finite": true
+            },
+            "loss_abs": 0.0
+          },
+          "profiles": {
+            "eager": {
+              "step_seconds": [
+                0.2814416470937431,
+                0.28044543415308,
+                0.2808216910343617
+              ],
+              "mean_seconds": 0.28090292409372825,
+              "tokens_per_second": 116652.3990653311
+            },
+            "candidate": {
+              "step_seconds": [
+                0.28288856195285916,
+                0.2810411921236664,
+                0.28349132486619055
+              ],
+              "mean_seconds": 0.28247369298090536,
+              "tokens_per_second": 116003.72287487688
+            }
+          },
+          "input_sha256": "f804be432c816a61241e524ac5c2f217edf683ca81e9244cde3c4b4beabda489",
+          "candidate": "cast preservation + eager RMSNorm + eager Attention",
+          "production_modified": false,
+          "optimizer": "production ndim>=2 wd.1 / ndim<2 wd0, AdamW fused .9/.95 eps1e-8 lr3e-4 clip1",
+          "torch": "2.7.0a0+7c8ec84dab.nv25.03",
+          "max_allocated_gib": 22.957847595214844,
+          "max_reserved_gib": 27.830078125,
+          "scope": "Fixed synthetic paired one-step numerics plus 2warm/3timed steps. No actual-token checkpoint/resume or multi-step convergence approval."
+        }
+      ],
+      "execution": {
+        "cases": [
+          "w8_s4096_seed711"
+        ],
+        "elapsed_seconds": 80.7679683060851,
+        "sampled_peak_rss_bytes": 137772675072,
+        "main_before": {
+          "unix": 1793965147.9462197,
+          "phase": "ingest",
+          "rows": 34229301,
+          "main_state": "running",
+          "main_peak_rss_bytes": 28170674176
+        },
+        "main_after": {
+          "unix": 1793965228.7081797,
+          "phase": "ingest",
+          "rows": 34969653,
+          "main_state": "running",
+          "main_peak_rss_bytes": 28741918720
+        },
+        "main_rows_per_second": 9167.088066320275
+      }
+    },
+    {
+      "case": "w8_s4096_seed712",
+      "reports": [
+        {
+          "status": "passed_bounded_pair",
+          "model": "3b",
+          "sequence": 4096,
+          "seed": 712,
+          "rank": 0,
+          "world": 8,
+          "tolerances": {
+            "logits_rel_l2": 0.03,
+            "gradient_rel_l2": 0.05,
+            "update_rel_l2": 0.1,
+            "loss_abs": 0.03
+          },
+          "eager_repeat": {
+            "logits": {
+              "rel_l2": 0.0,
+              "max_abs": 0.0,
+              "finite": true
+            },
+            "gradient": {
+              "rel_l2": 0.01643649973060393,
+              "max_abs": 0.00019359588623046875,
+              "finite": true
+            },
+            "update": {
+              "rel_l2": 0.07525626916774657,
+              "max_abs": 0.0005988809280097485,
+              "finite": true
+            },
+            "loss_abs": 0.0
+          },
+          "compiled_vs_eager": {
+            "logits": {
+              "rel_l2": 0.0,
+              "max_abs": 0.0,
+              "finite": true
+            },
+            "gradient": {
+              "rel_l2": 0.01790483343021174,
+              "max_abs": 0.00021648406982421875,
+              "finite": true
+            },
+            "update": {
+              "rel_l2": 0.08202627697506602,
+              "max_abs": 0.0005990073550492525,
+              "finite": true
+            },
+            "loss_abs": 0.0
+          },
+          "profiles": {
+            "eager": {
+              "step_seconds": [
+                0.2810973080340773,
+                0.28137828409671783,
+                0.2840513167902827
+              ],
+              "mean_seconds": 0.28217563630702597,
+              "tokens_per_second": 116126.25536652011
+            },
+            "candidate": {
+              "step_seconds": [
+                0.2817758289165795,
+                0.28160953102633357,
+                0.2823901539668441
+              ],
+              "mean_seconds": 0.2819251713032524,
+              "tokens_per_second": 116229.42303634588
+            }
+          },
+          "input_sha256": "c80de3b0ef4385464537e79a102a7de4aea1a2c4732085087ed1f9a0df1e7c6c",
+          "candidate": "cast preservation + eager RMSNorm + eager Attention",
+          "production_modified": false,
+          "optimizer": "production ndim>=2 wd.1 / ndim<2 wd0, AdamW fused .9/.95 eps1e-8 lr3e-4 clip1",
+          "torch": "2.7.0a0+7c8ec84dab.nv25.03",
+          "max_allocated_gib": 22.957847595214844,
+          "max_reserved_gib": 27.830078125,
+          "scope": "Fixed synthetic paired one-step numerics plus 2warm/3timed steps. No actual-token checkpoint/resume or multi-step convergence approval."
+        },
+        {
+          "status": "passed_bounded_pair",
+          "model": "3b",
+          "sequence": 4096,
+          "seed": 712,
+          "rank": 1,
+          "world": 8,
+          "tolerances": {
+            "logits_rel_l2": 0.03,
+            "gradient_rel_l2": 0.05,
+            "update_rel_l2": 0.1,
+            "loss_abs": 0.03
+          },
+          "eager_repeat": {
+            "logits": {
+              "rel_l2": 0.0,
+              "max_abs": 0.0,
+              "finite": true
+            },
+            "gradient": {
+              "rel_l2": 0.01643649973060393,
+              "max_abs": 0.00019359588623046875,
+              "finite": true
+            },
+            "update": {
+              "rel_l2": 0.07525626916774657,
+              "max_abs": 0.0005988809280097485,
+              "finite": true
+            },
+            "loss_abs": 0.0
+          },
+          "compiled_vs_eager": {
+            "logits": {
+              "rel_l2": 0.0,
+              "max_abs": 0.0,
+              "finite": true
+            },
+            "gradient": {
+              "rel_l2": 0.01790483343021174,
+              "max_abs": 0.00021648406982421875,
+              "finite": true
+            },
+            "update": {
+              "rel_l2": 0.08202627697506602,
+              "max_abs": 0.0005990073550492525,
+              "finite": true
+            },
+            "loss_abs": 0.0
+          },
+          "profiles": {
+            "eager": {
+              "step_seconds": [
+                0.2810973080340773,
+                0.28137828409671783,
+                0.2840513167902827
+              ],
+              "mean_seconds": 0.28217563630702597,
+              "tokens_per_second": 116126.25536652011
+            },
+            "candidate": {
+              "step_seconds": [
+                0.2817758289165795,
+                0.28160953102633357,
+                0.2823901539668441
+              ],
+              "mean_seconds": 0.2819251713032524,
+              "tokens_per_second": 116229.42303634588
+            }
+          },
+          "input_sha256": "7d732fc22996741d39fdc13c44db9711746357c6fe464f24a1b3e6f0af790522",
+          "candidate": "cast preservation + eager RMSNorm + eager Attention",
+          "production_modified": false,
+          "optimizer": "production ndim>=2 wd.1 / ndim<2 wd0, AdamW fused .9/.95 eps1e-8 lr3e-4 clip1",
+          "torch": "2.7.0a0+7c8ec84dab.nv25.03",
+          "max_allocated_gib": 22.957847595214844,
+          "max_reserved_gib": 27.830078125,
+          "scope": "Fixed synthetic paired one-step numerics plus 2warm/3timed steps. No actual-token checkpoint/resume or multi-step convergence approval."
+        },
+        {
+          "status": "passed_bounded_pair",
+          "model": "3b",
+          "sequence": 4096,
+          "seed": 712,
+          "rank": 2,
+          "world": 8,
+          "tolerances": {
+            "logits_rel_l2": 0.03,
+            "gradient_rel_l2": 0.05,
+            "update_rel_l2": 0.1,
+            "loss_abs": 0.03
+          },
+          "eager_repeat": {
+            "logits": {
+              "rel_l2": 0.0,
+              "max_abs": 0.0,
+              "finite": true
+            },
+            "gradient": {
+              "rel_l2": 0.01643649973060393,
+              "max_abs": 0.00019359588623046875,
+              "finite": true
+            },
+            "update": {
+              "rel_l2": 0.07525626916774657,
+              "max_abs": 0.0005988809280097485,
+              "finite": true
+            },
+            "loss_abs": 0.0
+          },
+          "compiled_vs_eager": {
+            "logits": {
+              "rel_l2": 0.0,
+              "max_abs": 0.0,
+              "finite": true
+            },
+            "gradient": {
+              "rel_l2": 0.01790483343021174,
+              "max_abs": 0.00021648406982421875,
+              "finite": true
+            },
+            "update": {
+              "rel_l2": 0.08202627697506602,
+              "max_abs": 0.0005990073550492525,
+              "finite": true
+            },
+            "loss_abs": 0.0
+          },
+          "profiles": {
+            "eager": {
+              "step_seconds": [
+                0.2810973080340773,
+                0.28137828409671783,
+                0.2840513167902827
+              ],
+              "mean_seconds": 0.28217563630702597,
+              "tokens_per_second": 116126.25536652011
+            },
+            "candidate": {
+              "step_seconds": [
+                0.2817758289165795,
+                0.28160953102633357,
+                0.2823901539668441
+              ],
+              "mean_seconds": 0.2819251713032524,
+              "tokens_per_second": 116229.42303634588
+            }
+          },
+          "input_sha256": "1d6f24c75857c42b98feec1a686c953c645dfbe47765f6a965e42717070cdcc7",
+          "candidate": "cast preservation + eager RMSNorm + eager Attention",
+          "production_modified": false,
+          "optimizer": "production ndim>=2 wd.1 / ndim<2 wd0, AdamW fused .9/.95 eps1e-8 lr3e-4 clip1",
+          "torch": "2.7.0a0+7c8ec84dab.nv25.03",
+          "max_allocated_gib": 22.957847595214844,
+          "max_reserved_gib": 27.830078125,
+          "scope": "Fixed synthetic paired one-step numerics plus 2warm/3timed steps. No actual-token checkpoint/resume or multi-step convergence approval."
+        },
+        {
+          "status": "passed_bounded_pair",
+          "model": "3b",
+          "sequence": 4096,
+          "seed": 712,
+          "rank": 3,
+          "world": 8,
+          "tolerances": {
+            "logits_rel_l2": 0.03,
+            "gradient_rel_l2": 0.05,
+            "update_rel_l2": 0.1,
+            "loss_abs": 0.03
+          },
+          "eager_repeat": {
+            "logits": {
+              "rel_l2": 0.0,
+              "max_abs": 0.0,
+              "finite": true
+            },
+            "gradient": {
+              "rel_l2": 0.01643649973060393,
+              "max_abs": 0.00019359588623046875,
+              "finite": true
+            },
+            "update": {
+              "rel_l2": 0.07525626916774657,
+              "max_abs": 0.0005988809280097485,
+              "finite": true
+            },
+            "loss_abs": 0.0
+          },
+          "compiled_vs_eager": {
+            "logits": {
+              "rel_l2": 0.0,
+              "max_abs": 0.0,
+              "finite": true
+            },
+            "gradient": {
+              "rel_l2": 0.01790483343021174,
+              "max_abs": 0.00021648406982421875,
+              "finite": true
+            },
+            "update": {
+              "rel_l2": 0.08202627697506602,
+              "max_abs": 0.0005990073550492525,
+              "finite": true
+            },
+            "loss_abs": 0.0
+          },
+          "profiles": {
+            "eager": {
+              "step_seconds": [
+                0.2810973080340773,
+                0.28137828409671783,
+                0.2840513167902827
+              ],
+              "mean_seconds": 0.28217563630702597,
+              "tokens_per_second": 116126.25536652011
+            },
+            "candidate": {
+              "step_seconds": [
+                0.2817758289165795,
+                0.28160953102633357,
+                0.2823901539668441
+              ],
+              "mean_seconds": 0.2819251713032524,
+              "tokens_per_second": 116229.42303634588
+            }
+          },
+          "input_sha256": "621b4e66cf597160debe066ceb12dac015f2a7ad4e53e1cd34c40881a74626a8",
+          "candidate": "cast preservation + eager RMSNorm + eager Attention",
+          "production_modified": false,
+          "optimizer": "production ndim>=2 wd.1 / ndim<2 wd0, AdamW fused .9/.95 eps1e-8 lr3e-4 clip1",
+          "torch": "2.7.0a0+7c8ec84dab.nv25.03",
+          "max_allocated_gib": 22.957847595214844,
+          "max_reserved_gib": 27.830078125,
+          "scope": "Fixed synthetic paired one-step numerics plus 2warm/3timed steps. No actual-token checkpoint/resume or multi-step convergence approval."
+        },
+        {
+          "status": "passed_bounded_pair",
+          "model": "3b",
+          "sequence": 4096,
+          "seed": 712,
+          "rank": 4,
+          "world": 8,
+          "tolerances": {
+            "logits_rel_l2": 0.03,
+            "gradient_rel_l2": 0.05,
+            "update_rel_l2": 0.1,
+            "loss_abs": 0.03
+          },
+          "eager_repeat": {
+            "logits": {
+              "rel_l2": 0.0,
+              "max_abs": 0.0,
+              "finite": true
+            },
+            "gradient": {
+              "rel_l2": 0.01643649973060393,
+              "max_abs": 0.00019359588623046875,
+              "finite": true
+            },
+            "update": {
+              "rel_l2": 0.07525626916774657,
+              "max_abs": 0.0005988809280097485,
+              "finite": true
+            },
+            "loss_abs": 0.0
+          },
+          "compiled_vs_eager": {
+            "logits": {
+              "rel_l2": 0.0,
+              "max_abs": 0.0,
+              "finite": true
+            },
+            "gradient": {
+              "rel_l2": 0.01790483343021174,
+              "max_abs": 0.00021648406982421875,
+              "finite": true
+            },
+            "update": {
+              "rel_l2": 0.08202627697506602,
+              "max_abs": 0.0005990073550492525,
+              "finite": true
+            },
+            "loss_abs": 0.0
+          },
+          "profiles": {
+            "eager": {
+              "step_seconds": [
+                0.2810973080340773,
+                0.28137828409671783,
+                0.2840513167902827
+              ],
+              "mean_seconds": 0.28217563630702597,
+              "tokens_per_second": 116126.25536652011
+            },
+            "candidate": {
+              "step_seconds": [
+                0.2817758289165795,
+                0.28160953102633357,
+                0.2823901539668441
+              ],
+              "mean_seconds": 0.2819251713032524,
+              "tokens_per_second": 116229.42303634588
+            }
+          },
+          "input_sha256": "a09da6becaaa0d2288132c0401e51ef7f9d2dd1cce0ec3d3ebc97a3cdc275988",
+          "candidate": "cast preservation + eager RMSNorm + eager Attention",
+          "production_modified": false,
+          "optimizer": "production ndim>=2 wd.1 / ndim<2 wd0, AdamW fused .9/.95 eps1e-8 lr3e-4 clip1",
+          "torch": "2.7.0a0+7c8ec84dab.nv25.03",
+          "max_allocated_gib": 22.957847595214844,
+          "max_reserved_gib": 27.830078125,
+          "scope": "Fixed synthetic paired one-step numerics plus 2warm/3timed steps. No actual-token checkpoint/resume or multi-step convergence approval."
+        },
+        {
+          "status": "passed_bounded_pair",
+          "model": "3b",
+          "sequence": 4096,
+          "seed": 712,
+          "rank": 5,
+          "world": 8,
+          "tolerances": {
+            "logits_rel_l2": 0.03,
+            "gradient_rel_l2": 0.05,
+            "update_rel_l2": 0.1,
+            "loss_abs": 0.03
+          },
+          "eager_repeat": {
+            "logits": {
+              "rel_l2": 0.0,
+              "max_abs": 0.0,
+              "finite": true
+            },
+            "gradient": {
+              "rel_l2": 0.01643649973060393,
+              "max_abs": 0.00019359588623046875,
+              "finite": true
+            },
+            "update": {
+              "rel_l2": 0.07525626916774657,
+              "max_abs": 0.0005988809280097485,
+              "finite": true
+            },
+            "loss_abs": 0.0
+          },
+          "compiled_vs_eager": {
+            "logits": {
+              "rel_l2": 0.0,
+              "max_abs": 0.0,
+              "finite": true
+            },
+            "gradient": {
+              "rel_l2": 0.01790483343021174,
+              "max_abs": 0.00021648406982421875,
+              "finite": true
+            },
+            "update": {
+              "rel_l2": 0.08202627697506602,
+              "max_abs": 0.0005990073550492525,
+              "finite": true
+            },
+            "loss_abs": 0.0
+          },
+          "profiles": {
+            "eager": {
+              "step_seconds": [
+                0.2810973080340773,
+                0.28137828409671783,
+                0.2840513167902827
+              ],
+              "mean_seconds": 0.28217563630702597,
+              "tokens_per_second": 116126.25536652011
+            },
+            "candidate": {
+              "step_seconds": [
+                0.2817758289165795,
+                0.28160953102633357,
+                0.2823901539668441
+              ],
+              "mean_seconds": 0.2819251713032524,
+              "tokens_per_second": 116229.42303634588
+            }
+          },
+          "input_sha256": "4a8e0a05a634ce9986b8804fea63ef9a1744a0d63725221db41e8119b6d3ebd9",
+          "candidate": "cast preservation + eager RMSNorm + eager Attention",
+          "production_modified": false,
+          "optimizer": "production ndim>=2 wd.1 / ndim<2 wd0, AdamW fused .9/.95 eps1e-8 lr3e-4 clip1",
+          "torch": "2.7.0a0+7c8ec84dab.nv25.03",
+          "max_allocated_gib": 22.957847595214844,
+          "max_reserved_gib": 27.830078125,
+          "scope": "Fixed synthetic paired one-step numerics plus 2warm/3timed steps. No actual-token checkpoint/resume or multi-step convergence approval."
+        },
+        {
+          "status": "passed_bounded_pair",
+          "model": "3b",
+          "sequence": 4096,
+          "seed": 712,
+          "rank": 6,
+          "world": 8,
+          "tolerances": {
+            "logits_rel_l2": 0.03,
+            "gradient_rel_l2": 0.05,
+            "update_rel_l2": 0.1,
+            "loss_abs": 0.03
+          },
+          "eager_repeat": {
+            "logits": {
+              "rel_l2": 0.0,
+              "max_abs": 0.0,
+              "finite": true
+            },
+            "gradient": {
+              "rel_l2": 0.01643649973060393,
+              "max_abs": 0.00019359588623046875,
+              "finite": true
+            },
+            "update": {
+              "rel_l2": 0.07525626916774657,
+              "max_abs": 0.0005988809280097485,
+              "finite": true
+            },
+            "loss_abs": 0.0
+          },
+          "compiled_vs_eager": {
+            "logits": {
+              "rel_l2": 0.0,
+              "max_abs": 0.0,
+              "finite": true
+            },
+            "gradient": {
+              "rel_l2": 0.01790483343021174,
+              "max_abs": 0.00021648406982421875,
+              "finite": true
+            },
+            "update": {
+              "rel_l2": 0.08202627697506602,
+              "max_abs": 0.0005990073550492525,
+              "finite": true
+            },
+            "loss_abs": 0.0
+          },
+          "profiles": {
+            "eager": {
+              "step_seconds": [
+                0.2810973080340773,
+                0.28137828409671783,
+                0.2840513167902827
+              ],
+              "mean_seconds": 0.28217563630702597,
+              "tokens_per_second": 116126.25536652011
+            },
+            "candidate": {
+              "step_seconds": [
+                0.2817758289165795,
+                0.28160953102633357,
+                0.2823901539668441
+              ],
+              "mean_seconds": 0.2819251713032524,
+              "tokens_per_second": 116229.42303634588
+            }
+          },
+          "input_sha256": "f804be432c816a61241e524ac5c2f217edf683ca81e9244cde3c4b4beabda489",
+          "candidate": "cast preservation + eager RMSNorm + eager Attention",
+          "production_modified": false,
+          "optimizer": "production ndim>=2 wd.1 / ndim<2 wd0, AdamW fused .9/.95 eps1e-8 lr3e-4 clip1",
+          "torch": "2.7.0a0+7c8ec84dab.nv25.03",
+          "max_allocated_gib": 22.957847595214844,
+          "max_reserved_gib": 27.830078125,
+          "scope": "Fixed synthetic paired one-step numerics plus 2warm/3timed steps. No actual-token checkpoint/resume or multi-step convergence approval."
+        },
+        {
+          "status": "passed_bounded_pair",
+          "model": "3b",
+          "sequence": 4096,
+          "seed": 712,
+          "rank": 7,
+          "world": 8,
+          "tolerances": {
+            "logits_rel_l2": 0.03,
+            "gradient_rel_l2": 0.05,
+            "update_rel_l2": 0.1,
+            "loss_abs": 0.03
+          },
+          "eager_repeat": {
+            "logits": {
+              "rel_l2": 0.0,
+              "max_abs": 0.0,
+              "finite": true
+            },
+            "gradient": {
+              "rel_l2": 0.01643649973060393,
+              "max_abs": 0.00019359588623046875,
+              "finite": true
+            },
+            "update": {
+              "rel_l2": 0.07525626916774657,
+              "max_abs": 0.0005988809280097485,
+              "finite": true
+            },
+            "loss_abs": 0.0
+          },
+          "compiled_vs_eager": {
+            "logits": {
+              "rel_l2": 0.0,
+              "max_abs": 0.0,
+              "finite": true
+            },
+            "gradient": {
+              "rel_l2": 0.01790483343021174,
+              "max_abs": 0.00021648406982421875,
+              "finite": true
+            },
+            "update": {
+              "rel_l2": 0.08202627697506602,
+              "max_abs": 0.0005990073550492525,
+              "finite": true
+            },
+            "loss_abs": 0.0
+          },
+          "profiles": {
+            "eager": {
+              "step_seconds": [
+                0.2810973080340773,
+                0.28137828409671783,
+                0.2840513167902827
+              ],
+              "mean_seconds": 0.28217563630702597,
+              "tokens_per_second": 116126.25536652011
+            },
+            "candidate": {
+              "step_seconds": [
+                0.2817758289165795,
+                0.28160953102633357,
+                0.2823901539668441
+              ],
+              "mean_seconds": 0.2819251713032524,
+              "tokens_per_second": 116229.42303634588
+            }
+          },
+          "input_sha256": "e22ad64f3f31b6f20d1c28ec755993662a1f4eeab26fa633e33ce216a80ad570",
+          "candidate": "cast preservation + eager RMSNorm + eager Attention",
+          "production_modified": false,
+          "optimizer": "production ndim>=2 wd.1 / ndim<2 wd0, AdamW fused .9/.95 eps1e-8 lr3e-4 clip1",
+          "torch": "2.7.0a0+7c8ec84dab.nv25.03",
+          "max_allocated_gib": 22.957847595214844,
+          "max_reserved_gib": 27.830078125,
+          "scope": "Fixed synthetic paired one-step numerics plus 2warm/3timed steps. No actual-token checkpoint/resume or multi-step convergence approval."
+        }
+      ],
+      "execution": {
+        "cases": [
+          "w8_s4096_seed712"
+        ],
+        "elapsed_seconds": 76.76732862507924,
+        "sampled_peak_rss_bytes": 145346265088,
+        "main_before": {
+          "unix": 1793965228.7387526,
+          "phase": "ingest",
+          "rows": 34969653,
+          "main_state": "running",
+          "main_peak_rss_bytes": 28741918720
+        },
+        "main_after": {
+          "unix": 1793965305.5021777,
+          "phase": "ingest",
+          "rows": 35652569,
+          "main_state": "running",
+          "main_peak_rss_bytes": 29265494016
+        },
+        "main_rows_per_second": 8896.37218513435
+      }
+    }
+  ],
+  "production_adoption": "pending",
+  "scope": "Candidate diagnostic only; complete short-context stage before long context, then FSDP8. Numeric failure remains needs_review, not hidden by tolerance changes."
+}

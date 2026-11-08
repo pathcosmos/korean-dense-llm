@@ -1,0 +1,80 @@
+{
+  "schema_version": 1,
+  "purpose": "새 Dense 모델 구현자가 실제 테스트에 연결할 입력과 기대 결과",
+  "status": "specification_only_not_executed_against_new_implementation",
+  "guide": "../../FRANKENSTALLM_HANDOFF.md",
+  "evidence": "evidence.json",
+  "token_ids": "synthetic_only",
+  "cases": [
+    {
+      "id": "D01", "ref": "REF-DATA", "target": "train/data.py",
+      "inputs": {"tokens": [0, 1, 2, 3, 4], "seq_len": 4, "batch_size": 1},
+      "expected": {"valid_start_offsets": [0], "input_ids": [0, 1, 2, 3], "targets": [1, 2, 3, 4], "raises": false},
+      "reason": "정확히 한 window가 있는 샤드도 유효하다."
+    },
+    {
+      "id": "D02", "ref": "REF-DATA", "target": "train/data.py",
+      "inputs": {"tokens": [0, 1, 2, 3, 4, 5], "seq_len": 4},
+      "expected": {"valid_start_offsets": [0, 1], "last_window_input": [1, 2, 3, 4], "last_window_targets": [2, 3, 4, 5]},
+      "test_method": "유효 시작점 범위를 직접 검사하거나 제어된 RNG로 마지막 시작점을 선택한다. 확률적 관찰만으로 판정하지 않는다."
+    },
+    {
+      "id": "D03", "ref": "REF-DATA", "target": "data/filters.py or code deduplication",
+      "inputs": {"pairs": [["if ready:\n    run()\n    stop()", "if ready:\n    run()\nstop()"], ["X = 1", "x = 1"]]},
+      "expected": {"treat_as_exact_duplicates": [false, false]},
+      "reason": "코드의 의미를 바꿀 수 있는 공백·대소문자를 보존한다. 웹용 정규화와 분리한다."
+    },
+    {
+      "id": "T01", "ref": "REF-TOK", "target": "data/tokenize_shards.py",
+      "inputs": {"valid_ids": [0, 1, 65535], "invalid_ids": [-1, 65536], "storage_dtype": "uint16"},
+      "expected": {"accept_valid_ids": true, "reject_each_invalid_id_before_cast_or_write": true},
+      "reason": "dtype 변환 뒤 overflow를 확인하면 원래 범위를 복원할 수 없다."
+    },
+    {
+      "id": "T02", "ref": "REF-TOK", "also_refs": ["REF-SFT"], "target": "tokenization and SFT cache identity",
+      "inputs": {"tokenizer_a": {"<unk>": 0, "a": 1, "b": 2}, "tokenizer_b": {"<unk>": 0, "a": 2, "b": 1}, "same_input_file": true, "same_seq_len": true},
+      "expected": {"cache_identity_equal": false, "reuse_a_tokens_for_b": false},
+      "reason": "같은 vocab 크기가 같은 tokenizer를 뜻하지 않는다."
+    },
+    {
+      "id": "E01", "ref": "REF-EVAL", "target": "eval/perplexity.py or equivalent scoring windows",
+      "inputs": {"tokens": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12], "seq_len": 8, "stride": 2},
+      "expected": {"scored_target_positions": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12], "total_scored": 12, "unique_scored": 12, "duplicate_count": 0, "missing_count": 0},
+      "reason": "context를 겹쳐 읽어도 목표 토큰은 한 번만 점수화하고 tail을 포함한다."
+    },
+    {
+      "id": "E02", "ref": "REF-EVAL", "also_refs": ["REF-SFT"], "target": "loss aggregation",
+      "inputs": {"batches": [{"nll_sum": 2.0, "valid_tokens": 1}, {"nll_sum": 12.0, "valid_tokens": 3}]},
+      "expected": {"nll_sum": 14.0, "valid_tokens": 4, "mean_nll": 3.5},
+      "reason": "배치 평균들의 단순 평균 3.0은 토큰 가중 평균과 다르다."
+    },
+    {
+      "id": "E03", "ref": "REF-EVAL", "target": "empty evaluation handling",
+      "inputs": {"token_sequences": [[], [5]]},
+      "expected": {"valid_next_token_targets": [0, 0], "raise_or_report_explicit_invalid_evaluation": true, "emit_successful_ppl_1": false}
+    },
+    {
+      "id": "X01", "ref": "REF-EXPORT", "target": "checkpoint loader and exporter",
+      "inputs": {"base": "complete tiny model state dict for its actual config", "mutation": "remove one required attention q_proj or equivalent current wq weight"},
+      "expected": {"reject_before_scoring": true, "report_missing_key": true, "silently_random_initialize_missing_weight": false},
+      "reason": "가중치 누락을 모델 성능 점수로 바꾸지 않는다."
+    },
+    {
+      "id": "S01", "ref": "REF-SFT", "target": "sft label construction for current model forward",
+      "inputs": {"prompt_ids": [3, 4], "response_ids_including_eos": [5, 6, 7], "eos_id": 7, "ignore_index": -100, "model_shifts_targets_internally": false},
+      "expected": {"input_ids": [3, 4, 5, 6, 7], "labels": [-100, 5, 6, 7, -100], "supervised_tokens": 3},
+      "reason": "현재 모델 계약에 맞춘 합성 사례. 실제 tokenizer ID는 실행 시 읽으며 shift를 중복 적용하지 않는다."
+    },
+    {
+      "id": "S02", "ref": "REF-SFT", "target": "chat template and conversation normalization",
+      "inputs": {"messages": [{"role": "system", "content": "SYSTEM_SENTINEL"}, {"role": "user", "content": "QUESTION_SENTINEL"}, {"role": "assistant", "content": "ANSWER_SENTINEL"}]},
+      "expected": {"system_content_retained_in_context": true, "user_content_retained_in_context": true, "supervise_system_or_user_content": false, "supervise_assistant_content_and_end_marker": true}
+    },
+    {
+      "id": "P01", "ref": "REF-PREF", "target": "preference data normalization",
+      "inputs": {"prompt": "질문", "response_a": "A 응답", "response_b": "B 응답", "winner_cases": [null, "tie", "unknown"]},
+      "expected": {"infer_winner_a_or_b": false, "exclude_with_reason": true},
+      "reason": "라벨 누락이나 동점을 실제 선호 라벨로 만들지 않는다."
+    }
+  ]
+}

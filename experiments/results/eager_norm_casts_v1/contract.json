@@ -1,0 +1,13 @@
+{
+  "code": {
+    "scripts/probe_eager_norm_casts.py": "8447f2ae330e88647dedd3439503b9f3128340a78872687eab05ebc3fe65c331",
+    "scripts/diagnose_compile_precision.py": "a28c573c75e4ca66f8af33f172ae6346e1cd428b041e9a6f8a921824a0a63bcc",
+    "model/model.py": "719cc0d69b35620e36cba817df1b11dd0e322da529f3cafc30130f6a45b5fee9",
+    "train/train.py": "c4a948e5701cd5d3f61dc0903ef9506b8af1149a3ab3df36a706417a21a61904"
+  },
+  "torch": "2.7.0a0+7c8ec84dab.nv25.03",
+  "inductor_config_sha256": "0919ae7494b47adcab159ce9d35c64c2e502882ded7e4beed5d40d1a2388a50d",
+  "emulate_precision_casts": true,
+  "eager_rmsnorm": true,
+  "production_modified": false
+}

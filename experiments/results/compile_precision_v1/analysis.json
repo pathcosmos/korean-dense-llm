@@ -1,0 +1,524 @@
+{
+  "status": "diagnosis_complete_adoption_pending",
+  "evidence": {
+    "baseline": {
+      "report": "runs/compile_precision_v1/3b/report.json",
+      "sha256": "1fcc4fad1c21fb93512c08aa303db996868ddac34354c9450c5decce435b63f8",
+      "comparison": {
+        "logits": {
+          "rel_l2": 0.024010893553552428,
+          "max_abs": 0.153350830078125,
+          "finite": true
+        },
+        "loss_abs": 0.0015850067138671875,
+        "gradient": {
+          "rel_l2": 0.039058390071456374,
+          "max_abs": 0.0541963130235672,
+          "finite": true
+        },
+        "update": {
+          "rel_l2": 0.16970650129175482,
+          "max_abs": 0.0005998928099870682,
+          "finite": true
+        },
+        "grad_norms": [
+          477.4815673828125,
+          477.57635498046875
+        ],
+        "gradient_sign_flip_fraction": 0.011319986179824909,
+        "sign_flip_reference_gradient_energy_fraction": 1.2466379568021683e-05,
+        "worst_gradient_parameters": [
+          [
+            "blocks.27.attn.wq.weight",
+            {
+              "rel_l2": 0.05099657519944025,
+              "max_abs": 5.8650970458984375e-05,
+              "finite": true
+            }
+          ],
+          [
+            "blocks.27.attn.wk.weight",
+            {
+              "rel_l2": 0.05097706798835662,
+              "max_abs": 8.7738037109375e-05,
+              "finite": true
+            }
+          ],
+          [
+            "blocks.25.attn.wk.weight",
+            {
+              "rel_l2": 0.05064334626142479,
+              "max_abs": 9.5367431640625e-05,
+              "finite": true
+            }
+          ],
+          [
+            "blocks.24.attn.wq.weight",
+            {
+              "rel_l2": 0.050632826934660126,
+              "max_abs": 6.4849853515625e-05,
+              "finite": true
+            }
+          ],
+          [
+            "blocks.24.attn.wk.weight",
+            {
+              "rel_l2": 0.05062766851540615,
+              "max_abs": 8.7738037109375e-05,
+              "finite": true
+            }
+          ],
+          [
+            "blocks.21.attn.wk.weight",
+            {
+              "rel_l2": 0.05046648100525552,
+              "max_abs": 0.00011444091796875,
+              "finite": true
+            }
+          ],
+          [
+            "blocks.25.attn.wq.weight",
+            {
+              "rel_l2": 0.05043164366945866,
+              "max_abs": 5.7220458984375e-05,
+              "finite": true
+            }
+          ],
+          [
+            "blocks.22.attn.wq.weight",
+            {
+              "rel_l2": 0.05037586766888346,
+              "max_abs": 7.2479248046875e-05,
+              "finite": true
+            }
+          ],
+          [
+            "blocks.22.attn.wk.weight",
+            {
+              "rel_l2": 0.050224080559367015,
+              "max_abs": 0.0001049041748046875,
+              "finite": true
+            }
+          ],
+          [
+            "blocks.21.attn.wq.weight",
+            {
+              "rel_l2": 0.05005088179653713,
+              "max_abs": 8.392333984375e-05,
+              "finite": true
+            }
+          ],
+          [
+            "blocks.23.attn.wk.weight",
+            {
+              "rel_l2": 0.049555006367986154,
+              "max_abs": 9.918212890625e-05,
+              "finite": true
+            }
+          ],
+          [
+            "blocks.23.attn.wq.weight",
+            {
+              "rel_l2": 0.049332039651962624,
+              "max_abs": 7.62939453125e-05,
+              "finite": true
+            }
+          ]
+        ]
+      }
+    },
+    "fp32_gate": {
+      "report": "runs/full_fp32_gate_v1/report.json",
+      "sha256": "dd3cd4d056aa669960b94ce1471df21c00e60318dcab9ddc56dd058aa7927164",
+      "comparison": {
+        "logits": {
+          "rel_l2": 0.01961110657211907,
+          "max_abs": 0.125,
+          "finite": true
+        },
+        "loss_abs": 0.0023059844970703125,
+        "gradient": {
+          "rel_l2": 0.032782781809337275,
+          "max_abs": 0.048942334949970245,
+          "finite": true
+        },
+        "update": {
+          "rel_l2": 0.14920274297973932,
+          "max_abs": 0.0005998741835355759,
+          "finite": true
+        },
+        "grad_norms": [
+          477.4815673828125,
+          477.55450439453125
+        ],
+        "gradient_sign_flip_fraction": 0.009266582436967938,
+        "sign_flip_reference_gradient_energy_fraction": 7.494130604642735e-06,
+        "worst_gradient_parameters": [
+          [
+            "blocks.27.attn.wk.weight",
+            {
+              "rel_l2": 0.039971317397576554,
+              "max_abs": 7.2479248046875e-05,
+              "finite": true
+            }
+          ],
+          [
+            "blocks.24.attn.wk.weight",
+            {
+              "rel_l2": 0.03985818248760305,
+              "max_abs": 7.62939453125e-05,
+              "finite": true
+            }
+          ],
+          [
+            "blocks.22.attn.wq.weight",
+            {
+              "rel_l2": 0.03976085048104357,
+              "max_abs": 5.936622619628906e-05,
+              "finite": true
+            }
+          ],
+          [
+            "blocks.17.attn.wk.weight",
+            {
+              "rel_l2": 0.039752788587055415,
+              "max_abs": 0.00013494491577148438,
+              "finite": true
+            }
+          ],
+          [
+            "blocks.27.attn.wq.weight",
+            {
+              "rel_l2": 0.03972700463590453,
+              "max_abs": 4.57763671875e-05,
+              "finite": true
+            }
+          ],
+          [
+            "blocks.22.attn.wk.weight",
+            {
+              "rel_l2": 0.03963109163216851,
+              "max_abs": 8.7738037109375e-05,
+              "finite": true
+            }
+          ],
+          [
+            "blocks.21.attn.wk.weight",
+            {
+              "rel_l2": 0.039573769236627004,
+              "max_abs": 8.0108642578125e-05,
+              "finite": true
+            }
+          ],
+          [
+            "blocks.23.attn.wq.weight",
+            {
+              "rel_l2": 0.039555558892410816,
+              "max_abs": 6.103515625e-05,
+              "finite": true
+            }
+          ],
+          [
+            "blocks.23.attn.wk.weight",
+            {
+              "rel_l2": 0.0395467126480337,
+              "max_abs": 7.385015487670898e-05,
+              "finite": true
+            }
+          ],
+          [
+            "blocks.17.attn.wq.weight",
+            {
+              "rel_l2": 0.03952021274248066,
+              "max_abs": 6.866455078125e-05,
+              "finite": true
+            }
+          ],
+          [
+            "blocks.25.attn.wk.weight",
+            {
+              "rel_l2": 0.039433524393468096,
+              "max_abs": 7.295608520507812e-05,
+              "finite": true
+            }
+          ],
+          [
+            "blocks.24.attn.wq.weight",
+            {
+              "rel_l2": 0.03938192110263122,
+              "max_abs": 4.9114227294921875e-05,
+              "finite": true
+            }
+          ]
+        ]
+      }
+    },
+    "preserve_casts": {
+      "report": "runs/compile_casts_v1/report.json",
+      "sha256": "1134d46ba94a9ec66388fc590586fc2a8124a13e3b47f0d6cfd707b79db8a9a1",
+      "comparison": {
+        "logits": {
+          "rel_l2": 0.01962727412521188,
+          "max_abs": 0.15625,
+          "finite": true
+        },
+        "loss_abs": 0.004482269287109375,
+        "gradient": {
+          "rel_l2": 0.03267044757348496,
+          "max_abs": 0.04360687732696533,
+          "finite": true
+        },
+        "update": {
+          "rel_l2": 0.14942505042464405,
+          "max_abs": 0.0005997790140099823,
+          "finite": true
+        },
+        "grad_norms": [
+          477.2646484375,
+          477.57635498046875
+        ],
+        "gradient_sign_flip_fraction": 0.009287760492410119,
+        "sign_flip_reference_gradient_energy_fraction": 7.380794292138353e-06,
+        "worst_gradient_parameters": [
+          [
+            "blocks.24.attn.wq.weight",
+            {
+              "rel_l2": 0.03976897676534809,
+              "max_abs": 4.76837158203125e-05,
+              "finite": true
+            }
+          ],
+          [
+            "blocks.22.attn.wk.weight",
+            {
+              "rel_l2": 0.03966255121139868,
+              "max_abs": 9.34600830078125e-05,
+              "finite": true
+            }
+          ],
+          [
+            "blocks.24.attn.wk.weight",
+            {
+              "rel_l2": 0.0396607901484682,
+              "max_abs": 7.772445678710938e-05,
+              "finite": true
+            }
+          ],
+          [
+            "blocks.22.attn.wq.weight",
+            {
+              "rel_l2": 0.03944738473476353,
+              "max_abs": 6.4849853515625e-05,
+              "finite": true
+            }
+          ],
+          [
+            "blocks.27.attn.wk.weight",
+            {
+              "rel_l2": 0.03935186973157673,
+              "max_abs": 5.9485435485839844e-05,
+              "finite": true
+            }
+          ],
+          [
+            "blocks.27.attn.wq.weight",
+            {
+              "rel_l2": 0.03929169857542315,
+              "max_abs": 4.57763671875e-05,
+              "finite": true
+            }
+          ],
+          [
+            "blocks.23.attn.wk.weight",
+            {
+              "rel_l2": 0.03901213546873033,
+              "max_abs": 6.866455078125e-05,
+              "finite": true
+            }
+          ],
+          [
+            "blocks.21.attn.wk.weight",
+            {
+              "rel_l2": 0.03884609597296839,
+              "max_abs": 8.0108642578125e-05,
+              "finite": true
+            }
+          ],
+          [
+            "blocks.23.attn.wq.weight",
+            {
+              "rel_l2": 0.03859971959726274,
+              "max_abs": 5.6743621826171875e-05,
+              "finite": true
+            }
+          ],
+          [
+            "blocks.25.attn.wq.weight",
+            {
+              "rel_l2": 0.03845572374782193,
+              "max_abs": 4.482269287109375e-05,
+              "finite": true
+            }
+          ],
+          [
+            "blocks.17.attn.wk.weight",
+            {
+              "rel_l2": 0.03840118617037238,
+              "max_abs": 0.0001068115234375,
+              "finite": true
+            }
+          ],
+          [
+            "blocks.25.attn.wk.weight",
+            {
+              "rel_l2": 0.03837458443733438,
+              "max_abs": 7.62939453125e-05,
+              "finite": true
+            }
+          ]
+        ]
+      }
+    },
+    "eager_norm_and_casts": {
+      "report": "runs/eager_norm_casts_v1/report.json",
+      "sha256": "cbe09b5bd7e70ec0605f2a5eaf77388b5af7a66caa7aa663214ff8497b7217fd",
+      "comparison": {
+        "logits": {
+          "rel_l2": 0.01184576277173039,
+          "max_abs": 0.078125,
+          "finite": true
+        },
+        "loss_abs": 0.0021076202392578125,
+        "gradient": {
+          "rel_l2": 0.020794894359806748,
+          "max_abs": 0.03274843096733093,
+          "finite": true
+        },
+        "update": {
+          "rel_l2": 0.10738703196885656,
+          "max_abs": 0.0005996599793434143,
+          "finite": true
+        },
+        "grad_norms": [
+          477.531982421875,
+          477.57635498046875
+        ],
+        "gradient_sign_flip_fraction": 0.005689925412119874,
+        "sign_flip_reference_gradient_energy_fraction": 1.8849440670647042e-06,
+        "worst_gradient_parameters": [
+          [
+            "blocks.27.attn.wk.weight",
+            {
+              "rel_l2": 0.0257167795359927,
+              "max_abs": 4.00543212890625e-05,
+              "finite": true
+            }
+          ],
+          [
+            "blocks.27.attn.wq.weight",
+            {
+              "rel_l2": 0.02565697535006658,
+              "max_abs": 3.147125244140625e-05,
+              "finite": true
+            }
+          ],
+          [
+            "blocks.24.attn.wk.weight",
+            {
+              "rel_l2": 0.025536084982913085,
+              "max_abs": 5.054473876953125e-05,
+              "finite": true
+            }
+          ],
+          [
+            "blocks.24.attn.wq.weight",
+            {
+              "rel_l2": 0.025258722044083456,
+              "max_abs": 3.24249267578125e-05,
+              "finite": true
+            }
+          ],
+          [
+            "blocks.22.attn.wq.weight",
+            {
+              "rel_l2": 0.025150775238185433,
+              "max_abs": 4.9591064453125e-05,
+              "finite": true
+            }
+          ],
+          [
+            "blocks.22.attn.wk.weight",
+            {
+              "rel_l2": 0.02492907391604525,
+              "max_abs": 4.8160552978515625e-05,
+              "finite": true
+            }
+          ],
+          [
+            "blocks.21.attn.wk.weight",
+            {
+              "rel_l2": 0.02461296795256584,
+              "max_abs": 4.9591064453125e-05,
+              "finite": true
+            }
+          ],
+          [
+            "blocks.25.attn.wk.weight",
+            {
+              "rel_l2": 0.02449240876370806,
+              "max_abs": 4.673004150390625e-05,
+              "finite": true
+            }
+          ],
+          [
+            "blocks.25.attn.wq.weight",
+            {
+              "rel_l2": 0.024379098299633407,
+              "max_abs": 3.0517578125e-05,
+              "finite": true
+            }
+          ],
+          [
+            "blocks.15.attn.wk.weight",
+            {
+              "rel_l2": 0.024320942313161023,
+              "max_abs": 6.4849853515625e-05,
+              "finite": true
+            }
+          ],
+          [
+            "blocks.21.attn.wq.weight",
+            {
+              "rel_l2": 0.024279595953024046,
+              "max_abs": 3.528594970703125e-05,
+              "finite": true
+            }
+          ],
+          [
+            "blocks.26.attn.wq.weight",
+            {
+              "rel_l2": 0.024126132277727457,
+              "max_abs": 3.8623809814453125e-05,
+              "finite": true
+            }
+          ]
+        ]
+      }
+    }
+  },
+  "isolated_swiglu_report_sha256": "10cd0f71546e12c01322ad8dea71390a77a3b15492801570b3c0687b39d00a58",
+  "findings": [
+    "FP32 compile/eager differences small; production decay groups do not remove bf16 differences",
+    "Isolated SwiGLU: materializing SiLU removes output/gradient difference; explicit FP32 gate gives equal outputs and gradient relative L2 about1.5e-6",
+    "Fusion/downcast behavior contributes, supported by installed Inductor config source and controlled probes; not sole full-model cause",
+    "Full3B best tested norm+casts still update relL2 .107387 > old .10 review threshold; no threshold relaxation",
+    "Global low-energy gradient sign changes can amplify first AdamW updates; this is not a percentage change of all model weights",
+    "No production model/train/config modified"
+  ],
+  "next": [
+    "Isolate same-input attention/projection/residual branches and backward rounding with layer-local differential probes",
+    "Then compare production FSDP8 seq4096/multiple seeds and short training curves",
+    "Measure candidate throughput after numerical acceptance; no speed claim from these probes"
+  ],
+  "scope": "SingleGPU, seq32, seed711, one optimizer step; layer traces may alter graph fusion, measured final trace equivalence included in reports"
+}

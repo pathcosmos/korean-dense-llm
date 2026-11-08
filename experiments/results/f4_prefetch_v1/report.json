@@ -1,0 +1,9 @@
+{
+  "status": "passed_whole_file_read",
+  "bytes": 115775635456,
+  "total": 115775635456,
+  "elapsed_seconds": 537.3308878880925,
+  "sha256": "2ed5a374f292d087353809a260ca4d268537182f3a22eca0e9db20e93c1c7eb7",
+  "stop_reason": null,
+  "scope": "Read-only sequential prefetch and actual whole-file SHA. Not F4 SQL completion; no source/output modifications."
+}

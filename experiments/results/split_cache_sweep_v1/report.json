@@ -1,0 +1,100 @@
+{
+  "status": "measurement_complete",
+  "cases": [
+    {
+      "cache_mib": 512,
+      "build_seconds": 293.501241782913,
+      "verify_seconds": 23.3806108860299,
+      "build_and_verify_seconds": 316.8818526689429,
+      "digest_seconds": 15.950164722977206,
+      "max_rss_kib": 950300,
+      "logical_rows": 3000000,
+      "logical_sha256": "da7e3cf699bc86f86bbe61b5d5c5f32027f8b09cc0b323a813169d68244003c2",
+      "counts": {
+        "eval": 301351,
+        "train": 2698649
+      },
+      "database_bytes": 2471710720,
+      "manifest_sha256": "ca88cf27473f70ceeb00242f677d9aca1980a100b54f0ca11b348c38c3103d51",
+      "phase_first_seconds": {
+        "verify_source:web": 0.0002964520826935768,
+        "verify_source:code": 0.016011721920222044,
+        "ingest_pending": 0.056843800004571676,
+        "ingest": 0.05818003392778337,
+        "assign": 186.33426057803445,
+        "finalize_pending": 269.9355554229114,
+        "finalize": 270.8739321429748,
+        "publish_db": 291.5000805601012,
+        "publish_report": 293.492689125007
+      }
+    },
+    {
+      "cache_mib": 8192,
+      "build_seconds": 298.26269569504075,
+      "verify_seconds": 20.076039504958317,
+      "build_and_verify_seconds": 318.33873519999906,
+      "digest_seconds": 15.894667273852974,
+      "max_rss_kib": 3226604,
+      "logical_rows": 3000000,
+      "logical_sha256": "da7e3cf699bc86f86bbe61b5d5c5f32027f8b09cc0b323a813169d68244003c2",
+      "counts": {
+        "eval": 301351,
+        "train": 2698649
+      },
+      "database_bytes": 2471710720,
+      "manifest_sha256": "e29f94f01a26e450e2969fcc3f71cc0603e36f68e32b98bf4936211cc3753718",
+      "phase_first_seconds": {
+        "verify_source:web": 0.0015473859384655952,
+        "verify_source:code": 0.035931064980104566,
+        "ingest_pending": 0.08714201906695962,
+        "ingest": 0.08886865386739373,
+        "assign": 202.6643289749045,
+        "finalize_pending": 277.29572927299887,
+        "finalize": 278.58671049796976,
+        "publish_db": 296.2349113319069,
+        "publish_report": 298.2517856420018
+      }
+    },
+    {
+      "cache_mib": 131072,
+      "build_seconds": 282.4775058599189,
+      "verify_seconds": 20.379940233193338,
+      "build_and_verify_seconds": 302.85744609311223,
+      "digest_seconds": 15.858957038959488,
+      "max_rss_kib": 3204644,
+      "logical_rows": 3000000,
+      "logical_sha256": "da7e3cf699bc86f86bbe61b5d5c5f32027f8b09cc0b323a813169d68244003c2",
+      "counts": {
+        "eval": 301351,
+        "train": 2698649
+      },
+      "database_bytes": 2471710720,
+      "manifest_sha256": "3b8afa6895a882232a8217f791a76f26f75aad097ab84508d33994e5370dbd7f",
+      "phase_first_seconds": {
+        "verify_source:web": 0.00040732603520154953,
+        "verify_source:code": 0.01755162188783288,
+        "ingest_pending": 0.05635222396813333,
+        "ingest": 0.057880738051608205,
+        "assign": 187.24816962797195,
+        "finalize_pending": 261.02615763503127,
+        "finalize": 262.31891846703365,
+        "publish_db": 280.44227363402024,
+        "publish_report": 282.46989964693785
+      }
+    }
+  ],
+  "fastest_measured_cache_mib": 131072,
+  "scope": "Sequential same-input 3M local comparisons. Cache is an upper bound, not preallocated RAM. No full-corpus speed extrapolation.",
+  "code_sha256": {
+    "scripts/benchmark_split_resources.py": "ca8b0bf5b9bc268c991247acea6ae93e23e025b20be18084059f8c3be7825572",
+    "data/split_manifest.py": "83d0336476d887642880722306ce17a599264e715bf4d2bed246acf8037b56d3",
+    "common/data_contracts.py": "9b7af55f00602532e369f5880bd5da2bfc80290c19a387aad2862f2a6052ac63",
+    "common/source_inventory.py": "89865829d78904e8b242976c1e78b1942a2dbad79e438db747857ee3a4f3416d",
+    "scripts/run_local_split.py": "6a9866204ebfe18c5471b5488bdc9a2b0c58818b30fe1d56a0c9b541188a8746"
+  },
+  "case_sha256": {
+    "512": "bc434126b145778dd7f77d0db059b8941376856270b612ba887a6b9e31c1fa4a",
+    "8192": "49ff784d8bba0868702dfcbcba1e7b9699d632ef3247c80416079ab440b22e08",
+    "131072": "a4a6ad65231338e1a70de9c87a2103f0c43cb2eb4b93554b8bb82bd953835142"
+  }
+}

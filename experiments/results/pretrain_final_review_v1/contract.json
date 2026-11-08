@@ -1,0 +1,21 @@
+{
+  "sources": {
+    "rehearsal": "runs/1b_rehearsal_final_v3",
+    "native": "runs/rehearsal_final_native_v1",
+    "monitored": "runs/monitored_3b_validation_v1"
+  },
+  "code": {
+    "scripts/assemble_pretrain_review.py": "92e915e7a793440bb39915861396280a76df2d3cbc832cb7863df2d9bddf6fa8",
+    "scripts/plan_main_training.py": "3b6d2a57c0e1123091c3c3a6f507c50f3adce8b4d12770e5831f9816d5223402",
+    "scripts/evaluate_final_rehearsal.py": "3b787bc85c163a0ad91562f35b7105a72ffdffad060007b0a9ea3058d8c2db35",
+    "scripts/run_rehearsal.py": "1bdb53a5b7d5c86ac4d76911bda8c524d4a6f947383a6f25b90180b9718ff1d6",
+    "train/probe.py": "d96f30fb910517511001e084e6afb975c8524f5e6546dedd175f10962925032f",
+    "train/rehearsal.py": "b9448d8e20a9cd65db582038ee990ee6b9b801ccbaa60c9f3168a7e6459e0543",
+    "scripts/observe_rehearsal.py": "fc903410c6400ac5bfa7e3597b57695891838c6653a3f2ca96135ae5d783c636",
+    "scripts/run_local_split.py": "9734816a8b28923f1f177983c78e7d655db8c727684254d9a597cc2397da3273",
+    "scripts/resource_admission.py": "e8fa9dd51c8dbbabba9de9b1b7d26f9a4b3e5fe564ee435a426852c5120eff90",
+    "scripts/hardware_profile.py": "497d25545a42d7129cd2024d99539b8734642075f6ec53d737e33c29d1fc6c9b"
+  },
+  "scope": "Assembly only;final review still required;no training/deletion/upload",
+  "max_seconds": 172800
+}

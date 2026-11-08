@@ -1,0 +1,77 @@
+{
+  "version": 2,
+  "code": {
+    "scripts/benchmark_gpu.py": "b2e0c4630dfcbbf112cbbcfac8a92a789b1fd9661ba7bfb275e8caf45b46c947",
+    "scripts/benchmark_contract.py": "a63a5c452f202278d065caac6780bd70bc694a59f3420ba1ab47c53b145cef80",
+    "scripts/check_gpu_numerics.py": "ab26d3da4f7287ca2cf84fbd6e4a256a1e07623853bff4035a6b242232756bc7",
+    "model/model.py": "719cc0d69b35620e36cba817df1b11dd0e322da529f3cafc30130f6a45b5fee9",
+    "train/train.py": "c4a948e5701cd5d3f61dc0903ef9506b8af1149a3ab3df36a706417a21a61904",
+    "train/data.py": "0988f6dc71cc65895c5ec949429c47fd97098e1381ee51cc02fba12d983d54d4",
+    "train/runtime.py": "56a918a827d4b16dc924e3e32b86e7546eacdeebb3c7f90c47ffc2c074afa0ba",
+    "common/paths.py": "07f673ebced3c515ffd763ae6896f19440b7e359f188795ebbc8efbfea42be63"
+  },
+  "environment": {
+    "python": "3.12.3",
+    "torch": "2.7.0a0+7c8ec84dab.nv25.03",
+    "cuda": "12.8",
+    "gpus": "GPU-139129c6-f4bb-385a-4ac9-9f5ebfaafaf4, NVIDIA H200, 580.126.20\nGPU-3dd41434-83e6-2f0e-d435-7941dc7d2b87, NVIDIA H200, 580.126.20\nGPU-75c05f14-112e-4993-0ab6-91aaefa8171d, NVIDIA H200, 580.126.20\nGPU-320496a4-a507-e70a-3809-af8ade5fd24e, NVIDIA H200, 580.126.20\nGPU-0dc1d5e0-f331-ab2a-6f8a-8f3134cc90a8, NVIDIA H200, 580.126.20\nGPU-b0e91fba-c303-6576-cc94-65feef2ba2eb, NVIDIA H200, 580.126.20\nGPU-09f7206e-f7d1-5aca-43cf-a4496651230f, NVIDIA H200, 580.126.20\nGPU-0aed1474-a2e7-0653-54c4-51427216715f, NVIDIA H200, 580.126.20"
+  },
+  "data_sha256": "657a491ab19caafba14977d4fb7a735621fb5fb925516898fae77dc0cf55f0ff",
+  "mix_sha256": "885a8a34a631c98c3062dc761db6c8b652b3ceff065ae9af44c363199196cb0a",
+  "cases": [
+    [
+      "tiny",
+      true,
+      2,
+      128,
+      6
+    ],
+    [
+      "1b",
+      false,
+      2,
+      4096,
+      40
+    ],
+    [
+      "1b",
+      true,
+      2,
+      4096,
+      40
+    ],
+    [
+      "3b",
+      false,
+      2,
+      4096,
+      40
+    ],
+    [
+      "3b",
+      true,
+      2,
+      4096,
+      40
+    ],
+    [
+      "3b",
+      false,
+      4,
+      4096,
+      40
+    ],
+    [
+      "3b",
+      true,
+      4,
+      4096,
+      40
+    ]
+  ],
+  "env_overrides": {
+    "OMP_NUM_THREADS": "2",
+    "NUMEXPR_NUM_THREADS": "2",
+    "TORCHINDUCTOR_COMPILE_THREADS": "2"
+  }
+}

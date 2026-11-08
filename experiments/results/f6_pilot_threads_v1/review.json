@@ -1,0 +1,10 @@
+{
+  "decision": "use_8_threads_for_six_worker_pilot",
+  "median_seconds": {
+    "2": 36.83284329937305,
+    "8": 23.27373160002753
+  },
+  "time_reduction_percent": 36.812557719583694,
+  "report_sha256": "826564d9afffad72321249e73860e06245acf4164db5498486ed59141122f207",
+  "scope": "Fourcases2/8/8/2,all116473784 tokens/logicalID equal. Does not change full24x2/16x3 candidate settings."
+}

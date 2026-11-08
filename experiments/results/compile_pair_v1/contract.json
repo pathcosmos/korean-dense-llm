@@ -1,0 +1,16 @@
+{
+  "code": {
+    "scripts/validate_compile_pair.py": "0f04e884867be8e1d7f92d4f91dcc4ee2070ca780b4e36c09c5244724c7a8772",
+    "model/model.py": "719cc0d69b35620e36cba817df1b11dd0e322da529f3cafc30130f6a45b5fee9",
+    "train/runtime.py": "56a918a827d4b16dc924e3e32b86e7546eacdeebb3c7f90c47ffc2c074afa0ba",
+    "train/data.py": "0988f6dc71cc65895c5ec949429c47fd97098e1381ee51cc02fba12d983d54d4",
+    "common/data_contracts.py": "56e633b331a5bdeed863d6b93e554123b5366eaecf65259b6b02911abf6137f0"
+  },
+  "tolerances": {
+    "logits_rel_l2": 0.03,
+    "gradient_rel_l2": 0.05,
+    "update_rel_l2": 0.1,
+    "loss_abs": 0.03
+  },
+  "scope": "Paired seq32 full models; profile seq4096 FSDP only"
+}

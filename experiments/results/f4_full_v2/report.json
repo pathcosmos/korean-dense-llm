@@ -1,0 +1,14 @@
+{
+  "status": "passed",
+  "manifest": "data/datasets/final_v2.split/manifest.json",
+  "manifest_sha256": "1acf2a294450bf6fdb6ed9c6a3c7c051b4da7b4b2c295d030fed984635018958",
+  "counts": {
+    "eval": 1290840,
+    "train": 127565418
+  },
+  "split_contract_id": "c06e2f6a42b6f8ba0d8a6ecd15f3b9d156ea7f44601efe86ad59f38ab0aedfc4",
+  "database_sha256": "2ed5a374f292d087353809a260ca4d268537182f3a22eca0e9db20e93c1c7eb7",
+  "elapsed_seconds_current_attempt": 27268.709226154024,
+  "verification": "builder integrity/leakage/counts; copy SHA identity; final independent SplitSelection coverage/integrity/leakage",
+  "recovery_policy": "resume local transaction; rebuild from sources if local lost before durable staging"
+}

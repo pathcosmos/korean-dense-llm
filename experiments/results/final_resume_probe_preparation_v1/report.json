@@ -1,0 +1,66 @@
+{
+  "status": "passed_final_resume_core_cpu_preparation",
+  "utc": "2026-11-07T06:42:15.163391+00:00",
+  "code": {
+    "train/final_resume_probe.py": "5199ca906ebb586eed93a1cf7545f90b7bce2cfe9b07f3a4e68d9c1d6b2ea9cd",
+    "scripts/verify_final_resume_probe.py": "605a921bd73ac14036710aa40e03390c9b37d7d409b56ecd882aeeb2ebc5777d",
+    "tests/test_final_resume_probe.py": "0ef52cd7a1474128527d726ec75de2f5d3e2ddfe2affaef1525778bc0a95f3d6"
+  },
+  "tests": 7,
+  "test_log": "logs/tests_final_resume_probe_v1_final.log",
+  "test_log_sha256": "2435a416c6829c0ba5f448c42027189d529b2492fb3fd6ad6c10118a39888dea",
+  "actual3b_cpu_comparison": {
+    "exact": true,
+    "tensors": 1020,
+    "model_tensors": 255,
+    "optimizer_tensors": 765,
+    "rng_ranks": 8,
+    "elapsed_seconds": 37.49774906807579,
+    "status": "passed_existing_actual3b_cpu_full_state_comparison",
+    "left": "${PROJECT_ROOT}/runs/actual_train_validation_v1/3b_validated_checkpoint",
+    "right": "${LOCAL_SCRATCH}",
+    "fresh_payload_sha_both": true,
+    "peak_rss_bytes": 78357827584,
+    "total_seconds": 48.94500866299495,
+    "scope": "Current new comparator on existing actual3B model/optimizer and8rank RNG; not final57000 or a new8GPU update/resume execution."
+  },
+  "guard": {
+    "exit_code": 0,
+    "peak_pss_bytes": 78016407552,
+    "elapsed_seconds": 51.63172560790554,
+    "max_pss_gib": 128,
+    "max_seconds": 180,
+    "cpu_affinity": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15
+    ],
+    "threads": 8
+  },
+  "compare_function_sha256": "2c1102aec89af7f26251d54933a9fb50c3573e8db958658b6dd00b12e19cdf50",
+  "plan": "runs/3b_final_resume_v1/plan.json",
+  "plan_sha256": "9a339efb357ac0a2b8895fa550b6f49ec15ce3e2eb80711c488a778d7582f9d4",
+  "actual_final_57000_8gpu_resume_completed": false,
+  "automatic_controller_connected": false,
+  "current_main_step": 140,
+  "source_main_code_unchanged": true,
+  "limits": [
+    "Production8GPU probe entry still unexecuted; requires actual final57000 audit and idle GPU lock",
+    "Controller materialization/resource guards/final proof publication remain to be connected",
+    "CPU fixture/process tests and existing3B CPU comparison do not substitute final3B actual8GPU resume"
+  ],
+  "scope": "Preparation progress only; parent main and target/config unchanged, no new main checkpoint pruning by this tool, no additional full-checkpoint copy."
+}

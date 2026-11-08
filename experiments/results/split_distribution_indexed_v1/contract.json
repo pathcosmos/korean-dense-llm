@@ -1,0 +1,165 @@
+{
+  "sources_sha256": "defe09d1dca5d1df7d8195c117c8708dbc4c1dd5e2c7c72da7488961b1ad9513",
+  "split_sha256": "f7287bbf96f333562bc60f8d9204d99ea747a4bba816f01c24a65c482109e88a",
+  "hardware": {
+    "utc": "2026-11-06T16:19:22.501150+00:00",
+    "cpu": {
+      "affinity": [
+        64,
+        65,
+        66,
+        67,
+        68,
+        69,
+        70,
+        71,
+        72,
+        73,
+        74,
+        75,
+        76,
+        77,
+        78,
+        79
+      ],
+      "effective": 16.0,
+      "quota": "max 100000"
+    },
+    "memory": {
+      "limit_bytes": 2061584302080,
+      "current_bytes": 1265225654272,
+      "file_cache_bytes": 1117178286080,
+      "reserve_bytes": 137438953472,
+      "conservative_headroom_gib": 613.6667861938477
+    },
+    "gpus": [
+      "0, NVIDIA H200, 143771",
+      "1, NVIDIA H200, 143771",
+      "2, NVIDIA H200, 143771",
+      "3, NVIDIA H200, 143771",
+      "4, NVIDIA H200, 143771",
+      "5, NVIDIA H200, 143771",
+      "6, NVIDIA H200, 143771",
+      "7, NVIDIA H200, 143771"
+    ],
+    "storage": {
+      "project": {
+        "path": "${PROJECT_ROOT}",
+        "fstype": "nfs",
+        "target": "${PRIVATE_PATH}",
+        "device": 49,
+        "total_bytes": 2000000024576,
+        "free_bytes": 882777653248,
+        "network": true
+      },
+      "scratch_parent": {
+        "path": "${LOCAL_SCRATCH}",
+        "fstype": "overlay",
+        "target": "/",
+        "device": 66,
+        "total_bytes": 3148091097088,
+        "free_bytes": 2595903467520,
+        "network": false
+      },
+      "scratch_dir": "${LOCAL_SCRATCH}"
+    },
+    "presets": {
+      "cpu_effective": 16.0,
+      "reserved_cpu": 2,
+      "launch_permitted": true,
+      "minimum_memory_headroom_gib": 4,
+      "stages": {
+        "cpu-prep": {
+          "start_workers": 3,
+          "max_workers": 7,
+          "arrow_threads": 3,
+          "env": {
+            "OMP_NUM_THREADS": "1",
+            "NUMEXPR_NUM_THREADS": "2",
+            "RAYON_NUM_THREADS": "1"
+          },
+          "job_memory_budget_gib": 460.25008964538574,
+          "worker_candidates": [
+            4,
+            8,
+            16,
+            32
+          ]
+        },
+        "tokenization": {
+          "start_workers": 1,
+          "max_workers": 2,
+          "arrow_threads": 3,
+          "env": {
+            "OMP_NUM_THREADS": "1",
+            "NUMEXPR_NUM_THREADS": "2",
+            "RAYON_NUM_THREADS": "4",
+            "TOKENIZERS_PARALLELISM": "true"
+          },
+          "job_memory_budget_gib": 256
+        },
+        "tokenizer-train": {
+          "start_workers": 1,
+          "max_workers": 1,
+          "arrow_threads": 8,
+          "env": {
+            "OMP_NUM_THREADS": "2",
+            "NUMEXPR_NUM_THREADS": "2",
+            "RAYON_NUM_THREADS": "14",
+            "TOKENIZERS_PARALLELISM": "true"
+          },
+          "job_memory_budget_gib": 460.25008964538574,
+          "rayon_candidates": [
+            8,
+            16,
+            32,
+            64
+          ]
+        },
+        "sqlite": {
+          "start_workers": 1,
+          "max_workers": 1,
+          "arrow_threads": 4,
+          "env": {
+            "OMP_NUM_THREADS": "2",
+            "NUMEXPR_NUM_THREADS": "2"
+          },
+          "validated_cache_mib": 131072,
+          "validated_cache_candidates_mib": [
+            512,
+            8192,
+            131072
+          ],
+          "hash_workers": 14,
+          "candidate_note": "3M same-input cache sweep verified logical identity; 128GiB is a capacity ceiling for the estimated100GiB full DB, not proof of full-scale speed or resident128GiB usage. Use fresh RSS headroom and runtime guards.",
+          "job_memory_budget_gib": 384
+        },
+        "gpu": {
+          "start_workers": 1,
+          "max_workers": 1,
+          "arrow_threads": 4,
+          "env": {
+            "OMP_NUM_THREADS": "2",
+            "NUMEXPR_NUM_THREADS": "2",
+            "TORCHINDUCTOR_COMPILE_THREADS": "1"
+          },
+          "job_memory_budget_gib": 256,
+          "gpu_policy": "Use available required GPUs for compatible kernels/training. Eight-GPU main training still requires user confirmation and numerical gates."
+        }
+      }
+    },
+    "policy": "Measured-container limits, not host core counts. Current memory includes reclaimable file cache. No global kernel/mount/GPU clock changes. Worker and memory budgets are planning values, not automatically enforced by arbitrary child commands."
+  },
+  "workers": 8,
+  "worker_cache_mib": 64,
+  "parent_cache_mib": 512,
+  "code": {
+    "scripts/benchmark_split_distribution.py": "8d11457739eebd7e3bc7e2589fcee82f362b2c44bd70014efb661a84b247db8c",
+    "data/split_distribution.py": "ab894578e7e23404ea9471aea69d5526430cab0372c55420981b155d50cd54af",
+    "data/verified_split_context.py": "68a98e1e6d56d7a2beab4a59f18a3f7b76a8d8e524164c4b7bc393f9a16bc924",
+    "data/split_manifest.py": "3869b7ed1d54c10c9f689fe3e0eb7efda03d2989f03e1dc2ccc8adec3e15ce56",
+    "common/data_contracts.py": "9b7af55f00602532e369f5880bd5da2bfc80290c19a387aad2862f2a6052ac63",
+    "common/source_inventory.py": "89865829d78904e8b242976c1e78b1942a2dbad79e438db747857ee3a4f3416d"
+  },
+  "scope": "Independent completed132k-row fixture only; full-corpus performance unproven."
+}

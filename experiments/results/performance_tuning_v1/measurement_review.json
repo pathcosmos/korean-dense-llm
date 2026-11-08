@@ -1,0 +1,14 @@
+{
+  "status": "passed",
+  "logical_rows": 3000000,
+  "logical_sha256": "da7e3cf699bc86f86bbe61b5d5c5f32027f8b09cc0b323a813169d68244003c2",
+  "cache_report_sha256": "eae343ea89b166e39b9cac1cda9901fb426ec5fc08218428cf804faae7d75e54",
+  "hotpath_report_sha256": "a52f8ede9b62785f771fbcaa9236773cb72042c0ba76c3aaf39bb84f4ebde757",
+  "cache_seconds": {
+    "512": 316.8818526689429,
+    "8192": 318.33873519999906,
+    "131072": 302.85744609311223
+  },
+  "candidate_seconds": 304.8866400239058,
+  "scope": "Single shared-host runs; 8GiB case overlapped hotpath candidate. Cache timings nearly equal at 3M, no material speedup claim. Use128GiB as capacity for estimated100GiB full DB; actual corpus performance still monitored."
+}

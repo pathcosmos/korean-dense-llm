@@ -1,0 +1,64 @@
+{
+  "status": "passed",
+  "scope": "synthetic micro model, 8 GPU, compile=false",
+  "cases": [
+    {
+      "case": "continuous",
+      "returncode": 0,
+      "wall_s": 19.37960537383333,
+      "expected_error": null
+    },
+    {
+      "case": "stop_at_2",
+      "returncode": 0,
+      "wall_s": 17.752529507968575,
+      "expected_error": null
+    },
+    {
+      "case": "resume",
+      "returncode": 0,
+      "wall_s": 17.654738455079496,
+      "expected_error": null
+    },
+    {
+      "case": "reject_changed_tokenizer",
+      "returncode": 1,
+      "wall_s": 14.827668329933658,
+      "expected_error": "Training identity mismatch"
+    },
+    {
+      "case": "nan_loss",
+      "returncode": 0,
+      "wall_s": 17.477245688904077,
+      "expected_error": null
+    },
+    {
+      "case": "nan_gradient",
+      "returncode": 0,
+      "wall_s": 17.580453315982595,
+      "expected_error": null
+    }
+  ],
+  "continuous_resume": {
+    "tensors": 84,
+    "max_abs": 0.0,
+    "exact": true
+  },
+  "uneven_eval_windows": [
+    1,
+    7,
+    9
+  ],
+  "remaining": [
+    "real Korean/English holdout",
+    "production-size trajectory",
+    "compile=true resume"
+  ],
+  "code": {
+    "train/train.py": "c4a948e5701cd5d3f61dc0903ef9506b8af1149a3ab3df36a706417a21a61904",
+    "train/runtime.py": "03edefc5d490b044ddbab17ae15e07b0547b9ff86beb530b83348fc2c6096d1b",
+    "train/data.py": "0988f6dc71cc65895c5ec949429c47fd97098e1381ee51cc02fba12d983d54d4",
+    "model/model.py": "719cc0d69b35620e36cba817df1b11dd0e322da529f3cafc30130f6a45b5fee9",
+    "scripts/validate_distributed.py": "3f8dbcfe0067d8f66efe15341a9608655dcaafbf4be835c8f51bbf7cf8596d15"
+  }
+}

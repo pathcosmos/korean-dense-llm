@@ -1,0 +1,23 @@
+{
+  "status": "bounded_tests_passed",
+  "tests": 6,
+  "details": [
+    "Native serial/1worker/2worker bytes identical across batch sizes; existing build_mix consumes layout",
+    "Actual worker process crash after pending resumes; corrupt output/missing split certificate/source mutation rejected",
+    "Fresh verified source records not redundantly hashed; final train-only tokenizer required for production",
+    "Copy contents/fsync/atomic rename/completed staging recovery; incomplete staging preserved"
+  ],
+  "code": {
+    "data/verified_split_context.py": "68a98e1e6d56d7a2beab4a59f18a3f7b76a8d8e524164c4b7bc393f9a16bc924",
+    "data/parallel_tokenize.py": "7d903aafaa9416ad45efe23d148a005a56d881ed84fbd0f94fb3f1631059d431",
+    "scripts/report_split_distribution.py": "456bcf708e862afe019f47080e6f3d015ac70f77058136e517cb597227b8d754",
+    "scripts/benchmark_next_stage.py": "a8a1dc08e29e9ef0e20282488327b2762a85779f28f51dda12c765461096e753",
+    "tests/test_parallel_tokenize.py": "9208b22ecd122696db83869e5713bd7085fae03c3e4f44b709e692658d132976",
+    "tests/test_token_publication.py": "5d38f2d8a1fe97796d6d1e800326be545fcc4a7d6d01a784f2edb35a5fff01e7"
+  },
+  "not_validated": [
+    "Final full-corpus throughput",
+    "Final train-only tokenizer and actual-source whole-file token pilot",
+    "Automatic recovery of partially copied publication stage; currently preserves and rejects it"
+  ]
+}

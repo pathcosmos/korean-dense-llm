@@ -1,0 +1,138 @@
+{
+  "status": "candidate_selected",
+  "scope": "Final-tokenizer pilot actual eager8GPU throughput only; selected exact geometry requires full finite/eval/RNG/checkpoint/resume validation.",
+  "results": [
+    {
+      "status": "passed",
+      "model": "1b",
+      "micro_bsz": 4,
+      "aggregate_tok_s": 377011.1558950646,
+      "median_tok_s": 377659.7897967211,
+      "timed_seconds": 33.375436782836914,
+      "timed_tokens": 12582912,
+      "timed_steps": 6,
+      "max_allocated_gib": 42.49126386642456,
+      "max_reserved_gib": 45.220703125,
+      "first_step_seconds": 6.344279527664185,
+      "final_loss": 10.171748161315918,
+      "wall_seconds": 66.5617229831405,
+      "peak_host_rss_bytes": 16493723648,
+      "repeat": false
+    },
+    {
+      "status": "passed",
+      "model": "1b",
+      "micro_bsz": 8,
+      "aggregate_tok_s": 389298.4175030895,
+      "median_tok_s": 389226.11804336956,
+      "timed_seconds": 32.32202196121216,
+      "timed_tokens": 12582912,
+      "timed_steps": 6,
+      "max_allocated_gib": 79.50402021408081,
+      "max_reserved_gib": 88.45703125,
+      "first_step_seconds": 6.100147724151611,
+      "final_loss": 10.18214225769043,
+      "wall_seconds": 64.46627533319406,
+      "peak_host_rss_bytes": 16618754048,
+      "repeat": false
+    },
+    {
+      "status": "cuda_oom",
+      "model": "1b",
+      "micro_bsz": 16,
+      "wall_seconds": 22.197635394055396,
+      "peak_host_rss_bytes": 11724017664,
+      "repeat": false
+    },
+    {
+      "status": "passed",
+      "model": "1b",
+      "micro_bsz": 8,
+      "aggregate_tok_s": 390112.3828536747,
+      "median_tok_s": 389728.1861193386,
+      "timed_seconds": 32.25458240509033,
+      "timed_tokens": 12582912,
+      "timed_steps": 6,
+      "max_allocated_gib": 79.50402021408081,
+      "max_reserved_gib": 88.45703125,
+      "first_step_seconds": 6.087285518646239,
+      "final_loss": 10.268657684326172,
+      "wall_seconds": 64.90736334607936,
+      "peak_host_rss_bytes": 16668430336,
+      "repeat": true
+    },
+    {
+      "status": "passed",
+      "model": "3b",
+      "micro_bsz": 2,
+      "aggregate_tok_s": 139673.22974442402,
+      "median_tok_s": 139792.4711273671,
+      "timed_seconds": 90.08821535110474,
+      "timed_tokens": 12582912,
+      "timed_steps": 6,
+      "max_allocated_gib": 51.75289964675903,
+      "max_reserved_gib": 57.23828125,
+      "first_step_seconds": 16.203577995300293,
+      "final_loss": 11.14374828338623,
+      "wall_seconds": 142.1613534039352,
+      "peak_host_rss_bytes": 16579977216,
+      "repeat": false
+    },
+    {
+      "status": "passed",
+      "model": "3b",
+      "micro_bsz": 4,
+      "aggregate_tok_s": 147273.25756148555,
+      "median_tok_s": 147396.29279151262,
+      "timed_seconds": 85.43921828269958,
+      "timed_tokens": 12582912,
+      "timed_steps": 6,
+      "max_allocated_gib": 85.96960496902466,
+      "max_reserved_gib": 90.15234375,
+      "first_step_seconds": 15.24499797821045,
+      "final_loss": 10.61545181274414,
+      "wall_seconds": 137.76444375514984,
+      "peak_host_rss_bytes": 16541945856,
+      "repeat": false
+    },
+    {
+      "status": "cuda_oom",
+      "model": "3b",
+      "micro_bsz": 8,
+      "wall_seconds": 22.28504685801454,
+      "peak_host_rss_bytes": 13253849088,
+      "repeat": false
+    },
+    {
+      "status": "passed",
+      "model": "3b",
+      "micro_bsz": 4,
+      "aggregate_tok_s": 147188.65689360793,
+      "median_tok_s": 147173.67883220396,
+      "timed_seconds": 85.48832678794861,
+      "timed_tokens": 12582912,
+      "timed_steps": 6,
+      "max_allocated_gib": 85.96960496902466,
+      "max_reserved_gib": 90.15234375,
+      "first_step_seconds": 15.245004653930662,
+      "final_loss": 10.600778579711914,
+      "wall_seconds": 136.18189996713772,
+      "peak_host_rss_bytes": 16609026048,
+      "repeat": true
+    }
+  ],
+  "selected_model_settings": {
+    "1b": {
+      "micro_bsz": 8,
+      "global_tokens": 2097152,
+      "lr": 0.0006
+    },
+    "3b": {
+      "micro_bsz": 4,
+      "global_tokens": 2097152,
+      "lr": 0.0003
+    }
+  },
+  "selected_model_settings_sha256": "c176f54dbb7f7f7d209f5914871f7cad7f4108252fac22035626e1329fcd7180",
+  "remaining": "Actual exact-geometry/LR4step finite/eval/checkpoint/RNG/resume validation and native PPL are mandatory before rehearsal. Compile not adopted."
+}

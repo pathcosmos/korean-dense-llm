@@ -1,0 +1,68 @@
+{
+  "status": "measurement_complete",
+  "selected_files": 16,
+  "bytes_per_pass": 73322850613,
+  "cases": [
+    {
+      "workers": 1,
+      "seconds": 62.8071172980126,
+      "cpu_seconds": 62.792441075999996,
+      "gib_per_second": 1.087252988973052,
+      "all_hashes_verified": true,
+      "hashes_identity": "2f2d47e05599a68d8352421d94b6bb536d56103a179c8be548a0837e3967ccf5",
+      "cumulative_process_peak_rss_kib": 77056
+    },
+    {
+      "workers": 8,
+      "seconds": 8.085611558053643,
+      "cpu_seconds": 63.350467089,
+      "gib_per_second": 8.445523943458308,
+      "all_hashes_verified": true,
+      "hashes_identity": "2f2d47e05599a68d8352421d94b6bb536d56103a179c8be548a0837e3967ccf5",
+      "cumulative_process_peak_rss_kib": 417536
+    },
+    {
+      "workers": 16,
+      "seconds": 4.231984886107966,
+      "cpu_seconds": 64.53057118000001,
+      "gib_per_second": 16.135980597474926,
+      "all_hashes_verified": true,
+      "hashes_identity": "2f2d47e05599a68d8352421d94b6bb536d56103a179c8be548a0837e3967ccf5",
+      "cumulative_process_peak_rss_kib": 675584
+    },
+    {
+      "workers": 16,
+      "seconds": 4.2826390969567,
+      "cpu_seconds": 64.21943371200001,
+      "gib_per_second": 15.945127400431916,
+      "all_hashes_verified": true,
+      "hashes_identity": "2f2d47e05599a68d8352421d94b6bb536d56103a179c8be548a0837e3967ccf5",
+      "cumulative_process_peak_rss_kib": 804608
+    },
+    {
+      "workers": 8,
+      "seconds": 8.024359239032492,
+      "cpu_seconds": 62.86062551699999,
+      "gib_per_second": 8.509991137844267,
+      "all_hashes_verified": true,
+      "hashes_identity": "2f2d47e05599a68d8352421d94b6bb536d56103a179c8be548a0837e3967ccf5",
+      "cumulative_process_peak_rss_kib": 804608
+    },
+    {
+      "workers": 1,
+      "seconds": 62.674001888837665,
+      "cpu_seconds": 62.648449967999966,
+      "gib_per_second": 1.089562241966989,
+      "all_hashes_verified": true,
+      "hashes_identity": "2f2d47e05599a68d8352421d94b6bb536d56103a179c8be548a0837e3967ccf5",
+      "cumulative_process_peak_rss_kib": 804608
+    }
+  ],
+  "median_seconds": {
+    "1": 62.74055959342513,
+    "8": 8.054985398543067,
+    "16": 4.257311991532333
+  },
+  "fastest_workers": 16,
+  "scope": "Largest 16 audited files, existing host cache, counterbalanced repeats. Shared host with local SQLite sweep; not cold-storage or all-source throughput."
+}

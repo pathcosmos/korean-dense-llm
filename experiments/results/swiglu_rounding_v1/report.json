@@ -1,0 +1,28 @@
+{
+  "status": "diagnostic_complete",
+  "scope": "One isolated 3B-shape FFN, random normalized-like input, one seed; no full-model/FSDP/performance adoption proof",
+  "results": {
+    "baseline": {
+      "output_rel_l2": 0.003614581680101997,
+      "gradient_rel_l2": 0.003527369992716765,
+      "eager_vs_fp32_output": 0.00549876005342505,
+      "compiled_vs_fp32_output": 0.005203310191177716
+    },
+    "silu_materialization_barrier": {
+      "output_rel_l2": 0.0,
+      "gradient_rel_l2": 0.0,
+      "eager_vs_fp32_output": 0.00549876005342505,
+      "compiled_vs_fp32_output": 0.00549876005342505
+    },
+    "fp32_pointwise_gate": {
+      "output_rel_l2": 0.0,
+      "gradient_rel_l2": 1.5000228859139654e-06,
+      "eager_vs_fp32_output": 0.005203310191177716,
+      "compiled_vs_fp32_output": 0.005203310191177716
+    }
+  },
+  "code": {
+    "scripts/probe_swiglu_rounding.py": "7f124009404ee2e2197c9db139ed9906a996a317b66dae07ed88a51925cffe59",
+    "model/model.py": "719cc0d69b35620e36cba817df1b11dd0e322da529f3cafc30130f6a45b5fee9"
+  }
+}

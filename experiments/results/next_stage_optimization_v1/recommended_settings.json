@@ -1,0 +1,27 @@
+{
+  "status": "experimental_candidates_pending_final_pilot",
+  "reference_report_sha256": "3f1b543f46dfbc215119c08f714e3c4f1bbdb90ce428bf9a8d1e4f8517c0dafd",
+  "ram_report_sha256": "9e6139a25e641eb35f8705604249d5396d4a322b3e28ce1f95d350af0de42df3",
+  "tokenization": {
+    "workers": 24,
+    "rayon_per_worker": 2,
+    "batch_size": 1024,
+    "arrow_threads": 1,
+    "storage": "direct_nfs",
+    "close_alternative": {
+      "workers": 16,
+      "rayon_per_worker": 3
+    }
+  },
+  "bpe": {
+    "rayon_threads": 16,
+    "input_mode": "streaming",
+    "ram_preload": "not_selected"
+  },
+  "required_before_production": [
+    "F4 published completion, verified distribution/coverage/cross-split evidence",
+    "Final train-only3GB tokenizer plus independent raw/special/efficiency checks",
+    "Six-source representative whole-file token pilot, fresh CPU/RAM/disk budgets"
+  ],
+  "preset_changed": false
+}

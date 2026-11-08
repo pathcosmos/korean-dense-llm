@@ -1,0 +1,44 @@
+{
+  "status": "bounded_synthetic_verified",
+  "contract_id": "c1da73dcfb08b7e0423d4e8a8c0b8b78787e5e6ea42249bb902e1ae038d6cef4",
+  "config": {
+    "version": 2,
+    "sizes": [
+      3000000
+    ],
+    "sqlite_cache_mib": 512,
+    "generator": "streamed-short-text+repo5+cross-duplicate101-v2",
+    "environment": {
+      "python": "3.12.3",
+      "sqlite": "3.45.1",
+      "pyarrow": "19.0.1"
+    },
+    "code": {
+      "scripts/measure_split.py": "d73eec538a69171c171fb133df9e74554fe079921835811fb14fe8901478ee18",
+      "data/split_manifest.py": "5a672a3844c162e287ddf87cf881d53560f593fe4c4be79936ba2574285c4844",
+      "common/data_contracts.py": "56e633b331a5bdeed863d6b93e554123b5366eaecf65259b6b02911abf6137f0",
+      "common/source_inventory.py": "9842a61f02c1e3f3debcb3e1b4759a2bf6badb9abb5e90dba10b76074371cae4"
+    }
+  },
+  "cases": [
+    {
+      "documents": 3000000,
+      "build_seconds_current_attempt": 1313.6875817999244,
+      "verification_seconds": 351.34669210901484,
+      "resumed_split": false,
+      "counts": {
+        "eval": 301351,
+        "train": 2698649
+      },
+      "split_contract_id": "89d97d7e2fe39887a4c68726ad5a10e59d2393847c2b6e6fa6f86c296f419103",
+      "sqlite_cache_mib": 512,
+      "database_bytes": 2471710720,
+      "max_rss_kib": 1000304,
+      "attempts": 1,
+      "cumulative_attempt_seconds": 1666.7923183150124,
+      "sampled_peak_case_bytes": 3368751915,
+      "sampled_peak_journal_bytes": 888697656
+    }
+  ],
+  "scope": "Explicit synthetic case sizes only. Resumed attempts and sampled peaks are labelled; no corpus-throughput/storage extrapolation."
+}

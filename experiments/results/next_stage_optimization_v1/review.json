@@ -1,0 +1,31 @@
+{
+  "status": "reviewed_experimental_performance",
+  "report_sha256": "3f1b543f46dfbc215119c08f714e3c4f1bbdb90ce428bf9a8d1e4f8517c0dafd",
+  "identical_encoding_cases": 13,
+  "tokens_per_case": 116473784,
+  "candidate": {
+    "workers": 24,
+    "rayon_per_worker": 2,
+    "batch_size": 1024,
+    "arrow_threads": 1,
+    "storage": "direct_nfs",
+    "bpe_threads": 16
+  },
+  "baseline_seconds": 73.88647750485688,
+  "nfs_median_seconds": 18.09937876195181,
+  "speedup_vs_single_worker": 4.082265942750461,
+  "plateau": "16workers median18.807s vs24workers18.670s (~0.73% difference): no robust optimal-worker claim; both finalists.",
+  "local_publish_median_seconds": 20.509809970972128,
+  "bpe_seconds": {
+    "bpe_16": 65.46063541807234,
+    "bpe_32": 70.55350557295606
+  },
+  "limits": [
+    "512MiB truncated shuffled-prefix texts repacked into48small Parquet shards; synthetic repo/split, four sources rather than final six.",
+    "Warm cache; adaptive short experiment. Whole-file and final-tokenizer pilot required.",
+    "Distribution reporter proven on132305-row fixture only; full-corpus aggregation cost/cache/local reader still needs sizing before use.",
+    "Partial copy staging is preserved and rejected, not automatically repaired.",
+    "Production F5 sampling still uses prior SplitInputs; verified-context integration is prepared separately and not active."
+  ],
+  "production_adoption": "pending_final_input_pilot"
+}

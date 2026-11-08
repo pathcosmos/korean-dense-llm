@@ -1,0 +1,59 @@
+{
+  "status": "passed_bounded_read_probe",
+  "results": [
+    {
+      "storage": "local",
+      "seconds": 0.24408061592839658,
+      "parts": [
+        {
+          "offset": 0,
+          "sha256": "ba9b3c2458d4ff6cb10f5e286b6e26b6cfd245a4e559cdf60af10c42e2678b68",
+          "seconds": 0.23064139392226934
+        },
+        {
+          "offset": 38117376000,
+          "sha256": "7b0db2da1d4bcc4841e5a1ce76a389d0114cf1a16e71a8e8056447192de97c64",
+          "seconds": 0.23952945903874934
+        },
+        {
+          "offset": 76234752000,
+          "sha256": "aeba09c54b50653717af8a42e21355795abda149fc55549410d531534b63c863",
+          "seconds": 0.24282063310965896
+        },
+        {
+          "offset": 115507200000,
+          "sha256": "dffe126af9bf2e2f7592e56e867c68d9bfbcc746eb6afa94a601fa96cdb44509",
+          "seconds": 0.2388632649090141
+        }
+      ]
+    },
+    {
+      "storage": "nfs",
+      "seconds": 6.651614689035341,
+      "parts": [
+        {
+          "offset": 0,
+          "sha256": "ba9b3c2458d4ff6cb10f5e286b6e26b6cfd245a4e559cdf60af10c42e2678b68",
+          "seconds": 6.567771103000268
+        },
+        {
+          "offset": 38117376000,
+          "sha256": "7b0db2da1d4bcc4841e5a1ce76a389d0114cf1a16e71a8e8056447192de97c64",
+          "seconds": 6.570190206170082
+        },
+        {
+          "offset": 76234752000,
+          "sha256": "aeba09c54b50653717af8a42e21355795abda149fc55549410d531534b63c863",
+          "seconds": 6.635099411010742
+        },
+        {
+          "offset": 115507200000,
+          "sha256": "dffe126af9bf2e2f7592e56e867c68d9bfbcc746eb6afa94a601fa96cdb44509",
+          "seconds": 6.642622187966481
+        }
+      ]
+    }
+  ],
+  "sampled_bytes_each": 1073741824,
+  "scope": "Selected ranges identical; cache state uncontrolled. Does not complete F4 final SQL validation."
+}

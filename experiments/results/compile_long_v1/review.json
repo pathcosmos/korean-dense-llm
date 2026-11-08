@@ -1,0 +1,68 @@
+{
+  "status": "reviewed_bounded_diagnostic",
+  "report_sha256": "b1a43a68f196dd2b84fd6643b9a03574081f9b6cc813ee9e5c927126be50e452",
+  "cases": [
+    {
+      "case": "w1_s512_seed711",
+      "ranks": 1,
+      "update_rel_l2": 0.0560288903545308,
+      "repeat_update_rel_l2": 0.049245014843307844,
+      "eager_tokens_s": 3617.7734019435643,
+      "candidate_tokens_s": 3337.2539252966785,
+      "throughput_change_percent": -7.753926116439002
+    },
+    {
+      "case": "w1_s512_seed712",
+      "ranks": 1,
+      "update_rel_l2": 0.056059573627606954,
+      "repeat_update_rel_l2": 0.04919598584472209,
+      "eager_tokens_s": 3586.496687492706,
+      "candidate_tokens_s": 3327.7516963087846,
+      "throughput_change_percent": -7.214421585449948
+    },
+    {
+      "case": "w1_s4096_seed711",
+      "ranks": 1,
+      "update_rel_l2": 0.05726291653063806,
+      "repeat_update_rel_l2": 0.049974563272021454,
+      "eager_tokens_s": 13864.652294850112,
+      "candidate_tokens_s": 14235.616864523248,
+      "throughput_change_percent": 2.6756139410068602
+    },
+    {
+      "case": "w1_s4096_seed712",
+      "ranks": 1,
+      "update_rel_l2": 0.05726095979012499,
+      "repeat_update_rel_l2": 0.049979256024534714,
+      "eager_tokens_s": 13855.047010833769,
+      "candidate_tokens_s": 14222.974493722548,
+      "throughput_change_percent": 2.6555484265126106
+    },
+    {
+      "case": "w8_s4096_seed711",
+      "ranks": 8,
+      "update_rel_l2": 0.08196717006624629,
+      "repeat_update_rel_l2": 0.07516977769813522,
+      "eager_tokens_s": 116652.3990653311,
+      "candidate_tokens_s": 116003.72287487688,
+      "throughput_change_percent": -0.5560761678728321
+    },
+    {
+      "case": "w8_s4096_seed712",
+      "ranks": 8,
+      "update_rel_l2": 0.08202627697506602,
+      "repeat_update_rel_l2": 0.07525626916774657,
+      "eager_tokens_s": 116126.25536652011,
+      "candidate_tokens_s": 116229.42303634588,
+      "throughput_change_percent": 0.08884095117003277
+    }
+  ],
+  "conclusion": "All six synthetic paired cases passed preset tolerances. No meaningful observed 8GPU throughput gain; do not adopt candidate for performance on this evidence.",
+  "production_adoption": "not_adopted",
+  "limitations": [
+    "Two seeds; batch1; one-step numerical comparison; 2warm/3timed optimizer steps.",
+    "Eager repeats also differ: 8GPU update relative L2 about7.52%; paired difference is not compile-only attribution.",
+    "Actual token input, multi-step convergence, checkpoint/resume and longer throughput measurements remain pending."
+  ],
+  "next": "Keep existing production configuration. F4 completion and distribution review -> train-only final tokenizer -> actual-token model validation. Further compile changes require a new isolated contract."
+}

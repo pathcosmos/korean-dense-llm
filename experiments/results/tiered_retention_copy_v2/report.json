@@ -1,0 +1,22 @@
+{
+  "status": "passed_actual_checkpoint_copy_and_cpu_state_restore",
+  "cpu_state_exact": true,
+  "all8_original_cpu_cuda_rng_exact": true,
+  "cpu_restored_tensors": 1020,
+  "selected_copy_workers": 8,
+  "actual3b_copy": {
+    "copy_seconds": 12.58889768505469,
+    "destination_verify_fsync_seconds": 4.104567104950547,
+    "total_seconds": 16.693465890130028,
+    "bytes": 38667183744
+  },
+  "actual3b_output": "${LOCAL_SCRATCH}",
+  "elapsed_seconds": 60.02562651899643,
+  "actual_peak_rss_bytes": 78334193664,
+  "source_deletions": 0,
+  "stage_is_reusable_not_published": true,
+  "evidence": {
+    "runs/3b_full_v1/checkpoint_certificates/ckpt_0000500.json": "e874d4f0d94eb8c8a32d89bfc9ed672b65f4b9026874bb38ffa1ab0950c8e6fe"
+  },
+  "actual_gpu_restore": false
+}

@@ -1,0 +1,139 @@
+{
+  "status": "local_public_checkout_passed",
+  "pytest": {
+    "total": 293,
+    "passed": 284,
+    "skipped": 9,
+    "failed": 0
+  },
+  "skips": [
+    {
+      "test": "tests.test_checkpoint_retention_audit.RetentionAuditTests::test_actual_main_marker_without_target_cannot_pass_final_gate",
+      "reason": "Original-run integration: requires excluded production dataset release/active training manifests; use --run-original-integrations only in a restored test copy"
+    },
+    {
+      "test": "tests.test_corpus_consolidation::test_single_repository_release_download_paths_and_retry",
+      "reason": "Original-run integration: requires excluded production dataset release/active training manifests; use --run-original-integrations only in a restored test copy"
+    },
+    {
+      "test": "tests.test_corpus_finalizer::test_release_assembly_and_retry_keep_13_languages_and_pins",
+      "reason": "Original-run integration: requires excluded production dataset release/active training manifests; use --run-original-integrations only in a restored test copy"
+    },
+    {
+      "test": "tests.test_final_resume_controller.FinalResumeControllerTests::test_current_prepared_plan_bindings_and_worker_tmpdir_admission",
+      "reason": "Original-run integration: requires excluded production dataset release/active training manifests; use --run-original-integrations only in a restored test copy"
+    },
+    {
+      "test": "tests.test_final_retention_controller.FinalRetentionControllerTest::test_actual_parent_paths_protected_and_current_bindings_preparable",
+      "reason": "Original-run integration: requires excluded production dataset release/active training manifests; use --run-original-integrations only in a restored test copy"
+    },
+    {
+      "test": "tests.test_final_retention_controller.FinalRetentionControllerTest::test_sigterm_stops_owned_worker_only_and_preserves_incomplete_evidence",
+      "reason": "Original-run integration: requires excluded production dataset release/active training manifests; use --run-original-integrations only in a restored test copy"
+    },
+    {
+      "test": "tests.test_native_training_inputs::test_final_native_package_retains_exact_732_inputs_and_reuses_release_on_retry",
+      "reason": "Original-run integration: requires excluded production dataset release/active training manifests; use --run-original-integrations only in a restored test copy"
+    },
+    {
+      "test": "tests.test_tiered_checkpoint_retention.TieredRetentionTest::test_original_3b_optimizer_metadata",
+      "reason": "Original-run integration: requires excluded production dataset release/active training manifests; use --run-original-integrations only in a restored test copy"
+    },
+    {
+      "test": "tests.test_tiered_checkpoint_retention.TieredRetentionTest::test_original_validated_copy_settings",
+      "reason": "Original-run integration: requires excluded production dataset release/active training manifests; use --run-original-integrations only in a restored test copy"
+    }
+  ],
+  "quickstart": {
+    "status": "passed",
+    "synthetic_only": true,
+    "dedup": {
+      "input_docs": 130,
+      "kept": 120,
+      "exact_duplicates": 10
+    },
+    "split": {
+      "eval": 20,
+      "train": 100
+    },
+    "tokens": {
+      "tokens": 65211,
+      "holdout_tokens": 13061,
+      "train_docs": 100,
+      "holdout_docs": 20
+    },
+    "vocab_size": 272,
+    "parameters": 108864,
+    "training_losses": [
+      5.638175010681152,
+      5.518810272216797,
+      5.3765482902526855
+    ],
+    "next_step_loss": 5.228689670562744,
+    "holdout_loss": 5.1129961013793945,
+    "resume_model_optimizer_exact": true,
+    "scope": "Offline CPU FP32 micro model; same model/sampler/data modules, simple torch.save demo checkpoint. Full FSDP/DCP and GPU are covered separately, not rerun here."
+  },
+  "resources": {
+    "pytest": {
+      "command": [
+        "python",
+        "-m",
+        "pytest",
+        "-q",
+        "tests"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 106.84826578595676,
+      "sampled_group_peak_rss_bytes": 1822654464,
+      "guard_reason": null,
+      "cpu_affinity": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "threads": 2,
+      "gpu_visible": false,
+      "rss_budget_gib": 6,
+      "min_cgroup_free_gib": 8,
+      "scope": "Installed packages, independent staging cwd, no production PROJECT_ROOT/PYTHONPATH or credentials; offline validation"
+    },
+    "quickstart": {
+      "command": [
+        "python",
+        "examples/quickstart_cpu.py"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 4.0304318908602,
+      "sampled_group_peak_rss_bytes": 741085184,
+      "guard_reason": null,
+      "cpu_affinity": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "threads": 2,
+      "gpu_visible": false,
+      "rss_budget_gib": 6,
+      "min_cgroup_free_gib": 8,
+      "scope": "Installed packages, independent staging cwd, no production PROJECT_ROOT/PYTHONPATH or credentials; offline validation"
+    }
+  },
+  "not_executed": [
+    "fresh package installation",
+    "new eight-GPU training or full corpus reproduction",
+    "official language-ability benchmarks",
+    "remote CI (pending first public push)",
+    "anonymous public clone (pending publication)"
+  ]
+}

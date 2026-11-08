@@ -1,0 +1,302 @@
+{
+  "status": "passed_bounded_distribution",
+  "rows": 3000000,
+  "copy_seconds": 50.58946170308627,
+  "initial_validation_seconds": 21.532011733856052,
+  "reference_seconds": 15.112456407165155,
+  "results": [
+    {
+      "split_contract_id": "89d97d7e2fe39887a4c68726ad5a10e59d2393847c2b6e6fa6f86c296f419103",
+      "source_sha256": "79214354c7f11fad5ec790a470bec39ed720e9d665d266be6505cf27ce762271",
+      "split_manifest_sha256": "b58d4a4b5d1d34eb2d35bce1d05e9b6a9c461019ee43bcab3ca47c9ec6614cdf",
+      "database": {
+        "path": "${LOCAL_SCRATCH}",
+        "sha256": "5c3f6d8facdb7c46132fc3b5bb684a8c02d3e891e5a85e53fd3998ebd3c14261"
+      },
+      "counts": {
+        "eval": 301351,
+        "train": 2698649
+      },
+      "sources": {
+        "web": {
+          "splits": {
+            "eval": {
+              "documents": 150106,
+              "groups": 150106
+            },
+            "train": {
+              "documents": 1349894,
+              "groups": 1349894
+            }
+          },
+          "largest_components": [
+            {
+              "group_id": "text:fffff64df38480abdf50f7404060fab06f2af95449401b41435a40c3403dd9e8",
+              "documents": 1
+            },
+            {
+              "group_id": "text:ffffeb210a1eec4b04c8e7d24db743dacdbf5b8464007d3cdbe0267b7705a296",
+              "documents": 1
+            },
+            {
+              "group_id": "text:ffffe048c4ecc5fd0f1523b1aa8ce56aabe009f804a18cfb6e2bbef95bd63900",
+              "documents": 1
+            },
+            {
+              "group_id": "text:ffffc8bf74f161a2e43bfb200ac00c5d76001b7f48576c3328a7808d0be2dfa0",
+              "documents": 1
+            },
+            {
+              "group_id": "text:ffffbfb2e923953d5c70cc06f4c0217e93933d0a07203cb93cad7b91bcb36902",
+              "documents": 1
+            }
+          ],
+          "eval_document_fraction": 0.10007066666666667
+        },
+        "code": {
+          "splits": {
+            "eval": {
+              "documents": 151245,
+              "groups": 30249
+            },
+            "train": {
+              "documents": 1348755,
+              "groups": 269751
+            }
+          },
+          "largest_components": [
+            {
+              "group_id": "repo:org/repo99999",
+              "documents": 5
+            },
+            {
+              "group_id": "repo:org/repo99998",
+              "documents": 5
+            },
+            {
+              "group_id": "repo:org/repo99997",
+              "documents": 5
+            },
+            {
+              "group_id": "repo:org/repo99996",
+              "documents": 5
+            },
+            {
+              "group_id": "repo:org/repo99995",
+              "documents": 5
+            }
+          ],
+          "eval_document_fraction": 0.10083
+        }
+      },
+      "largest_components": [
+        {
+          "group_id": "repo:org/repo99990",
+          "documents": 6,
+          "sources": 2
+        },
+        {
+          "group_id": "repo:org/repo9999",
+          "documents": 6,
+          "sources": 2
+        },
+        {
+          "group_id": "repo:org/repo99969",
+          "documents": 6,
+          "sources": 2
+        },
+        {
+          "group_id": "repo:org/repo99949",
+          "documents": 6,
+          "sources": 2
+        },
+        {
+          "group_id": "repo:org/repo99929",
+          "documents": 6,
+          "sources": 2
+        },
+        {
+          "group_id": "repo:org/repo99909",
+          "documents": 6,
+          "sources": 2
+        },
+        {
+          "group_id": "repo:org/repo99889",
+          "documents": 6,
+          "sources": 2
+        },
+        {
+          "group_id": "repo:org/repo99868",
+          "documents": 6,
+          "sources": 2
+        },
+        {
+          "group_id": "repo:org/repo99848",
+          "documents": 6,
+          "sources": 2
+        },
+        {
+          "group_id": "repo:org/repo99828",
+          "documents": 6,
+          "sources": 2
+        }
+      ],
+      "original_rows_materialized": 3000000,
+      "materialization_seconds": 4.533810957102105,
+      "elapsed_seconds": 7.46266975090839,
+      "sort_threads": 1,
+      "temp_store": "MEMORY",
+      "validation": "Fresh verified parent context; native source/group TEMP aggregation, source/global totals checked.",
+      "tie_order": "documents descending, group ID descending",
+      "limitation": "Document/group distribution only; bytes/tokens require later pilot. Fresh full consumer validation is separate."
+    },
+    {
+      "split_contract_id": "89d97d7e2fe39887a4c68726ad5a10e59d2393847c2b6e6fa6f86c296f419103",
+      "source_sha256": "79214354c7f11fad5ec790a470bec39ed720e9d665d266be6505cf27ce762271",
+      "split_manifest_sha256": "b58d4a4b5d1d34eb2d35bce1d05e9b6a9c461019ee43bcab3ca47c9ec6614cdf",
+      "database": {
+        "path": "${LOCAL_SCRATCH}",
+        "sha256": "5c3f6d8facdb7c46132fc3b5bb684a8c02d3e891e5a85e53fd3998ebd3c14261"
+      },
+      "counts": {
+        "eval": 301351,
+        "train": 2698649
+      },
+      "sources": {
+        "web": {
+          "splits": {
+            "eval": {
+              "documents": 150106,
+              "groups": 150106
+            },
+            "train": {
+              "documents": 1349894,
+              "groups": 1349894
+            }
+          },
+          "largest_components": [
+            {
+              "group_id": "text:fffff64df38480abdf50f7404060fab06f2af95449401b41435a40c3403dd9e8",
+              "documents": 1
+            },
+            {
+              "group_id": "text:ffffeb210a1eec4b04c8e7d24db743dacdbf5b8464007d3cdbe0267b7705a296",
+              "documents": 1
+            },
+            {
+              "group_id": "text:ffffe048c4ecc5fd0f1523b1aa8ce56aabe009f804a18cfb6e2bbef95bd63900",
+              "documents": 1
+            },
+            {
+              "group_id": "text:ffffc8bf74f161a2e43bfb200ac00c5d76001b7f48576c3328a7808d0be2dfa0",
+              "documents": 1
+            },
+            {
+              "group_id": "text:ffffbfb2e923953d5c70cc06f4c0217e93933d0a07203cb93cad7b91bcb36902",
+              "documents": 1
+            }
+          ],
+          "eval_document_fraction": 0.10007066666666667
+        },
+        "code": {
+          "splits": {
+            "eval": {
+              "documents": 151245,
+              "groups": 30249
+            },
+            "train": {
+              "documents": 1348755,
+              "groups": 269751
+            }
+          },
+          "largest_components": [
+            {
+              "group_id": "repo:org/repo99999",
+              "documents": 5
+            },
+            {
+              "group_id": "repo:org/repo99998",
+              "documents": 5
+            },
+            {
+              "group_id": "repo:org/repo99997",
+              "documents": 5
+            },
+            {
+              "group_id": "repo:org/repo99996",
+              "documents": 5
+            },
+            {
+              "group_id": "repo:org/repo99995",
+              "documents": 5
+            }
+          ],
+          "eval_document_fraction": 0.10083
+        }
+      },
+      "largest_components": [
+        {
+          "group_id": "repo:org/repo99990",
+          "documents": 6,
+          "sources": 2
+        },
+        {
+          "group_id": "repo:org/repo9999",
+          "documents": 6,
+          "sources": 2
+        },
+        {
+          "group_id": "repo:org/repo99969",
+          "documents": 6,
+          "sources": 2
+        },
+        {
+          "group_id": "repo:org/repo99949",
+          "documents": 6,
+          "sources": 2
+        },
+        {
+          "group_id": "repo:org/repo99929",
+          "documents": 6,
+          "sources": 2
+        },
+        {
+          "group_id": "repo:org/repo99909",
+          "documents": 6,
+          "sources": 2
+        },
+        {
+          "group_id": "repo:org/repo99889",
+          "documents": 6,
+          "sources": 2
+        },
+        {
+          "group_id": "repo:org/repo99868",
+          "documents": 6,
+          "sources": 2
+        },
+        {
+          "group_id": "repo:org/repo99848",
+          "documents": 6,
+          "sources": 2
+        },
+        {
+          "group_id": "repo:org/repo99828",
+          "documents": 6,
+          "sources": 2
+        }
+      ],
+      "original_rows_materialized": 3000000,
+      "materialization_seconds": 4.393166597001255,
+      "elapsed_seconds": 7.30955387884751,
+      "sort_threads": 8,
+      "temp_store": "MEMORY",
+      "validation": "Fresh verified parent context; native source/group TEMP aggregation, source/global totals checked.",
+      "tie_order": "documents descending, group ID descending",
+      "limitation": "Document/group distribution only; bytes/tokens require later pilot. Fresh full consumer validation is separate."
+    }
+  ],
+  "total_seconds": 102.64349173707888,
+  "peak_rss_kib": 3099360,
+  "scope": "Warm-cache completed fixture; full128M-row behavior not established."
+}

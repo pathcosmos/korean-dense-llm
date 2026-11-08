@@ -1,0 +1,730 @@
+[
+  {
+    "case": "micro_1gpu",
+    "status": "passed_bounded_pair",
+    "reports": [
+      {
+        "model": "micro",
+        "world": 1,
+        "rank": 0,
+        "sequence": 32,
+        "tolerances": {
+          "logits_rel_l2": 0.03,
+          "gradient_rel_l2": 0.05,
+          "update_rel_l2": 0.1,
+          "loss_abs": 0.03
+        },
+        "initial_input_shared": true,
+        "eager_repeat": {
+          "logits": {
+            "rel_l2": 0.0,
+            "max_abs": 0.0,
+            "finite": true
+          },
+          "loss_abs": 0.0,
+          "gradient": {
+            "rel_l2": 0.0,
+            "max_abs": 0.0,
+            "finite": true
+          },
+          "update": {
+            "rel_l2": 0.0,
+            "max_abs": 0.0,
+            "finite": true
+          }
+        },
+        "compiled_vs_eager": {
+          "logits": {
+            "rel_l2": 0.0025568722798099655,
+            "max_abs": 0.001953125,
+            "finite": true
+          },
+          "loss_abs": 1.8596649169921875e-05,
+          "gradient": {
+            "rel_l2": 0.0022721863688416853,
+            "max_abs": 0.00048828125,
+            "finite": true
+          },
+          "update": {
+            "rel_l2": 0.06798627924152098,
+            "max_abs": 0.0005997209809720516,
+            "finite": true
+          }
+        },
+        "bf16_vs_fp32": {
+          "logits": {
+            "rel_l2": 0.003125796381327211,
+            "max_abs": 0.0018631219863891602,
+            "finite": true
+          },
+          "loss_abs": 5.7220458984375e-05,
+          "gradient": {
+            "rel_l2": 0.003629970320960264,
+            "max_abs": 0.0005404800176620483,
+            "finite": true
+          },
+          "update": {
+            "rel_l2": 0.08290434703170461,
+            "max_abs": 0.0005997763946652412,
+            "finite": true
+          }
+        },
+        "status": "passed_bounded_pair"
+      }
+    ]
+  },
+  {
+    "case": "1b_1gpu",
+    "status": "needs_review",
+    "reports": [
+      {
+        "model": "1b",
+        "world": 1,
+        "rank": 0,
+        "sequence": 32,
+        "tolerances": {
+          "logits_rel_l2": 0.03,
+          "gradient_rel_l2": 0.05,
+          "update_rel_l2": 0.1,
+          "loss_abs": 0.03
+        },
+        "initial_input_shared": true,
+        "eager_repeat": {
+          "logits": {
+            "rel_l2": 0.0,
+            "max_abs": 0.0,
+            "finite": true
+          },
+          "loss_abs": 0.0,
+          "gradient": {
+            "rel_l2": 0.0,
+            "max_abs": 0.0,
+            "finite": true
+          },
+          "update": {
+            "rel_l2": 0.0,
+            "max_abs": 0.0,
+            "finite": true
+          }
+        },
+        "compiled_vs_eager": {
+          "logits": {
+            "rel_l2": 0.014107242582846256,
+            "max_abs": 0.0703125,
+            "finite": true
+          },
+          "loss_abs": 0.0024929046630859375,
+          "gradient": {
+            "rel_l2": 0.02010303544081669,
+            "max_abs": 0.02683544158935547,
+            "finite": true
+          },
+          "update": {
+            "rel_l2": 0.1280857300249443,
+            "max_abs": 0.000599786639213562,
+            "finite": true
+          }
+        },
+        "status": "needs_review"
+      }
+    ]
+  },
+  {
+    "case": "3b_1gpu",
+    "status": "needs_review",
+    "reports": [
+      {
+        "model": "3b",
+        "world": 1,
+        "rank": 0,
+        "sequence": 32,
+        "tolerances": {
+          "logits_rel_l2": 0.03,
+          "gradient_rel_l2": 0.05,
+          "update_rel_l2": 0.1,
+          "loss_abs": 0.03
+        },
+        "initial_input_shared": true,
+        "eager_repeat": {
+          "logits": {
+            "rel_l2": 0.0,
+            "max_abs": 0.0,
+            "finite": true
+          },
+          "loss_abs": 0.0,
+          "gradient": {
+            "rel_l2": 0.0,
+            "max_abs": 0.0,
+            "finite": true
+          },
+          "update": {
+            "rel_l2": 0.0,
+            "max_abs": 0.0,
+            "finite": true
+          }
+        },
+        "compiled_vs_eager": {
+          "logits": {
+            "rel_l2": 0.024010893553552428,
+            "max_abs": 0.153350830078125,
+            "finite": true
+          },
+          "loss_abs": 0.0015850067138671875,
+          "gradient": {
+            "rel_l2": 0.039058390071456374,
+            "max_abs": 0.0541963130235672,
+            "finite": true
+          },
+          "update": {
+            "rel_l2": 0.1697064440715916,
+            "max_abs": 0.0005998928099870682,
+            "finite": true
+          }
+        },
+        "status": "needs_review"
+      }
+    ]
+  },
+  {
+    "case": "3b_8gpu",
+    "status": "needs_review",
+    "reports": [
+      {
+        "model": "3b",
+        "world": 8,
+        "rank": 0,
+        "sequence": 32,
+        "tolerances": {
+          "logits_rel_l2": 0.03,
+          "gradient_rel_l2": 0.05,
+          "update_rel_l2": 0.1,
+          "loss_abs": 0.03
+        },
+        "initial_input_shared": true,
+        "eager_repeat": {
+          "logits": {
+            "rel_l2": 0.0,
+            "max_abs": 0.0,
+            "finite": true
+          },
+          "loss_abs": 0.0,
+          "gradient": {
+            "rel_l2": 0.0,
+            "max_abs": 0.0,
+            "finite": true
+          },
+          "update": {
+            "rel_l2": 0.0,
+            "max_abs": 0.0,
+            "finite": true
+          }
+        },
+        "compiled_vs_eager": {
+          "logits": {
+            "rel_l2": 0.03625464786572508,
+            "max_abs": 0.20703125,
+            "finite": true
+          },
+          "loss_abs": 0.006207466125488281,
+          "gradient": {
+            "rel_l2": 0.0567346498965787,
+            "max_abs": 0.013339996337890625,
+            "finite": true
+          },
+          "update": {
+            "rel_l2": 0.2189804398804544,
+            "max_abs": 0.0005998178385198116,
+            "finite": true
+          }
+        },
+        "status": "needs_review",
+        "profile": {
+          "sequence": 4096,
+          "micro_batch": 2,
+          "accumulation": 2,
+          "measured_steps": 3,
+          "scope": "Synchronized stage timings, overhead included; collectives included within stages",
+          "seconds": {
+            "h2d": 0.0002922123142828544,
+            "forward": 0.23807194184822342,
+            "loss_check": 0.0016760455910116434,
+            "backward": 0.5211988670441011,
+            "gradient_check": 0.02123786959176262,
+            "clip": 0.005969215339670579,
+            "norm_check": 0.0009532513407369455,
+            "optimizer": 0.0068192143614093466
+          }
+        }
+      },
+      {
+        "model": "3b",
+        "world": 8,
+        "rank": 1,
+        "sequence": 32,
+        "tolerances": {
+          "logits_rel_l2": 0.03,
+          "gradient_rel_l2": 0.05,
+          "update_rel_l2": 0.1,
+          "loss_abs": 0.03
+        },
+        "initial_input_shared": true,
+        "eager_repeat": {
+          "logits": {
+            "rel_l2": 0.0,
+            "max_abs": 0.0,
+            "finite": true
+          },
+          "loss_abs": 0.0,
+          "gradient": {
+            "rel_l2": 0.0,
+            "max_abs": 0.0,
+            "finite": true
+          },
+          "update": {
+            "rel_l2": 0.0,
+            "max_abs": 0.0,
+            "finite": true
+          }
+        },
+        "compiled_vs_eager": {
+          "logits": {
+            "rel_l2": 0.03624009295771713,
+            "max_abs": 0.2265625,
+            "finite": true
+          },
+          "loss_abs": 0.00016498565673828125,
+          "gradient": {
+            "rel_l2": 0.05691161825077379,
+            "max_abs": 0.01282501220703125,
+            "finite": true
+          },
+          "update": {
+            "rel_l2": 0.21921212890586628,
+            "max_abs": 0.0005998378619551659,
+            "finite": true
+          }
+        },
+        "status": "needs_review",
+        "profile": {
+          "sequence": 4096,
+          "micro_batch": 2,
+          "accumulation": 2,
+          "measured_steps": 3,
+          "scope": "Synchronized stage timings, overhead included; collectives included within stages",
+          "seconds": {
+            "h2d": 0.00035407495064040023,
+            "forward": 0.23541515367105603,
+            "loss_check": 0.0035080202699949345,
+            "backward": 0.5211257631114373,
+            "gradient_check": 0.02136381862995525,
+            "clip": 0.00640354926387469,
+            "norm_check": 0.00040309752027193707,
+            "optimizer": 0.0073032564638803405
+          }
+        }
+      },
+      {
+        "model": "3b",
+        "world": 8,
+        "rank": 2,
+        "sequence": 32,
+        "tolerances": {
+          "logits_rel_l2": 0.03,
+          "gradient_rel_l2": 0.05,
+          "update_rel_l2": 0.1,
+          "loss_abs": 0.03
+        },
+        "initial_input_shared": true,
+        "eager_repeat": {
+          "logits": {
+            "rel_l2": 0.0,
+            "max_abs": 0.0,
+            "finite": true
+          },
+          "loss_abs": 0.0,
+          "gradient": {
+            "rel_l2": 0.0,
+            "max_abs": 0.0,
+            "finite": true
+          },
+          "update": {
+            "rel_l2": 0.0,
+            "max_abs": 0.0,
+            "finite": true
+          }
+        },
+        "compiled_vs_eager": {
+          "logits": {
+            "rel_l2": 0.03607469619249555,
+            "max_abs": 0.203125,
+            "finite": true
+          },
+          "loss_abs": 0.0028696060180664062,
+          "gradient": {
+            "rel_l2": 0.057292556218609694,
+            "max_abs": 0.0128936767578125,
+            "finite": true
+          },
+          "update": {
+            "rel_l2": 0.21897632896275038,
+            "max_abs": 0.0005997958360239863,
+            "finite": true
+          }
+        },
+        "status": "needs_review",
+        "profile": {
+          "sequence": 4096,
+          "micro_batch": 2,
+          "accumulation": 2,
+          "measured_steps": 3,
+          "scope": "Synchronized stage timings, overhead included; collectives included within stages",
+          "seconds": {
+            "h2d": 0.00030310886601607007,
+            "forward": 0.2353599393585076,
+            "loss_check": 0.004438422465076049,
+            "backward": 0.5206013915594667,
+            "gradient_check": 0.02127221164604028,
+            "clip": 0.005975584266707301,
+            "norm_check": 0.0009122999229778846,
+            "optimizer": 0.00709323196982344
+          }
+        }
+      },
+      {
+        "model": "3b",
+        "world": 8,
+        "rank": 3,
+        "sequence": 32,
+        "tolerances": {
+          "logits_rel_l2": 0.03,
+          "gradient_rel_l2": 0.05,
+          "update_rel_l2": 0.1,
+          "loss_abs": 0.03
+        },
+        "initial_input_shared": true,
+        "eager_repeat": {
+          "logits": {
+            "rel_l2": 0.0,
+            "max_abs": 0.0,
+            "finite": true
+          },
+          "loss_abs": 0.0,
+          "gradient": {
+            "rel_l2": 0.0,
+            "max_abs": 0.0,
+            "finite": true
+          },
+          "update": {
+            "rel_l2": 0.0,
+            "max_abs": 0.0,
+            "finite": true
+          }
+        },
+        "compiled_vs_eager": {
+          "logits": {
+            "rel_l2": 0.03789445810420681,
+            "max_abs": 0.2265625,
+            "finite": true
+          },
+          "loss_abs": 0.0039577484130859375,
+          "gradient": {
+            "rel_l2": 0.05686437209220082,
+            "max_abs": 0.01141357421875,
+            "finite": true
+          },
+          "update": {
+            "rel_l2": 0.21918248208378507,
+            "max_abs": 0.0005997840780764818,
+            "finite": true
+          }
+        },
+        "status": "needs_review",
+        "profile": {
+          "sequence": 4096,
+          "micro_batch": 2,
+          "accumulation": 2,
+          "measured_steps": 3,
+          "scope": "Synchronized stage timings, overhead included; collectives included within stages",
+          "seconds": {
+            "h2d": 0.0002885309513658285,
+            "forward": 0.2368677450964848,
+            "loss_check": 0.0021960195153951645,
+            "backward": 0.5218216623179615,
+            "gradient_check": 0.021246516689037282,
+            "clip": 0.006029149672637383,
+            "norm_check": 0.000882146026318272,
+            "optimizer": 0.006948291324079037
+          }
+        }
+      },
+      {
+        "model": "3b",
+        "world": 8,
+        "rank": 4,
+        "sequence": 32,
+        "tolerances": {
+          "logits_rel_l2": 0.03,
+          "gradient_rel_l2": 0.05,
+          "update_rel_l2": 0.1,
+          "loss_abs": 0.03
+        },
+        "initial_input_shared": true,
+        "eager_repeat": {
+          "logits": {
+            "rel_l2": 0.0,
+            "max_abs": 0.0,
+            "finite": true
+          },
+          "loss_abs": 0.0,
+          "gradient": {
+            "rel_l2": 0.0,
+            "max_abs": 0.0,
+            "finite": true
+          },
+          "update": {
+            "rel_l2": 0.0,
+            "max_abs": 0.0,
+            "finite": true
+          }
+        },
+        "compiled_vs_eager": {
+          "logits": {
+            "rel_l2": 0.035536933045593716,
+            "max_abs": 0.21875,
+            "finite": true
+          },
+          "loss_abs": 0.00167083740234375,
+          "gradient": {
+            "rel_l2": 0.057411475174238016,
+            "max_abs": 0.01287841796875,
+            "finite": true
+          },
+          "update": {
+            "rel_l2": 0.2191486747089256,
+            "max_abs": 0.0005997722037136555,
+            "finite": true
+          }
+        },
+        "status": "needs_review",
+        "profile": {
+          "sequence": 4096,
+          "micro_batch": 2,
+          "accumulation": 2,
+          "measured_steps": 3,
+          "scope": "Synchronized stage timings, overhead included; collectives included within stages",
+          "seconds": {
+            "h2d": 0.0003241439505169789,
+            "forward": 0.23592896736226976,
+            "loss_check": 0.0023575113154947758,
+            "backward": 0.5217428710311651,
+            "gradient_check": 0.021289894978205364,
+            "clip": 0.006001882643128435,
+            "norm_check": 0.0008075792963306109,
+            "optimizer": 0.007201837686200936
+          }
+        }
+      },
+      {
+        "model": "3b",
+        "world": 8,
+        "rank": 5,
+        "sequence": 32,
+        "tolerances": {
+          "logits_rel_l2": 0.03,
+          "gradient_rel_l2": 0.05,
+          "update_rel_l2": 0.1,
+          "loss_abs": 0.03
+        },
+        "initial_input_shared": true,
+        "eager_repeat": {
+          "logits": {
+            "rel_l2": 0.0,
+            "max_abs": 0.0,
+            "finite": true
+          },
+          "loss_abs": 0.0,
+          "gradient": {
+            "rel_l2": 0.0,
+            "max_abs": 0.0,
+            "finite": true
+          },
+          "update": {
+            "rel_l2": 0.0,
+            "max_abs": 0.0,
+            "finite": true
+          }
+        },
+        "compiled_vs_eager": {
+          "logits": {
+            "rel_l2": 0.03711869892715428,
+            "max_abs": 0.23046875,
+            "finite": true
+          },
+          "loss_abs": 0.007533073425292969,
+          "gradient": {
+            "rel_l2": 0.057015289241583285,
+            "max_abs": 0.0133056640625,
+            "finite": true
+          },
+          "update": {
+            "rel_l2": 0.21916352632777486,
+            "max_abs": 0.000599805498495698,
+            "finite": true
+          }
+        },
+        "status": "needs_review",
+        "profile": {
+          "sequence": 4096,
+          "micro_batch": 2,
+          "accumulation": 2,
+          "measured_steps": 3,
+          "scope": "Synchronized stage timings, overhead included; collectives included within stages",
+          "seconds": {
+            "h2d": 0.0003032749518752098,
+            "forward": 0.23643834454317889,
+            "loss_check": 0.0033369317340354123,
+            "backward": 0.5212363326766839,
+            "gradient_check": 0.021224411359677713,
+            "clip": 0.005986594672625263,
+            "norm_check": 0.000936214734489719,
+            "optimizer": 0.006832784973084927
+          }
+        }
+      },
+      {
+        "model": "3b",
+        "world": 8,
+        "rank": 6,
+        "sequence": 32,
+        "tolerances": {
+          "logits_rel_l2": 0.03,
+          "gradient_rel_l2": 0.05,
+          "update_rel_l2": 0.1,
+          "loss_abs": 0.03
+        },
+        "initial_input_shared": true,
+        "eager_repeat": {
+          "logits": {
+            "rel_l2": 0.0,
+            "max_abs": 0.0,
+            "finite": true
+          },
+          "loss_abs": 0.0,
+          "gradient": {
+            "rel_l2": 0.0,
+            "max_abs": 0.0,
+            "finite": true
+          },
+          "update": {
+            "rel_l2": 0.0,
+            "max_abs": 0.0,
+            "finite": true
+          }
+        },
+        "compiled_vs_eager": {
+          "logits": {
+            "rel_l2": 0.036120801650430405,
+            "max_abs": 0.22412109375,
+            "finite": true
+          },
+          "loss_abs": 0.0013551712036132812,
+          "gradient": {
+            "rel_l2": 0.056844700811912396,
+            "max_abs": 0.011902093887329102,
+            "finite": true
+          },
+          "update": {
+            "rel_l2": 0.21921438544753755,
+            "max_abs": 0.0005997766274958849,
+            "finite": true
+          }
+        },
+        "status": "needs_review",
+        "profile": {
+          "sequence": 4096,
+          "micro_batch": 2,
+          "accumulation": 2,
+          "measured_steps": 3,
+          "scope": "Synchronized stage timings, overhead included; collectives included within stages",
+          "seconds": {
+            "h2d": 0.00028429498585561913,
+            "forward": 0.23678079969249666,
+            "loss_check": 0.003508191633348664,
+            "backward": 0.5206668411071101,
+            "gradient_check": 0.021223027957603335,
+            "clip": 0.0059619703485320015,
+            "norm_check": 0.0009619609142343203,
+            "optimizer": 0.006883281748741865
+          }
+        }
+      },
+      {
+        "model": "3b",
+        "world": 8,
+        "rank": 7,
+        "sequence": 32,
+        "tolerances": {
+          "logits_rel_l2": 0.03,
+          "gradient_rel_l2": 0.05,
+          "update_rel_l2": 0.1,
+          "loss_abs": 0.03
+        },
+        "initial_input_shared": true,
+        "eager_repeat": {
+          "logits": {
+            "rel_l2": 0.0,
+            "max_abs": 0.0,
+            "finite": true
+          },
+          "loss_abs": 0.0,
+          "gradient": {
+            "rel_l2": 0.0,
+            "max_abs": 0.0,
+            "finite": true
+          },
+          "update": {
+            "rel_l2": 0.0,
+            "max_abs": 0.0,
+            "finite": true
+          }
+        },
+        "compiled_vs_eager": {
+          "logits": {
+            "rel_l2": 0.03696982452647247,
+            "max_abs": 0.22998046875,
+            "finite": true
+          },
+          "loss_abs": 0.00374603271484375,
+          "gradient": {
+            "rel_l2": 0.05731844421171156,
+            "max_abs": 0.01268768310546875,
+            "finite": true
+          },
+          "update": {
+            "rel_l2": 0.219072756096048,
+            "max_abs": 0.000599793391302228,
+            "finite": true
+          }
+        },
+        "status": "needs_review",
+        "profile": {
+          "sequence": 4096,
+          "micro_batch": 2,
+          "accumulation": 2,
+          "measured_steps": 3,
+          "scope": "Synchronized stage timings, overhead included; collectives included within stages",
+          "seconds": {
+            "h2d": 0.00034581776708364487,
+            "forward": 0.23505210977358124,
+            "loss_check": 0.0035951835258553424,
+            "backward": 0.5208892013567189,
+            "gradient_check": 0.021248399668062728,
+            "clip": 0.00599141667286555,
+            "norm_check": 0.0009069006579617659,
+            "optimizer": 0.007225044692556064
+          }
+        }
+      }
+    ]
+  }
+]

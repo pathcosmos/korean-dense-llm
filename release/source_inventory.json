@@ -1,0 +1,5705 @@
+{
+  "utc": "2026-11-08T05:31:31.161806+00:00",
+  "files": [
+    {
+      "path": "common/data_contracts.py",
+      "bytes": 3111,
+      "sha256": "9b7af55f00602532e369f5880bd5da2bfc80290c19a387aad2862f2a6052ac63",
+      "git_tracked": false,
+      "decision": "include",
+      "role": "common",
+      "imports": [
+        "common.paths",
+        "common.source_inventory",
+        "hashlib",
+        "json",
+        "pathlib"
+      ],
+      "local_references": [
+        "data/clean/{source}"
+      ]
+    },
+    {
+      "path": "common/paths.py",
+      "bytes": 247,
+      "sha256": "07f673ebced3c515ffd763ae6896f19440b7e359f188795ebbc8efbfea42be63",
+      "git_tracked": true,
+      "decision": "include",
+      "role": "common",
+      "imports": [
+        "os"
+      ],
+      "local_references": []
+    },
+    {
+      "path": "common/source_inventory.py",
+      "bytes": 4478,
+      "sha256": "89865829d78904e8b242976c1e78b1942a2dbad79e438db747857ee3a4f3416d",
+      "git_tracked": false,
+      "decision": "include",
+      "role": "common",
+      "imports": [
+        "common.data_contracts",
+        "concurrent.futures",
+        "json",
+        "pathlib"
+      ],
+      "local_references": []
+    },
+    {
+      "path": "data/build_mix.py",
+      "bytes": 4965,
+      "sha256": "74ae57c9a4cb30c71204c5408edefe79f0bdba924e0a1c4a962b0345897538a1",
+      "git_tracked": true,
+      "decision": "include",
+      "role": "data",
+      "imports": [
+        "argparse",
+        "common.data_contracts",
+        "common.paths",
+        "data.tokenize_shards",
+        "json",
+        "math",
+        "pathlib",
+        "sys",
+        "train.data"
+      ],
+      "local_references": [
+        "data/tokens",
+        "data/tokens/mix.json"
+      ]
+    },
+    {
+      "path": "data/clean.py",
+      "bytes": 3700,
+      "sha256": "fd12b6694c7f14728441b2ce84545b8f5cf57819b84d05e5ba27b99a1973065e",
+      "git_tracked": true,
+      "decision": "include",
+      "role": "data",
+      "imports": [
+        "collections",
+        "common.paths",
+        "concurrent.futures",
+        "filters",
+        "glob",
+        "json",
+        "os",
+        "pyarrow",
+        "pyarrow.parquet",
+        "sys",
+        "time"
+      ],
+      "local_references": []
+    },
+    {
+      "path": "data/clean_code.py",
+      "bytes": 8521,
+      "sha256": "26b42b1b75da710dccc1866cceaac20c40c9cc7074c5f5fb319882c02536a4cc",
+      "git_tracked": false,
+      "decision": "include",
+      "role": "data",
+      "imports": [
+        "argparse",
+        "collections",
+        "common.paths",
+        "concurrent.futures",
+        "data.dedup",
+        "hashlib",
+        "json",
+        "os",
+        "pathlib",
+        "pyarrow",
+        "pyarrow.parquet",
+        "re",
+        "sys"
+      ],
+      "local_references": []
+    },
+    {
+      "path": "data/dedup.py",
+      "bytes": 6336,
+      "sha256": "7700dd52d6873d350cd4fd8d470635acc2f8663bfe52cb75fae25d44d994bdbe",
+      "git_tracked": false,
+      "decision": "include",
+      "role": "data",
+      "imports": [
+        "argparse",
+        "common.paths",
+        "hashlib",
+        "json",
+        "os",
+        "pathlib",
+        "pyarrow",
+        "pyarrow.parquet",
+        "sqlite3",
+        "sys",
+        "time",
+        "unicodedata"
+      ],
+      "local_references": []
+    },
+    {
+      "path": "data/download.py",
+      "bytes": 6248,
+      "sha256": "d8f9aa485d2e74c84c47b44cb5cbd577f7f62f571117f2a3ba128e8e44cc7390",
+      "git_tracked": true,
+      "decision": "include",
+      "role": "data",
+      "imports": [
+        "argparse",
+        "common.paths",
+        "concurrent.futures",
+        "fnmatch",
+        "hashlib",
+        "huggingface_hub",
+        "json",
+        "os",
+        "pathlib",
+        "pyarrow.parquet",
+        "sys",
+        "time"
+      ],
+      "local_references": [
+        "data/*",
+        "data/kor_Hang/train/*"
+      ]
+    },
+    {
+      "path": "data/filters.py",
+      "bytes": 2912,
+      "sha256": "30765d8f8d49cf378f0c36684683934d3f14e88b9c338765760a450a1f58dc08",
+      "git_tracked": true,
+      "decision": "include",
+      "role": "data",
+      "imports": [
+        "collections",
+        "re",
+        "xxhash"
+      ],
+      "local_references": []
+    },
+    {
+      "path": "data/local_split_reader.py",
+      "bytes": 4001,
+      "sha256": "300796afb9d98025c5253e4cdc9426fa5017c254399d7d96429327098539caea",
+      "git_tracked": false,
+      "decision": "include",
+      "role": "data",
+      "imports": [
+        "common.data_contracts",
+        "copy",
+        "hashlib",
+        "json",
+        "os",
+        "pathlib",
+        "time"
+      ],
+      "local_references": []
+    },
+    {
+      "path": "data/parallel_tokenize.py",
+      "bytes": 14096,
+      "sha256": "9afbb816804134a04d1c90ddfa7b3bc51a57ab384c53e0c99fc4daafc8dc4d19",
+      "git_tracked": false,
+      "decision": "include",
+      "role": "data",
+      "imports": [
+        "argparse",
+        "common.data_contracts",
+        "concurrent.futures",
+        "contextlib",
+        "data.tokenize_shards",
+        "data.verified_split_context",
+        "fcntl",
+        "hashlib",
+        "json",
+        "multiprocessing",
+        "os",
+        "pathlib",
+        "pyarrow",
+        "pyarrow.parquet",
+        "resource",
+        "sqlite3",
+        "sys",
+        "time",
+        "tokenizers",
+        "uuid"
+      ],
+      "local_references": [
+        "data/local_split_reader.py",
+        "data/parallel_tokenize.py",
+        "data/split_manifest.py",
+        "data/tokenize_shards.py",
+        "data/verified_split_context.py"
+      ]
+    },
+    {
+      "path": "data/pilot_mix.py",
+      "bytes": 9164,
+      "sha256": "76e4476fbaa8e269eb6103a8f906525a6369d1af8859f3b0b154f7f44b084086",
+      "git_tracked": false,
+      "decision": "include",
+      "role": "data",
+      "imports": [
+        "argparse",
+        "common.data_contracts",
+        "data.tokenize_shards",
+        "json",
+        "math",
+        "pathlib",
+        "scripts.run_final_tokens",
+        "sys",
+        "train.data"
+      ],
+      "local_references": []
+    },
+    {
+      "path": "data/probe_audit_overlap.py",
+      "bytes": 6665,
+      "sha256": "6a4bc9c1fa2a89ae2c250384aebc15c60446e4225f8622cd9c9864cebd77c545",
+      "git_tracked": false,
+      "decision": "include",
+      "role": "data",
+      "imports": [
+        "argparse",
+        "collections",
+        "common.data_contracts",
+        "common.source_inventory",
+        "data.probe_text_similarity",
+        "data.source_audit",
+        "json",
+        "pathlib",
+        "pyarrow.parquet",
+        "resource",
+        "sys",
+        "time"
+      ],
+      "local_references": [
+        "data/probe_audit_overlap.py",
+        "data/probe_text_similarity.py"
+      ]
+    },
+    {
+      "path": "data/probe_code_math_overlap.py",
+      "bytes": 8437,
+      "sha256": "ac02425ecd6e87f53d57cc53d99dba41022d98ed5710f143f556a643ca7cf0f7",
+      "git_tracked": false,
+      "decision": "include",
+      "role": "data",
+      "imports": [
+        "argparse",
+        "collections",
+        "common.paths",
+        "data.dedup",
+        "hashlib",
+        "json",
+        "pathlib",
+        "pyarrow",
+        "pyarrow.parquet",
+        "re",
+        "sys"
+      ],
+      "local_references": []
+    },
+    {
+      "path": "data/probe_code_web_overlap.py",
+      "bytes": 3591,
+      "sha256": "c86155f6cac68ca51478057637d2c52a0627d6ba3b54df2a8461589a783df63d",
+      "git_tracked": false,
+      "decision": "include",
+      "role": "data",
+      "imports": [
+        "argparse",
+        "collections",
+        "common.data_contracts",
+        "data.probe_code_math_overlap",
+        "data.probe_text_similarity",
+        "data.sample_snapshot",
+        "json",
+        "pathlib",
+        "sys",
+        "time"
+      ],
+      "local_references": [
+        "data/probe_code_math_overlap.py",
+        "data/probe_code_web_overlap.py"
+      ]
+    },
+    {
+      "path": "data/probe_filters.py",
+      "bytes": 967,
+      "sha256": "a81be374e838cb3136831987d24b5c7f63ba6880aff1bd38e7b0197536b85a0a",
+      "git_tracked": true,
+      "decision": "include",
+      "role": "data",
+      "imports": [
+        "collections",
+        "filters",
+        "glob",
+        "pyarrow.parquet",
+        "sys"
+      ],
+      "local_references": []
+    },
+    {
+      "path": "data/probe_similarity_recall.py",
+      "bytes": 7514,
+      "sha256": "e6d7a4d10e15ad14d14010435b9f2283e0923ced1b03efb6250a80bc16383958",
+      "git_tracked": false,
+      "decision": "include",
+      "role": "data",
+      "imports": [
+        "argparse",
+        "common.data_contracts",
+        "data.probe_text_similarity",
+        "data.sample_snapshot",
+        "hashlib",
+        "json",
+        "pathlib",
+        "random",
+        "string",
+        "sys",
+        "time",
+        "unicodedata"
+      ],
+      "local_references": [
+        "data/probe_similarity_recall.py",
+        "data/probe_text_similarity.py"
+      ]
+    },
+    {
+      "path": "data/probe_text_similarity.py",
+      "bytes": 5030,
+      "sha256": "ee8daaa315a3e08dc84b23b67f64a4b2b3bf8ba8a39f81da6cc11fefcf0d8989",
+      "git_tracked": false,
+      "decision": "include",
+      "role": "data",
+      "imports": [
+        "argparse",
+        "common.data_contracts",
+        "data.sample_snapshot",
+        "hashlib",
+        "json",
+        "math",
+        "pathlib",
+        "sys",
+        "time",
+        "unicodedata"
+      ],
+      "local_references": []
+    },
+    {
+      "path": "data/probe_url_overlap.py",
+      "bytes": 4259,
+      "sha256": "c01a316bc2d38ac4bae5e7c64711418bf90d45df1657940eb397310a28240ac1",
+      "git_tracked": false,
+      "decision": "include",
+      "role": "data",
+      "imports": [
+        "argparse",
+        "common.paths",
+        "json",
+        "pathlib",
+        "pyarrow.parquet",
+        "sys",
+        "urllib.parse",
+        "xxhash"
+      ],
+      "local_references": []
+    },
+    {
+      "path": "data/public_corpus_reader.py",
+      "bytes": 3676,
+      "sha256": "85fefa8c968ec5408f9039bae37d5d1aecb84be3988b1b89ceb3bf7c8eba3c92",
+      "git_tracked": false,
+      "decision": "include",
+      "role": "data",
+      "imports": [
+        "hashlib",
+        "huggingface_hub",
+        "itertools",
+        "json",
+        "pathlib",
+        "pyarrow.parquet"
+      ],
+      "local_references": []
+    },
+    {
+      "path": "data/quality_report.py",
+      "bytes": 12087,
+      "sha256": "4de4fa84a77947242aa3c8c0869c824292bf601a1cb2355b9f30b8f84bd6ee14",
+      "git_tracked": false,
+      "decision": "include",
+      "role": "data",
+      "imports": [
+        "common.data_contracts",
+        "common.source_inventory",
+        "json",
+        "math",
+        "pathlib",
+        "pyarrow.parquet"
+      ],
+      "local_references": []
+    },
+    {
+      "path": "data/release_offsets.py",
+      "bytes": 4730,
+      "sha256": "0580f5f9498e3ae8b16418b7f4e41101b5a66032ce6594951982dcb083b6b4c3",
+      "git_tracked": false,
+      "decision": "include",
+      "role": "data",
+      "imports": [
+        "hashlib",
+        "json",
+        "numpy",
+        "os",
+        "pathlib",
+        "pyarrow",
+        "pyarrow.parquet",
+        "sys"
+      ],
+      "local_references": []
+    },
+    {
+      "path": "data/release_provenance.py",
+      "bytes": 9490,
+      "sha256": "61dee963c93b9097af238850ef3fc00231995971630e42569ec891a473cab4d4",
+      "git_tracked": false,
+      "decision": "include",
+      "role": "data",
+      "imports": [
+        "argparse",
+        "common.paths",
+        "data.filters",
+        "hashlib",
+        "json",
+        "os",
+        "pathlib",
+        "pyarrow",
+        "pyarrow.parquet",
+        "resource",
+        "sqlite3",
+        "sys",
+        "time"
+      ],
+      "local_references": [
+        "data/datasets/final_v2.split/manifest.json",
+        "docs/data_provenance_v1/file_inventory.json",
+        "docs/data_provenance_v1/source_registry.json"
+      ]
+    },
+    {
+      "path": "data/release_split.py",
+      "bytes": 8963,
+      "sha256": "2ebd8027ead19de6b610cc7134d3dc2052d2fe64bf8f6d1ee24a8ab193ce3571",
+      "git_tracked": false,
+      "decision": "include",
+      "role": "data",
+      "imports": [
+        "argparse",
+        "common.paths",
+        "concurrent.futures",
+        "data.release_provenance",
+        "hashlib",
+        "json",
+        "os",
+        "pathlib",
+        "pyarrow",
+        "pyarrow.parquet",
+        "resource",
+        "sqlite3",
+        "struct",
+        "sys",
+        "time"
+      ],
+      "local_references": [
+        "data/datasets/final_v2.split/manifest.json"
+      ]
+    },
+    {
+      "path": "data/sample_snapshot.py",
+      "bytes": 9140,
+      "sha256": "ed47d328426f53918e0a6d12b616f406619925703d7de7b134592d9d30271eca",
+      "git_tracked": false,
+      "decision": "include",
+      "role": "data",
+      "imports": [
+        "argparse",
+        "common.data_contracts",
+        "data.split_manifest",
+        "json",
+        "math",
+        "pathlib",
+        "pyarrow.parquet",
+        "random",
+        "sys",
+        "time"
+      ],
+      "local_references": []
+    },
+    {
+      "path": "data/source_audit.py",
+      "bytes": 13166,
+      "sha256": "510fa41a6dd363a556fd920a4cb8437bd34425e02b8e0d5c12cd53176908556c",
+      "git_tracked": false,
+      "decision": "include",
+      "role": "data",
+      "imports": [
+        "common.data_contracts",
+        "common.source_inventory",
+        "data.probe_code_math_overlap",
+        "datetime",
+        "fcntl",
+        "hashlib",
+        "json",
+        "os",
+        "pathlib",
+        "pyarrow",
+        "pyarrow.parquet",
+        "resource",
+        "shutil",
+        "time"
+      ],
+      "local_references": [
+        "data/probe_code_math_overlap.py",
+        "data/source_audit.py"
+      ]
+    },
+    {
+      "path": "data/split_distribution.py",
+      "bytes": 5398,
+      "sha256": "ab894578e7e23404ea9471aea69d5526430cab0372c55420981b155d50cd54af",
+      "git_tracked": false,
+      "decision": "include",
+      "role": "data",
+      "imports": [
+        "common.data_contracts",
+        "concurrent.futures",
+        "heapq",
+        "multiprocessing",
+        "pathlib",
+        "sqlite3",
+        "time"
+      ],
+      "local_references": []
+    },
+    {
+      "path": "data/split_distribution_native.py",
+      "bytes": 3424,
+      "sha256": "b750758daa2e40d4f03fa41b89568aed15327ca22a5d57ef44ef46496d8a2b43",
+      "git_tracked": false,
+      "decision": "include",
+      "role": "data",
+      "imports": [
+        "common.data_contracts",
+        "time",
+        "uuid"
+      ],
+      "local_references": []
+    },
+    {
+      "path": "data/split_inputs.py",
+      "bytes": 10633,
+      "sha256": "365301c33601c6afb5621cb067609d160d0277ab79199eec098afa803d696d13",
+      "git_tracked": false,
+      "decision": "include",
+      "role": "data",
+      "imports": [
+        "common.data_contracts",
+        "data.split_manifest",
+        "data.verified_split_context",
+        "hashlib",
+        "json",
+        "pathlib",
+        "pyarrow.parquet",
+        "random"
+      ],
+      "local_references": []
+    },
+    {
+      "path": "data/split_manifest.py",
+      "bytes": 14951,
+      "sha256": "3869b7ed1d54c10c9f689fe3e0eb7efda03d2989f03e1dc2ccc8adec3e15ce56",
+      "git_tracked": false,
+      "decision": "include",
+      "role": "data",
+      "imports": [
+        "argparse",
+        "common.data_contracts",
+        "concurrent.futures",
+        "hashlib",
+        "json",
+        "math",
+        "pathlib",
+        "pyarrow.parquet",
+        "sqlite3",
+        "sys",
+        "unicodedata"
+      ],
+      "local_references": []
+    },
+    {
+      "path": "data/split_manifest_candidate.py",
+      "bytes": 14951,
+      "sha256": "3869b7ed1d54c10c9f689fe3e0eb7efda03d2989f03e1dc2ccc8adec3e15ce56",
+      "git_tracked": false,
+      "decision": "include",
+      "role": "data",
+      "imports": [
+        "argparse",
+        "common.data_contracts",
+        "concurrent.futures",
+        "hashlib",
+        "json",
+        "math",
+        "pathlib",
+        "pyarrow.parquet",
+        "sqlite3",
+        "sys",
+        "unicodedata"
+      ],
+      "local_references": []
+    },
+    {
+      "path": "data/tokenize_shards.py",
+      "bytes": 8865,
+      "sha256": "907c6be4b5611e3bf03235ba3b9c2b6e45fdd61174fb26ad17da05f60effef3b",
+      "git_tracked": true,
+      "decision": "include",
+      "role": "data",
+      "imports": [
+        "argparse",
+        "common.data_contracts",
+        "common.paths",
+        "data.split_manifest",
+        "hashlib",
+        "json",
+        "numpy",
+        "pathlib",
+        "pyarrow.parquet",
+        "sys",
+        "tokenizers"
+      ],
+      "local_references": [
+        "data/tokens/{a.source}",
+        "tokenizer/tokenizer.json"
+      ]
+    },
+    {
+      "path": "data/verified_split_context.py",
+      "bytes": 4360,
+      "sha256": "9747cda5a9c978886fedee83e6540bb12a0ebf2c3163fcc7966364579f17a33e",
+      "git_tracked": false,
+      "decision": "include",
+      "role": "data",
+      "imports": [
+        "common.data_contracts",
+        "concurrent.futures",
+        "copy",
+        "data.local_split_reader",
+        "data.split_manifest",
+        "json",
+        "pathlib"
+      ],
+      "local_references": []
+    },
+    {
+      "path": "docs/CHECKPOINT_RETENTION.md",
+      "bytes": 12867,
+      "sha256": "2ad97fb62a04f3591cffd16083517f50bca633901b63b0fd82c4f6023f14090d",
+      "git_tracked": false,
+      "decision": "include",
+      "role": "docs",
+      "imports": [],
+      "local_references": []
+    },
+    {
+      "path": "docs/CODE_DATA_PLAN.md",
+      "bytes": 7922,
+      "sha256": "25baea6c739db2e2f8c26975fb4809a9102ce5bc4d156cfbe20346dac37bc490",
+      "git_tracked": false,
+      "decision": "include",
+      "role": "docs",
+      "imports": [],
+      "local_references": []
+    },
+    {
+      "path": "docs/DATA_CONTRACT.md",
+      "bytes": 18447,
+      "sha256": "83eb2d6f29acf38d9d7ef0fdc44e6d453f93669d93d89ed3f61317af1963119c",
+      "git_tracked": false,
+      "decision": "include",
+      "role": "docs",
+      "imports": [],
+      "local_references": [
+        "data/clean/github_code_v1/.done",
+        "data/clean/github_code_v1/train-00000-of-01126.parquet",
+        "data/dedup/exact_v1/.done",
+        "data/dedup/exact_v1/clean/fineweb2_ko/000_00000.parquet"
+      ]
+    },
+    {
+      "path": "docs/DATA_RETENTION_AND_RECOVERY.md",
+      "bytes": 19461,
+      "sha256": "6d377b209ce07be256ca25457fd2400380b6d9b574227f88d4f8272b6d7a109c",
+      "git_tracked": false,
+      "decision": "include",
+      "role": "docs",
+      "imports": [],
+      "local_references": []
+    },
+    {
+      "path": "docs/DATA_SOURCES_AND_LICENSES.md",
+      "bytes": 22644,
+      "sha256": "b27645f22506ab1e015ef44d65ca7c877b6fe955d2edf1e43985c584b0ce42f7",
+      "git_tracked": false,
+      "decision": "include",
+      "role": "docs",
+      "imports": [],
+      "local_references": []
+    },
+    {
+      "path": "docs/FRANKENSTALLM_HANDOFF.md",
+      "bytes": 31358,
+      "sha256": "130ab4071fb542a7176c3e842f062b7d0794e6fbee5dfaf13029edb957f1ecf9",
+      "git_tracked": false,
+      "decision": "include",
+      "role": "docs",
+      "imports": [],
+      "local_references": []
+    },
+    {
+      "path": "docs/FRANKENSTALLM_REVIEW.md",
+      "bytes": 25906,
+      "sha256": "b5234da89c0a9145bc76e673023c35f16dea645badb708a155e3ac1f6090c575",
+      "git_tracked": false,
+      "decision": "include",
+      "role": "docs",
+      "imports": [],
+      "local_references": []
+    },
+    {
+      "path": "docs/HARDWARE_RESOURCES.md",
+      "bytes": 14517,
+      "sha256": "cac4e5ed676f26a4eadf0e615c59a5f86e110385a974448e675fcc3dada3a83d",
+      "git_tracked": false,
+      "decision": "include",
+      "role": "docs",
+      "imports": [],
+      "local_references": []
+    },
+    {
+      "path": "docs/LESSONS.md",
+      "bytes": 7731,
+      "sha256": "5b7ff83edad2538328dd57788f749e8ad249457fe317de7dd23ef8b4500e528c",
+      "git_tracked": true,
+      "decision": "include",
+      "role": "docs",
+      "imports": [],
+      "local_references": [
+        "tokenizer/*"
+      ]
+    },
+    {
+      "path": "docs/RUNBOOK.md",
+      "bytes": 33937,
+      "sha256": "4864878cfc04b79dbe0a4b6a27f7358f1b649b05b98495e7b61a3dd9ecdcd9db",
+      "git_tracked": true,
+      "decision": "include",
+      "role": "docs",
+      "imports": [],
+      "local_references": []
+    },
+    {
+      "path": "docs/data_provenance_v1/source_registry.json",
+      "bytes": 12070,
+      "sha256": "c03d276bd500616ba25b5d33906e6f47c7887620ee33686c039cd3e6b06a386f",
+      "git_tracked": false,
+      "decision": "include",
+      "role": "docs",
+      "imports": [],
+      "local_references": [
+        "data/kor_Hang/train: 25 shards",
+        "docs/data_provenance_v1/evidence/fineweb2_ko_pinned_README.md",
+        "docs/data_provenance_v1/evidence/fineweb_edu_pinned_README.md",
+        "docs/data_provenance_v1/evidence/github_code_v1_pinned_README.md",
+        "docs/data_provenance_v1/evidence/hplt_ko_pinned_README.md",
+        "docs/data_provenance_v1/evidence/owm_pinned_README.md",
+        "docs/data_provenance_v1/evidence/wiki_ko_pinned_README.md"
+      ]
+    },
+    {
+      "path": "docs/reviews/frankenstallm/acceptance_cases.json",
+      "bytes": 5400,
+      "sha256": "6378bea2f4cbdf36eed3ce354d8bd7ebdae810d3bc3e1cb89503900ceff8cc77",
+      "git_tracked": false,
+      "decision": "include",
+      "role": "docs",
+      "imports": [],
+      "local_references": [
+        "data/filters.py or code deduplication",
+        "data/tokenize_shards.py"
+      ]
+    },
+    {
+      "path": "eval/__init__.py",
+      "bytes": 91,
+      "sha256": "f593dcd12da0ddac3cbcee68e5bd0e982c1505539f866a5cc49174ad6b0f97f2",
+      "git_tracked": false,
+      "decision": "include",
+      "role": "eval",
+      "imports": [],
+      "local_references": []
+    },
+    {
+      "path": "eval/generation.py",
+      "bytes": 1862,
+      "sha256": "ba9e2ba8cd7d52283f6c3fe8a00b42a9c0caf84cc078239aecaeab73bd9796de",
+      "git_tracked": false,
+      "decision": "include",
+      "role": "eval",
+      "imports": [
+        "math",
+        "torch"
+      ],
+      "local_references": []
+    },
+    {
+      "path": "eval/multiple_choice.py",
+      "bytes": 7624,
+      "sha256": "81a64829052474dd9f2334d7763bca0e6429380a3b325c0409fa63a244a070d6",
+      "git_tracked": false,
+      "decision": "include",
+      "role": "eval",
+      "imports": [
+        "argparse",
+        "common.data_contracts",
+        "eval.run",
+        "json",
+        "math",
+        "pathlib",
+        "string",
+        "sys",
+        "tokenizers",
+        "torch"
+      ],
+      "local_references": []
+    },
+    {
+      "path": "eval/perplexity.py",
+      "bytes": 3792,
+      "sha256": "ac9abc015a62c23276bf850331ec2ac297bd394dc9a45136d3f2918ea65daa9b",
+      "git_tracked": false,
+      "decision": "include",
+      "role": "eval",
+      "imports": [
+        "dataclasses",
+        "math",
+        "sys",
+        "torch",
+        "torch.nn.functional"
+      ],
+      "local_references": []
+    },
+    {
+      "path": "eval/prepare_holdout.py",
+      "bytes": 2773,
+      "sha256": "563032323e866ad3976908e493d7349df1f1bb7affaff4582a8d0f6de61c5472",
+      "git_tracked": false,
+      "decision": "include",
+      "role": "eval",
+      "imports": [
+        "argparse",
+        "common.data_contracts",
+        "contextlib",
+        "data.local_split_reader",
+        "data.split_inputs",
+        "data.verified_split_context",
+        "json",
+        "math",
+        "pathlib",
+        "sys"
+      ],
+      "local_references": []
+    },
+    {
+      "path": "eval/run.py",
+      "bytes": 9112,
+      "sha256": "47105a037e91057a436a6d978b2fe076466d5179b3b499bac9c8b4a1c36c02e4",
+      "git_tracked": false,
+      "decision": "include",
+      "role": "eval",
+      "imports": [
+        "argparse",
+        "common.data_contracts",
+        "data.split_inputs",
+        "eval.generation",
+        "eval.perplexity",
+        "eval.prepare_holdout",
+        "json",
+        "model.model",
+        "pathlib",
+        "sys",
+        "tokenizers",
+        "torch",
+        "torch.distributed.checkpoint"
+      ],
+      "local_references": [
+        "data/local_split_reader.py",
+        "data/split_inputs.py",
+        "data/split_manifest.py",
+        "data/verified_split_context.py"
+      ]
+    },
+    {
+      "path": "model/model.py",
+      "bytes": 5556,
+      "sha256": "719cc0d69b35620e36cba817df1b11dd0e322da529f3cafc30130f6a45b5fee9",
+      "git_tracked": true,
+      "decision": "include",
+      "role": "model",
+      "imports": [
+        "dataclasses",
+        "math",
+        "torch",
+        "torch.nn",
+        "torch.nn.functional"
+      ],
+      "local_references": []
+    },
+    {
+      "path": "requirements.txt",
+      "bytes": 309,
+      "sha256": "be3479d067610232cbfce5b32396896f1a95fef0fbebe85bff38d323fc833dec",
+      "git_tracked": true,
+      "decision": "include",
+      "role": "requirements.txt",
+      "imports": [],
+      "local_references": []
+    },
+    {
+      "path": "scripts/adopt_main_worker.py",
+      "bytes": 4392,
+      "sha256": "b4f9579082f634a721627f46c6633d542d47924d85f9dd69eebe02b50aa74c81",
+      "git_tracked": false,
+      "decision": "include",
+      "role": "scripts",
+      "imports": [
+        "common.data_contracts",
+        "fcntl",
+        "json",
+        "os",
+        "pathlib",
+        "signal",
+        "subprocess",
+        "time"
+      ],
+      "local_references": [
+        "runs/.gpu_benchmark.lock"
+      ]
+    },
+    {
+      "path": "scripts/assemble_pretrain_review.py",
+      "bytes": 14509,
+      "sha256": "92e915e7a793440bb39915861396280a76df2d3cbc832cb7863df2d9bddf6fa8",
+      "git_tracked": false,
+      "decision": "include",
+      "role": "scripts",
+      "imports": [
+        "argparse",
+        "common.data_contracts",
+        "fcntl",
+        "json",
+        "math",
+        "matplotlib",
+        "os",
+        "pathlib",
+        "scripts.evaluate_final_rehearsal",
+        "scripts.observe_rehearsal",
+        "scripts.plan_main_training",
+        "scripts.resource_admission",
+        "scripts.run_local_split",
+        "scripts.run_native_evaluation",
+        "scripts.run_rehearsal",
+        "shutil",
+        "subprocess",
+        "sys",
+        "time",
+        "train.probe",
+        "train.rehearsal"
+      ],
+      "local_references": [
+        "runs/1b_rehearsal_final_v3",
+        "runs/actual_deterministic_batch_v1",
+        "runs/actual_train_validation_v1",
+        "runs/f4_full_v2",
+        "runs/f4_full_v2/report.json",
+        "runs/f5_tokenizer_v1",
+        "runs/f6_tokens_v1",
+        "runs/monitored_3b_validation_v1",
+        "runs/native_eval_validation_v1",
+        "runs/rehearsal_final_native_v1"
+      ]
+    },
+    {
+      "path": "scripts/audit_checkpoint_retention.py",
+      "bytes": 21392,
+      "sha256": "cf4785d4e5b2cb9bf3d4de14beb45bfbb810c5c28a4b24d1d85536426fb89437",
+      "git_tracked": false,
+      "decision": "include",
+      "role": "scripts",
+      "imports": [
+        "argparse",
+        "common.data_contracts",
+        "datetime",
+        "json",
+        "math",
+        "model.model",
+        "pathlib",
+        "re",
+        "scripts.evaluate_final_main",
+        "scripts.supervise_main_training",
+        "scripts.tiered_checkpoint_retention",
+        "shutil",
+        "sys",
+        "torch",
+        "torch.distributed.checkpoint",
+        "train.final_resume_probe"
+      ],
+      "local_references": [
+        "runs/3b_full_v1"
+      ]
+    },
+    {
+      "path": "scripts/audit_frankenstallm.py",
+      "bytes": 16061,
+      "sha256": "3a8b5ff1aeed4cfe12061ede25cbec4bae17438a053610ee280a40cc64d73b8f",
+      "git_tracked": false,
+      "decision": "include",
+      "role": "scripts",
+      "imports": [
+        "__future__",
+        "argparse",
+        "ast",
+        "collections",
+        "common.paths",
+        "contextlib",
+        "datetime",
+        "hashlib",
+        "importlib.util",
+        "io",
+        "json",
+        "math",
+        "numpy",
+        "pathlib",
+        "subprocess",
+        "sys",
+        "tempfile",
+        "tokenizers",
+        "torch",
+        "types"
+      ],
+      "local_references": [
+        "data/build_mix.py",
+        "data/clean.py",
+        "data/filters.py",
+        "data/prepare_preference_combined.py",
+        "data/sft_dataset.py",
+        "data/tokenize_shards.py",
+        "docs/reviews/frankenstallm",
+        "tokenizer/check_tokenizer.py",
+        "tokenizer/train_tokenizer.py"
+      ]
+    },
+    {
+      "path": "scripts/audit_main_training.py",
+      "bytes": 21027,
+      "sha256": "b6fe9a2e5856b9cef6b5a296a453e591de9af003c608dfe0fec654cf38a50868",
+      "git_tracked": false,
+      "decision": "include",
+      "role": "scripts",
+      "imports": [
+        "argparse",
+        "collections",
+        "common.data_contracts",
+        "datetime",
+        "hashlib",
+        "json",
+        "math",
+        "pathlib",
+        "re",
+        "sys"
+      ],
+      "local_references": []
+    },
+    {
+      "path": "scripts/audit_retention_recovery.py",
+      "bytes": 16866,
+      "sha256": "ae1b54c240f8193b4c4cd07dfd7894a669c2363e56c5597229d64b16e5a06c00",
+      "git_tracked": false,
+      "decision": "include",
+      "role": "scripts",
+      "imports": [
+        "argparse",
+        "common.data_contracts",
+        "common.paths",
+        "common.source_inventory",
+        "concurrent.futures",
+        "data",
+        "datetime",
+        "hashlib",
+        "huggingface_hub",
+        "importlib.metadata",
+        "importlib.util",
+        "json",
+        "os",
+        "pathlib",
+        "pyarrow",
+        "pyarrow.parquet",
+        "requests",
+        "resource",
+        "scripts.resource_admission",
+        "shutil",
+        "sys",
+        "time"
+      ],
+      "local_references": [
+        "data/clean",
+        "data/clean.py",
+        "data/clean_code.py",
+        "data/datasets/final_v1.ready.json",
+        "data/dedup.py",
+        "data/dedup/exact_v1",
+        "data/download.py",
+        "data/filters.py",
+        "data/raw",
+        "data/raw/",
+        "data/recovery",
+        "runs/pretrain_readiness_v1/storage_cost_and_retention_proposal_v1.json"
+      ]
+    },
+    {
+      "path": "scripts/audit_source_inventory.py",
+      "bytes": 1240,
+      "sha256": "9dc02ed393d2a6d23be396d13e8eac51c9db740b0246460245bf785a6c2c23c0",
+      "git_tracked": false,
+      "decision": "include",
+      "role": "scripts",
+      "imports": [
+        "argparse",
+        "data.source_audit",
+        "json",
+        "pathlib",
+        "sys"
+      ],
+      "local_references": []
+    },
+    {
+      "path": "scripts/benchmark_actual_training.py",
+      "bytes": 11044,
+      "sha256": "6d3d7715acb6d126899e155107e0779b3d350e6f66dc994b97092979ca091f52",
+      "git_tracked": false,
+      "decision": "include",
+      "role": "scripts",
+      "imports": [
+        "argparse",
+        "common.data_contracts",
+        "data.pilot_mix",
+        "fcntl",
+        "json",
+        "math",
+        "os",
+        "pathlib",
+        "scripts.hardware_profile",
+        "scripts.run_local_split",
+        "scripts.validate_actual_training",
+        "shutil",
+        "statistics",
+        "subprocess",
+        "sys",
+        "time",
+        "torch"
+      ],
+      "local_references": [
+        "data/pilot_mix.py",
+        "runs/.gpu_benchmark.lock"
+      ]
+    },
+    {
+      "path": "scripts/benchmark_bpe_memory.py",
+      "bytes": 4959,
+      "sha256": "a99b95f8c341b6135e76bf21c93d19887c6a2f2e9c7540427f3cf4ca64c55ebb",
+      "git_tracked": false,
+      "decision": "include",
+      "role": "scripts",
+      "imports": [
+        "argparse",
+        "common.data_contracts",
+        "json",
+        "os",
+        "pathlib",
+        "resource",
+        "scripts.benchmark_tokenizer_resources",
+        "scripts.hardware_profile",
+        "scripts.parallel_job_support",
+        "sys",
+        "time",
+        "tokenizer.train_tokenizer",
+        "tokenizers"
+      ],
+      "local_references": [
+        "runs/next_stage_optimization_v1"
+      ]
+    },
+    {
+      "path": "scripts/benchmark_contract.py",
+      "bytes": 1351,
+      "sha256": "a63a5c452f202278d065caac6780bd70bc694a59f3420ba1ab47c53b145cef80",
+      "git_tracked": false,
+      "decision": "include",
+      "role": "scripts",
+      "imports": [
+        "common.data_contracts",
+        "hashlib",
+        "json",
+        "pathlib",
+        "platform",
+        "subprocess",
+        "torch"
+      ],
+      "local_references": []
+    },
+    {
+      "path": "scripts/benchmark_deterministic_training.py",
+      "bytes": 12348,
+      "sha256": "8d439edf17f77f0ac5b265520067573c65403126981100b818000c91c8bb1405",
+      "git_tracked": false,
+      "decision": "include",
+      "role": "scripts",
+      "imports": [
+        "argparse",
+        "common.data_contracts",
+        "data.pilot_mix",
+        "fcntl",
+        "json",
+        "math",
+        "os",
+        "pathlib",
+        "scripts.hardware_profile",
+        "scripts.run_local_split",
+        "scripts.validate_actual_training",
+        "shutil",
+        "statistics",
+        "subprocess",
+        "sys",
+        "time",
+        "torch"
+      ],
+      "local_references": [
+        "data/pilot_mix.py",
+        "runs/.gpu_benchmark.lock"
+      ]
+    },
+    {
+      "path": "scripts/benchmark_distribution_native.py",
+      "bytes": 3380,
+      "sha256": "79361ac3d93f14397ffacbbd32d91fc6d584092001bbb3360bf9bc6c4a15a3e4",
+      "git_tracked": false,
+      "decision": "include",
+      "role": "scripts",
+      "imports": [
+        "argparse",
+        "common.data_contracts",
+        "data.local_split_reader",
+        "data.split_distribution_native",
+        "data.verified_split_context",
+        "json",
+        "pathlib",
+        "resource",
+        "scripts.hardware_profile",
+        "sys",
+        "time"
+      ],
+      "local_references": [
+        "data/local_split_reader.py",
+        "data/split_distribution_native.py",
+        "data/split_manifest.py",
+        "data/verified_split_context.py"
+      ]
+    },
+    {
+      "path": "scripts/benchmark_gpu.py",
+      "bytes": 6911,
+      "sha256": "866c6f7e255fe9eec09730fbc1b90e3fe7b30f887e9f81d8eb67b56c21f9afe5",
+      "git_tracked": false,
+      "decision": "include",
+      "role": "scripts",
+      "imports": [
+        "argparse",
+        "common.data_contracts",
+        "common.paths",
+        "datetime",
+        "fcntl",
+        "json",
+        "math",
+        "numpy",
+        "os",
+        "pathlib",
+        "scripts.benchmark_contract",
+        "statistics",
+        "subprocess",
+        "sys",
+        "time"
+      ],
+      "local_references": [
+        "runs/.gpu_benchmark.lock"
+      ]
+    },
+    {
+      "path": "scripts/benchmark_next_stage.py",
+      "bytes": 12437,
+      "sha256": "a8a1dc08e29e9ef0e20282488327b2762a85779f28f51dda12c765461096e753",
+      "git_tracked": false,
+      "decision": "include",
+      "role": "scripts",
+      "imports": [
+        "argparse",
+        "common.data_contracts",
+        "data.parallel_tokenize",
+        "data.split_manifest",
+        "hashlib",
+        "json",
+        "os",
+        "pathlib",
+        "pyarrow",
+        "pyarrow.parquet",
+        "resource",
+        "scripts.benchmark_tokenizer_resources",
+        "scripts.hardware_profile",
+        "scripts.parallel_job_support",
+        "scripts.publish_local_split",
+        "scripts.report_split_distribution",
+        "scripts.run_local_split",
+        "shutil",
+        "statistics",
+        "subprocess",
+        "sys",
+        "time",
+        "types"
+      ],
+      "local_references": [
+        "data/datasets/final_v1.ready.json",
+        "data/parallel_tokenize.py",
+        "data/split_manifest.py",
+        "data/tokenize_shards.py",
+        "data/verified_split_context.py",
+        "runs/tokenizer_resources_v1/bpe_16/experimental_tokenizer.json",
+        "runs/tokenizer_resources_v1/bpe_16/result.json",
+        "tokenizer/train_tokenizer.py"
+      ]
+    },
+    {
+      "path": "scripts/benchmark_source_hash.py",
+      "bytes": 3226,
+      "sha256": "edc1afdc94117fcdf566a3123e0687aafca0a9f19b4abaa15efb509f12dd54b4",
+      "git_tracked": false,
+      "decision": "include",
+      "role": "scripts",
+      "imports": [
+        "argparse",
+        "common.data_contracts",
+        "concurrent.futures",
+        "json",
+        "pathlib",
+        "resource",
+        "statistics",
+        "sys",
+        "time"
+      ],
+      "local_references": []
+    },
+    {
+      "path": "scripts/benchmark_split_distribution.py",
+      "bytes": 2793,
+      "sha256": "8d11457739eebd7e3bc7e2589fcee82f362b2c44bd70014efb661a84b247db8c",
+      "git_tracked": false,
+      "decision": "include",
+      "role": "scripts",
+      "imports": [
+        "argparse",
+        "common.data_contracts",
+        "data.split_distribution",
+        "data.verified_split_context",
+        "json",
+        "pathlib",
+        "scripts.hardware_profile",
+        "sys",
+        "time"
+      ],
+      "local_references": [
+        "data/split_distribution.py",
+        "data/split_manifest.py",
+        "data/verified_split_context.py"
+      ]
+    },
+    {
+      "path": "scripts/benchmark_split_hotpath.py",
+      "bytes": 2817,
+      "sha256": "178a276dd460ae93cab6b0dbf50b0ee56036a0f43a5a6c846b0926980219b902",
+      "git_tracked": false,
+      "decision": "include",
+      "role": "scripts",
+      "imports": [
+        "argparse",
+        "common.data_contracts",
+        "data.split_manifest_candidate",
+        "hashlib",
+        "json",
+        "os",
+        "pathlib",
+        "resource",
+        "sys",
+        "time"
+      ],
+      "local_references": [
+        "data/split_manifest_candidate.py"
+      ]
+    },
+    {
+      "path": "scripts/benchmark_split_resources.py",
+      "bytes": 5754,
+      "sha256": "ca8b0bf5b9bc268c991247acea6ae93e23e025b20be18084059f8c3be7825572",
+      "git_tracked": false,
+      "decision": "include",
+      "role": "scripts",
+      "imports": [
+        "argparse",
+        "common.data_contracts",
+        "data.split_manifest",
+        "hashlib",
+        "json",
+        "os",
+        "pathlib",
+        "pyarrow",
+        "resource",
+        "scripts.hardware_profile",
+        "scripts.run_local_split",
+        "shutil",
+        "subprocess",
+        "sys",
+        "time"
+      ],
+      "local_references": [
+        "data/split_manifest.py"
+      ]
+    },
+    {
+      "path": "scripts/benchmark_tokenizer_resources.py",
+      "bytes": 11683,
+      "sha256": "6ae139a838db8cce7ec71673ebd163674b40b2bfd2fc75b451cf2e868b2ee799",
+      "git_tracked": false,
+      "decision": "include",
+      "role": "scripts",
+      "imports": [
+        "argparse",
+        "common.data_contracts",
+        "common.source_inventory",
+        "concurrent.futures",
+        "data.tokenize_shards",
+        "hashlib",
+        "json",
+        "multiprocessing",
+        "os",
+        "pathlib",
+        "pyarrow",
+        "pyarrow.parquet",
+        "random",
+        "resource",
+        "scripts.hardware_profile",
+        "scripts.parallel_job_support",
+        "statistics",
+        "sys",
+        "time",
+        "tokenizer.train_tokenizer",
+        "tokenizers"
+      ],
+      "local_references": [
+        "data/datasets/final_v1.ready.json",
+        "data/tokenize_shards.py",
+        "tokenizer/train_tokenizer.py"
+      ]
+    },
+    {
+      "path": "scripts/check_data_readiness.py",
+      "bytes": 942,
+      "sha256": "57f8852febee64ad54b975fa5854bba4c708615fe2ca0d5afbe9e7928e4f2352",
+      "git_tracked": false,
+      "decision": "include",
+      "role": "scripts",
+      "imports": [
+        "argparse",
+        "data.quality_report",
+        "json",
+        "pathlib",
+        "sys"
+      ],
+      "local_references": []
+    },
+    {
+      "path": "scripts/check_env.py",
+      "bytes": 1110,
+      "sha256": "81b630e0c0d505a2c292d8b152c8e1e82d0f9270142df2def0bf90274a045733",
+      "git_tracked": true,
+      "decision": "include",
+      "role": "scripts",
+      "imports": [
+        "common.paths",
+        "os",
+        "shutil",
+        "subprocess",
+        "sys",
+        "torch"
+      ],
+      "local_references": []
+    },
+    {
+      "path": "scripts/check_gpu_numerics.py",
+      "bytes": 2535,
+      "sha256": "ab26d3da4f7287ca2cf84fbd6e4a256a1e07623853bff4035a6b242232756bc7",
+      "git_tracked": false,
+      "decision": "include",
+      "role": "scripts",
+      "imports": [
+        "argparse",
+        "common.data_contracts",
+        "json",
+        "math",
+        "model.model",
+        "pathlib",
+        "sys",
+        "torch"
+      ],
+      "local_references": []
+    },
+    {
+      "path": "scripts/check_public_corpus_consumer.py",
+      "bytes": 4294,
+      "sha256": "95be5c3e745d5405915ddec613fbc8fb68e3a03d6a5a5f47ecb58dcc4f530eb4",
+      "git_tracked": false,
+      "decision": "include",
+      "role": "scripts",
+      "imports": [
+        "argparse",
+        "common.paths",
+        "hashlib",
+        "huggingface_hub",
+        "io",
+        "itertools",
+        "json",
+        "numpy",
+        "os",
+        "pathlib",
+        "requests",
+        "stream_documents",
+        "sys",
+        "torch"
+      ],
+      "local_references": [
+        "runs/dataset_upload_v1/index_assets/examples"
+      ]
+    },
+    {
+      "path": "scripts/compare_normalization.py",
+      "bytes": 4347,
+      "sha256": "0f40a3bfe397e6d3f400b963d140e4947cbdb0534a406f986b63416c84c7b98e",
+      "git_tracked": false,
+      "decision": "include",
+      "role": "scripts",
+      "imports": [
+        "argparse",
+        "common.data_contracts",
+        "hashlib",
+        "json",
+        "pathlib",
+        "pyarrow.parquet",
+        "sys",
+        "tokenizer.check_tokenizer",
+        "tokenizer.train_tokenizer",
+        "tokenizers"
+      ],
+      "local_references": []
+    },
+    {
+      "path": "scripts/consolidate_public_corpus.py",
+      "bytes": 25525,
+      "sha256": "dfb922923164b51bad1ca2a954a1846e6304d2b4e2d36b079f3b93e00896cf22",
+      "git_tracked": false,
+      "decision": "include",
+      "role": "scripts",
+      "imports": [
+        "argparse",
+        "common.paths",
+        "datetime",
+        "fcntl",
+        "hashlib",
+        "huggingface_hub",
+        "importlib.util",
+        "itertools",
+        "json",
+        "os",
+        "pathlib",
+        "scripts.check_public_corpus_consumer",
+        "scripts.finalize_public_corpus_v2",
+        "scripts.upload_public_corpus",
+        "shutil",
+        "sys",
+        "threading",
+        "time",
+        "yaml"
+      ],
+      "local_references": [
+        "data/public_corpus_reader.py",
+        "runs/dataset_unified_v1",
+        "runs/dataset_upload_v1",
+        "runs/dataset_upload_v1/upload_spec.json",
+        "tokenizer/*"
+      ]
+    },
+    {
+      "path": "scripts/continue_pretraining.py",
+      "bytes": 10768,
+      "sha256": "354ebf435e5d21556dcdb0946b49d5b2864402ac4d64dda7c5e2e34ae4e74883",
+      "git_tracked": false,
+      "decision": "include",
+      "role": "scripts",
+      "imports": [
+        "argparse",
+        "common.data_contracts",
+        "datetime",
+        "fcntl",
+        "json",
+        "os",
+        "pathlib",
+        "scripts.job_registry",
+        "scripts.mix_review_policy",
+        "scripts.resource_admission",
+        "scripts.run_final_tokens",
+        "scripts.run_native_evaluation",
+        "subprocess",
+        "sys",
+        "time"
+      ],
+      "local_references": [
+        "runs/1b_rehearsal_final_v1",
+        "runs/f6_tokens_v1",
+        "runs/native_eval_validation_v1",
+        "runs/rehearsal_hooks_actual_v2"
+      ]
+    },
+    {
+      "path": "scripts/diagnose_compile_precision.py",
+      "bytes": 7966,
+      "sha256": "a28c573c75e4ca66f8af33f172ae6346e1cd428b041e9a6f8a921824a0a63bcc",
+      "git_tracked": false,
+      "decision": "include",
+      "role": "scripts",
+      "imports": [
+        "argparse",
+        "common.data_contracts",
+        "common.paths",
+        "datetime",
+        "fcntl",
+        "json",
+        "math",
+        "model.model",
+        "os",
+        "pathlib",
+        "subprocess",
+        "sys",
+        "time",
+        "torch"
+      ],
+      "local_references": [
+        "runs/.gpu_benchmark.lock"
+      ]
+    },
+    {
+      "path": "scripts/evaluate_final_main.py",
+      "bytes": 20028,
+      "sha256": "635bffbf9dfd01b461318fd42e927edf473fb78bda68e2f6511084d504d8f928",
+      "git_tracked": false,
+      "decision": "include",
+      "role": "scripts",
+      "imports": [
+        "argparse",
+        "common.data_contracts",
+        "common.paths",
+        "data.split_inputs",
+        "eval.prepare_holdout",
+        "eval.run",
+        "fcntl",
+        "json",
+        "math",
+        "os",
+        "pathlib",
+        "pyarrow",
+        "scripts.audit_main_training",
+        "scripts.evaluate_final_rehearsal",
+        "scripts.resource_admission",
+        "scripts.retention_capacity",
+        "scripts.run_local_split",
+        "scripts.run_native_evaluation",
+        "shutil",
+        "statistics",
+        "subprocess",
+        "sys",
+        "time",
+        "tokenizers",
+        "torch"
+      ],
+      "local_references": [
+        "runs/3b_full_v1",
+        "runs/rehearsal_final_native_v1"
+      ]
+    },
+    {
+      "path": "scripts/evaluate_final_rehearsal.py",
+      "bytes": 19209,
+      "sha256": "3b787bc85c163a0ad91562f35b7105a72ffdffad060007b0a9ea3058d8c2db35",
+      "git_tracked": false,
+      "decision": "include",
+      "role": "scripts",
+      "imports": [
+        "argparse",
+        "common.data_contracts",
+        "common.paths",
+        "data.split_inputs",
+        "eval.prepare_holdout",
+        "eval.run",
+        "fcntl",
+        "json",
+        "math",
+        "os",
+        "pathlib",
+        "pyarrow",
+        "scripts.resource_admission",
+        "scripts.run_local_split",
+        "scripts.run_native_evaluation",
+        "shutil",
+        "statistics",
+        "subprocess",
+        "sys",
+        "time",
+        "tokenizers"
+      ],
+      "local_references": [
+        "runs/.gpu_benchmark.lock",
+        "runs/1b_rehearsal_final_v3",
+        "runs/f6_tokens_v1",
+        "runs/native_eval_validation_v1"
+      ]
+    },
+    {
+      "path": "scripts/execute_reviewed_eviction.py",
+      "bytes": 13568,
+      "sha256": "a7668b451999c0425e7f820a01121248f371175a979b7b1c38b2bd711f6ee016",
+      "git_tracked": false,
+      "decision": "include",
+      "role": "scripts",
+      "imports": [
+        "argparse",
+        "common.data_contracts",
+        "common.paths",
+        "concurrent.futures",
+        "data.quality_report",
+        "datetime",
+        "fcntl",
+        "hashlib",
+        "json",
+        "os",
+        "pathlib",
+        "resource",
+        "scripts.resource_admission",
+        "shutil",
+        "stat",
+        "sys",
+        "tempfile",
+        "time"
+      ],
+      "local_references": [
+        "data/clean",
+        "data/clean.py",
+        "data/clean/github_code_v1",
+        "data/clean_code.py",
+        "data/datasets",
+        "data/datasets/final_v1.candidate.json",
+        "data/dedup.py",
+        "data/dedup/exact_v1",
+        "data/download.py",
+        "data/raw",
+        "data/recovery",
+        "data/tokens/final_v1",
+        "docs/recovery/data_retention_v1",
+        "runs/1b_rehearsal_final_v3/contract.json",
+        "runs/1b_rehearsal_final_v3/training/log.jsonl",
+        "runs/data_eviction_v1",
+        "runs/f2_execution_v1/final_policy.json",
+        "runs/monitored_3b_validation_v1/contract.json",
+        "runs/pretrain_final_review_v1/contract.json",
+        "runs/rehearsal_final_native_v1/contract.json",
+        "tokenizer/candidate_v1"
+      ]
+    },
+    {
+      "path": "scripts/finalize_public_corpus.py",
+      "bytes": 20938,
+      "sha256": "5a848c01bc8353318b2cbe87828bb7cd2eddf56ff38d22951f48743738bf2aef",
+      "git_tracked": false,
+      "decision": "include",
+      "role": "scripts",
+      "imports": [
+        "argparse",
+        "common.paths",
+        "datetime",
+        "fcntl",
+        "hashlib",
+        "huggingface_hub",
+        "importlib.util",
+        "json",
+        "os",
+        "pathlib",
+        "scripts.upload_public_corpus",
+        "shutil",
+        "subprocess",
+        "sys",
+        "time"
+      ],
+      "local_references": [
+        "runs/dataset_public_release_v1/build_multilingual_cards.py",
+        "runs/dataset_public_release_v1/public_index_v4",
+        "runs/dataset_upload_v1"
+      ]
+    },
+    {
+      "path": "scripts/finalize_public_corpus_v2.py",
+      "bytes": 27021,
+      "sha256": "eb38be5fcd001fdddf07a4363765db9276c0a8b1bad46f36b6d37ba6ab8cc2ed",
+      "git_tracked": false,
+      "decision": "include",
+      "role": "scripts",
+      "imports": [
+        "argparse",
+        "common.paths",
+        "datetime",
+        "fcntl",
+        "hashlib",
+        "huggingface_hub",
+        "importlib.util",
+        "json",
+        "os",
+        "pathlib",
+        "scripts.upload_public_corpus",
+        "shutil",
+        "subprocess",
+        "sys",
+        "time",
+        "yaml"
+      ],
+      "local_references": [
+        "runs/dataset_public_release_v1/build_multilingual_cards.py",
+        "runs/dataset_public_release_v1/public_index_v4",
+        "runs/dataset_upload_v1"
+      ]
+    },
+    {
+      "path": "scripts/finalize_source_manifest.py",
+      "bytes": 2687,
+      "sha256": "72d619944bdee223cc8a33f2adb8e2f3336c65bd307d7aca632df675ece5fde5",
+      "git_tracked": false,
+      "decision": "include",
+      "role": "scripts",
+      "imports": [
+        "argparse",
+        "common.data_contracts",
+        "common.source_inventory",
+        "data.quality_report",
+        "json",
+        "pathlib",
+        "sys"
+      ],
+      "local_references": []
+    },
+    {
+      "path": "scripts/hardware_profile.py",
+      "bytes": 6102,
+      "sha256": "497d25545a42d7129cd2024d99539b8734642075f6ec53d737e33c29d1fc6c9b",
+      "git_tracked": false,
+      "decision": "include",
+      "role": "scripts",
+      "imports": [
+        "argparse",
+        "common.data_contracts",
+        "common.paths",
+        "datetime",
+        "hashlib",
+        "json",
+        "math",
+        "os",
+        "pathlib",
+        "shutil",
+        "subprocess",
+        "sys",
+        "tempfile"
+      ],
+      "local_references": []
+    },
+    {
+      "path": "scripts/job_registry.py",
+      "bytes": 5244,
+      "sha256": "e37f1b300b43543f38a6be1743031c7e2f90029d88c0963a194c55f2912226c8",
+      "git_tracked": false,
+      "decision": "include",
+      "role": "scripts",
+      "imports": [
+        "common.data_contracts",
+        "fcntl",
+        "json",
+        "pathlib",
+        "subprocess",
+        "sys",
+        "time"
+      ],
+      "local_references": []
+    },
+    {
+      "path": "scripts/make_manifest.py",
+      "bytes": 1296,
+      "sha256": "23917d19a5f900a9c1d213cafea4e69b680cb8deba6aaa347779482ee1b87697",
+      "git_tracked": true,
+      "decision": "include",
+      "role": "scripts",
+      "imports": [
+        "common.paths",
+        "concurrent.futures",
+        "glob",
+        "json",
+        "os",
+        "sys",
+        "xxhash"
+      ],
+      "local_references": [
+        "data/MANIFEST.json",
+        "data/clean/**/*.parquet",
+        "data/tokens/**/*.bin",
+        "data/tokens/mix.json",
+        "tokenizer/*.json"
+      ]
+    },
+    {
+      "path": "scripts/make_smoke_data.py",
+      "bytes": 535,
+      "sha256": "416a9450562c01891dd0236f74490e03996d6974a8c203b240609c3310160c70",
+      "git_tracked": true,
+      "decision": "include",
+      "role": "scripts",
+      "imports": [
+        "json",
+        "numpy",
+        "os"
+      ],
+      "local_references": []
+    },
+    {
+      "path": "scripts/measure_split.py",
+      "bytes": 13695,
+      "sha256": "f5ff93bd5db1ba96260a0ae609e47c4ee7c1fc4ca06281c4f9dcd1284b78b7dd",
+      "git_tracked": false,
+      "decision": "include",
+      "role": "scripts",
+      "imports": [
+        "argparse",
+        "common.data_contracts",
+        "data.split_manifest",
+        "datetime",
+        "fcntl",
+        "json",
+        "math",
+        "os",
+        "pathlib",
+        "platform",
+        "pyarrow",
+        "pyarrow.parquet",
+        "resource",
+        "shutil",
+        "signal",
+        "sqlite3",
+        "subprocess",
+        "sys",
+        "time"
+      ],
+      "local_references": [
+        "data/split_manifest.py"
+      ]
+    },
+    {
+      "path": "scripts/mix_review_policy.py",
+      "bytes": 3398,
+      "sha256": "e0342dfef6a514f0d6a3a02c147daa125226242a55be017e9456de3c8ee33f06",
+      "git_tracked": false,
+      "decision": "include",
+      "role": "scripts",
+      "imports": [
+        "math"
+      ],
+      "local_references": []
+    },
+    {
+      "path": "scripts/observe_main_training.py",
+      "bytes": 12428,
+      "sha256": "d4246661525ef45a730cf8b6a79b668bace2f3ecec637899bc565392ae6d3932",
+      "git_tracked": false,
+      "decision": "include",
+      "role": "scripts",
+      "imports": [
+        "argparse",
+        "common.data_contracts",
+        "datetime",
+        "fcntl",
+        "json",
+        "math",
+        "os",
+        "pathlib",
+        "scripts.audit_main_training",
+        "scripts.report_resource_usage",
+        "statistics",
+        "sys",
+        "time"
+      ],
+      "local_references": []
+    },
+    {
+      "path": "scripts/observe_rehearsal.py",
+      "bytes": 11744,
+      "sha256": "fc903410c6400ac5bfa7e3597b57695891838c6653a3f2ca96135ae5d783c636",
+      "git_tracked": false,
+      "decision": "include",
+      "role": "scripts",
+      "imports": [
+        "argparse",
+        "common.data_contracts",
+        "datetime",
+        "fcntl",
+        "json",
+        "math",
+        "os",
+        "pathlib",
+        "shutil",
+        "statistics",
+        "sys",
+        "time"
+      ],
+      "local_references": [
+        "runs/1b_rehearsal_final_v3"
+      ]
+    },
+    {
+      "path": "scripts/parallel_job_support.py",
+      "bytes": 4134,
+      "sha256": "20ce6d3fe1d564517b10da90d829c871f94837d94fb852ee41b82434717265d7",
+      "git_tracked": false,
+      "decision": "include",
+      "role": "scripts",
+      "imports": [
+        "common.data_contracts",
+        "json",
+        "os",
+        "pathlib",
+        "scripts.run_local_split",
+        "shutil",
+        "sqlite3",
+        "subprocess",
+        "time"
+      ],
+      "local_references": [
+        "runs/f4_full_v2"
+      ]
+    },
+    {
+      "path": "scripts/plan_main_training.py",
+      "bytes": 12623,
+      "sha256": "3b6d2a57c0e1123091c3c3a6f507c50f3adce8b4d12770e5831f9816d5223402",
+      "git_tracked": false,
+      "decision": "include",
+      "role": "scripts",
+      "imports": [
+        "argparse",
+        "common.data_contracts",
+        "json",
+        "math",
+        "model.model",
+        "pathlib",
+        "scripts.resource_admission",
+        "scripts.run_local_split",
+        "scripts.run_native_evaluation",
+        "statistics",
+        "sys",
+        "torch",
+        "train.probe",
+        "train.train"
+      ],
+      "local_references": [
+        "runs/1b_rehearsal_final_v3",
+        "runs/3b_full_v1",
+        "runs/actual_deterministic_batch_v1",
+        "runs/actual_train_validation_v1",
+        "runs/f6_tokens_v1",
+        "runs/native_eval_validation_v1"
+      ]
+    },
+    {
+      "path": "scripts/preflight.py",
+      "bytes": 3189,
+      "sha256": "76e9468fb4d656aa37fc98a2b60904e09a398583d7b584d92a02228b55ae664a",
+      "git_tracked": true,
+      "decision": "include",
+      "role": "scripts",
+      "imports": [
+        "common.paths",
+        "glob",
+        "json",
+        "os",
+        "shutil",
+        "sys",
+        "torch"
+      ],
+      "local_references": [
+        "data/MANIFEST.json (integrity manifest of moved files)",
+        "data/clean/{s}/*.parquet.done",
+        "data/raw/{s}/**/*.parquet",
+        "data/tokens/mix.json",
+        "data/tokens/{s}/*.bin.done",
+        "tokenizer/tokenizer.json (FINAL, not the *_test200mb one)"
+      ]
+    },
+    {
+      "path": "scripts/prepare_corpus_index_assets.py",
+      "bytes": 4547,
+      "sha256": "19735eadb94e759be773af81522db5bb11622ac17a183f48e5f7ef824046bc88",
+      "git_tracked": false,
+      "decision": "include",
+      "role": "scripts",
+      "imports": [
+        "common.paths",
+        "hashlib",
+        "json",
+        "pathlib",
+        "shutil",
+        "sys",
+        "tarfile"
+      ],
+      "local_references": [
+        "data/public_corpus_reader.py",
+        "data/release_offsets.py",
+        "data/release_provenance.py",
+        "data/release_split.py",
+        "data/tokens/final_v1/mix.json",
+        "runs/3b_full_v1/main.json",
+        "runs/dataset_public_release_v1/publication_decisions.json",
+        "runs/dataset_public_release_v1/recipe_snapshot_v1",
+        "runs/dataset_upload_v1",
+        "runs/korean-pretrain-consumer"
+      ]
+    },
+    {
+      "path": "scripts/prepare_corpus_upload.py",
+      "bytes": 10791,
+      "sha256": "6ed0f7d21b8c67a040d07122838698e5b668e5df251161b25d0b854662ad178d",
+      "git_tracked": false,
+      "decision": "include",
+      "role": "scripts",
+      "imports": [
+        "common.paths",
+        "hashlib",
+        "json",
+        "pathlib",
+        "shutil",
+        "sys"
+      ],
+      "local_references": [
+        "data/public_corpus_reader.py",
+        "data/tokens/final_v1",
+        "docs/data_provenance_v1/file_inventory.json",
+        "docs/data_provenance_v1/source_registry.json",
+        "runs/dataset_public_release_v1/provenance/wiki_ko",
+        "runs/dataset_public_release_v1/publication_decisions.json",
+        "runs/dataset_public_release_v1/recipe_snapshot_v1/LICENSE-CODE",
+        "runs/dataset_public_release_v1/split_full_v1",
+        "runs/dataset_public_release_v1/split_full_v1/report.json",
+        "runs/dataset_public_release_v1/token_offsets_v1",
+        "runs/dataset_upload_v1",
+        "runs/f6_tokens_v1/counts.json"
+      ]
+    },
+    {
+      "path": "scripts/prepare_dataset_release.py",
+      "bytes": 18193,
+      "sha256": "89de10d675f67e781a2480f6af68ecc6ba6273910358e49c5065b053fc23ad1c",
+      "git_tracked": false,
+      "decision": "include",
+      "role": "scripts",
+      "imports": [
+        "argparse",
+        "ast",
+        "common.paths",
+        "datetime",
+        "hashlib",
+        "json",
+        "pathlib",
+        "re",
+        "shutil",
+        "sys",
+        "tarfile"
+      ],
+      "local_references": [
+        "data/clean/",
+        "data/clean/github_code_v1/policy.json",
+        "data/clean/github_code_v1/summary.json",
+        "data/datasets/final_v1.ready.json",
+        "data/datasets/final_v2.split/manifest.json",
+        "data/dedup/exact_v1/manifest.json",
+        "data/dedup/exact_v1/summary.json",
+        "data/raw/",
+        "data/tokens/final_v1/mix.json",
+        "docs/DATASET_RELEASE_PLAN.md",
+        "docs/DATA_CONTRACT.md",
+        "docs/DATA_RETENTION_AND_RECOVERY.md",
+        "docs/DATA_SOURCES_AND_LICENSES.md",
+        "docs/data_provenance_v1/file_inventory.json",
+        "docs/data_provenance_v1/legal_evidence.json",
+        "docs/data_provenance_v1/raw_schema_evidence.json",
+        "docs/data_provenance_v1/source_registry.json",
+        "docs/data_provenance_v1/upstream_evidence.json",
+        "docs/recovery/data_retention_v1/recovery_bundle.tar.gz",
+        "runs/dataset_release_plan_v1/distributed_v1",
+        "runs/f5_tokenizer_v1/efficiency.json",
+        "runs/f6_tokens_v1/counts.json",
+        "tokenizer/candidate_v1/tokenizer.json"
+      ]
+    },
+    {
+      "path": "scripts/prepare_dual_corpus_navigation.py",
+      "bytes": 9810,
+      "sha256": "917a43c68920ffb115cdb167a770d5d66b8c931ce2fb715e51c922c4473a934f",
+      "git_tracked": false,
+      "decision": "include",
+      "role": "scripts",
+      "imports": [
+        "argparse",
+        "common.paths",
+        "datetime",
+        "hashlib",
+        "huggingface_hub",
+        "json",
+        "os",
+        "pathlib",
+        "requests",
+        "scripts.upload_public_corpus",
+        "sys",
+        "time"
+      ],
+      "local_references": [
+        "runs/dataset_unified_v1",
+        "runs/dataset_unified_v1/root_template",
+        "runs/public_card_dual_links_v1"
+      ]
+    },
+    {
+      "path": "scripts/prepare_public_recipe.py",
+      "bytes": 8521,
+      "sha256": "a9774a14f841edbbf1fc7a36e94eefbbe75d8f1ea62ed1237fc5f2d63f1eca16",
+      "git_tracked": false,
+      "decision": "include",
+      "role": "scripts",
+      "imports": [
+        "argparse",
+        "ast",
+        "common.paths",
+        "hashlib",
+        "importlib.metadata",
+        "json",
+        "pathlib",
+        "re",
+        "shutil",
+        "sys"
+      ],
+      "local_references": [
+        "data/clean.py",
+        "data/clean_code.py",
+        "data/dedup.py",
+        "data/download.py",
+        "data/filters.py",
+        "data/release_provenance.py",
+        "data/tokens/final_v1/mix.json",
+        "docs/data_provenance_v1/",
+        "runs/3b_full_v1/contract.json",
+        "runs/3b_full_v1/main.json",
+        "runs/f6_tokens_v1/counts.json",
+        "tokenizer/candidate_v1/tokenizer.json",
+        "tokenizer/tokenizer.json"
+      ]
+    },
+    {
+      "path": "scripts/prepare_source_manifest.py",
+      "bytes": 2361,
+      "sha256": "35a5ff56de324ae393b3f748f5e03762ee3190064b901d40bfd30abe6a4253cc",
+      "git_tracked": false,
+      "decision": "include",
+      "role": "scripts",
+      "imports": [
+        "argparse",
+        "common.data_contracts",
+        "common.paths",
+        "datetime",
+        "json",
+        "pathlib",
+        "sys"
+      ],
+      "local_references": [
+        "data/datasets/final_v1.draft.json"
+      ]
+    },
+    {
+      "path": "scripts/preprocess_followup.py",
+      "bytes": 2197,
+      "sha256": "ed3a319a378b6fe042d891b26d4624e9a77a05faf9b48f7a63577391c69dabbe",
+      "git_tracked": false,
+      "decision": "include",
+      "role": "scripts",
+      "imports": [
+        "argparse",
+        "common.paths",
+        "json",
+        "pathlib",
+        "subprocess",
+        "sys",
+        "time"
+      ],
+      "local_references": [
+        "data/clean.py",
+        "data/clean_code.py",
+        "data/dedup.py"
+      ]
+    },
+    {
+      "path": "scripts/probe_code_pilot.py",
+      "bytes": 3041,
+      "sha256": "69881c33c375ec8e292071e7fc5a9285aa9313da66599ac00f675c1b3cd0af21",
+      "git_tracked": false,
+      "decision": "include",
+      "role": "scripts",
+      "imports": [
+        "collections",
+        "common.paths",
+        "json",
+        "pathlib",
+        "pyarrow.parquet",
+        "sys"
+      ],
+      "local_references": []
+    },
+    {
+      "path": "scripts/probe_compile_boundaries.py",
+      "bytes": 4631,
+      "sha256": "74b6c23a582077b99d94bc2ffcdf4c07fad9476420336d57219622ae22c4e5d0",
+      "git_tracked": false,
+      "decision": "include",
+      "role": "scripts",
+      "imports": [
+        "argparse",
+        "common.data_contracts",
+        "common.paths",
+        "fcntl",
+        "json",
+        "model.model",
+        "os",
+        "pathlib",
+        "scripts.diagnose_compile_precision",
+        "subprocess",
+        "sys",
+        "time",
+        "torch",
+        "torch._inductor.config"
+      ],
+      "local_references": [
+        "runs/.gpu_benchmark.lock"
+      ]
+    },
+    {
+      "path": "scripts/probe_compile_casts.py",
+      "bytes": 1505,
+      "sha256": "14e11566591cbb01666adfe1769efebca9577eb4d8efbbf1c0c23f6132715e9a",
+      "git_tracked": false,
+      "decision": "include",
+      "role": "scripts",
+      "imports": [
+        "argparse",
+        "common.data_contracts",
+        "common.paths",
+        "fcntl",
+        "os",
+        "pathlib",
+        "scripts.diagnose_compile_precision",
+        "sys",
+        "torch",
+        "torch._inductor.config"
+      ],
+      "local_references": [
+        "runs/.gpu_benchmark.lock"
+      ]
+    },
+    {
+      "path": "scripts/probe_eager_norm_casts.py",
+      "bytes": 1617,
+      "sha256": "8447f2ae330e88647dedd3439503b9f3128340a78872687eab05ebc3fe65c331",
+      "git_tracked": false,
+      "decision": "include",
+      "role": "scripts",
+      "imports": [
+        "argparse",
+        "common.data_contracts",
+        "common.paths",
+        "fcntl",
+        "model.model",
+        "os",
+        "pathlib",
+        "scripts.diagnose_compile_precision",
+        "sys",
+        "torch",
+        "torch._inductor.config"
+      ],
+      "local_references": [
+        "runs/.gpu_benchmark.lock"
+      ]
+    },
+    {
+      "path": "scripts/probe_full_fp32_gate.py",
+      "bytes": 1503,
+      "sha256": "4cd1414e869dfdc8b15f89b15b63bc2edf1b52f9240ddc22e8044a2088eec4f5",
+      "git_tracked": false,
+      "decision": "include",
+      "role": "scripts",
+      "imports": [
+        "argparse",
+        "common.data_contracts",
+        "common.paths",
+        "fcntl",
+        "json",
+        "model.model",
+        "pathlib",
+        "scripts.diagnose_compile_precision",
+        "sys",
+        "torch.nn.functional"
+      ],
+      "local_references": [
+        "runs/.gpu_benchmark.lock"
+      ]
+    },
+    {
+      "path": "scripts/probe_swiglu_rounding.py",
+      "bytes": 2697,
+      "sha256": "7f124009404ee2e2197c9db139ed9906a996a317b66dae07ed88a51925cffe59",
+      "git_tracked": false,
+      "decision": "include",
+      "role": "scripts",
+      "imports": [
+        "argparse",
+        "common.data_contracts",
+        "common.paths",
+        "fcntl",
+        "json",
+        "math",
+        "model.model",
+        "pathlib",
+        "sys",
+        "torch",
+        "torch.nn.functional"
+      ],
+      "local_references": [
+        "runs/.gpu_benchmark.lock"
+      ]
+    },
+    {
+      "path": "scripts/process_accounting.py",
+      "bytes": 1750,
+      "sha256": "b96f0ec540a294b2073982b794fa6161bd500025358b6a3c5ec16537006587cd",
+      "git_tracked": false,
+      "decision": "include",
+      "role": "scripts",
+      "imports": [
+        "pathlib"
+      ],
+      "local_references": []
+    },
+    {
+      "path": "scripts/publish_corpus_index_assets.py",
+      "bytes": 3658,
+      "sha256": "efba7572d6780fbcd77b4e99876c4c6abc910be53acd10951208cc5897194619",
+      "git_tracked": false,
+      "decision": "include",
+      "role": "scripts",
+      "imports": [
+        "common.paths",
+        "hashlib",
+        "huggingface_hub",
+        "json",
+        "pathlib",
+        "scripts.upload_public_corpus",
+        "sys"
+      ],
+      "local_references": [
+        "runs/dataset_public_release_v1/public_index_v4",
+        "runs/dataset_upload_v1",
+        "tokenizer/*"
+      ]
+    },
+    {
+      "path": "scripts/publish_local_split.py",
+      "bytes": 11628,
+      "sha256": "905a2448b12e19c23c032d352b3a17e1ebefee19334703d90ca76ddfbc1523c4",
+      "git_tracked": false,
+      "decision": "include",
+      "role": "scripts",
+      "imports": [
+        "argparse",
+        "common.data_contracts",
+        "common.paths",
+        "copy",
+        "data.split_manifest",
+        "fcntl",
+        "json",
+        "math",
+        "os",
+        "pathlib",
+        "shutil",
+        "sys",
+        "time"
+      ],
+      "local_references": [
+        "data/split_manifest.py"
+      ]
+    },
+    {
+      "path": "scripts/publish_native_training_inputs.py",
+      "bytes": 26236,
+      "sha256": "905921eaff8ce1f9b88f28808ae62c2d00ec904e7796ce5af974a743d9aeb701",
+      "git_tracked": false,
+      "decision": "include",
+      "role": "scripts",
+      "imports": [
+        "argparse",
+        "common.paths",
+        "datetime",
+        "fcntl",
+        "hashlib",
+        "huggingface_hub",
+        "importlib.metadata",
+        "json",
+        "numpy",
+        "os",
+        "pathlib",
+        "requests",
+        "scripts.upload_public_corpus",
+        "shutil",
+        "sys",
+        "threading",
+        "time",
+        "train.data"
+      ],
+      "local_references": [
+        "runs/3b_full_v1/main.json",
+        "runs/dataset_unified_v1/metadata",
+        "runs/dataset_unified_v1/root",
+        "runs/dataset_upload_v1/upload_spec.json",
+        "runs/native-inputs-reproduction",
+        "runs/training_inputs_release_v1",
+        "tokenizer/*",
+        "tokenizer/special_tokens_map.json",
+        "tokenizer/tokenizer.json",
+        "tokenizer/tokenizer_config.json"
+      ]
+    },
+    {
+      "path": "scripts/refresh_corpus_index_assets.py",
+      "bytes": 2744,
+      "sha256": "13a3b282ab0eeaf89746a5f37e52ade0e16f95379d93d5db69b2d1712f237d1f",
+      "git_tracked": false,
+      "decision": "include",
+      "role": "scripts",
+      "imports": [
+        "common.paths",
+        "hashlib",
+        "huggingface_hub",
+        "json",
+        "pathlib",
+        "scripts.upload_public_corpus",
+        "sys"
+      ],
+      "local_references": [
+        "runs/dataset_public_release_v1/public_index_v4",
+        "runs/dataset_upload_v1"
+      ]
+    },
+    {
+      "path": "scripts/register_pipeline_job.py",
+      "bytes": 1159,
+      "sha256": "1b875d88ede8b1fd95b737d3a5282b50b92ab900e9489665b5a0530f34995e51",
+      "git_tracked": false,
+      "decision": "include",
+      "role": "scripts",
+      "imports": [
+        "argparse",
+        "common.data_contracts",
+        "common.paths",
+        "fcntl",
+        "json",
+        "pathlib",
+        "scripts.job_registry",
+        "sys"
+      ],
+      "local_references": []
+    },
+    {
+      "path": "scripts/repair_shard.py",
+      "bytes": 3456,
+      "sha256": "a2dda8830e9a2ab1cc50fddb96e9e05b40e993830c93f7beec44ebf4508aa44f",
+      "git_tracked": false,
+      "decision": "include",
+      "role": "scripts",
+      "imports": [
+        "argparse",
+        "common.paths",
+        "datetime",
+        "hashlib",
+        "huggingface_hub",
+        "json",
+        "os",
+        "pathlib",
+        "pyarrow.parquet",
+        "sys"
+      ],
+      "local_references": []
+    },
+    {
+      "path": "scripts/report_resource_usage.py",
+      "bytes": 3433,
+      "sha256": "fc9551110e7b86fa2e789720dd837b7f400068a68e13d7741c7b4c87aec2ecd7",
+      "git_tracked": false,
+      "decision": "include",
+      "role": "scripts",
+      "imports": [
+        "common.data_contracts",
+        "common.paths",
+        "datetime",
+        "json",
+        "os",
+        "pathlib",
+        "shutil",
+        "subprocess",
+        "sys",
+        "time"
+      ],
+      "local_references": []
+    },
+    {
+      "path": "scripts/report_split_distribution.py",
+      "bytes": 956,
+      "sha256": "456bcf708e862afe019f47080e6f3d015ac70f77058136e517cb597227b8d754",
+      "git_tracked": false,
+      "decision": "include",
+      "role": "scripts",
+      "imports": [
+        "argparse",
+        "common.data_contracts",
+        "data.verified_split_context",
+        "pathlib",
+        "sys"
+      ],
+      "local_references": []
+    },
+    {
+      "path": "scripts/resource_admission.py",
+      "bytes": 2173,
+      "sha256": "e8fa9dd51c8dbbabba9de9b1b7d26f9a4b3e5fe564ee435a426852c5120eff90",
+      "git_tracked": false,
+      "decision": "include",
+      "role": "scripts",
+      "imports": [
+        "pathlib",
+        "scripts.hardware_profile"
+      ],
+      "local_references": []
+    },
+    {
+      "path": "scripts/retention_capacity.py",
+      "bytes": 767,
+      "sha256": "e27e453c0dd10acb0059b11fb7cb6b2a731d2a7e2a2cae9ac7b0c4b5cbac0856",
+      "git_tracked": false,
+      "decision": "include",
+      "role": "scripts",
+      "imports": [
+        "math"
+      ],
+      "local_references": []
+    },
+    {
+      "path": "scripts/run_f2_checks.py",
+      "bytes": 4556,
+      "sha256": "4de7b9c9b1da67756896889ba440734d465d9f689f44f6a8b85567d70dc225f9",
+      "git_tracked": false,
+      "decision": "include",
+      "role": "scripts",
+      "imports": [
+        "argparse",
+        "common.data_contracts",
+        "common.paths",
+        "datetime",
+        "fcntl",
+        "json",
+        "os",
+        "pathlib",
+        "scripts.storage_budget",
+        "subprocess",
+        "sys",
+        "time"
+      ],
+      "local_references": [
+        "data/probe_audit_overlap.py",
+        "data/probe_text_similarity.py",
+        "data/sample_snapshot.py",
+        "data/split_manifest.py",
+        "runs/source_audit_full_v1/report.json"
+      ]
+    },
+    {
+      "path": "scripts/run_final_resume_probe.py",
+      "bytes": 24570,
+      "sha256": "db1091b382d60beae3750b5f1484ecaca4cc8bb6b2e7d13b3757d2692271bafc",
+      "git_tracked": false,
+      "decision": "include",
+      "role": "scripts",
+      "imports": [
+        "argparse",
+        "common.data_contracts",
+        "common.paths",
+        "fcntl",
+        "json",
+        "os",
+        "pathlib",
+        "scripts.evaluate_final_main",
+        "scripts.evaluate_final_rehearsal",
+        "scripts.process_accounting",
+        "scripts.resource_admission",
+        "scripts.retention_capacity",
+        "scripts.tiered_checkpoint_retention",
+        "scripts.verify_final_resume_probe",
+        "shutil",
+        "signal",
+        "subprocess",
+        "sys",
+        "time",
+        "torch",
+        "train.final_resume_probe",
+        "train.parallel_contract"
+      ],
+      "local_references": []
+    },
+    {
+      "path": "scripts/run_final_retention_audit.py",
+      "bytes": 20664,
+      "sha256": "e9cbaeab487949cfac7b5cc346831d254f5a39e57d9f238c21070c5a92b3e471",
+      "git_tracked": false,
+      "decision": "include",
+      "role": "scripts",
+      "imports": [
+        "argparse",
+        "common.data_contracts",
+        "datetime",
+        "fcntl",
+        "json",
+        "os",
+        "pathlib",
+        "scripts.audit_checkpoint_retention",
+        "scripts.evaluate_final_main",
+        "scripts.evaluate_final_rehearsal",
+        "scripts.process_accounting",
+        "scripts.resource_admission",
+        "scripts.retention_capacity",
+        "scripts.run_final_resume_probe",
+        "scripts.supervise_main_training",
+        "scripts.tiered_checkpoint_retention",
+        "shutil",
+        "signal",
+        "sys",
+        "time",
+        "train.final_resume_probe"
+      ],
+      "local_references": [
+        "runs/3b_final_native_v3",
+        "runs/3b_final_resume_v2",
+        "runs/3b_full_v1"
+      ]
+    },
+    {
+      "path": "scripts/run_final_tokenizer.py",
+      "bytes": 14754,
+      "sha256": "28ce39ac3bdc545e9d863e49e8560fa045c71aaaf92299ed80f90f80d080cd46",
+      "git_tracked": false,
+      "decision": "include",
+      "role": "scripts",
+      "imports": [
+        "argparse",
+        "common.data_contracts",
+        "data.local_split_reader",
+        "data.split_distribution_native",
+        "data.split_inputs",
+        "data.verified_split_context",
+        "datetime",
+        "json",
+        "math",
+        "os",
+        "pathlib",
+        "scripts.hardware_profile",
+        "scripts.run_local_split",
+        "scripts.watch_split_finalization",
+        "shutil",
+        "subprocess",
+        "sys",
+        "time",
+        "tokenizer.check_tokenizer",
+        "tokenizer.quality_inputs",
+        "tokenizer.train_tokenizer"
+      ],
+      "local_references": [
+        "data/datasets/final_v1.ready.json",
+        "data/datasets/final_v2.split/manifest.json",
+        "data/local_split_reader.py",
+        "data/split_distribution_native.py",
+        "data/split_inputs.py",
+        "data/split_manifest.py",
+        "data/verified_split_context.py",
+        "runs/f2_execution_v1/final_policy.json",
+        "runs/f4_full_v2",
+        "runs/tokenizer_resources_v1",
+        "tokenizer/candidate_v1/tokenizer.json",
+        "tokenizer/check_tokenizer.py",
+        "tokenizer/quality_inputs.py",
+        "tokenizer/train_tokenizer.py"
+      ]
+    },
+    {
+      "path": "scripts/run_final_tokens.py",
+      "bytes": 21925,
+      "sha256": "fadb1832de24824bb7e5594b4eb0852b01055a0555b68b7f00a3fc7ec4d41920",
+      "git_tracked": false,
+      "decision": "include",
+      "role": "scripts",
+      "imports": [
+        "argparse",
+        "common.data_contracts",
+        "data.build_mix",
+        "data.local_split_reader",
+        "data.parallel_tokenize",
+        "data.verified_split_context",
+        "fcntl",
+        "json",
+        "math",
+        "os",
+        "pathlib",
+        "scripts.hardware_profile",
+        "scripts.run_local_split",
+        "scripts.watch_split_finalization",
+        "shutil",
+        "subprocess",
+        "sys",
+        "time"
+      ],
+      "local_references": [
+        "data/build_mix.py",
+        "data/datasets/final_v1.ready.json",
+        "data/datasets/final_v2.split/manifest.json",
+        "data/local_split_reader.py",
+        "data/parallel_tokenize.py",
+        "data/split_manifest.py",
+        "data/tokenize_shards.py",
+        "data/tokens/final_v1",
+        "data/verified_split_context.py",
+        "runs/f4_full_v2",
+        "runs/f5_tokenizer_v1",
+        "runs/f6_preflight_v1/plan.json"
+      ]
+    },
+    {
+      "path": "scripts/run_local_split.py",
+      "bytes": 7972,
+      "sha256": "9734816a8b28923f1f177983c78e7d655db8c727684254d9a597cc2397da3273",
+      "git_tracked": false,
+      "decision": "include",
+      "role": "scripts",
+      "imports": [
+        "argparse",
+        "common.data_contracts",
+        "common.paths",
+        "fcntl",
+        "json",
+        "math",
+        "os",
+        "pathlib",
+        "scripts.hardware_profile",
+        "shutil",
+        "signal",
+        "subprocess",
+        "sys",
+        "time"
+      ],
+      "local_references": []
+    },
+    {
+      "path": "scripts/run_native_evaluation.py",
+      "bytes": 11721,
+      "sha256": "ba3500af2ea4ea72a2c17b66f7fe10971db9adbaa1180d3f1f025293de898c81",
+      "git_tracked": false,
+      "decision": "include",
+      "role": "scripts",
+      "imports": [
+        "argparse",
+        "common.data_contracts",
+        "data.split_inputs",
+        "eval.prepare_holdout",
+        "eval.run",
+        "fcntl",
+        "json",
+        "os",
+        "pathlib",
+        "scripts.hardware_profile",
+        "scripts.run_final_tokens",
+        "scripts.run_local_split",
+        "shutil",
+        "subprocess",
+        "sys",
+        "time"
+      ],
+      "local_references": [
+        "data/local_split_reader.py",
+        "data/split_inputs.py",
+        "data/split_manifest.py",
+        "data/verified_split_context.py",
+        "runs/.gpu_benchmark.lock",
+        "runs/actual_train_validation_v1",
+        "runs/f5_tokenizer_v1",
+        "runs/f7_preflight_v1/plan.json"
+      ]
+    },
+    {
+      "path": "scripts/run_rehearsal.py",
+      "bytes": 22455,
+      "sha256": "1bdb53a5b7d5c86ac4d76911bda8c524d4a6f947383a6f25b90180b9718ff1d6",
+      "git_tracked": false,
+      "decision": "include",
+      "role": "scripts",
+      "imports": [
+        "argparse",
+        "common.data_contracts",
+        "concurrent.futures",
+        "fcntl",
+        "json",
+        "math",
+        "os",
+        "pathlib",
+        "scripts.resource_admission",
+        "scripts.run_local_split",
+        "scripts.run_native_evaluation",
+        "scripts.validate_actual_training",
+        "shutil",
+        "statistics",
+        "subprocess",
+        "sys",
+        "time",
+        "train.parallel_contract",
+        "train.probe",
+        "train.rehearsal",
+        "train.runtime",
+        "train.train"
+      ],
+      "local_references": [
+        "runs/.gpu_benchmark.lock",
+        "runs/actual_deterministic_batch_v1",
+        "runs/actual_train_validation_v1",
+        "runs/f6_tokens_v1",
+        "runs/native_eval_validation_v1"
+      ]
+    },
+    {
+      "path": "scripts/run_with_resources.py",
+      "bytes": 2684,
+      "sha256": "4ee83444158e6b8f5ebf289c9c259ce9f78fc5f211f9b6b35e1050203dfe6a76",
+      "git_tracked": false,
+      "decision": "include",
+      "role": "scripts",
+      "imports": [
+        "argparse",
+        "common.data_contracts",
+        "common.paths",
+        "json",
+        "os",
+        "pathlib",
+        "scripts.hardware_profile",
+        "subprocess",
+        "sys",
+        "time"
+      ],
+      "local_references": []
+    },
+    {
+      "path": "scripts/setup_env.sh",
+      "bytes": 156,
+      "sha256": "1e92bb07df7487feb3a60fb9836414dadcb44edccab5efb9b22e4baf0dfd644d",
+      "git_tracked": true,
+      "decision": "include",
+      "role": "scripts",
+      "imports": [],
+      "local_references": []
+    },
+    {
+      "path": "scripts/storage_budget.py",
+      "bytes": 6766,
+      "sha256": "3cf7b44637d07a23bac2390ffcf0ed331a0c767091c2051bef8733a6d69019d2",
+      "git_tracked": false,
+      "decision": "include",
+      "role": "scripts",
+      "imports": [
+        "argparse",
+        "common.data_contracts",
+        "common.paths",
+        "json",
+        "math",
+        "pathlib",
+        "shutil",
+        "sys"
+      ],
+      "local_references": [
+        "data/tokens"
+      ]
+    },
+    {
+      "path": "scripts/supervise_corpus_upload.py",
+      "bytes": 3791,
+      "sha256": "9f13b1446fcc6e0e2fd390acd9a8a49ffb85a8bddd5f2a4bae39d786ff16543f",
+      "git_tracked": false,
+      "decision": "include",
+      "role": "scripts",
+      "imports": [
+        "common.paths",
+        "datetime",
+        "hashlib",
+        "json",
+        "os",
+        "pathlib",
+        "scripts.upload_public_corpus",
+        "subprocess",
+        "sys",
+        "time"
+      ],
+      "local_references": [
+        "runs/dataset_upload_v1"
+      ]
+    },
+    {
+      "path": "scripts/supervise_main_training.py",
+      "bytes": 25693,
+      "sha256": "32befa28fb5460311c2b3f305bab4657d102a978a433bfdeed7de9cb64e4d61c",
+      "git_tracked": false,
+      "decision": "include",
+      "role": "scripts",
+      "imports": [
+        "argparse",
+        "common.data_contracts",
+        "common.paths",
+        "concurrent.futures",
+        "fcntl",
+        "json",
+        "math",
+        "os",
+        "pathlib",
+        "scripts.adopt_main_worker",
+        "scripts.evaluate_final_rehearsal",
+        "scripts.process_accounting",
+        "scripts.resource_admission",
+        "scripts.retention_capacity",
+        "scripts.run_local_split",
+        "scripts.run_native_evaluation",
+        "scripts.tiered_checkpoint_retention",
+        "shutil",
+        "subprocess",
+        "sys",
+        "threading",
+        "time",
+        "torch",
+        "torch.distributed.checkpoint",
+        "train.monitored",
+        "train.parallel_contract",
+        "train.probe",
+        "train.runtime",
+        "uuid"
+      ],
+      "local_references": [
+        "runs/actual_train_validation_v1/contract.json",
+        "runs/f5_tokenizer_v1/contract.json",
+        "runs/f6_tokens_v1/contract.json",
+        "runs/f6_tokens_v1/report.json",
+        "runs/pretrain_final_review_v1",
+        "runs/tiered_retention_copy_v1",
+        "runs/tiered_retention_copy_v2"
+      ]
+    },
+    {
+      "path": "scripts/tiered_checkpoint_retention.py",
+      "bytes": 23301,
+      "sha256": "0dac4243cd6d0f750df2caf5c4fbdb28cfe9cfb7ce08128983be1aa9d13c4a98",
+      "git_tracked": false,
+      "decision": "include",
+      "role": "scripts",
+      "imports": [
+        "common.data_contracts",
+        "concurrent.futures",
+        "contextlib",
+        "fcntl",
+        "json",
+        "math",
+        "os",
+        "pathlib",
+        "re",
+        "shutil",
+        "time"
+      ],
+      "local_references": []
+    },
+    {
+      "path": "scripts/update_public_corpus_card_links.py",
+      "bytes": 6841,
+      "sha256": "ac3691d7d503af8aadca575609e5cb2d9b5aa723c4b7942d5a39df3d425b906c",
+      "git_tracked": false,
+      "decision": "include",
+      "role": "scripts",
+      "imports": [
+        "argparse",
+        "common.data_contracts",
+        "common.paths",
+        "datetime",
+        "hashlib",
+        "huggingface_hub",
+        "json",
+        "os",
+        "pathlib",
+        "scripts.upload_public_corpus",
+        "sys"
+      ],
+      "local_references": []
+    },
+    {
+      "path": "scripts/upload_public_corpus.py",
+      "bytes": 11797,
+      "sha256": "cd37b6f0279dd2f00d98694b0565a3642ab870501470144bcd3d351301bf21a1",
+      "git_tracked": false,
+      "decision": "include",
+      "role": "scripts",
+      "imports": [
+        "argparse",
+        "common.paths",
+        "concurrent.futures",
+        "datetime",
+        "fcntl",
+        "hashlib",
+        "huggingface_hub",
+        "huggingface_hub.utils",
+        "json",
+        "os",
+        "pathlib",
+        "requests",
+        "sys",
+        "time"
+      ],
+      "local_references": [
+        "runs/dataset_upload_v1/upload_spec.json"
+      ]
+    },
+    {
+      "path": "scripts/validate_actual_training.py",
+      "bytes": 13787,
+      "sha256": "da754614019b51ec90e30c3e504e9a7d910e7839aa3ae85d0f45eb1bc9ea6178",
+      "git_tracked": false,
+      "decision": "include",
+      "role": "scripts",
+      "imports": [
+        "argparse",
+        "common.data_contracts",
+        "copy",
+        "data.pilot_mix",
+        "fcntl",
+        "json",
+        "math",
+        "os",
+        "pathlib",
+        "scripts.hardware_profile",
+        "scripts.run_local_split",
+        "scripts.validate_distributed",
+        "shutil",
+        "subprocess",
+        "sys",
+        "time",
+        "torch"
+      ],
+      "local_references": [
+        "data/pilot_mix.py",
+        "runs/.gpu_benchmark.lock"
+      ]
+    },
+    {
+      "path": "scripts/validate_compile_long.py",
+      "bytes": 11130,
+      "sha256": "363adf2ed44c6c61ffa35ff93455481a92b018ca7a0cf632515e3e967eb9bd6f",
+      "git_tracked": false,
+      "decision": "include",
+      "role": "scripts",
+      "imports": [
+        "argparse",
+        "common.data_contracts",
+        "fcntl",
+        "hashlib",
+        "json",
+        "math",
+        "model.model",
+        "os",
+        "pathlib",
+        "scripts.diagnose_compile_precision",
+        "scripts.hardware_profile",
+        "scripts.parallel_job_support",
+        "scripts.validate_compile_pair",
+        "sys",
+        "time",
+        "torch",
+        "torch._inductor.config",
+        "torch.distributed",
+        "torch.distributed.fsdp",
+        "train.runtime"
+      ],
+      "local_references": [
+        "runs/.gpu_benchmark.lock"
+      ]
+    },
+    {
+      "path": "scripts/validate_compile_pair.py",
+      "bytes": 8859,
+      "sha256": "0f04e884867be8e1d7f92d4f91dcc4ee2070ca780b4e36c09c5244724c7a8772",
+      "git_tracked": false,
+      "decision": "include",
+      "role": "scripts",
+      "imports": [
+        "argparse",
+        "common.data_contracts",
+        "common.paths",
+        "datetime",
+        "fcntl",
+        "json",
+        "math",
+        "model.model",
+        "os",
+        "pathlib",
+        "subprocess",
+        "sys",
+        "time",
+        "torch",
+        "torch.distributed",
+        "torch.distributed.fsdp",
+        "train.runtime"
+      ],
+      "local_references": [
+        "runs/.gpu_benchmark.lock"
+      ]
+    },
+    {
+      "path": "scripts/validate_deterministic_training.py",
+      "bytes": 14063,
+      "sha256": "4f39e674502dd94f4d0d9ed69a654ce7a2fedf3904352efd9fd55a27ae9d65f1",
+      "git_tracked": false,
+      "decision": "include",
+      "role": "scripts",
+      "imports": [
+        "argparse",
+        "common.data_contracts",
+        "copy",
+        "data.pilot_mix",
+        "fcntl",
+        "json",
+        "math",
+        "os",
+        "pathlib",
+        "scripts.hardware_profile",
+        "scripts.run_local_split",
+        "scripts.validate_distributed",
+        "shutil",
+        "subprocess",
+        "sys",
+        "time",
+        "torch",
+        "train.deterministic_train"
+      ],
+      "local_references": [
+        "data/pilot_mix.py",
+        "runs/.gpu_benchmark.lock"
+      ]
+    },
+    {
+      "path": "scripts/validate_distributed.py",
+      "bytes": 12469,
+      "sha256": "ab2ec754bbbbe7dfa980faaab23c6927a4976222bdd81d8a5c8e5930a74ac5e0",
+      "git_tracked": false,
+      "decision": "include",
+      "role": "scripts",
+      "imports": [
+        "argparse",
+        "common.data_contracts",
+        "common.paths",
+        "copy",
+        "datetime",
+        "fcntl",
+        "hashlib",
+        "json",
+        "numpy",
+        "os",
+        "pathlib",
+        "subprocess",
+        "sys",
+        "time",
+        "torch",
+        "torch.distributed",
+        "torch.distributed.checkpoint.format_utils",
+        "train.data",
+        "train.runtime",
+        "train.train"
+      ],
+      "local_references": [
+        "runs/.gpu_benchmark.lock"
+      ]
+    },
+    {
+      "path": "scripts/validate_monitored_training.py",
+      "bytes": 15549,
+      "sha256": "e7c74cb49100f7531e300d39b12d9f1525bee4fc28cdda7c04100cf2a2e30e93",
+      "git_tracked": false,
+      "decision": "include",
+      "role": "scripts",
+      "imports": [
+        "argparse",
+        "common.data_contracts",
+        "common.paths",
+        "concurrent.futures",
+        "fcntl",
+        "json",
+        "os",
+        "pathlib",
+        "scripts.evaluate_final_rehearsal",
+        "scripts.resource_admission",
+        "scripts.run_local_split",
+        "scripts.run_native_evaluation",
+        "scripts.run_rehearsal",
+        "shutil",
+        "subprocess",
+        "sys",
+        "time",
+        "torch.distributed.checkpoint",
+        "train.parallel_contract",
+        "train.probe",
+        "train.rehearsal",
+        "train.runtime",
+        "train.train"
+      ],
+      "local_references": [
+        "runs/1b_rehearsal_final_v3",
+        "runs/actual_deterministic_batch_v1",
+        "runs/actual_train_validation_v1",
+        "runs/f6_tokens_v1",
+        "runs/native_eval_validation_v1",
+        "runs/rehearsal_final_native_v1"
+      ]
+    },
+    {
+      "path": "scripts/validate_nfs_checkpoint_timing.py",
+      "bytes": 11590,
+      "sha256": "07cfb4ce60c2760a3d993688b2f1c9aab04959094772fd6ddf87af5cf427f57c",
+      "git_tracked": false,
+      "decision": "include",
+      "role": "scripts",
+      "imports": [
+        "argparse",
+        "common.data_contracts",
+        "fcntl",
+        "json",
+        "os",
+        "pathlib",
+        "scripts.evaluate_final_rehearsal",
+        "scripts.resource_admission",
+        "scripts.run_local_split",
+        "scripts.run_native_evaluation",
+        "scripts.run_rehearsal",
+        "scripts.supervise_main_training",
+        "scripts.validate_actual_training",
+        "scripts.validate_monitored_training",
+        "scripts.validate_tiered_retention_copy",
+        "shutil",
+        "subprocess",
+        "sys",
+        "time",
+        "torch",
+        "torch.distributed.checkpoint",
+        "train.probe",
+        "train.rehearsal",
+        "train.runtime"
+      ],
+      "local_references": [
+        "runs/monitored_3b_validation_v1"
+      ]
+    },
+    {
+      "path": "scripts/validate_retention3_copy.py",
+      "bytes": 3374,
+      "sha256": "5af34e84ea6e560ca4c7770194588faa7eed61ab7152f54152d6db0a58a71721",
+      "git_tracked": false,
+      "decision": "include",
+      "role": "scripts",
+      "imports": [
+        "common.data_contracts",
+        "json",
+        "pathlib",
+        "resource",
+        "scripts.resource_admission",
+        "scripts.tiered_checkpoint_retention",
+        "scripts.validate_tiered_retention_copy",
+        "time",
+        "torch"
+      ],
+      "local_references": [
+        "runs/3b_full_v1",
+        "runs/tiered_retention_copy_v2"
+      ]
+    },
+    {
+      "path": "scripts/validate_source_manifest.py",
+      "bytes": 3124,
+      "sha256": "e6d7891671458453edce82bbc7ac05045061b4803d63b2697a87699697195732",
+      "git_tracked": false,
+      "decision": "include",
+      "role": "scripts",
+      "imports": [
+        "argparse",
+        "common.data_contracts",
+        "json",
+        "pathlib",
+        "pyarrow",
+        "pyarrow.parquet",
+        "sys"
+      ],
+      "local_references": []
+    },
+    {
+      "path": "scripts/validate_tiered_retention_copy.py",
+      "bytes": 7298,
+      "sha256": "3f61e39179d468481a4e97ccd24b9bb4d96fed4b8e93e4a007268691000fc07b",
+      "git_tracked": false,
+      "decision": "include",
+      "role": "scripts",
+      "imports": [
+        "argparse",
+        "common.data_contracts",
+        "json",
+        "os",
+        "pathlib",
+        "resource",
+        "scripts.resource_admission",
+        "scripts.tiered_checkpoint_retention",
+        "shutil",
+        "sys",
+        "time",
+        "torch",
+        "torch.distributed.checkpoint",
+        "torch.distributed.checkpoint.metadata"
+      ],
+      "local_references": [
+        "runs/1b_rehearsal_final_v3/checkpoint_certificates/ckpt_0001000.json",
+        "runs/1b_rehearsal_final_v3/training/ckpt_0001000",
+        "runs/actual_train_validation_v1/3b_validated_checkpoint",
+        "runs/actual_train_validation_v1/report.json"
+      ]
+    },
+    {
+      "path": "scripts/verify_final_resume_probe.py",
+      "bytes": 12897,
+      "sha256": "96fdb68a3d8d43fa258913c56a6ba5bc64f1a1582c3b0392a05d4076d3f801fe",
+      "git_tracked": false,
+      "decision": "include",
+      "role": "scripts",
+      "imports": [
+        "argparse",
+        "common.data_contracts",
+        "concurrent.futures",
+        "json",
+        "math",
+        "os",
+        "pathlib",
+        "scripts.supervise_main_training",
+        "scripts.tiered_checkpoint_retention",
+        "scripts.validate_tiered_retention_copy",
+        "sys",
+        "time",
+        "torch",
+        "torch.distributed.checkpoint",
+        "train.final_resume_probe"
+      ],
+      "local_references": []
+    },
+    {
+      "path": "scripts/watch_data_pipeline.py",
+      "bytes": 10361,
+      "sha256": "3c29f69449001451c470d672c538bbbcea1c57f4517ee50f9a60b2c649272fbc",
+      "git_tracked": false,
+      "decision": "include",
+      "role": "scripts",
+      "imports": [
+        "argparse",
+        "common.data_contracts",
+        "common.paths",
+        "datetime",
+        "fcntl",
+        "json",
+        "pathlib",
+        "scripts.job_registry",
+        "shutil",
+        "sys",
+        "time"
+      ],
+      "local_references": [
+        "runs/data_eviction_v1",
+        "runs/data_eviction_v1/eviction_receipt.json"
+      ]
+    },
+    {
+      "path": "scripts/watch_split_finalization.py",
+      "bytes": 11208,
+      "sha256": "9977c5a85c852003761577b415958dd90102e0ec5357723884ddccdcaf70ba79",
+      "git_tracked": false,
+      "decision": "include",
+      "role": "scripts",
+      "imports": [
+        "argparse",
+        "common.data_contracts",
+        "datetime",
+        "fcntl",
+        "json",
+        "pathlib",
+        "scripts.hardware_profile",
+        "sqlite3",
+        "sys",
+        "time"
+      ],
+      "local_references": [
+        "docs/STATUS.md",
+        "runs/f4_full_v2"
+      ]
+    },
+    {
+      "path": "tests/test_actual_training_contract.py",
+      "bytes": 3781,
+      "sha256": "a0b2eb373851f6c9ef1576cd7d26fa9a4051da63139b7d3487df9d92c0664404",
+      "git_tracked": false,
+      "decision": "include",
+      "role": "tests",
+      "imports": [
+        "common.data_contracts",
+        "json",
+        "pathlib",
+        "scripts.validate_actual_training",
+        "scripts.validate_distributed",
+        "tempfile",
+        "types",
+        "unittest",
+        "unittest.mock"
+      ],
+      "local_references": []
+    },
+    {
+      "path": "tests/test_actual_training_throughput.py",
+      "bytes": 1700,
+      "sha256": "49d4337a2ed9702399726a101e5b5ffd0ea636c03ce96d14c569cdea00d53880",
+      "git_tracked": false,
+      "decision": "include",
+      "role": "tests",
+      "imports": [
+        "copy",
+        "scripts.benchmark_actual_training",
+        "unittest"
+      ],
+      "local_references": []
+    },
+    {
+      "path": "tests/test_adopt_main_worker.py",
+      "bytes": 3527,
+      "sha256": "19541a7167f54f2ac69fa8423cf58a4ee58875cc7795752173ecf0740b7a96b5",
+      "git_tracked": false,
+      "decision": "include",
+      "role": "tests",
+      "imports": [
+        "json",
+        "os",
+        "pathlib",
+        "scripts.adopt_main_worker",
+        "signal",
+        "subprocess",
+        "sys",
+        "tempfile",
+        "time",
+        "unittest",
+        "unittest.mock"
+      ],
+      "local_references": []
+    },
+    {
+      "path": "tests/test_audit_overlap.py",
+      "bytes": 1869,
+      "sha256": "6c8b3c0d37e67072d78d90f039d383ee8fc782a5c988b7140f4536841ad5154b",
+      "git_tracked": false,
+      "decision": "include",
+      "role": "tests",
+      "imports": [
+        "data.probe_audit_overlap",
+        "data.source_audit",
+        "pathlib",
+        "tempfile",
+        "test_source_audit",
+        "unittest"
+      ],
+      "local_references": []
+    },
+    {
+      "path": "tests/test_benchmark_contract.py",
+      "bytes": 1398,
+      "sha256": "7dda16c970b9d93c1168928fa62fbe5823fc9d8195b8f41f683a7436eedfd2ee",
+      "git_tracked": false,
+      "decision": "include",
+      "role": "tests",
+      "imports": [
+        "json",
+        "pathlib",
+        "scripts.benchmark_contract",
+        "scripts.benchmark_gpu",
+        "tempfile",
+        "unittest",
+        "unittest.mock"
+      ],
+      "local_references": []
+    },
+    {
+      "path": "tests/test_checkpoint_retention_audit.py",
+      "bytes": 8423,
+      "sha256": "340cc07afb4114869c96d1aa98eaef0fffc6b64d13f32982c6150ba25eab9ffd",
+      "git_tracked": false,
+      "decision": "include",
+      "role": "tests",
+      "imports": [
+        "common.data_contracts",
+        "copy",
+        "json",
+        "pathlib",
+        "scripts.audit_checkpoint_retention",
+        "scripts.supervise_main_training",
+        "scripts.tiered_checkpoint_retention",
+        "shutil",
+        "tempfile",
+        "torch",
+        "torch.distributed.checkpoint",
+        "unittest",
+        "unittest.mock",
+        "uuid"
+      ],
+      "local_references": [
+        "runs/3b_full_v1"
+      ]
+    },
+    {
+      "path": "tests/test_clean_streaming.py",
+      "bytes": 1476,
+      "sha256": "3e524804f517c1acc4501d016eb9042c9a9fabe65a7e4686d153c33336ba9069",
+      "git_tracked": false,
+      "decision": "include",
+      "role": "tests",
+      "imports": [
+        "collections",
+        "data",
+        "pathlib",
+        "pyarrow",
+        "pyarrow.parquet",
+        "tempfile",
+        "unittest",
+        "unittest.mock"
+      ],
+      "local_references": []
+    },
+    {
+      "path": "tests/test_code_clean.py",
+      "bytes": 3351,
+      "sha256": "d9e702c489cd0f5808d8b3e307b7b67d6c8a54247d63d4bbfa5c97903248d3b6",
+      "git_tracked": false,
+      "decision": "include",
+      "role": "tests",
+      "imports": [
+        "data",
+        "data.dedup",
+        "json",
+        "pathlib",
+        "pyarrow",
+        "pyarrow.parquet",
+        "tempfile",
+        "unittest",
+        "unittest.mock"
+      ],
+      "local_references": [
+        "docs/reviews/frankenstallm/acceptance_cases.json"
+      ]
+    },
+    {
+      "path": "tests/test_code_math_overlap.py",
+      "bytes": 2384,
+      "sha256": "2a21e7e4acc124dfbe8bdd10995895f684fd4e6a58e6116c6f1cf61dc9a3cd1f",
+      "git_tracked": false,
+      "decision": "include",
+      "role": "tests",
+      "imports": [
+        "data.probe_code_math_overlap",
+        "hashlib",
+        "pathlib",
+        "pyarrow",
+        "pyarrow.parquet",
+        "tempfile",
+        "unittest"
+      ],
+      "local_references": []
+    },
+    {
+      "path": "tests/test_code_web_overlap.py",
+      "bytes": 2390,
+      "sha256": "3457099d1d2ad22a09609e1b79c6aa60929bcaa78d3f8135c31b63921ce67d89",
+      "git_tracked": false,
+      "decision": "include",
+      "role": "tests",
+      "imports": [
+        "common.data_contracts",
+        "data.probe_code_web_overlap",
+        "data.sample_snapshot",
+        "pathlib",
+        "pyarrow",
+        "pyarrow.parquet",
+        "tempfile",
+        "test_text_similarity",
+        "unicodedata",
+        "unittest"
+      ],
+      "local_references": []
+    },
+    {
+      "path": "tests/test_compile_long_metrics.py",
+      "bytes": 644,
+      "sha256": "143c4f6bdc9928a884758815ebd2a7c98e6b3435bac1a7c270ceac668573c627",
+      "git_tracked": false,
+      "decision": "include",
+      "role": "tests",
+      "imports": [
+        "scripts.validate_compile_long",
+        "scripts.validate_compile_pair",
+        "torch",
+        "unittest"
+      ],
+      "local_references": []
+    },
+    {
+      "path": "tests/test_compile_pair_metrics.py",
+      "bytes": 877,
+      "sha256": "86f2ce3f0837cdab71d577b457d26fb4577759a965a34eae0b1b7b66a7ef0ddd",
+      "git_tracked": false,
+      "decision": "include",
+      "role": "tests",
+      "imports": [
+        "scripts.validate_compile_pair",
+        "torch",
+        "unittest"
+      ],
+      "local_references": []
+    },
+    {
+      "path": "tests/test_corpus_consolidation.py",
+      "bytes": 4747,
+      "sha256": "d467fa8a8cb8e630db93dbd70d47a8624d7e301643b0930163b75d3c90e8fcf3",
+      "git_tracked": false,
+      "decision": "include",
+      "role": "tests",
+      "imports": [
+        "copy",
+        "json",
+        "pathlib",
+        "scripts.consolidate_public_corpus",
+        "shutil",
+        "types",
+        "yaml"
+      ],
+      "local_references": [
+        "runs/dataset_unified_v1",
+        "runs/dataset_unified_v1/preparation.json",
+        "runs/dataset_upload_v1",
+        "runs/dataset_upload_v1/upload_spec.json"
+      ]
+    },
+    {
+      "path": "tests/test_corpus_finalizer.py",
+      "bytes": 4251,
+      "sha256": "4bd32a1bfdeeae58199b6996e08b6d279c7e0ccb2b4b86e540eaa4b369a33948",
+      "git_tracked": false,
+      "decision": "include",
+      "role": "tests",
+      "imports": [
+        "hashlib",
+        "json",
+        "pathlib",
+        "scripts.finalize_public_corpus_v2",
+        "shutil",
+        "types",
+        "yaml"
+      ],
+      "local_references": [
+        "runs/dataset_public_release_v1",
+        "runs/dataset_public_release_v1/build_multilingual_cards.py",
+        "runs/dataset_public_release_v1/public_index_v4",
+        "runs/dataset_upload_v1"
+      ]
+    },
+    {
+      "path": "tests/test_corpus_upload.py",
+      "bytes": 1716,
+      "sha256": "13a2c223da4a2fefa0d50b0721bafbd30ec731ee828c810438dcee2f23f8f259",
+      "git_tracked": false,
+      "decision": "include",
+      "role": "tests",
+      "imports": [
+        "hashlib",
+        "os",
+        "pathlib",
+        "pytest",
+        "scripts.upload_public_corpus"
+      ],
+      "local_references": []
+    },
+    {
+      "path": "tests/test_data_readiness.py",
+      "bytes": 6850,
+      "sha256": "80e4bd009429ab4fd2f1c0b0ad3c0bb04dc453495e1cd56476ad571b820beb58",
+      "git_tracked": false,
+      "decision": "include",
+      "role": "tests",
+      "imports": [
+        "common.data_contracts",
+        "data.quality_report",
+        "json",
+        "pathlib",
+        "pyarrow",
+        "pyarrow.parquet",
+        "scripts.validate_source_manifest",
+        "tempfile",
+        "unittest"
+      ],
+      "local_references": []
+    },
+    {
+      "path": "tests/test_dedup.py",
+      "bytes": 2935,
+      "sha256": "f37f05079f6719416b5a36d54eb8c0aec0d274c19c5f6a2257e9002ad44b2465",
+      "git_tracked": false,
+      "decision": "include",
+      "role": "tests",
+      "imports": [
+        "data.dedup",
+        "json",
+        "pathlib",
+        "pyarrow",
+        "pyarrow.parquet",
+        "sqlite3",
+        "tempfile",
+        "unittest"
+      ],
+      "local_references": []
+    },
+    {
+      "path": "tests/test_deterministic_training_entrypoint.py",
+      "bytes": 3051,
+      "sha256": "3fba6fcf587e69419d054f5d42e8489348c09e1f8c2b1758427ebd1cf90b7688",
+      "git_tracked": false,
+      "decision": "include",
+      "role": "tests",
+      "imports": [
+        "json",
+        "os",
+        "pathlib",
+        "scripts.benchmark_deterministic_training",
+        "tempfile",
+        "torch",
+        "train",
+        "train.deterministic_train",
+        "train.runtime",
+        "unittest"
+      ],
+      "local_references": []
+    },
+    {
+      "path": "tests/test_download_selection.py",
+      "bytes": 721,
+      "sha256": "53ce617e882e6bbbc40d875206940e2317ca96cbb80993c7dc57e57a0c8c3ef9",
+      "git_tracked": false,
+      "decision": "include",
+      "role": "tests",
+      "imports": [
+        "data.download",
+        "unittest"
+      ],
+      "local_references": []
+    },
+    {
+      "path": "tests/test_eval_runner.py",
+      "bytes": 3468,
+      "sha256": "5fcfa2f1b187230887fa26aeb235307655af935f929c622615649a54805ce759",
+      "git_tracked": false,
+      "decision": "include",
+      "role": "tests",
+      "imports": [
+        "common.data_contracts",
+        "eval.run",
+        "json",
+        "model.model",
+        "pathlib",
+        "subprocess",
+        "sys",
+        "tempfile",
+        "tokenizers",
+        "torch",
+        "torch.distributed.checkpoint",
+        "unittest"
+      ],
+      "local_references": []
+    },
+    {
+      "path": "tests/test_evaluation.py",
+      "bytes": 3386,
+      "sha256": "dea9d57f0d9c1420cedc0233a3503e696d48208fe2fa408e05eb3fb85b40f8b0",
+      "git_tracked": false,
+      "decision": "include",
+      "role": "tests",
+      "imports": [
+        "eval.generation",
+        "eval.perplexity",
+        "json",
+        "math",
+        "model.model",
+        "pathlib",
+        "torch",
+        "unittest"
+      ],
+      "local_references": [
+        "docs/reviews/frankenstallm/acceptance_cases.json"
+      ]
+    },
+    {
+      "path": "tests/test_final_main_evaluation.py",
+      "bytes": 7496,
+      "sha256": "9aae312b58e8822836674d471ae3a307d6d93d4021017f02e6665716afb03792",
+      "git_tracked": false,
+      "decision": "include",
+      "role": "tests",
+      "imports": [
+        "common.data_contracts",
+        "copy",
+        "data.local_split_reader",
+        "data.split_inputs",
+        "eval.prepare_holdout",
+        "eval.run",
+        "json",
+        "pathlib",
+        "scripts.evaluate_final_main",
+        "subprocess",
+        "sys",
+        "tempfile",
+        "test_eval_runner",
+        "test_split_inputs",
+        "tokenizers",
+        "unittest",
+        "unittest.mock"
+      ],
+      "local_references": []
+    },
+    {
+      "path": "tests/test_final_rehearsal_evaluation.py",
+      "bytes": 7687,
+      "sha256": "46cab4a38f01adeddf0b8eb8d2e9c7dcfab45d879d924f357265372d13b4ec2e",
+      "git_tracked": false,
+      "decision": "include",
+      "role": "tests",
+      "imports": [
+        "common.data_contracts",
+        "copy",
+        "data.local_split_reader",
+        "data.split_inputs",
+        "eval.prepare_holdout",
+        "eval.run",
+        "json",
+        "os",
+        "pathlib",
+        "scripts.evaluate_final_rehearsal",
+        "subprocess",
+        "sys",
+        "tempfile",
+        "test_eval_runner",
+        "test_split_inputs",
+        "tokenizers",
+        "unittest"
+      ],
+      "local_references": []
+    },
+    {
+      "path": "tests/test_final_resume_controller.py",
+      "bytes": 7842,
+      "sha256": "a40ef68ae1740df60a5d91a93b86eedaf0d7c37e2257fc5aed4491861aceac07",
+      "git_tracked": false,
+      "decision": "include",
+      "role": "tests",
+      "imports": [
+        "common.data_contracts",
+        "copy",
+        "json",
+        "os",
+        "pathlib",
+        "scripts.resource_admission",
+        "scripts.run_final_resume_probe",
+        "scripts.tiered_checkpoint_retention",
+        "scripts.verify_final_resume_probe",
+        "subprocess",
+        "sys",
+        "tempfile",
+        "unittest",
+        "unittest.mock"
+      ],
+      "local_references": [
+        "runs/3b_final_native_v2",
+        "runs/3b_full_v1",
+        "runs/main_training_readiness_v1/progress.json"
+      ]
+    },
+    {
+      "path": "tests/test_final_resume_probe.py",
+      "bytes": 11966,
+      "sha256": "0ef52cd7a1474128527d726ec75de2f5d3e2ddfe2affaef1525778bc0a95f3d6",
+      "git_tracked": false,
+      "decision": "include",
+      "role": "tests",
+      "imports": [
+        "common.data_contracts",
+        "copy",
+        "json",
+        "pathlib",
+        "scripts.verify_final_resume_probe",
+        "subprocess",
+        "sys",
+        "tempfile",
+        "torch",
+        "torch.distributed",
+        "torch.distributed.checkpoint",
+        "torch.distributed.checkpoint.state_dict",
+        "train.final_resume_probe",
+        "unittest"
+      ],
+      "local_references": [
+        "runs/3b_full_v1/training"
+      ]
+    },
+    {
+      "path": "tests/test_final_retention_controller.py",
+      "bytes": 10823,
+      "sha256": "c6014096b6fd6f07bdb4a83a30984f2145537d6841c6c6dcd78c517e7f8fc13f",
+      "git_tracked": false,
+      "decision": "include",
+      "role": "tests",
+      "imports": [
+        "common.data_contracts",
+        "copy",
+        "json",
+        "os",
+        "pathlib",
+        "scripts.run_final_retention_audit",
+        "signal",
+        "subprocess",
+        "sys",
+        "tempfile",
+        "time",
+        "train.final_resume_probe",
+        "unittest"
+      ],
+      "local_references": [
+        "runs/3b_full_v1",
+        "runs/3b_full_v1/diagnostic",
+        "runs/main_training_readiness_v1/progress.json",
+        "runs/test_independent_retention_output",
+        "runs/test_main"
+      ]
+    },
+    {
+      "path": "tests/test_final_tokenizer_gates.py",
+      "bytes": 2182,
+      "sha256": "727175dcb79f4c5251b49afa3c76604f4e1a12e26d5aaa60b2729bef9987cfcf",
+      "git_tracked": false,
+      "decision": "include",
+      "role": "tests",
+      "imports": [
+        "common.data_contracts",
+        "json",
+        "pathlib",
+        "scripts.run_final_tokenizer",
+        "tempfile",
+        "unittest"
+      ],
+      "local_references": []
+    },
+    {
+      "path": "tests/test_final_tokens_gates.py",
+      "bytes": 8179,
+      "sha256": "7a68ae90fed65710284c5c1fb21e476f77f82029cbda2c45982bff78c04beae0",
+      "git_tracked": false,
+      "decision": "include",
+      "role": "tests",
+      "imports": [
+        "common.data_contracts",
+        "copy",
+        "data.parallel_tokenize",
+        "data.verified_split_context",
+        "json",
+        "pathlib",
+        "scripts.run_final_tokens",
+        "tempfile",
+        "test_parallel_tokenize",
+        "unittest"
+      ],
+      "local_references": []
+    },
+    {
+      "path": "tests/test_fp32_gate_candidate.py",
+      "bytes": 993,
+      "sha256": "cb5a207a0e0d876d486e3ebd79cccad12b80c3db553ecb133fdf230fb0dfde27",
+      "git_tracked": false,
+      "decision": "include",
+      "role": "tests",
+      "imports": [
+        "copy",
+        "model.model",
+        "scripts.probe_full_fp32_gate",
+        "torch",
+        "unittest"
+      ],
+      "local_references": []
+    },
+    {
+      "path": "tests/test_hardware_profile.py",
+      "bytes": 1423,
+      "sha256": "2e92e77a6fbf5df8a8b7c95241e6d569876baee2eee335ad5ea37bf9f1ed41e8",
+      "git_tracked": false,
+      "decision": "include",
+      "role": "tests",
+      "imports": [
+        "scripts.hardware_profile",
+        "unittest"
+      ],
+      "local_references": []
+    },
+    {
+      "path": "tests/test_job_registry.py",
+      "bytes": 2956,
+      "sha256": "7b68d16b7f58b46aca1d9703d922ecd52ac6d6407baa67f7fcb898753b9be347",
+      "git_tracked": false,
+      "decision": "include",
+      "role": "tests",
+      "imports": [
+        "common.data_contracts",
+        "fcntl",
+        "json",
+        "os",
+        "pathlib",
+        "scripts.job_registry",
+        "tempfile",
+        "time",
+        "unittest"
+      ],
+      "local_references": []
+    },
+    {
+      "path": "tests/test_local_holdout_eval.py",
+      "bytes": 4039,
+      "sha256": "851a75248caaab2ce89c97f803cebbce7a9f832ac7eb23484f393d690b9e7c04",
+      "git_tracked": false,
+      "decision": "include",
+      "role": "tests",
+      "imports": [
+        "common.data_contracts",
+        "data.local_split_reader",
+        "data.split_inputs",
+        "eval.prepare_holdout",
+        "eval.run",
+        "json",
+        "pathlib",
+        "subprocess",
+        "sys",
+        "tempfile",
+        "test_eval_runner",
+        "test_split_inputs",
+        "unittest"
+      ],
+      "local_references": []
+    },
+    {
+      "path": "tests/test_local_split_publication.py",
+      "bytes": 5729,
+      "sha256": "3df9834d9d63f59b853a83dc9e792a610271e94a392a2659f50edfa4d6939260",
+      "git_tracked": false,
+      "decision": "include",
+      "role": "tests",
+      "imports": [
+        "common.data_contracts",
+        "data.split_manifest",
+        "json",
+        "os",
+        "pathlib",
+        "scripts.publish_local_split",
+        "scripts.run_local_split",
+        "shutil",
+        "subprocess",
+        "sys",
+        "tempfile",
+        "test_split_manifest",
+        "unittest"
+      ],
+      "local_references": []
+    },
+    {
+      "path": "tests/test_local_split_reader.py",
+      "bytes": 3402,
+      "sha256": "626d0e13d077c06c2c399b0efaa11e6840bb9d9af30f9e36a399a0555cf189b6",
+      "git_tracked": false,
+      "decision": "include",
+      "role": "tests",
+      "imports": [
+        "common.data_contracts",
+        "data.local_split_reader",
+        "data.split_inputs",
+        "data.verified_split_context",
+        "json",
+        "pathlib",
+        "shutil",
+        "tempfile",
+        "test_parallel_tokenize",
+        "unittest"
+      ],
+      "local_references": []
+    },
+    {
+      "path": "tests/test_main_supervision.py",
+      "bytes": 3849,
+      "sha256": "788442ae575231240be2539671440c1938ca93a8abd0cf9cc14d7f74931494a2",
+      "git_tracked": false,
+      "decision": "include",
+      "role": "tests",
+      "imports": [
+        "argparse",
+        "common.data_contracts",
+        "json",
+        "os",
+        "pathlib",
+        "scripts.process_accounting",
+        "scripts.supervise_main_training",
+        "tempfile",
+        "torch",
+        "torch.distributed.checkpoint",
+        "unittest",
+        "unittest.mock"
+      ],
+      "local_references": []
+    },
+    {
+      "path": "tests/test_main_training_audit.py",
+      "bytes": 9612,
+      "sha256": "fc77045151b3a71ea1fc33e23b6dc1deae7cfcd59093939fb25ab58838b6ad06",
+      "git_tracked": false,
+      "decision": "include",
+      "role": "tests",
+      "imports": [
+        "common.data_contracts",
+        "copy",
+        "json",
+        "pathlib",
+        "scripts.audit_main_training",
+        "tempfile",
+        "unittest"
+      ],
+      "local_references": [
+        "data/tokens/final_v1/mix.json",
+        "runs/example/training",
+        "runs/other/training"
+      ]
+    },
+    {
+      "path": "tests/test_main_training_observer.py",
+      "bytes": 2404,
+      "sha256": "855948ef84421dda2d6567bec9d86012ca5e60458a435d05d53e268aaae859d5",
+      "git_tracked": false,
+      "decision": "include",
+      "role": "tests",
+      "imports": [
+        "json",
+        "pathlib",
+        "scripts.observe_main_training",
+        "tempfile",
+        "unittest"
+      ],
+      "local_references": []
+    },
+    {
+      "path": "tests/test_main_training_plan.py",
+      "bytes": 2136,
+      "sha256": "de217f34296572212358018d0a6719c19d804b494a1e8f1fed9ae1247667b0a9",
+      "git_tracked": false,
+      "decision": "include",
+      "role": "tests",
+      "imports": [
+        "scripts.plan_main_training",
+        "unittest"
+      ],
+      "local_references": []
+    },
+    {
+      "path": "tests/test_math_filter.py",
+      "bytes": 658,
+      "sha256": "151e2b418531d35c777d53ba898364a48a9d24f94e5dbc3e73a896fc68a121c3",
+      "git_tracked": false,
+      "decision": "include",
+      "role": "tests",
+      "imports": [
+        "data.filters",
+        "unittest"
+      ],
+      "local_references": []
+    },
+    {
+      "path": "tests/test_model_initialization.py",
+      "bytes": 1292,
+      "sha256": "a75c93d02daa79cd09fa77d45a2e4d984f94ca0b4d134f7f7f167e611c8da350",
+      "git_tracked": false,
+      "decision": "include",
+      "role": "tests",
+      "imports": [
+        "model.model",
+        "torch",
+        "unittest"
+      ],
+      "local_references": []
+    },
+    {
+      "path": "tests/test_model_reference.py",
+      "bytes": 5226,
+      "sha256": "64e1b00dbac579f11d9562ba0b331ba733f18c3cd11deb7b26559b210f999781",
+      "git_tracked": false,
+      "decision": "include",
+      "role": "tests",
+      "imports": [
+        "copy",
+        "json",
+        "math",
+        "model.model",
+        "numpy",
+        "pathlib",
+        "tempfile",
+        "torch",
+        "train.data",
+        "unittest"
+      ],
+      "local_references": []
+    },
+    {
+      "path": "tests/test_monitored_training.py",
+      "bytes": 4221,
+      "sha256": "0f80fe97f431cd2490332244f7be554595356ebfd695f13640c193d015a5b48b",
+      "git_tracked": false,
+      "decision": "include",
+      "role": "tests",
+      "imports": [
+        "common.data_contracts",
+        "copy",
+        "json",
+        "pathlib",
+        "scripts.validate_monitored_training",
+        "tempfile",
+        "torch",
+        "torch.distributed.checkpoint",
+        "train.monitored",
+        "unittest"
+      ],
+      "local_references": []
+    },
+    {
+      "path": "tests/test_multiple_choice.py",
+      "bytes": 4409,
+      "sha256": "b4c7390d281d5892d47fd0231cf208e51ad6213429b35292c41734eb0c6efd87",
+      "git_tracked": false,
+      "decision": "include",
+      "role": "tests",
+      "imports": [
+        "eval.multiple_choice",
+        "json",
+        "math",
+        "pathlib",
+        "subprocess",
+        "sys",
+        "tempfile",
+        "test_eval_runner",
+        "tokenizers",
+        "torch",
+        "unittest"
+      ],
+      "local_references": []
+    },
+    {
+      "path": "tests/test_native_evaluation_pipeline.py",
+      "bytes": 3818,
+      "sha256": "e4a519988bb8934e929c1c2cec0aeff6dd1b8e0032f567189abacbef71ed4019",
+      "git_tracked": false,
+      "decision": "include",
+      "role": "tests",
+      "imports": [
+        "common.data_contracts",
+        "copy",
+        "json",
+        "pathlib",
+        "scripts.run_native_evaluation",
+        "tempfile",
+        "unittest"
+      ],
+      "local_references": []
+    },
+    {
+      "path": "tests/test_native_training_inputs.py",
+      "bytes": 3009,
+      "sha256": "0fdd34f06da274073bf39586afd54a69e311a4efe81191ba41a44b2d509d62ab",
+      "git_tracked": false,
+      "decision": "include",
+      "role": "tests",
+      "imports": [
+        "json",
+        "pathlib",
+        "scripts.publish_native_training_inputs",
+        "shutil",
+        "types"
+      ],
+      "local_references": [
+        "runs/training_inputs_release_v1",
+        "runs/training_inputs_release_v1/metadata",
+        "runs/training_inputs_release_v1/upload_spec.json"
+      ]
+    },
+    {
+      "path": "tests/test_parallel_tokenize.py",
+      "bytes": 5983,
+      "sha256": "9208b22ecd122696db83869e5713bd7085fae03c3e4f44b709e692658d132976",
+      "git_tracked": false,
+      "decision": "include",
+      "role": "tests",
+      "imports": [
+        "common.data_contracts",
+        "data.build_mix",
+        "data.parallel_tokenize",
+        "data.split_manifest",
+        "data.tokenize_shards",
+        "data.verified_split_context",
+        "json",
+        "os",
+        "pathlib",
+        "pyarrow",
+        "pyarrow.parquet",
+        "subprocess",
+        "sys",
+        "tempfile",
+        "tokenizer.train_tokenizer",
+        "tokenizers",
+        "unittest",
+        "unittest.mock"
+      ],
+      "local_references": []
+    },
+    {
+      "path": "tests/test_parallel_training_contract.py",
+      "bytes": 4209,
+      "sha256": "a0e686005d26711f41762edf9d5cf19324417ec0fd272ce996c923a99e57e447",
+      "git_tracked": false,
+      "decision": "include",
+      "role": "tests",
+      "imports": [
+        "common.data_contracts",
+        "data.parallel_tokenize",
+        "json",
+        "pathlib",
+        "tempfile",
+        "test_parallel_tokenize",
+        "train.parallel_contract",
+        "train.runtime",
+        "train.train",
+        "unittest",
+        "unittest.mock"
+      ],
+      "local_references": []
+    },
+    {
+      "path": "tests/test_pilot_mix.py",
+      "bytes": 3184,
+      "sha256": "c3ad8ff5b344c306cddefa45cd5125f5e29a9e13309e9c1a61c243f599ef65c0",
+      "git_tracked": false,
+      "decision": "include",
+      "role": "tests",
+      "imports": [
+        "common.data_contracts",
+        "data.parallel_tokenize",
+        "data.pilot_mix",
+        "data.verified_split_context",
+        "json",
+        "pathlib",
+        "tempfile",
+        "test_parallel_tokenize",
+        "train.data",
+        "unittest"
+      ],
+      "local_references": []
+    },
+    {
+      "path": "tests/test_pipeline_watch.py",
+      "bytes": 3869,
+      "sha256": "72bca62d338f12b2d3f9ad1494249bf94191176b3b4cbaaf3766f2181e836215",
+      "git_tracked": false,
+      "decision": "include",
+      "role": "tests",
+      "imports": [
+        "common.data_contracts",
+        "json",
+        "os",
+        "pathlib",
+        "scripts.watch_data_pipeline",
+        "tempfile",
+        "time",
+        "unittest"
+      ],
+      "local_references": [
+        "runs/data_eviction_v1"
+      ]
+    },
+    {
+      "path": "tests/test_precision_groups.py",
+      "bytes": 1022,
+      "sha256": "84ce74ce6eb4b670c2e8f024e690778c2e7f714dea7717a14c06ed6ce4ece814",
+      "git_tracked": false,
+      "decision": "include",
+      "role": "tests",
+      "imports": [
+        "model.model",
+        "scripts.diagnose_compile_precision",
+        "torch",
+        "unittest"
+      ],
+      "local_references": []
+    },
+    {
+      "path": "tests/test_pretrain_review_assembly.py",
+      "bytes": 2802,
+      "sha256": "8c75adbcf303ad13008817bd4964fbea75d5f37373fa454f6a306a40e5d9ba44",
+      "git_tracked": false,
+      "decision": "include",
+      "role": "tests",
+      "imports": [
+        "argparse",
+        "common.data_contracts",
+        "copy",
+        "json",
+        "pathlib",
+        "scripts.assemble_pretrain_review",
+        "tempfile",
+        "unittest"
+      ],
+      "local_references": []
+    },
+    {
+      "path": "tests/test_pretraining_continuation.py",
+      "bytes": 3647,
+      "sha256": "5fb2625de9f79218539230cc40d9cb21743268aefdde8cde0903be5b938c7242",
+      "git_tracked": false,
+      "decision": "include",
+      "role": "tests",
+      "imports": [
+        "common.data_contracts",
+        "copy",
+        "json",
+        "pathlib",
+        "scripts.continue_pretraining",
+        "scripts.mix_review_policy",
+        "tempfile",
+        "unittest"
+      ],
+      "local_references": []
+    },
+    {
+      "path": "tests/test_public_corpus_reader.py",
+      "bytes": 1500,
+      "sha256": "9c86ec244ec21c1e5ae645b3bd79a72fece1c89d3ce08aac171ffc4c73aae565",
+      "git_tracked": false,
+      "decision": "include",
+      "role": "tests",
+      "imports": [
+        "data.public_corpus_reader",
+        "hashlib",
+        "pyarrow",
+        "pyarrow.parquet",
+        "pytest"
+      ],
+      "local_references": []
+    },
+    {
+      "path": "tests/test_rehearsal_controller.py",
+      "bytes": 6011,
+      "sha256": "f2014d50ee55285b5525a835add76cce38c00bb3ad938a5b93a9e463a598e7b0",
+      "git_tracked": false,
+      "decision": "include",
+      "role": "tests",
+      "imports": [
+        "copy",
+        "json",
+        "pathlib",
+        "scripts.run_rehearsal",
+        "tempfile",
+        "train.train",
+        "unittest"
+      ],
+      "local_references": []
+    },
+    {
+      "path": "tests/test_rehearsal_generation_distributed.py",
+      "bytes": 1926,
+      "sha256": "dfeaedde49614e364ae68b98348126dbac7ad5e224d2b39af6988a3b6f1c98b4",
+      "git_tracked": false,
+      "decision": "include",
+      "role": "tests",
+      "imports": [
+        "json",
+        "pathlib",
+        "tempfile",
+        "torch",
+        "torch.distributed",
+        "torch.multiprocessing",
+        "train.rehearsal",
+        "unittest"
+      ],
+      "local_references": []
+    },
+    {
+      "path": "tests/test_rehearsal_hooks.py",
+      "bytes": 6595,
+      "sha256": "9a45ac35349fe27825393c283f9c37ea98a4a73bef16ddcdbbca1d85913cc68d",
+      "git_tracked": false,
+      "decision": "include",
+      "role": "tests",
+      "imports": [
+        "json",
+        "numpy",
+        "pathlib",
+        "tempfile",
+        "torch",
+        "torch.distributed.checkpoint.state_dict",
+        "train.data",
+        "train.rehearsal",
+        "unittest",
+        "unittest.mock"
+      ],
+      "local_references": []
+    },
+    {
+      "path": "tests/test_rehearsal_observer.py",
+      "bytes": 3873,
+      "sha256": "86612c2332cc7e613e3d0da74386f2defe7825bfad3b0c0cfa85309b4e8ef390",
+      "git_tracked": false,
+      "decision": "include",
+      "role": "tests",
+      "imports": [
+        "common.data_contracts",
+        "copy",
+        "json",
+        "pathlib",
+        "scripts.observe_rehearsal",
+        "tempfile",
+        "unittest"
+      ],
+      "local_references": []
+    },
+    {
+      "path": "tests/test_release_offsets.py",
+      "bytes": 951,
+      "sha256": "86f6d64ad9b5a9ba21ae628d82e44617b7c6b648da6c833e678a896dd46701f3",
+      "git_tracked": false,
+      "decision": "include",
+      "role": "tests",
+      "imports": [
+        "data.release_offsets",
+        "hashlib",
+        "numpy",
+        "pytest"
+      ],
+      "local_references": []
+    },
+    {
+      "path": "tests/test_release_provenance.py",
+      "bytes": 1689,
+      "sha256": "caab9e8f425ee99fe6afe898e06e87c52dd10f93b7c7aeb4e17bbc96e6702aa1",
+      "git_tracked": false,
+      "decision": "include",
+      "role": "tests",
+      "imports": [
+        "data.filters",
+        "data.release_provenance",
+        "hashlib"
+      ],
+      "local_references": []
+    },
+    {
+      "path": "tests/test_release_split.py",
+      "bytes": 1597,
+      "sha256": "91ce0bd60dd523232f4be6e64bbf740813142c63dc2c933271b19ce76990e3fd",
+      "git_tracked": false,
+      "decision": "include",
+      "role": "tests",
+      "imports": [
+        "data.release_split",
+        "hashlib",
+        "pyarrow.parquet",
+        "pytest",
+        "sqlite3"
+      ],
+      "local_references": []
+    },
+    {
+      "path": "tests/test_resource_admission.py",
+      "bytes": 1337,
+      "sha256": "5d4e139246bc8e811793f5d6de6bc6cfe24055f11269775b87af1e59570a91b2",
+      "git_tracked": false,
+      "decision": "include",
+      "role": "tests",
+      "imports": [
+        "scripts.resource_admission",
+        "unittest"
+      ],
+      "local_references": []
+    },
+    {
+      "path": "tests/test_retention3_policy.py",
+      "bytes": 3967,
+      "sha256": "1f8ca85b649feb2867d957a3176abae4511ac1d474e15fab182d23ced9a06e8d",
+      "git_tracked": false,
+      "decision": "include",
+      "role": "tests",
+      "imports": [
+        "json",
+        "pathlib",
+        "scripts.audit_checkpoint_retention",
+        "scripts.retention_capacity",
+        "scripts.tiered_checkpoint_retention",
+        "test_checkpoint_retention_audit",
+        "test_tiered_checkpoint_retention",
+        "unittest"
+      ],
+      "local_references": []
+    },
+    {
+      "path": "tests/test_sample_quota.py",
+      "bytes": 1146,
+      "sha256": "0c5d2c28d3d5464f4c5885d10d32ef0effdde799c10913e07595d8d75c92d451",
+      "git_tracked": false,
+      "decision": "include",
+      "role": "tests",
+      "imports": [
+        "data.sample_snapshot",
+        "json",
+        "pathlib",
+        "pyarrow",
+        "pyarrow.parquet",
+        "tempfile",
+        "unittest"
+      ],
+      "local_references": []
+    },
+    {
+      "path": "tests/test_sampler.py",
+      "bytes": 4180,
+      "sha256": "3d5b03a4859b6169f2228c2d5031e6e92ca6561ef3dce9e6cd1884f8e18cdeea",
+      "git_tracked": false,
+      "decision": "include",
+      "role": "tests",
+      "imports": [
+        "json",
+        "numpy",
+        "pathlib",
+        "tempfile",
+        "train.data",
+        "unittest",
+        "unittest.mock"
+      ],
+      "local_references": [
+        "docs/reviews/frankenstallm/acceptance_cases.json"
+      ]
+    },
+    {
+      "path": "tests/test_shared_split_inputs.py",
+      "bytes": 2949,
+      "sha256": "ae1a9ba0c63f57c66c5a932bb5251434f9d91f1d40274d6f5392c1d6e4b40104",
+      "git_tracked": false,
+      "decision": "include",
+      "role": "tests",
+      "imports": [
+        "common.data_contracts",
+        "data.split_inputs",
+        "data.split_manifest",
+        "data.verified_split_context",
+        "json",
+        "pathlib",
+        "sqlite3",
+        "tempfile",
+        "test_split_inputs",
+        "tokenizer.train_tokenizer",
+        "unittest",
+        "unittest.mock"
+      ],
+      "local_references": []
+    },
+    {
+      "path": "tests/test_similarity_recall.py",
+      "bytes": 1576,
+      "sha256": "b55a970c4da1297e9c8b1d34f03000e303700caf9223098a7e48cd3e27c9abb7",
+      "git_tracked": false,
+      "decision": "include",
+      "role": "tests",
+      "imports": [
+        "data.probe_similarity_recall",
+        "pathlib",
+        "tempfile",
+        "test_text_similarity",
+        "unittest"
+      ],
+      "local_references": []
+    },
+    {
+      "path": "tests/test_source_audit.py",
+      "bytes": 8664,
+      "sha256": "9437b46ab791d4ed2c3baddbe4eeeb98490934053f08a9a682fc69d7f8d8b47b",
+      "git_tracked": false,
+      "decision": "include",
+      "role": "tests",
+      "imports": [
+        "common.data_contracts",
+        "common.source_inventory",
+        "data.quality_report",
+        "data.source_audit",
+        "json",
+        "os",
+        "pathlib",
+        "pyarrow",
+        "pyarrow.parquet",
+        "scripts.finalize_source_manifest",
+        "subprocess",
+        "sys",
+        "tempfile",
+        "unittest"
+      ],
+      "local_references": []
+    },
+    {
+      "path": "tests/test_split_distribution.py",
+      "bytes": 1312,
+      "sha256": "75ee784495b603e95265d3f40c8088e75bbbe6314b6512623da31326db2cb08e",
+      "git_tracked": false,
+      "decision": "include",
+      "role": "tests",
+      "imports": [
+        "data.split_distribution",
+        "data.verified_split_context",
+        "pathlib",
+        "tempfile",
+        "test_parallel_tokenize",
+        "unittest"
+      ],
+      "local_references": []
+    },
+    {
+      "path": "tests/test_split_distribution_native.py",
+      "bytes": 1395,
+      "sha256": "62521845a63c938dd209823c97c90a8738b08af1318269710d4d2761f51398b9",
+      "git_tracked": false,
+      "decision": "include",
+      "role": "tests",
+      "imports": [
+        "common.data_contracts",
+        "data.split_distribution_native",
+        "data.verified_split_context",
+        "pathlib",
+        "tempfile",
+        "test_parallel_tokenize",
+        "unittest"
+      ],
+      "local_references": []
+    },
+    {
+      "path": "tests/test_split_finalization_observer.py",
+      "bytes": 4647,
+      "sha256": "8d6415fcf94dbb35aef9be02fe322dccfc234015bb466d9c8c1b478b5f5d5e24",
+      "git_tracked": false,
+      "decision": "include",
+      "role": "tests",
+      "imports": [
+        "common.data_contracts",
+        "json",
+        "pathlib",
+        "scripts.watch_split_finalization",
+        "tempfile",
+        "unittest",
+        "unittest.mock"
+      ],
+      "local_references": []
+    },
+    {
+      "path": "tests/test_split_hotpath_candidate.py",
+      "bytes": 2050,
+      "sha256": "2bf43a8cd6639001a619201652182d8904c6c6ba2382e3ada4b36788bdf3efb8",
+      "git_tracked": false,
+      "decision": "include",
+      "role": "tests",
+      "imports": [
+        "data.split_manifest",
+        "data.split_manifest_candidate",
+        "pathlib",
+        "pyarrow",
+        "pyarrow.parquet",
+        "tempfile",
+        "test_split_manifest",
+        "unittest"
+      ],
+      "local_references": []
+    },
+    {
+      "path": "tests/test_split_inputs.py",
+      "bytes": 7025,
+      "sha256": "a68a22c7bc8d12f0d3ccac035120d95012937e6fb000a51b1c17c342c52372dd",
+      "git_tracked": false,
+      "decision": "include",
+      "role": "tests",
+      "imports": [
+        "common.data_contracts",
+        "data.split_inputs",
+        "data.split_manifest",
+        "eval.run",
+        "json",
+        "model.model",
+        "pathlib",
+        "pyarrow",
+        "pyarrow.parquet",
+        "subprocess",
+        "sys",
+        "tempfile",
+        "tokenizer.train_tokenizer",
+        "torch",
+        "torch.distributed.checkpoint",
+        "unittest"
+      ],
+      "local_references": []
+    },
+    {
+      "path": "tests/test_split_manifest.py",
+      "bytes": 7875,
+      "sha256": "806e4c1e2b8261c21053015fb7ceec61a4d9586bf35842f99177a330be79f2a1",
+      "git_tracked": false,
+      "decision": "include",
+      "role": "tests",
+      "imports": [
+        "common.data_contracts",
+        "data.build_mix",
+        "data.split_manifest",
+        "data.tokenize_shards",
+        "json",
+        "numpy",
+        "pathlib",
+        "pyarrow",
+        "pyarrow.parquet",
+        "scripts.validate_source_manifest",
+        "sqlite3",
+        "tempfile",
+        "tokenizers",
+        "unittest",
+        "unittest.mock"
+      ],
+      "local_references": []
+    },
+    {
+      "path": "tests/test_split_recovery.py",
+      "bytes": 2628,
+      "sha256": "28b6559d1cdcb3e9f014acb643ac135cfae3b21bf436ee5c9841e1fea9025f6c",
+      "git_tracked": false,
+      "decision": "include",
+      "role": "tests",
+      "imports": [
+        "data.split_manifest",
+        "json",
+        "os",
+        "pathlib",
+        "pyarrow",
+        "pyarrow.parquet",
+        "sqlite3",
+        "subprocess",
+        "sys",
+        "tempfile",
+        "test_split_manifest",
+        "unittest"
+      ],
+      "local_references": []
+    },
+    {
+      "path": "tests/test_split_scale_runner.py",
+      "bytes": 3483,
+      "sha256": "c91ec626d56711137696cb64e3fc3a54d5f2ea59d76e66fd7be2b92ca2dabd30",
+      "git_tracked": false,
+      "decision": "include",
+      "role": "tests",
+      "imports": [
+        "data.split_manifest",
+        "json",
+        "pathlib",
+        "scripts.measure_split",
+        "tempfile",
+        "test_split_manifest",
+        "time",
+        "unittest",
+        "unittest.mock"
+      ],
+      "local_references": []
+    },
+    {
+      "path": "tests/test_split_throughput.py",
+      "bytes": 3087,
+      "sha256": "8335a4acae4c6175f7f37eaad34a118a6ad2e2a2cd624faf7e4532f7fa8d52c1",
+      "git_tracked": false,
+      "decision": "include",
+      "role": "tests",
+      "imports": [
+        "common.data_contracts",
+        "data.source_audit",
+        "data.split_manifest",
+        "os",
+        "pathlib",
+        "scripts.finalize_source_manifest",
+        "tempfile",
+        "test_source_audit",
+        "test_split_manifest",
+        "unittest",
+        "unittest.mock"
+      ],
+      "local_references": []
+    },
+    {
+      "path": "tests/test_storage_budget.py",
+      "bytes": 1204,
+      "sha256": "2b2cca72f0254c7ef72d5915f5ac9ece487e3660f91b2b2ae06348da066bd670",
+      "git_tracked": false,
+      "decision": "include",
+      "role": "tests",
+      "imports": [
+        "scripts.storage_budget",
+        "types",
+        "unittest",
+        "unittest.mock"
+      ],
+      "local_references": []
+    },
+    {
+      "path": "tests/test_text_similarity.py",
+      "bytes": 3743,
+      "sha256": "0d55eb5451fc3c8940afa38b72e1b5c7eea28c566b8591df47d0c484c48fdd84",
+      "git_tracked": false,
+      "decision": "include",
+      "role": "tests",
+      "imports": [
+        "common.data_contracts",
+        "data.probe_text_similarity",
+        "data.sample_snapshot",
+        "json",
+        "pathlib",
+        "pyarrow",
+        "pyarrow.parquet",
+        "tempfile",
+        "unittest"
+      ],
+      "local_references": []
+    },
+    {
+      "path": "tests/test_tiered_checkpoint_retention.py",
+      "bytes": 17764,
+      "sha256": "d8341c5a5ee26c77dde7dda17d8c5b6da5c8f8a020415c17ff19dc99664890d0",
+      "git_tracked": false,
+      "decision": "include",
+      "role": "tests",
+      "imports": [
+        "common.data_contracts",
+        "common.paths",
+        "json",
+        "os",
+        "pathlib",
+        "scripts.supervise_main_training",
+        "scripts.tiered_checkpoint_retention",
+        "shutil",
+        "subprocess",
+        "sys",
+        "tempfile",
+        "torch",
+        "torch.distributed.checkpoint",
+        "torch.distributed.checkpoint.state_dict",
+        "train.runtime",
+        "unittest",
+        "unittest.mock",
+        "uuid"
+      ],
+      "local_references": [
+        "runs/actual_train_validation_v1/3b_validated_checkpoint",
+        "runs/pretrain_readiness_v1/main_training_proposal_v1.json"
+      ]
+    },
+    {
+      "path": "tests/test_token_pilot_resume.py",
+      "bytes": 2971,
+      "sha256": "6b3eab45173b492d4976b55caeeb246becd3966b786e7492b73b4168ed6a71b6",
+      "git_tracked": false,
+      "decision": "include",
+      "role": "tests",
+      "imports": [
+        "common.data_contracts",
+        "data.local_split_reader",
+        "data.parallel_tokenize",
+        "data.verified_split_context",
+        "pathlib",
+        "tempfile",
+        "test_parallel_tokenize",
+        "unittest"
+      ],
+      "local_references": []
+    },
+    {
+      "path": "tests/test_token_publication.py",
+      "bytes": 1401,
+      "sha256": "5d38f2d8a1fe97796d6d1e800326be545fcc4a7d6d01a784f2edb35a5fff01e7",
+      "git_tracked": false,
+      "decision": "include",
+      "role": "tests",
+      "imports": [
+        "pathlib",
+        "scripts.benchmark_next_stage",
+        "tempfile",
+        "unittest"
+      ],
+      "local_references": []
+    },
+    {
+      "path": "tests/test_tokenization.py",
+      "bytes": 5640,
+      "sha256": "7ac31dc0c8c7f488254c230ecd71e2e7103c0ce54860f8ae4bb208c1a8dffb32",
+      "git_tracked": false,
+      "decision": "include",
+      "role": "tests",
+      "imports": [
+        "common.data_contracts",
+        "data.build_mix",
+        "data.tokenize_shards",
+        "json",
+        "numpy",
+        "pathlib",
+        "pyarrow",
+        "pyarrow.parquet",
+        "tempfile",
+        "tokenizer.train_tokenizer",
+        "tokenizers",
+        "unittest",
+        "unittest.mock"
+      ],
+      "local_references": [
+        "docs/reviews/frankenstallm/acceptance_cases.json"
+      ]
+    },
+    {
+      "path": "tests/test_tokenizer_check.py",
+      "bytes": 4154,
+      "sha256": "9f1613be682d523ee8b0dc72fa0cfc19ca8b6abd6d469b901d0171ed26267d72",
+      "git_tracked": false,
+      "decision": "include",
+      "role": "tests",
+      "imports": [
+        "json",
+        "pathlib",
+        "subprocess",
+        "sys",
+        "tempfile",
+        "tokenizer.check_tokenizer",
+        "tokenizer.train_tokenizer",
+        "tokenizers",
+        "unittest"
+      ],
+      "local_references": [
+        "tokenizer/check_tokenizer.py"
+      ]
+    },
+    {
+      "path": "tests/test_tokenizer_quality_inputs.py",
+      "bytes": 3973,
+      "sha256": "d3ab2fae899200cbdf52e057876fe34ece18a42d4e27f2469fed287fedc0f0f7",
+      "git_tracked": false,
+      "decision": "include",
+      "role": "tests",
+      "imports": [
+        "common.data_contracts",
+        "data.split_inputs",
+        "data.split_manifest",
+        "data.verified_split_context",
+        "json",
+        "pathlib",
+        "pyarrow",
+        "pyarrow.parquet",
+        "tempfile",
+        "tokenizer.check_tokenizer",
+        "tokenizer.quality_inputs",
+        "tokenizer.train_tokenizer",
+        "unittest"
+      ],
+      "local_references": []
+    },
+    {
+      "path": "tests/test_tokenizer_resource_encoding.py",
+      "bytes": 1728,
+      "sha256": "850c4d8216740065f1a4c196915634a8e6e25524386a8e1973e3a5aa801138b3",
+      "git_tracked": false,
+      "decision": "include",
+      "role": "tests",
+      "imports": [
+        "common.data_contracts",
+        "json",
+        "numpy",
+        "pathlib",
+        "scripts.benchmark_tokenizer_resources",
+        "tempfile",
+        "tokenizers",
+        "types",
+        "unittest"
+      ],
+      "local_references": []
+    },
+    {
+      "path": "tests/test_training_probe.py",
+      "bytes": 3295,
+      "sha256": "8969099bba28d2d2176e57dddbaf9be337bdbc1aa2e706d5a134a297970aa821",
+      "git_tracked": false,
+      "decision": "include",
+      "role": "tests",
+      "imports": [
+        "data.parallel_tokenize",
+        "pathlib",
+        "tempfile",
+        "test_parallel_tokenize",
+        "torch",
+        "train.data",
+        "train.probe",
+        "unittest"
+      ],
+      "local_references": []
+    },
+    {
+      "path": "tests/test_training_runtime.py",
+      "bytes": 3348,
+      "sha256": "ff18f598e6a49eb398ce7822d1b9347df21eba81b088b7c95de683ce6ab51171",
+      "git_tracked": false,
+      "decision": "include",
+      "role": "tests",
+      "imports": [
+        "copy",
+        "json",
+        "pathlib",
+        "tempfile",
+        "train.runtime",
+        "train.train",
+        "unittest"
+      ],
+      "local_references": []
+    },
+    {
+      "path": "tests/test_url_overlap.py",
+      "bytes": 801,
+      "sha256": "a8c26648ea78b9a8b45093afc06b153e3acc531cba5a96a92cbf617cec1121b1",
+      "git_tracked": false,
+      "decision": "include",
+      "role": "tests",
+      "imports": [
+        "data.probe_url_overlap",
+        "unittest"
+      ],
+      "local_references": []
+    },
+    {
+      "path": "tokenizer/check_tokenizer.py",
+      "bytes": 6840,
+      "sha256": "4bb572224e168d6c42df0685529f2419c860f91c939e328f7d716f6d1ac77fef",
+      "git_tracked": true,
+      "decision": "include",
+      "role": "tokenizer",
+      "imports": [
+        "argparse",
+        "common.data_contracts",
+        "json",
+        "pathlib",
+        "sys",
+        "tokenizer.train_tokenizer",
+        "tokenizers",
+        "unicodedata"
+      ],
+      "local_references": []
+    },
+    {
+      "path": "tokenizer/quality_inputs.py",
+      "bytes": 7180,
+      "sha256": "ff363a2b4567f1018defd20ad1d1120a6c1ae4fc3574054885f9e7706b6a8d53",
+      "git_tracked": false,
+      "decision": "include",
+      "role": "tokenizer",
+      "imports": [
+        "common.data_contracts",
+        "data.split_manifest",
+        "json",
+        "pathlib"
+      ],
+      "local_references": []
+    },
+    {
+      "path": "tokenizer/train_tokenizer.py",
+      "bytes": 8381,
+      "sha256": "de94f36ef9552e5e7fbaaa8eca495a0583081eb02f89645f48ed34cadc04d036",
+      "git_tracked": true,
+      "decision": "include",
+      "role": "tokenizer",
+      "imports": [
+        "argparse",
+        "common.data_contracts",
+        "data.split_inputs",
+        "json",
+        "math",
+        "pathlib",
+        "pyarrow.parquet",
+        "random",
+        "sys",
+        "tokenizers"
+      ],
+      "local_references": [
+        "data/local_split_reader.py",
+        "data/split_inputs.py",
+        "data/split_manifest.py",
+        "data/verified_split_context.py",
+        "tokenizer/candidate/tokenizer.json",
+        "tokenizer/train_tokenizer.py"
+      ]
+    },
+    {
+      "path": "train/__init__.py",
+      "bytes": 82,
+      "sha256": "8bb42da44245b0429dd428a496f54124644466e204be93155b4c400a20dbd542",
+      "git_tracked": false,
+      "decision": "include",
+      "role": "train",
+      "imports": [],
+      "local_references": []
+    },
+    {
+      "path": "train/configs/1b_rehearsal.json",
+      "bytes": 279,
+      "sha256": "004bbd8cc5870671e5806176681479a9f67ca9721c9d26af8c20168e0d3d64b6",
+      "git_tracked": true,
+      "decision": "include",
+      "role": "train",
+      "imports": [],
+      "local_references": [
+        "data/tokens/mix.json",
+        "runs/1b_rehearsal"
+      ]
+    },
+    {
+      "path": "train/configs/3b.json",
+      "bytes": 271,
+      "sha256": "3fd203a8723b5f3f0e24997e8a6b15afa354dc65e9f037ccbde0cc330ae48153",
+      "git_tracked": true,
+      "decision": "include",
+      "role": "train",
+      "imports": [],
+      "local_references": [
+        "data/tokens/mix.json",
+        "runs/3b"
+      ]
+    },
+    {
+      "path": "train/configs/smoke.json",
+      "bytes": 285,
+      "sha256": "e6332b60f84a86db952e5011cfa418e080a2a56fe37135166c7fbeda6036f1a4",
+      "git_tracked": true,
+      "decision": "include",
+      "role": "train",
+      "imports": [],
+      "local_references": [
+        "runs/smoke"
+      ]
+    },
+    {
+      "path": "train/data.py",
+      "bytes": 5464,
+      "sha256": "0988f6dc71cc65895c5ec949429c47fd97098e1381ee51cc02fba12d983d54d4",
+      "git_tracked": true,
+      "decision": "include",
+      "role": "train",
+      "imports": [
+        "common.paths",
+        "json",
+        "math",
+        "numpy",
+        "os",
+        "pathlib",
+        "sys",
+        "torch"
+      ],
+      "local_references": []
+    },
+    {
+      "path": "train/deterministic_train.py",
+      "bytes": 1543,
+      "sha256": "c8bf0e5f207f771668ebf86f7a430667bcb28764c2b7dd108ef9e4b21192da47",
+      "git_tracked": false,
+      "decision": "include",
+      "role": "train",
+      "imports": [
+        "common.data_contracts",
+        "os",
+        "pathlib",
+        "sys",
+        "torch",
+        "train",
+        "train.train"
+      ],
+      "local_references": []
+    },
+    {
+      "path": "train/final_resume_probe.py",
+      "bytes": 14823,
+      "sha256": "5199ca906ebb586eed93a1cf7545f90b7bce2cfe9b07f3a4e68d9c1d6b2ea9cd",
+      "git_tracked": false,
+      "decision": "include",
+      "role": "train",
+      "imports": [
+        "argparse",
+        "common.data_contracts",
+        "datetime",
+        "json",
+        "model.model",
+        "os",
+        "pathlib",
+        "scripts.supervise_main_training",
+        "scripts.tiered_checkpoint_retention",
+        "scripts.verify_final_resume_probe",
+        "sys",
+        "time",
+        "torch",
+        "torch.distributed",
+        "torch.distributed.checkpoint",
+        "torch.distributed.checkpoint.state_dict",
+        "torch.distributed.fsdp",
+        "train.data",
+        "train.deterministic_train",
+        "train.rehearsal",
+        "train.runtime",
+        "train.train"
+      ],
+      "local_references": []
+    },
+    {
+      "path": "train/monitored.py",
+      "bytes": 8950,
+      "sha256": "675449e390b8a0ec274039223c5fbd785158c652b2b2309b9cee6131150813c4",
+      "git_tracked": false,
+      "decision": "include",
+      "role": "train",
+      "imports": [
+        "argparse",
+        "common.data_contracts",
+        "json",
+        "os",
+        "pathlib",
+        "scripts.plan_main_training",
+        "sys",
+        "time",
+        "tokenizers",
+        "torch",
+        "torch.distributed",
+        "train",
+        "train.deterministic_train",
+        "train.parallel_contract",
+        "train.probe",
+        "train.rehearsal"
+      ],
+      "local_references": []
+    },
+    {
+      "path": "train/parallel_contract.py",
+      "bytes": 3998,
+      "sha256": "54918aed1ff849bd7a22b0baf2e2f019ef8cde61772bc871ecd8fdf683c2ae62",
+      "git_tracked": false,
+      "decision": "include",
+      "role": "train",
+      "imports": [
+        "common.data_contracts",
+        "concurrent.futures",
+        "json",
+        "os",
+        "pathlib",
+        "time",
+        "train.runtime"
+      ],
+      "local_references": []
+    },
+    {
+      "path": "train/probe.py",
+      "bytes": 9103,
+      "sha256": "d96f30fb910517511001e084e6afb975c8524f5e6546dedd175f10962925032f",
+      "git_tracked": false,
+      "decision": "include",
+      "role": "train",
+      "imports": [
+        "common.data_contracts",
+        "copy",
+        "data.tokenize_shards",
+        "json",
+        "math",
+        "pathlib"
+      ],
+      "local_references": []
+    },
+    {
+      "path": "train/rehearsal.py",
+      "bytes": 13520,
+      "sha256": "b9448d8e20a9cd65db582038ee990ee6b9b801ccbaa60c9f3168a7e6459e0543",
+      "git_tracked": false,
+      "decision": "include",
+      "role": "train",
+      "imports": [
+        "argparse",
+        "common.data_contracts",
+        "json",
+        "math",
+        "os",
+        "pathlib",
+        "sys",
+        "time",
+        "tokenizers",
+        "torch",
+        "torch.distributed",
+        "train",
+        "train.deterministic_train",
+        "train.parallel_contract",
+        "train.probe",
+        "train.runtime"
+      ],
+      "local_references": []
+    },
+    {
+      "path": "train/runtime.py",
+      "bytes": 4156,
+      "sha256": "56a918a827d4b16dc924e3e32b86e7546eacdeebb3c7f90c47ffc2c074afa0ba",
+      "git_tracked": false,
+      "decision": "include",
+      "role": "train",
+      "imports": [
+        "common.data_contracts",
+        "json",
+        "math",
+        "pathlib",
+        "torch",
+        "torch.distributed"
+      ],
+      "local_references": []
+    },
+    {
+      "path": "train/train.py",
+      "bytes": 9908,
+      "sha256": "c4a948e5701cd5d3f61dc0903ef9506b8af1149a3ab3df36a706417a21a61904",
+      "git_tracked": true,
+      "decision": "include",
+      "role": "train",
+      "imports": [
+        "argparse",
+        "common.data_contracts",
+        "datetime",
+        "json",
+        "math",
+        "model.model",
+        "os",
+        "pathlib",
+        "shutil",
+        "sys",
+        "time",
+        "torch",
+        "torch.distributed",
+        "torch.distributed.checkpoint",
+        "torch.distributed.checkpoint.state_dict",
+        "torch.distributed.fsdp",
+        "train.data",
+        "train.runtime"
+      ],
+      "local_references": [
+        "data/tokens/mix.json",
+        "runs/smoke"
+      ]
+    }
+  ],
+  "scope": "Source tree snapshot, not dataset content",
+  "exclusions": [
+    "corpus payloads",
+    "tokenizer vocabulary artifact",
+    "token binaries",
+    "SQLite databases",
+    "checkpoints",
+    "unreviewed logs",
+    "private repository history",
+    "internal agent/session instructions"
+  ]
+}

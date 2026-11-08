@@ -1,0 +1,205 @@
+{
+  "source_sha256": "b8de4875c54e01c3f180259586d053462aa16e8cb4840d226919dae37992b199",
+  "files": [
+    {
+      "path": "data/dedup/exact_v1/clean/fineweb2_ko/000_00004.parquet",
+      "bytes": 4593328404,
+      "rows": 2686527,
+      "sha256": "55e74b557283150ca40e6ed56843d0ed562cd45501917a21613517eced395636"
+    },
+    {
+      "path": "data/dedup/exact_v1/clean/fineweb2_ko/000_00002.parquet",
+      "bytes": 4591583457,
+      "rows": 2685262,
+      "sha256": "cd09e86ac13e68a3d32075cc8a55fcee2be7d8ad1cd71d9ad134dc54b5ea71f8"
+    },
+    {
+      "path": "data/dedup/exact_v1/clean/fineweb2_ko/000_00003.parquet",
+      "bytes": 4590459380,
+      "rows": 2687556,
+      "sha256": "355bba2a70c84146387b3873495908ce8901898b2ea664387f46612988713950"
+    },
+    {
+      "path": "data/dedup/exact_v1/clean/fineweb2_ko/000_00001.parquet",
+      "bytes": 4590361616,
+      "rows": 2682951,
+      "sha256": "1ec6d512236f0ebd2f0b8d973f9f63d022098f56a54e4eb9fde96f81c16ca58b"
+    },
+    {
+      "path": "data/dedup/exact_v1/clean/fineweb2_ko/000_00000.parquet",
+      "bytes": 4589097871,
+      "rows": 2682500,
+      "sha256": "9eeb5e32358509319ef2bb77eb7702fff3282a5975ff944bf6a4362fa96bc661"
+    },
+    {
+      "path": "data/dedup/exact_v1/clean/fineweb2_ko/001_00003.parquet",
+      "bytes": 4585080202,
+      "rows": 2709055,
+      "sha256": "a69157657fd825fc906fbfa0fd5fefc2f47e5d69a086d430f86344429b280f01"
+    },
+    {
+      "path": "data/dedup/exact_v1/clean/fineweb2_ko/001_00000.parquet",
+      "bytes": 4583342846,
+      "rows": 2712942,
+      "sha256": "6b7e30e4ebee6518a66f9ce8c9bb08e5d1e5b5ec8d220b053f52cc718e1657a6"
+    },
+    {
+      "path": "data/dedup/exact_v1/clean/fineweb2_ko/001_00001.parquet",
+      "bytes": 4582856506,
+      "rows": 2714701,
+      "sha256": "e5f4f0eb6c4a3a1d46144b21429f13c752ab51804fdcacf02c1fd5ef5550298c"
+    },
+    {
+      "path": "data/dedup/exact_v1/clean/fineweb2_ko/001_00004.parquet",
+      "bytes": 4582710640,
+      "rows": 2713861,
+      "sha256": "5a67b58fa9ff5573e0b314f4beb27d134c41b3e1ea7a660ac9fb508a5d829ace"
+    },
+    {
+      "path": "data/dedup/exact_v1/clean/fineweb2_ko/001_00002.parquet",
+      "bytes": 4581979478,
+      "rows": 2716756,
+      "sha256": "db77f0bfba5f6f71fe32ad45b915ca79d6ce2c9cd4a83c126239edcb5581cf44"
+    },
+    {
+      "path": "data/dedup/exact_v1/clean/fineweb2_ko/002_00003.parquet",
+      "bytes": 4579203582,
+      "rows": 2704016,
+      "sha256": "f57d3d3becde541a1bd1f5a0481cc40c5ca10f990cd5c40f89ffae02768e1eb2"
+    },
+    {
+      "path": "data/dedup/exact_v1/clean/fineweb2_ko/002_00002.parquet",
+      "bytes": 4576515081,
+      "rows": 2698148,
+      "sha256": "ece6c0f7ecb963874f133f833b4814ecdcfc4c782e71247581a45a0369a0885e"
+    },
+    {
+      "path": "data/dedup/exact_v1/clean/fineweb2_ko/002_00000.parquet",
+      "bytes": 4576459906,
+      "rows": 2704005,
+      "sha256": "f4b128093594401fb19f58d4d973fb2ca0520204f602fb990129983a9f61e683"
+    },
+    {
+      "path": "data/dedup/exact_v1/clean/fineweb2_ko/002_00004.parquet",
+      "bytes": 4576216299,
+      "rows": 2699159,
+      "sha256": "0c2356b33dfb8ecc51c334be48d54fc4af3a8e311a830701ac6b4c06f6a5d774"
+    },
+    {
+      "path": "data/dedup/exact_v1/clean/fineweb2_ko/002_00001.parquet",
+      "bytes": 4575384185,
+      "rows": 2701532,
+      "sha256": "8145434458641b7be0e7699ff7886dbfa1d26e90f0c258a03ee7d5763e98f88e"
+    },
+    {
+      "path": "data/dedup/exact_v1/clean/fineweb2_ko/003_00004.parquet",
+      "bytes": 4568271160,
+      "rows": 2666725,
+      "sha256": "68d415f52c6654f292135d107647166e4811d5f15b0985cfffd05daa5147b3ae"
+    },
+    {
+      "path": "data/dedup/exact_v1/clean/fineweb2_ko/003_00002.parquet",
+      "bytes": 4565146016,
+      "rows": 2667134,
+      "sha256": "86a56aa3e668e9d08d95c89d6469cef3fb29b7136217c6dd72d0c17d2ea59fd3"
+    },
+    {
+      "path": "data/dedup/exact_v1/clean/fineweb2_ko/003_00003.parquet",
+      "bytes": 4563837179,
+      "rows": 2663599,
+      "sha256": "c2a371a0d32367e2662d3f02074dbce8112509230771c7dd9b6f4dcdfff59b9a"
+    },
+    {
+      "path": "data/dedup/exact_v1/clean/fineweb2_ko/003_00000.parquet",
+      "bytes": 4563809367,
+      "rows": 2668360,
+      "sha256": "c47165f2e0d4d7a451cb6053c6a2c0bffeb56adce6fcb330f498dce47ec9535c"
+    },
+    {
+      "path": "data/dedup/exact_v1/clean/fineweb2_ko/003_00001.parquet",
+      "bytes": 4563456306,
+      "rows": 2668907,
+      "sha256": "d863f647414a6f7c05ed514a40104127b85fa9e4612e652151488344203944e8"
+    },
+    {
+      "path": "data/dedup/exact_v1/clean/fineweb2_ko/004_00000.parquet",
+      "bytes": 1794110825,
+      "rows": 1039454,
+      "sha256": "227a66b43597a39d8ef732d6e42412abad9549f72b991b13a8dcab43a6e6d7ce"
+    },
+    {
+      "path": "data/dedup/exact_v1/clean/fineweb2_ko/004_00001.parquet",
+      "bytes": 1729637567,
+      "rows": 999107,
+      "sha256": "53fb89448c718a2036ae7208880e8a9dfbd4a07985ef04b62fc83ece89a00485"
+    },
+    {
+      "path": "data/dedup/exact_v1/clean/fineweb2_ko/004_00002.parquet",
+      "bytes": 1660607939,
+      "rows": 960388,
+      "sha256": "610f2de2dd9915385a267db77f77b58211ae7b997b250bc622c07aafc33f766a"
+    },
+    {
+      "path": "data/dedup/exact_v1/clean/fineweb2_ko/004_00003.parquet",
+      "bytes": 1616679497,
+      "rows": 933616,
+      "sha256": "056445ee28829a6f51f987e8d564c65c4213e120e8aa7b331c382cc67cf34ada"
+    },
+    {
+      "path": "data/dedup/exact_v1/clean/fineweb2_ko/004_00004.parquet",
+      "bytes": 1554157543,
+      "rows": 898153,
+      "sha256": "e9200f8afffb82b37026e58f413e70edfe006cd68243b10562e7439684ee997f"
+    },
+    {
+      "path": "data/dedup/exact_v1/clean/fineweb_edu/000_00000.parquet",
+      "bytes": 1414503862,
+      "rows": 724012,
+      "sha256": "861232e30ba15b88fc65c8859e6296359f2a6e1f049d4148c1fcd0667b873bf9"
+    },
+    {
+      "path": "data/dedup/exact_v1/clean/fineweb_edu/000_00001.parquet",
+      "bytes": 1409045371,
+      "rows": 722271,
+      "sha256": "053ed4c17a1336295fbaaabca974fff9b9f82956602876070691bb698db9360e"
+    },
+    {
+      "path": "data/dedup/exact_v1/clean/fineweb_edu/000_00002.parquet",
+      "bytes": 1405168077,
+      "rows": 721765,
+      "sha256": "1101c986d0601f070940d5a75293f9adbf9c3ac826a56c0b723dc5704ce7a4c2"
+    },
+    {
+      "path": "data/dedup/exact_v1/clean/fineweb_edu/000_00003.parquet",
+      "bytes": 1396978681,
+      "rows": 715072,
+      "sha256": "cea58df0b8c6901178434ce3a307fd344a073b7930ac4cff3fbe44bf4ceeb58c"
+    },
+    {
+      "path": "data/dedup/exact_v1/clean/fineweb_edu/000_00004.parquet",
+      "bytes": 1383776666,
+      "rows": 707876,
+      "sha256": "b17f0364aee5cce69722e8ece9fe5e17480db9f2b38f96380b060c87c8c3fac8"
+    },
+    {
+      "path": "data/dedup/exact_v1/clean/fineweb_edu/000_00005.parquet",
+      "bytes": 1382390786,
+      "rows": 708346,
+      "sha256": "f21f56e8dc61bf41027f1f92d2a7e4d5c59d7d12e5c998923d81f4be07574296"
+    },
+    {
+      "path": "data/dedup/exact_v1/clean/fineweb_edu/000_00006.parquet",
+      "bytes": 1377635029,
+      "rows": 705656,
+      "sha256": "d6b7d2ef7dbc8a55fa6be618bb4e65437b937ec997d0e39abc4913f9d442d90a"
+    }
+  ],
+  "order": [
+    16,
+    32,
+    32,
+    16
+  ],
+  "code_sha256": "edc1afdc94117fcdf566a3123e0687aafca0a9f19b4abaa15efb509f12dd54b4",
+  "scope": "Largest selected audited files, existing host cache, repeated worker configurations. Shared host with local SQLite sweep; not cold-storage or all-source throughput."
+}

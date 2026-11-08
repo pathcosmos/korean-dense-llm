@@ -1,0 +1,68 @@
+{
+  "status": "measurement_complete",
+  "ram": {
+    "status": "experimental_performance_only",
+    "rayon": 16,
+    "documents": 132305,
+    "utf8_bytes": 536881956,
+    "preload_seconds": 2.7323669139295816,
+    "bpe_seconds": 73.50148827093653,
+    "total_preload_train_seconds": 76.23385518486612,
+    "semantic_id": "502e5d88bc5101cef45aacecb8ad361ff0cf4942a69c1a5e960fde5a9cea7d6d",
+    "tokenizer_sha256": "e45286d0f0fa5bee51e7b9519fc2acaec3611f2b980b69331cd64d21ce12c4d7",
+    "max_rss_kib": 5745128,
+    "scope": "Same512MiB experimental input; RAM loading is charged, preceding frame SHA verification excluded as in streaming measurement."
+  },
+  "stream": {
+    "status": "experimental_performance_only",
+    "rayon": 16,
+    "train_seconds": 65.46063541807234,
+    "tokenizer_sha256": "e45286d0f0fa5bee51e7b9519fc2acaec3611f2b980b69331cd64d21ce12c4d7",
+    "semantic_id": "502e5d88bc5101cef45aacecb8ad361ff0cf4942a69c1a5e960fde5a9cea7d6d",
+    "max_rss_kib": 5090948,
+    "probe_roundtrips": 256,
+    "vocab": 65536,
+    "case": "bpe_16",
+    "supervisor_seconds": 68.72444569505751,
+    "sampled_group_peak_rss_bytes": 5223170048,
+    "main_before": {
+      "unix": 1793968203.3627608,
+      "phase": "ingest",
+      "rows": 62462801,
+      "main_state": "running",
+      "main_peak_rss_bytes": 50102964224
+    },
+    "main_after": {
+      "unix": 1793968272.0908356,
+      "phase": "ingest",
+      "rows": 63032333,
+      "main_state": "running",
+      "main_peak_rss_bytes": 50552680448
+    }
+  },
+  "execution": {
+    "cases": [
+      "ram"
+    ],
+    "elapsed_seconds": 80.61707566818222,
+    "sampled_peak_rss_bytes": 5892624384,
+    "main_before": {
+      "unix": 1793968374.4662266,
+      "phase": "ingest",
+      "rows": 63887557,
+      "main_state": "running",
+      "main_peak_rss_bytes": 51228872704
+    },
+    "main_after": {
+      "unix": 1793968455.0784242,
+      "phase": "ingest",
+      "rows": 64565475,
+      "main_state": "running",
+      "main_peak_rss_bytes": 51761299456
+    },
+    "main_rows_per_second": 8409.620626496251
+  },
+  "ram_vs_stream_speedup": 0.8586819498939303,
+  "production_adoption": "pending",
+  "scope": "One matched RAM vs streaming observation; production adoption pending."
+}

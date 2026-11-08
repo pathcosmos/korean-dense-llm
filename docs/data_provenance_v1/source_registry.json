@@ -1,0 +1,242 @@
+{
+  "schema_version": 1,
+  "reviewed_utc": "2026-11-07T04:01:13.378053+00:00",
+  "source_manifest_sha256": "b8de4875c54e01c3f180259586d053462aa16e8cb4840d226919dae37992b199",
+  "content_inventory_id": "94b095033a33f3452a9678563df0ef894c7cfa4b0c6da242637a20e3d2fffaff",
+  "scope": "source-level provenance and redistribution-condition review; not per-document clearance",
+  "upload_authorized": false,
+  "sources": [
+    {
+      "source": "wiki_ko",
+      "repository": "wikimedia/wikipedia",
+      "dataset_url": "https://huggingface.co/datasets/wikimedia/wikipedia",
+      "pinned_revision": "b04c8d1ceb2f5cd4588862100d08de323dccfbaa",
+      "pinned_card_url": "https://huggingface.co/datasets/wikimedia/wikipedia/blob/b04c8d1ceb2f5cd4588862100d08de323dccfbaa/README.md",
+      "selected_subset": "20231101.ko: all 3 selected shards",
+      "final_files": 3,
+      "final_documents": 455397,
+      "final_bytes": 529810285,
+      "declared_license_interpreted_from_card": [
+        "cc-by-sa-3.0",
+        "gfdl"
+      ],
+      "hf_api_license_value": [
+        "cc-by-sa-3.0",
+        "gfdl"
+      ],
+      "license_scope": "HF card label differs from Wikimedia 2023 transition to CC BY-SA 4.0; article attribution and exceptions must be checked",
+      "redistribution_review_status": "not_cleared_for_public_text_release",
+      "requirements_or_unresolved_items": [
+        "restore article ID/URL/title and attribution history",
+        "prepare CC BY-SA 4.0-compatible notices and modification description; check exceptions",
+        "do not use HF 3.0 tag alone or assume GFDL covers every article"
+      ],
+      "dataset_level_provenance": "recorded",
+      "document_level_provenance": "original URL/row metadata absent in final text,h; restoration pending",
+      "underlying_rights_verified": false,
+      "card_evidence": [
+        {
+          "url": "https://huggingface.co/datasets/wikimedia/wikipedia/raw/b04c8d1ceb2f5cd4588862100d08de323dccfbaa/README.md",
+          "final_url": "https://huggingface.co/datasets/wikimedia/wikipedia/raw/b04c8d1ceb2f5cd4588862100d08de323dccfbaa/README.md",
+          "path": "docs/data_provenance_v1/evidence/wiki_ko_pinned_README.md",
+          "bytes": 130835,
+          "sha256": "a0f2055ac612f924721e9981fa2a49a18adec1c67cc8026f6c97d12f17211b21",
+          "retrieved_utc": "2026-11-07T03:54:45.626537+00:00"
+        }
+      ]
+    },
+    {
+      "source": "fineweb2_ko",
+      "repository": "HuggingFaceFW/fineweb-2",
+      "dataset_url": "https://huggingface.co/datasets/HuggingFaceFW/fineweb-2",
+      "pinned_revision": "af9c13333eb981300149d5ca60a8e9d659b276b9",
+      "pinned_card_url": "https://huggingface.co/datasets/HuggingFaceFW/fineweb-2/blob/af9c13333eb981300149d5ca60a8e9d659b276b9/README.md",
+      "selected_subset": "data/kor_Hang/train: 25 shards",
+      "final_files": 25,
+      "final_documents": 58664414,
+      "final_bytes": 99934292852,
+      "declared_license_interpreted_from_card": [
+        "odc-by-1.0"
+      ],
+      "hf_api_license_value": "odc-by",
+      "license_scope": "database rights; individual website text rights are separate",
+      "redistribution_review_status": "not_cleared_for_public_text_release",
+      "requirements_or_unresolved_items": [
+        "ODC-By database attribution/license notice",
+        "Common Crawl terms",
+        "restore URL/crawl provenance",
+        "review basis for underlying text redistribution"
+      ],
+      "dataset_level_provenance": "recorded",
+      "document_level_provenance": "original URL/row metadata absent in final text,h; restoration pending",
+      "underlying_rights_verified": false,
+      "card_evidence": [
+        {
+          "url": "https://huggingface.co/datasets/HuggingFaceFW/fineweb-2/raw/af9c13333eb981300149d5ca60a8e9d659b276b9/README.md",
+          "final_url": "https://huggingface.co/datasets/HuggingFaceFW/fineweb-2/raw/af9c13333eb981300149d5ca60a8e9d659b276b9/README.md",
+          "path": "docs/data_provenance_v1/evidence/fineweb2_ko_pinned_README.md",
+          "bytes": 329009,
+          "sha256": "08d38a7e5cb7aae4b6fcc284fec4dd636ea653e4e5e74ef66a60d9616005b090",
+          "retrieved_utc": "2026-11-07T03:54:45.629772+00:00"
+        }
+      ]
+    },
+    {
+      "source": "hplt_ko",
+      "repository": "HPLT/HPLT2.0_cleaned",
+      "dataset_url": "https://huggingface.co/datasets/HPLT/HPLT2.0_cleaned",
+      "pinned_revision": "d1324a5283f762ee62c2a5c81de08fc6450ea540",
+      "pinned_card_url": "https://huggingface.co/datasets/HPLT/HPLT2.0_cleaned/blob/d1324a5283f762ee62c2a5c81de08fc6450ea540/README.md",
+      "selected_subset": "kor_Hang: 464 shards",
+      "final_files": 464,
+      "final_documents": 27434232,
+      "final_bytes": 62424084702,
+      "declared_license_interpreted_from_card": [
+        "cc0-1.0"
+      ],
+      "hf_api_license_value": "cc0-1.0",
+      "license_scope": "packaging only; underlying text not owned by HPLT",
+      "redistribution_review_status": "not_cleared_for_public_text_release",
+      "requirements_or_unresolved_items": [
+        "CC0 packaging scope declaration",
+        "restore URL/crawl provenance",
+        "review basis for underlying text redistribution",
+        "independent takedown procedure"
+      ],
+      "dataset_level_provenance": "recorded",
+      "document_level_provenance": "original URL/row metadata absent in final text,h; restoration pending",
+      "underlying_rights_verified": false,
+      "card_evidence": [
+        {
+          "url": "https://huggingface.co/datasets/HPLT/HPLT2.0_cleaned/raw/d1324a5283f762ee62c2a5c81de08fc6450ea540/README.md",
+          "final_url": "https://huggingface.co/datasets/HPLT/HPLT2.0_cleaned/raw/d1324a5283f762ee62c2a5c81de08fc6450ea540/README.md",
+          "path": "docs/data_provenance_v1/evidence/hplt_ko_pinned_README.md",
+          "bytes": 63144,
+          "sha256": "8c38b823150d89ca031bee43c835bda1bfff05886a84e00353557555c6336232",
+          "retrieved_utc": "2026-11-07T03:54:45.886963+00:00"
+        }
+      ]
+    },
+    {
+      "source": "fineweb_edu",
+      "repository": "HuggingFaceFW/fineweb-edu",
+      "dataset_url": "https://huggingface.co/datasets/HuggingFaceFW/fineweb-edu",
+      "pinned_revision": "87f09149ef4734204d70ed1d046ddc9ca3f2b8f9",
+      "pinned_card_url": "https://huggingface.co/datasets/HuggingFaceFW/fineweb-edu/blob/87f09149ef4734204d70ed1d046ddc9ca3f2b8f9/README.md",
+      "selected_subset": "sample/100BT: first 56 sorted shards, not complete 100BT sample",
+      "final_files": 56,
+      "final_documents": 34704836,
+      "final_bytes": 67328879744,
+      "declared_license_interpreted_from_card": [
+        "odc-by-1.0"
+      ],
+      "hf_api_license_value": "odc-by",
+      "license_scope": "database rights; individual website text rights are separate",
+      "redistribution_review_status": "not_cleared_for_public_text_release",
+      "requirements_or_unresolved_items": [
+        "ODC-By database attribution/license notice",
+        "Common Crawl terms",
+        "restore URL/crawl provenance",
+        "review basis for underlying text redistribution"
+      ],
+      "dataset_level_provenance": "recorded",
+      "document_level_provenance": "original URL/row metadata absent in final text,h; restoration pending",
+      "underlying_rights_verified": false,
+      "card_evidence": [
+        {
+          "url": "https://huggingface.co/datasets/HuggingFaceFW/fineweb-edu/raw/87f09149ef4734204d70ed1d046ddc9ca3f2b8f9/README.md",
+          "final_url": "https://huggingface.co/datasets/HuggingFaceFW/fineweb-edu/raw/87f09149ef4734204d70ed1d046ddc9ca3f2b8f9/README.md",
+          "path": "docs/data_provenance_v1/evidence/fineweb_edu_pinned_README.md",
+          "bytes": 26354,
+          "sha256": "a0cc8998a20499432b28b6575f3046b714938eb8e11b8d59a1d25ddf3716061e",
+          "retrieved_utc": "2026-11-07T03:54:45.529155+00:00"
+        }
+      ]
+    },
+    {
+      "source": "owm",
+      "repository": "open-web-math/open-web-math",
+      "dataset_url": "https://huggingface.co/datasets/open-web-math/open-web-math",
+      "pinned_revision": "fde8ef8de2300f5e778f56261843dab89f230815",
+      "pinned_card_url": "https://huggingface.co/datasets/open-web-math/open-web-math/blob/fde8ef8de2300f5e778f56261843dab89f230815/README.md",
+      "selected_subset": "data: 114 shards",
+      "final_files": 114,
+      "final_documents": 5448920,
+      "final_bytes": 13950498334,
+      "declared_license_interpreted_from_card": [
+        "odc-by-1.0"
+      ],
+      "hf_api_license_value": null,
+      "license_scope": "database rights; explicitly does not change underlying text licenses",
+      "redistribution_review_status": "not_cleared_for_public_text_release",
+      "requirements_or_unresolved_items": [
+        "ODC-By database attribution/license notice",
+        "Common Crawl terms",
+        "restore URL/date/metadata",
+        "check underlying site/document attribution and redistribution basis"
+      ],
+      "dataset_level_provenance": "recorded",
+      "document_level_provenance": "original URL/row metadata absent in final text,h; restoration pending",
+      "underlying_rights_verified": false,
+      "card_evidence": [
+        {
+          "url": "https://huggingface.co/datasets/open-web-math/open-web-math/raw/fde8ef8de2300f5e778f56261843dab89f230815/README.md",
+          "final_url": "https://huggingface.co/datasets/open-web-math/open-web-math/raw/fde8ef8de2300f5e778f56261843dab89f230815/README.md",
+          "path": "docs/data_provenance_v1/evidence/owm_pinned_README.md",
+          "bytes": 4802,
+          "sha256": "c4497f073cd93dfe104d8960f152fcbcbecd97ca1a7245a4cf66b8b8c79936ec",
+          "retrieved_utc": "2026-11-07T03:54:46.661304+00:00"
+        }
+      ],
+      "api_metadata_caveat": "license nested under dataset_info in README; explicit ODC-By body clause reviewed, API top-level null"
+    },
+    {
+      "source": "github_code_v1",
+      "repository": "codeparrot/github-code",
+      "dataset_url": "https://huggingface.co/datasets/codeparrot/github-code",
+      "pinned_revision": "b5661e6b17396364b2bcf8e68977b0d28e1ebd19",
+      "pinned_card_url": "https://huggingface.co/datasets/codeparrot/github-code/blob/b5661e6b17396364b2bcf8e68977b0d28e1ebd19/README.md",
+      "selected_subset": "64 evenly spread shards out of 1126",
+      "final_files": 64,
+      "final_documents": 2148459,
+      "final_bytes": 3584084955,
+      "declared_license_interpreted_from_card": [
+        "other"
+      ],
+      "hf_api_license_value": [
+        "other"
+      ],
+      "license_scope": "repository metadata labels; not per-file rights verification",
+      "redistribution_review_status": "not_cleared_for_public_text_release",
+      "requirements_or_unresolved_items": [
+        "recover original repository version and file license scope",
+        "retain copyright/permission/license text and applicable NOTICE",
+        "check per-file exceptions and third-party copied code",
+        "current repository URL is not a historical commit"
+      ],
+      "dataset_level_provenance": "recorded",
+      "document_level_provenance": "source_row/repo/path/body hash retained; original Git commit and notices not verified",
+      "underlying_rights_verified": false,
+      "card_evidence": [
+        {
+          "url": "https://huggingface.co/datasets/codeparrot/github-code/raw/b5661e6b17396364b2bcf8e68977b0d28e1ebd19/README.md",
+          "final_url": "https://huggingface.co/datasets/codeparrot/github-code/raw/b5661e6b17396364b2bcf8e68977b0d28e1ebd19/README.md",
+          "path": "docs/data_provenance_v1/evidence/github_code_v1_pinned_README.md",
+          "bytes": 7537,
+          "sha256": "141558bced78257f8406eb9bc564c2042ef8e777b43a635e9eaafa566eefcbf1",
+          "retrieved_utc": "2026-11-07T03:54:46.796226+00:00"
+        }
+      ],
+      "observed_license_counts": {
+        "apache-2.0": 860734,
+        "bsd-2-clause": 52643,
+        "bsd-3-clause": 219397,
+        "cc0-1.0": 56749,
+        "isc": 12855,
+        "mit": 925474,
+        "unlicense": 20607
+      },
+      "repository_count": 530331
+    }
+  ]
+}

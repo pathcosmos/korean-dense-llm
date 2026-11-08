@@ -1,0 +1,7 @@
+{
+  "status": "reviewed_bounded_performance",
+  "report_sha256": "7340b030c113782dfe047ad5bdfcbe1eb96d0549dee78bf8fb3179481b80ba2c",
+  "decision": "Use verified local reader and native TEMP aggregation for F4 distribution staging",
+  "scope": "Same3M-row fixture; local whole campaign102.643s including50.589s copy vs NFS campaign incomplete at240s. Cache/storage state differs; not a universal speedup.",
+  "native_aggregation_speedup_vs_reference": 2.0674936743947936
+}

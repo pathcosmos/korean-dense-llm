@@ -1,0 +1,3 @@
+{"model": "tiny", "seq_len": 1024, "micro_bsz": 16, "global_tokens": 262144, "max_steps": 60,
+ "warmup": 10, "ckpt_every": 30, "eval_every": 30, "log_every": 5,
+ "mix": "/tmp/smoke_tokens/mix.json", "holdout": ["/tmp/smoke_tokens/hold.bin"], "out_dir": "runs/smoke", "compile": false}

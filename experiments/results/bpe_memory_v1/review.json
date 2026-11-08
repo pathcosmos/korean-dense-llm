@@ -1,0 +1,6 @@
+{
+  "status": "reviewed_bounded_performance",
+  "report_sha256": "9e6139a25e641eb35f8705604249d5396d4a322b3e28ce1f95d350af0de42df3",
+  "conclusion": "RAM preload not selected:76.234s including2.732s preload vs65.461s streaming. Same tokenizer semantic ID. One paired observation, not universal behavior.",
+  "production_adoption": "pending_final_input_pilot"
+}

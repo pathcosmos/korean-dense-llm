@@ -1,0 +1,79 @@
+{
+  "status": "passed",
+  "scope": "Final train-only3GB raw65536 tokenizer plus independent eval checks; full tokenization pending.",
+  "f4_report_sha256": "39e1afd49fc2b1188fbbc3375b4e3a6507c21c6246254f550f0b63e88edcdb02",
+  "distribution_sha256": "a1fd1c5e4ea600edc8dd76143992357f556cd74c64e62c93a20b0e13f9dc43d6",
+  "distribution_review_sha256": "c5cbb5443d77d6e13225069f43bf9ed35f2764675eb66e863fc7f3f782c5359d",
+  "train_sample_manifest_sha256": "ceb2dc2889bdece887cc2d76c0576f6c8b8cd41a5e44d38f608f1a2520b5464b",
+  "train_sample_stats": {
+    "fineweb_edu": {
+      "documents": 247165,
+      "utf8_bytes": 1050006794,
+      "target_bytes": 1050000000,
+      "overshoot_bytes": 6794
+    },
+    "wiki_ko": {
+      "documents": 1404,
+      "utf8_bytes": 5056567,
+      "target_bytes": 5056014,
+      "overshoot_bytes": 553
+    },
+    "fineweb2_ko": {
+      "documents": 241253,
+      "utf8_bytes": 912637253,
+      "target_bytes": 912635485,
+      "overshoot_bytes": 1768
+    },
+    "hplt_ko": {
+      "documents": 116847,
+      "utf8_bytes": 582312552,
+      "target_bytes": 582308501,
+      "overshoot_bytes": 4051
+    },
+    "github_code_v1": {
+      "documents": 28345,
+      "utf8_bytes": 125086724,
+      "target_bytes": 125085560,
+      "overshoot_bytes": 1164
+    },
+    "owm": {
+      "documents": 64083,
+      "utf8_bytes": 324914584,
+      "target_bytes": 324914440,
+      "overshoot_bytes": 144
+    }
+  },
+  "quality_manifest_sha256": "13dd813a0f34c9b5f61cc97b1c08a3bbd70d1aaa55429223a0a0075fdc4387d9",
+  "quality_stats": {
+    "wiki_ko": {
+      "documents": 1024,
+      "utf8_bytes": 3938110
+    },
+    "fineweb2_ko": {
+      "documents": 1024,
+      "utf8_bytes": 3977479
+    },
+    "hplt_ko": {
+      "documents": 1024,
+      "utf8_bytes": 5628434
+    },
+    "fineweb_edu": {
+      "documents": 1024,
+      "utf8_bytes": 5070233
+    },
+    "github_code_v1": {
+      "documents": 1024,
+      "utf8_bytes": 6736322
+    },
+    "owm": {
+      "documents": 1024,
+      "utf8_bytes": 6967418
+    }
+  },
+  "tokenizer": "tokenizer/candidate_v1/tokenizer.json",
+  "tokenizer_sha256": "050f9b43cf964f0c3b29ae443a1c2eae46cb2ee0022cc010bcfea3d26acf1706",
+  "tokenizer_check_sha256": "7f58cbf9034439eba0056c509283459e4065730a1dc40bf44729762b623fa142",
+  "efficiency_sha256": "9259a8e0f92f166874fa8ff6d0618207aedf59cff30d10334f1262f3e96a5640",
+  "elapsed_seconds": 5862.786512098042,
+  "next": "Actual whole-file tokenization pilot with this final tokenizer, then token counts/storage/mix validation."
+}

@@ -1,0 +1,49 @@
+{
+  "decision": "proceed",
+  "counts_sha256": "f949834d2de13a0e82de3af0da605987a3593b70052841919327c4fb5c7d0b61",
+  "contract_sha256": "d92c7e2bdce12669b6e86fdd2a1398199c69cbb9cc5118b8fa6f492d184f1380",
+  "policy_sha256": "6b6d103bab39a0d37e6ea168c37c7b2adb340853f30a6238a17b44ba30e186ef",
+  "coordinator_contract_sha256": "32b2726886e2446f427af1bb307df107f56c150097bfe0aaaefb62f512b88009",
+  "weights": {
+    "wiki_ko": 0.005,
+    "fineweb2_ko": 0.29464577095297395,
+    "hplt_ko": 0.20035422904702602,
+    "fineweb_edu": 0.3,
+    "github_code_v1": 0.1,
+    "owm": 0.1
+  },
+  "expected_exposures": {
+    "10485760000": {
+      "wiki_ko": 0.17888168641517804,
+      "fineweb2_ko": 0.07301548403287357,
+      "hplt_ko": 0.07301548403287357,
+      "fineweb_edu": 0.08726109959708772,
+      "github_code_v1": 0.2617032135391392,
+      "owm": 0.10767674383725889
+    },
+    "119537664000": {
+      "wiki_ko": 2.0392512251330297,
+      "fineweb2_ko": 0.8323765179747588,
+      "hplt_ko": 0.8323765179747588,
+      "fineweb_edu": 0.9947765354068001,
+      "github_code_v1": 2.983416634346187,
+      "owm": 1.2275148797447515
+    }
+  },
+  "actual_train_tokens": {
+    "wiki_ko": 293092049,
+    "fineweb2_ko": 42314104743,
+    "hplt_ko": 28772888225,
+    "fineweb_edu": 36049603025,
+    "owm": 9738184520,
+    "github_code_v1": 4006737196
+  },
+  "category_holdout_tokens": {
+    "ko": 722669578,
+    "en": 364507519,
+    "code": 42420481,
+    "math": 98186477
+  },
+  "prior_wiki_5pct_exposures": 20.3925122513303,
+  "reason": "Actual full train-token counts used. Category targets ko/en/code/math50/30/10/10. Wiki capped at0.5% and3 main-target exposures rather than copying the old5% proposal; other Korean weights proportional to actual web train tokens. Exposure and50M ko/en holdout guards passed. Sampler is replacement sampling; exposures are expectations, not strict epochs."
+}

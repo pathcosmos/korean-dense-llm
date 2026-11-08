@@ -1,0 +1,8 @@
+{
+  "status": "passed_actual_token_prefetch",
+  "files": 1452,
+  "bytes": 244804787626,
+  "elapsed_seconds": 763.1397362758871,
+  "peak_rss_bytes": 1604911104,
+  "scope": "Readonly complete token prefetch/SHA against immutable native output records. Original F6 verification remains unchanged and mandatory. No cold/warm speed guarantee."
+}

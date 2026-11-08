@@ -1,0 +1,16 @@
+{
+  "status": "passed",
+  "source_run": "${PROJECT_ROOT}/runs/f4_full_v2",
+  "counts": {
+    "eval": 1290840,
+    "train": 127565418
+  },
+  "total_documents": 128856258,
+  "manifest": "${PROJECT_ROOT}/data/datasets/final_v2.split/manifest.json",
+  "manifest_sha256": "1acf2a294450bf6fdb6ed9c6a3c7c051b4da7b4b2c295d030fed984635018958",
+  "database_sha256": "2ed5a374f292d087353809a260ca4d268537182f3a22eca0e9db20e93c1c7eb7",
+  "database_bytes": 115775635456,
+  "publisher_verification": "builder integrity/leakage/counts; copy SHA identity; final independent SplitSelection coverage/integrity/leakage",
+  "receipt_verification": "Pinned run/manifest/publication/source/code/count bindings verified. Publisher performed full DB SHA, integrity, cross-split and row coverage checks.",
+  "next": "Review source distributions and final train-only tokenizer inputs. No next-stage job launched by observer."
+}
