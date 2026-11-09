@@ -1,0 +1,12 @@
+{
+ "agreement_all_reviewed": 1.0,
+ "agreement_random_controls": 1.0,
+ "basis": "JUN이 검수 시트 44건을 확인하고 수정 없음이라고 답함 (대화, 2026-11-09). 문서별 서명이나 기록이 아니라 구두 확인이다.",
+ "corrected": 0,
+ "kappa_all_reviewed": 1.0,
+ "kappa_random_controls": null,
+ "note": "agreement_all_reviewed is biased low because most reviewed documents were selected as doubtful; the random-control slice is the unbiased estimate (small n). Spans and tags are not edited by this path.",
+ "random_controls": 8,
+ "reviewed": 44,
+ "reviewer": "jun"
+}

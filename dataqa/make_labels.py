@@ -207,7 +207,7 @@ def apply_review(labels, review):
                 control_pairs.append(pair)
         out.append(r)
     agree = lambda ps: None if not ps else sum(a == b for a, b in ps) / len(ps)
-    report = dict(reviewer=reviewer, reviewed=len(reviewed), corrected=len(corrections), random_controls=len(controls),
+    report = dict(reviewer=reviewer, basis=review.get('basis'), reviewed=len(reviewed), corrected=len(corrections), random_controls=len(controls),
                   agreement_all_reviewed=agree(pairs), kappa_all_reviewed=cohen_kappa(pairs),
                   agreement_random_controls=agree(control_pairs), kappa_random_controls=cohen_kappa(control_pairs),
                   note='agreement_all_reviewed is biased low because most reviewed documents were selected as doubtful; '

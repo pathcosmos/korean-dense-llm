@@ -49,7 +49,7 @@ class DerivedTagsAndReviewTest(unittest.TestCase):
                                           ('reject', 'short'), ('keep', None), ('keep', None)])]
 
     def test_apply_review_marks_sources_and_reports_agreement(self):
-        review = dict(reviewer='jun', reviewed=['r0', 'r1', 'r2', 'r3'], random_controls=['r0', 'r2'],
+        review = dict(reviewer='jun', basis='verbal confirmation', reviewed=['r0', 'r1', 'r2', 'r3'], random_controls=['r0', 'r2'],
                       corrections={'r1': dict(label='keep', reject_reason=None)})
         out, rep = make_labels.apply_review(self.LABELS, review)
         by = {r['id']: r for r in out}
@@ -58,6 +58,7 @@ class DerivedTagsAndReviewTest(unittest.TestCase):
         self.assertEqual(by['r0']['label_source'], 'human_review:jun:agreed')
         self.assertEqual(by['r5']['label_source'], 'agent_prelabel:A')            # unreviewed stays untouched
         self.assertEqual((rep['reviewed'], rep['corrected']), (4, 1))
+        self.assertEqual(rep['basis'], 'verbal confirmation')
         self.assertAlmostEqual(rep['agreement_all_reviewed'], 0.75)
         self.assertEqual(rep['agreement_random_controls'], 1.0)
         self.assertIn('biased low', rep['note'])
