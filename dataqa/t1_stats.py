@@ -121,12 +121,46 @@ def run(strata, seed, out):
     print('wrote', out)
 
 
+ROWS = [
+    ('ko_reject_keep', '필터 통과 (기본 정책)'), ('ko_reject_short', 'short (<200자)'),
+    ('ko_reject_dup_lines', 'dup_lines'), ('ko_reject_ngram_rep', 'ngram_rep'),
+    ('ko_reject_low_hangul_ratio', 'low_hangul_ratio'), ('ko_reject_few_hangul', 'few_hangul'),
+    ('ko_reject_low_alnum', 'low_alnum'), ('ko_reject_bad_encoding', 'bad_encoding'), ('ko_reject_long', 'long'),
+    ('not_nfc', 'NFC가 아닌 원문'), ('conjoining_jamo', '분해형(conjoining) 자모 포함'),
+    ('nfd_rejected', 'NFD 때문에 거절 (NFC면 통과)'), ('special_literal_any', '특수 토큰 문자열 포함'),
+    ('eos_literal', '<|eos|> 문자열 포함'), ('email_placeholder', '데이터셋 이메일 플레이스홀더 포함'),
+    ('pii_email', '플레이스홀더가 아닌 이메일 형태'), ('pii_phone', '전화번호 형태 (기본 정규식)'),
+    ('pii_rrn', '주민번호 형태 (기본 정규식)'), ('pii_default_changed', '기본 마스킹이 문서를 바꿈'),
+    ('pii_opt_in_differs', 'opt-in 정책의 마스킹이 기본과 다름')]
+
+
+def render_markdown(result):
+    cols = result['sources']
+    head = '| 항목 | ' + ' | '.join(f"{c['source']} ({c['docs']:,}문서/{c['row_groups']}그룹)" for c in cols) + ' |'
+    out = [f"seed {result['seed']} · 단위: {result['unit']}", '', head, '|---|' + '---|' * len(cols)]
+    for key, label in ROWS:
+        cells = []
+        for c in cols:
+            r = c['rates'].get(key)
+            cells.append('0' if r is None else f"{r['rate'] * 100:.2f}% [{r['ci95'][0] * 100:.2f}, {r['ci95'][1] * 100:.2f}] (n={r['count']})")
+        out.append(f'| {label} | ' + ' | '.join(cells) + ' |')
+    out.append('| 문서 길이 중앙값 / p90 (자) | ' + ' | '.join(f"{c['chars_median']:.0f} / {c['chars_p90']}" for c in cols) + ' |')
+    out += ['', '"0"은 표본에서 한 건도 관찰되지 않았다는 뜻이다(전체에 없다는 보증이 아니다).', ''] + [f'- {x}' for x in result['caveats']]
+    return '\n'.join(out) + '\n'
+
+
 def main(argv=None):
     ap = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     ap.add_argument('--strata', default='fineweb2_ko:60,hplt_ko:60,wiki_ko:40', help='source:row_groups,...')
     ap.add_argument('--seed', type=int, default=20261109)
-    ap.add_argument('--out', required=True)
+    ap.add_argument('--out')
+    ap.add_argument('--render', help='print a markdown table for an existing result JSON and exit')
     a = ap.parse_args(argv)
+    if a.render:
+        print(render_markdown(json.loads(Path(a.render).read_text(encoding='utf-8'))))
+        return
+    if not a.out:
+        ap.error('--out is required unless --render is used')
     run(real_sample.parse_strata(a.strata, 'fineweb2_ko', 0), a.seed, a.out)
 
 

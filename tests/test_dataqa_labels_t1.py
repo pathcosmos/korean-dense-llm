@@ -110,6 +110,14 @@ class T1StatsTest(unittest.TestCase):
         self.assertEqual(c['ko_reject_short'], 1)
         self.assertEqual(len(lengths), 7)
 
+    def test_render_markdown_has_zero_cells_and_caveats(self):
+        c, ls = t1_stats.scan_group([seed_gold.prose(random.Random(5), 300)], [])
+        summary = t1_stats.summarize([c, c], ls * 2, 'fineweb2_ko', 25)
+        md = t1_stats.render_markdown(dict(seed=1, unit='row group', caveats=['caveat-one'], sources=[summary]))
+        self.assertIn('| 필터 통과 (기본 정책) | 100.00%', md)
+        self.assertIn('| NFD 때문에 거절 (NFC면 통과) | 0 |', md)
+        self.assertIn('- caveat-one', md)
+
     def test_bootstrap_resamples_groups_and_is_deterministic(self):
         groups = [dict(docs=100, a=10), dict(docs=100, a=10), dict(docs=100, a=90)]
         r = t1_stats.bootstrap(groups, 'a', boots=500, seed=1)
