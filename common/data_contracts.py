@@ -9,9 +9,24 @@ from common.paths import PROJECT_ROOT
 SCHEMA_VERSION = 1
 
 
+CODE_ROOT = Path(__file__).resolve().parents[1]   # the checkout that is actually running
+
+
 def resolve(path):
+    """Relative paths are data/artifact paths under PROJECT_ROOT.
+
+    Code is different: producers hash the source files they run, and PROJECT_ROOT may point at an output
+    tree outside the checkout. A relative *.py path that does not exist under PROJECT_ROOT therefore
+    resolves to the running checkout (CODE_ROOT). A copy under PROJECT_ROOT still wins (historical behaviour),
+    and when PROJECT_ROOT is the checkout nothing changes. Only .py files take this fallback.
+    """
     p = Path(path)
-    return p if p.is_absolute() else Path(PROJECT_ROOT) / p
+    if p.is_absolute():
+        return p
+    under_root = Path(PROJECT_ROOT) / p
+    if p.suffix == '.py' and not under_root.exists() and (CODE_ROOT / p).is_file():
+        return CODE_ROOT / p
+    return under_root
 
 
 def relative(path):

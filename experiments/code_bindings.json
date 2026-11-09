@@ -61,8 +61,8 @@
       "json_key": "/code/common/data_contracts.py",
       "original_code_path": "common/data_contracts.py",
       "sha256": "9b7af55f00602532e369f5880bd5da2bfc80290c19a387aad2862f2a6052ac63",
-      "resolution": "current_source_exact",
-      "public_path": "common/data_contracts.py"
+      "resolution": "historical_object_exact",
+      "public_path": "experiments/code/9b7af55f00602532e369f5880bd5da2bfc80290c19a387aad2862f2a6052ac63.py"
     },
     {
       "report": "experiments/results/actual_deterministic_batch_v1/contract.json",
@@ -141,8 +141,8 @@
       "json_key": "/code/common/data_contracts.py",
       "original_code_path": "common/data_contracts.py",
       "sha256": "9b7af55f00602532e369f5880bd5da2bfc80290c19a387aad2862f2a6052ac63",
-      "resolution": "current_source_exact",
-      "public_path": "common/data_contracts.py"
+      "resolution": "historical_object_exact",
+      "public_path": "experiments/code/9b7af55f00602532e369f5880bd5da2bfc80290c19a387aad2862f2a6052ac63.py"
     },
     {
       "report": "experiments/results/actual_train_validation_v1/contract.json",
@@ -317,8 +317,8 @@
       "json_key": "/code/common/data_contracts.py",
       "original_code_path": "common/data_contracts.py",
       "sha256": "9b7af55f00602532e369f5880bd5da2bfc80290c19a387aad2862f2a6052ac63",
-      "resolution": "current_source_exact",
-      "public_path": "common/data_contracts.py"
+      "resolution": "historical_object_exact",
+      "public_path": "experiments/code/9b7af55f00602532e369f5880bd5da2bfc80290c19a387aad2862f2a6052ac63.py"
     },
     {
       "report": "experiments/results/bpe_memory_v1/contract.json",
@@ -557,8 +557,8 @@
       "json_key": "/code/common/data_contracts.py",
       "original_code_path": "common/data_contracts.py",
       "sha256": "9b7af55f00602532e369f5880bd5da2bfc80290c19a387aad2862f2a6052ac63",
-      "resolution": "current_source_exact",
-      "public_path": "common/data_contracts.py"
+      "resolution": "historical_object_exact",
+      "public_path": "experiments/code/9b7af55f00602532e369f5880bd5da2bfc80290c19a387aad2862f2a6052ac63.py"
     },
     {
       "report": "experiments/results/compile_pair_v1/contract.json",
@@ -749,8 +749,8 @@
       "json_key": "/code/common/data_contracts.py",
       "original_code_path": "common/data_contracts.py",
       "sha256": "9b7af55f00602532e369f5880bd5da2bfc80290c19a387aad2862f2a6052ac63",
-      "resolution": "current_source_exact",
-      "public_path": "common/data_contracts.py"
+      "resolution": "historical_object_exact",
+      "public_path": "experiments/code/9b7af55f00602532e369f5880bd5da2bfc80290c19a387aad2862f2a6052ac63.py"
     },
     {
       "report": "experiments/results/f4_full_v2/contract.json",
@@ -901,8 +901,8 @@
       "json_key": "/code/common/data_contracts.py",
       "original_code_path": "common/data_contracts.py",
       "sha256": "9b7af55f00602532e369f5880bd5da2bfc80290c19a387aad2862f2a6052ac63",
-      "resolution": "current_source_exact",
-      "public_path": "common/data_contracts.py"
+      "resolution": "historical_object_exact",
+      "public_path": "experiments/code/9b7af55f00602532e369f5880bd5da2bfc80290c19a387aad2862f2a6052ac63.py"
     },
     {
       "report": "experiments/results/f5_tokenizer_v1/contract.json",
@@ -1021,8 +1021,8 @@
       "json_key": "/code/common/data_contracts.py",
       "original_code_path": "common/data_contracts.py",
       "sha256": "9b7af55f00602532e369f5880bd5da2bfc80290c19a387aad2862f2a6052ac63",
-      "resolution": "current_source_exact",
-      "public_path": "common/data_contracts.py"
+      "resolution": "historical_object_exact",
+      "public_path": "experiments/code/9b7af55f00602532e369f5880bd5da2bfc80290c19a387aad2862f2a6052ac63.py"
     },
     {
       "report": "experiments/results/f6_tokens_v1/contract.json",
@@ -1085,8 +1085,8 @@
       "json_key": "/code/common/data_contracts.py",
       "original_code_path": "common/data_contracts.py",
       "sha256": "9b7af55f00602532e369f5880bd5da2bfc80290c19a387aad2862f2a6052ac63",
-      "resolution": "current_source_exact",
-      "public_path": "common/data_contracts.py"
+      "resolution": "historical_object_exact",
+      "public_path": "experiments/code/9b7af55f00602532e369f5880bd5da2bfc80290c19a387aad2862f2a6052ac63.py"
     },
     {
       "report": "experiments/results/f6_tokens_v1/contract.json",
@@ -1373,8 +1373,8 @@
       "json_key": "/code/common/data_contracts.py",
       "original_code_path": "common/data_contracts.py",
       "sha256": "9b7af55f00602532e369f5880bd5da2bfc80290c19a387aad2862f2a6052ac63",
-      "resolution": "current_source_exact",
-      "public_path": "common/data_contracts.py"
+      "resolution": "historical_object_exact",
+      "public_path": "experiments/code/9b7af55f00602532e369f5880bd5da2bfc80290c19a387aad2862f2a6052ac63.py"
     },
     {
       "report": "experiments/results/monitored_3b_validation_v1/contract.json",
@@ -1805,8 +1805,8 @@
       "json_key": "/code/common/data_contracts.py",
       "original_code_path": "common/data_contracts.py",
       "sha256": "9b7af55f00602532e369f5880bd5da2bfc80290c19a387aad2862f2a6052ac63",
-      "resolution": "current_source_exact",
-      "public_path": "common/data_contracts.py"
+      "resolution": "historical_object_exact",
+      "public_path": "experiments/code/9b7af55f00602532e369f5880bd5da2bfc80290c19a387aad2862f2a6052ac63.py"
     },
     {
       "report": "experiments/results/next_stage_optimization_v1/contract.json",
@@ -1933,8 +1933,8 @@
       "json_key": "/code/common/data_contracts.py",
       "original_code_path": "common/data_contracts.py",
       "sha256": "9b7af55f00602532e369f5880bd5da2bfc80290c19a387aad2862f2a6052ac63",
-      "resolution": "current_source_exact",
-      "public_path": "common/data_contracts.py"
+      "resolution": "historical_object_exact",
+      "public_path": "experiments/code/9b7af55f00602532e369f5880bd5da2bfc80290c19a387aad2862f2a6052ac63.py"
     },
     {
       "report": "experiments/results/nfs_checkpoint_validation_v1/contract.json",
@@ -2381,8 +2381,8 @@
       "json_key": "/code/common/data_contracts.py",
       "original_code_path": "common/data_contracts.py",
       "sha256": "9b7af55f00602532e369f5880bd5da2bfc80290c19a387aad2862f2a6052ac63",
-      "resolution": "current_source_exact",
-      "public_path": "common/data_contracts.py"
+      "resolution": "historical_object_exact",
+      "public_path": "experiments/code/9b7af55f00602532e369f5880bd5da2bfc80290c19a387aad2862f2a6052ac63.py"
     },
     {
       "report": "experiments/results/split_cache_sweep_v1/contract.json",
@@ -2421,8 +2421,8 @@
       "json_key": "/code_sha256/common/data_contracts.py",
       "original_code_path": "common/data_contracts.py",
       "sha256": "9b7af55f00602532e369f5880bd5da2bfc80290c19a387aad2862f2a6052ac63",
-      "resolution": "current_source_exact",
-      "public_path": "common/data_contracts.py"
+      "resolution": "historical_object_exact",
+      "public_path": "experiments/code/9b7af55f00602532e369f5880bd5da2bfc80290c19a387aad2862f2a6052ac63.py"
     },
     {
       "report": "experiments/results/split_cache_sweep_v1/report.json",
@@ -2477,8 +2477,8 @@
       "json_key": "/code/common/data_contracts.py",
       "original_code_path": "common/data_contracts.py",
       "sha256": "9b7af55f00602532e369f5880bd5da2bfc80290c19a387aad2862f2a6052ac63",
-      "resolution": "current_source_exact",
-      "public_path": "common/data_contracts.py"
+      "resolution": "historical_object_exact",
+      "public_path": "experiments/code/9b7af55f00602532e369f5880bd5da2bfc80290c19a387aad2862f2a6052ac63.py"
     },
     {
       "report": "experiments/results/split_distribution_indexed_v1/contract.json",
@@ -2533,8 +2533,8 @@
       "json_key": "/code/common/data_contracts.py",
       "original_code_path": "common/data_contracts.py",
       "sha256": "9b7af55f00602532e369f5880bd5da2bfc80290c19a387aad2862f2a6052ac63",
-      "resolution": "current_source_exact",
-      "public_path": "common/data_contracts.py"
+      "resolution": "historical_object_exact",
+      "public_path": "experiments/code/9b7af55f00602532e369f5880bd5da2bfc80290c19a387aad2862f2a6052ac63.py"
     },
     {
       "report": "experiments/results/split_distribution_native3m_local_v1/contract.json",
@@ -2581,8 +2581,8 @@
       "json_key": "/code/common/data_contracts.py",
       "original_code_path": "common/data_contracts.py",
       "sha256": "9b7af55f00602532e369f5880bd5da2bfc80290c19a387aad2862f2a6052ac63",
-      "resolution": "current_source_exact",
-      "public_path": "common/data_contracts.py"
+      "resolution": "historical_object_exact",
+      "public_path": "experiments/code/9b7af55f00602532e369f5880bd5da2bfc80290c19a387aad2862f2a6052ac63.py"
     },
     {
       "report": "experiments/results/split_distribution_native3m_v1/contract.json",
@@ -2613,8 +2613,8 @@
       "json_key": "/code/common/data_contracts.py",
       "original_code_path": "common/data_contracts.py",
       "sha256": "9b7af55f00602532e369f5880bd5da2bfc80290c19a387aad2862f2a6052ac63",
-      "resolution": "current_source_exact",
-      "public_path": "common/data_contracts.py"
+      "resolution": "historical_object_exact",
+      "public_path": "experiments/code/9b7af55f00602532e369f5880bd5da2bfc80290c19a387aad2862f2a6052ac63.py"
     },
     {
       "report": "experiments/results/split_hotpath_v1/contract.json",
