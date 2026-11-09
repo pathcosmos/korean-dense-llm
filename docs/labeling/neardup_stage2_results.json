@@ -1,0 +1,3909 @@
+{
+ "pair_judgments": [
+  {
+   "id": "P0000",
+   "kind": "cross_hplt_to_fw2",
+   "stratum": "0.50-0.65",
+   "J": 0.5,
+   "label": "different",
+   "confidence": "high",
+   "why": "상품과 내용 다르고 교환반품 안내 틀만 공통"
+  },
+  {
+   "id": "P0003",
+   "kind": "cross_hplt_to_fw2",
+   "stratum": "0.50-0.65",
+   "J": 0.523,
+   "label": "different",
+   "confidence": "high",
+   "why": "쇼핑몰 공통 틀, 상품 설명 다름"
+  },
+  {
+   "id": "P0005",
+   "kind": "cross_hplt_to_fw2",
+   "stratum": "0.50-0.65",
+   "J": 0.547,
+   "label": "same",
+   "confidence": "low",
+   "why": "질문·답변 동일, 차단 안내문만 추가"
+  },
+  {
+   "id": "P0010",
+   "kind": "cross_hplt_to_fw2",
+   "stratum": "0.50-0.65",
+   "J": 0.508,
+   "label": "partial",
+   "confidence": "high",
+   "why": "A 질문들이 B에 포함, B에 질문 더 많음"
+  },
+  {
+   "id": "P0011",
+   "kind": "cross_hplt_to_fw2",
+   "stratum": "0.50-0.65",
+   "J": 0.508,
+   "label": "different",
+   "confidence": "low",
+   "why": "같은 템플릿, 검색 날짜와 호텔 목록 다름"
+  },
+  {
+   "id": "P0012",
+   "kind": "cross_hplt_to_fw2",
+   "stratum": "0.50-0.65",
+   "J": 0.609,
+   "label": "same",
+   "confidence": "high",
+   "why": "도입 문장만 다르고 본문 동일"
+  },
+  {
+   "id": "P0013",
+   "kind": "cross_hplt_to_fw2",
+   "stratum": "0.50-0.65",
+   "J": 0.578,
+   "label": "different",
+   "confidence": "high",
+   "why": "파워서플라이 리뷰 대 게시판 목록"
+  },
+  {
+   "id": "P0017",
+   "kind": "cross_hplt_to_fw2",
+   "stratum": "0.50-0.65",
+   "J": 0.602,
+   "label": "partial",
+   "confidence": "low",
+   "why": "머리·꼬리 동일, 한쪽 중간 1400자 가량 없음"
+  },
+  {
+   "id": "P0019",
+   "kind": "cross_hplt_to_fw2",
+   "stratum": "0.50-0.65",
+   "J": 0.594,
+   "label": "different",
+   "confidence": "high",
+   "why": "다른 상품, 정책 문구만 공통"
+  },
+  {
+   "id": "P0022",
+   "kind": "cross_hplt_to_fw2",
+   "stratum": "0.50-0.65",
+   "J": 0.547,
+   "label": "partial",
+   "confidence": "low",
+   "why": "같은 기사나 A가 첫·끝 단락 생략"
+  },
+  {
+   "id": "P0023",
+   "kind": "cross_hplt_to_fw2",
+   "stratum": "0.50-0.65",
+   "J": 0.562,
+   "label": "partial",
+   "confidence": "low",
+   "why": "공통 문단 있으나 B가 훨씬 길고 내용 다름"
+  },
+  {
+   "id": "P0025",
+   "kind": "cross_hplt_to_fw2",
+   "stratum": "0.50-0.65",
+   "J": 0.523,
+   "label": "different",
+   "confidence": "high",
+   "why": "상품이 다르고 반품 규정 틀만 공통"
+  },
+  {
+   "id": "P0027",
+   "kind": "cross_hplt_to_fw2",
+   "stratum": "0.50-0.65",
+   "J": 0.602,
+   "label": "partial",
+   "confidence": "low",
+   "why": "B에 사진 소개 도입부가 추가로 더 있음"
+  },
+  {
+   "id": "P0029",
+   "kind": "cross_hplt_to_fw2",
+   "stratum": "0.50-0.65",
+   "J": 0.594,
+   "label": "partial",
+   "confidence": "low",
+   "why": "다른 모델 상품, 업체 소개 공유"
+  },
+  {
+   "id": "P0031",
+   "kind": "cross_hplt_to_fw2",
+   "stratum": "0.50-0.65",
+   "J": 0.578,
+   "label": "partial",
+   "confidence": "low",
+   "why": "첫 문단 공통, 나머지 내용은 서로 다름"
+  },
+  {
+   "id": "P0032",
+   "kind": "cross_hplt_to_fw2",
+   "stratum": "0.50-0.65",
+   "J": 0.641,
+   "label": "different",
+   "confidence": "low",
+   "why": "머리 기사가 서로 다름, 꼬리만 공통"
+  },
+  {
+   "id": "P0033",
+   "kind": "cross_hplt_to_fw2",
+   "stratum": "0.50-0.65",
+   "J": 0.523,
+   "label": "different",
+   "confidence": "high",
+   "why": "다른 상품 설명, 틀만 공통"
+  },
+  {
+   "id": "P0034",
+   "kind": "cross_hplt_to_fw2",
+   "stratum": "0.50-0.65",
+   "J": 0.594,
+   "label": "different",
+   "confidence": "high",
+   "why": "다른 상품, 결제안내 문구만 공통"
+  },
+  {
+   "id": "P0035",
+   "kind": "cross_hplt_to_fw2",
+   "stratum": "0.50-0.65",
+   "J": 0.641,
+   "label": "same",
+   "confidence": "high",
+   "why": "같은 기사, 머리글·꼬리말 차이"
+  },
+  {
+   "id": "P0038",
+   "kind": "cross_hplt_to_fw2",
+   "stratum": "0.50-0.65",
+   "J": 0.523,
+   "label": "different",
+   "confidence": "high",
+   "why": "서로 다른 상품, 쇼핑몰 공통 문구만 같음"
+  },
+  {
+   "id": "P0040",
+   "kind": "cross_hplt_to_fw2",
+   "stratum": "0.50-0.65",
+   "J": 0.602,
+   "label": "same",
+   "confidence": "high",
+   "why": "같은 넥슨 월드컵 기사, B에 요약 도입"
+  },
+  {
+   "id": "P0043",
+   "kind": "cross_hplt_to_fw2",
+   "stratum": "0.50-0.65",
+   "J": 0.523,
+   "label": "same",
+   "confidence": "high",
+   "why": "동일 포스트, 사이드바만 다름"
+  },
+  {
+   "id": "P0047",
+   "kind": "cross_hplt_to_fw2",
+   "stratum": "0.50-0.65",
+   "J": 0.648,
+   "label": "same",
+   "confidence": "high",
+   "why": "동일 블로그 글, 하단 목록만 다름"
+  },
+  {
+   "id": "P0048",
+   "kind": "cross_hplt_to_fw2",
+   "stratum": "0.50-0.65",
+   "J": 0.562,
+   "label": "partial",
+   "confidence": "high",
+   "why": "A는 B의 앞부분 일부만"
+  },
+  {
+   "id": "P0049",
+   "kind": "cross_hplt_to_fw2",
+   "stratum": "0.50-0.65",
+   "J": 0.555,
+   "label": "same",
+   "confidence": "high",
+   "why": "기계번역 스팸 변형, 단어 몇 개 차이"
+  },
+  {
+   "id": "P0051",
+   "kind": "cross_hplt_to_fw2",
+   "stratum": "0.50-0.65",
+   "J": 0.523,
+   "label": "different",
+   "confidence": "high",
+   "why": "다른 원단 설명, 관리 문구 템플릿만 공통"
+  },
+  {
+   "id": "P0053",
+   "kind": "cross_hplt_to_fw2",
+   "stratum": "0.50-0.65",
+   "J": 0.523,
+   "label": "different",
+   "confidence": "high",
+   "why": "다른 앨범, 쇼핑몰 꼬리말만 공통"
+  },
+  {
+   "id": "P0055",
+   "kind": "cross_hplt_to_fw2",
+   "stratum": "0.50-0.65",
+   "J": 0.594,
+   "label": "different",
+   "confidence": "high",
+   "why": "상품이 다르고 결제 안내 틀만 공통"
+  },
+  {
+   "id": "P0059",
+   "kind": "cross_hplt_to_fw2",
+   "stratum": "0.50-0.65",
+   "J": 0.562,
+   "label": "same",
+   "confidence": "high",
+   "why": "사진 캡션 차이 외 동일"
+  },
+  {
+   "id": "P0060",
+   "kind": "cross_hplt_to_fw2",
+   "stratum": "0.50-0.65",
+   "J": 0.609,
+   "label": "different",
+   "confidence": "high",
+   "why": "서로 다른 상품, 공통 반품 안내 틀"
+  },
+  {
+   "id": "P0062",
+   "kind": "cross_hplt_to_fw2",
+   "stratum": "0.50-0.65",
+   "J": 0.586,
+   "label": "different",
+   "confidence": "low",
+   "why": "본문 주제 다르고 상용구·링크만 공통"
+  },
+  {
+   "id": "P0063",
+   "kind": "cross_hplt_to_fw2",
+   "stratum": "0.50-0.65",
+   "J": 0.523,
+   "label": "different",
+   "confidence": "high",
+   "why": "업체명과 본문 다르고 주소찾기 틀만 공통"
+  },
+  {
+   "id": "P0064",
+   "kind": "cross_hplt_to_fw2",
+   "stratum": "0.50-0.65",
+   "J": 0.531,
+   "label": "partial",
+   "confidence": "low",
+   "why": "A는 B 일부 발췌로 보임, 꼬리 다름"
+  },
+  {
+   "id": "P0067",
+   "kind": "cross_hplt_to_fw2",
+   "stratum": "0.50-0.65",
+   "J": 0.547,
+   "label": "partial",
+   "confidence": "low",
+   "why": "같은 레포트, 분량·끝부분 차이"
+  },
+  {
+   "id": "P0068",
+   "kind": "cross_hplt_to_fw2",
+   "stratum": "0.50-0.65",
+   "J": 0.562,
+   "label": "different",
+   "confidence": "high",
+   "why": "다른 상품, 공통 쇼핑몰 틀"
+  },
+  {
+   "id": "P0075",
+   "kind": "cross_hplt_to_fw2",
+   "stratum": "0.50-0.65",
+   "J": 0.539,
+   "label": "different",
+   "confidence": "high",
+   "why": "다른 상품, 공통 반품 안내 틀"
+  },
+  {
+   "id": "P0076",
+   "kind": "cross_hplt_to_fw2",
+   "stratum": "0.50-0.65",
+   "J": 0.523,
+   "label": "different",
+   "confidence": "high",
+   "why": "다른 지역 페이지, 인근 정보 다름"
+  },
+  {
+   "id": "P0078",
+   "kind": "cross_hplt_to_fw2",
+   "stratum": "0.50-0.65",
+   "J": 0.641,
+   "label": "same",
+   "confidence": "high",
+   "why": "같은 레포트, 머리말 꼬리말 차이"
+  },
+  {
+   "id": "P0079",
+   "kind": "cross_hplt_to_fw2",
+   "stratum": "0.50-0.65",
+   "J": 0.562,
+   "label": "different",
+   "confidence": "high",
+   "why": "다른 지역 호스텔 목록, 틀만 공통"
+  },
+  {
+   "id": "P0080",
+   "kind": "cross_hplt_to_fw2",
+   "stratum": "0.50-0.65",
+   "J": 0.547,
+   "label": "different",
+   "confidence": "high",
+   "why": "기사 내용이 다르고 꼬리 문구만 공통"
+  },
+  {
+   "id": "P0084",
+   "kind": "cross_hplt_to_fw2",
+   "stratum": "0.50-0.65",
+   "J": 0.625,
+   "label": "same",
+   "confidence": "high",
+   "why": "동일 기사, 메뉴 유무 차이"
+  },
+  {
+   "id": "P0085",
+   "kind": "cross_hplt_to_fw2",
+   "stratum": "0.50-0.65",
+   "J": 0.539,
+   "label": "partial",
+   "confidence": "low",
+   "why": "앞 두 문단 공통, 나머지 문단은 다른 사례"
+  },
+  {
+   "id": "P0087",
+   "kind": "cross_hplt_to_fw2",
+   "stratum": "0.50-0.65",
+   "J": 0.555,
+   "label": "different",
+   "confidence": "high",
+   "why": "서로 다른 기사, 꼬리 공통"
+  },
+  {
+   "id": "P0088",
+   "kind": "cross_hplt_to_fw2",
+   "stratum": "0.50-0.65",
+   "J": 0.531,
+   "label": "different",
+   "confidence": "high",
+   "why": "스키폴 대 스누피 케이크, 쇼핑몰 틀만 공통"
+  },
+  {
+   "id": "P0089",
+   "kind": "cross_hplt_to_fw2",
+   "stratum": "0.50-0.65",
+   "J": 0.586,
+   "label": "different",
+   "confidence": "high",
+   "why": "서로 다른 블로그 글"
+  },
+  {
+   "id": "P0091",
+   "kind": "cross_hplt_to_fw2",
+   "stratum": "0.50-0.65",
+   "J": 0.531,
+   "label": "different",
+   "confidence": "low",
+   "why": "지점별 변형, 등록번호와 대출 상품 다름"
+  },
+  {
+   "id": "P0094",
+   "kind": "cross_hplt_to_fw2",
+   "stratum": "0.50-0.65",
+   "J": 0.516,
+   "label": "different",
+   "confidence": "high",
+   "why": "다른 상품, 쇼핑몰 틀만 공통"
+  },
+  {
+   "id": "P0095",
+   "kind": "cross_hplt_to_fw2",
+   "stratum": "0.50-0.65",
+   "J": 0.641,
+   "label": "different",
+   "confidence": "low",
+   "why": "같은 사건의 다른 기사, 문장과 내용 다름"
+  },
+  {
+   "id": "P0097",
+   "kind": "cross_hplt_to_fw2",
+   "stratum": "0.50-0.65",
+   "J": 0.562,
+   "label": "different",
+   "confidence": "high",
+   "why": "시장보고서 틀만 공통, 제품·내용 다름"
+  },
+  {
+   "id": "P0099",
+   "kind": "cross_hplt_to_fw2",
+   "stratum": "0.50-0.65",
+   "J": 0.648,
+   "label": "same",
+   "confidence": "high",
+   "why": "보이는 본문이 동일, 머리말·꼬리말 차이뿐"
+  },
+  {
+   "id": "P0100",
+   "kind": "cross_hplt_to_fw2",
+   "stratum": "0.65-0.80",
+   "J": 0.727,
+   "label": "partial",
+   "confidence": "low",
+   "why": "앞부분 같고 뒷부분 다른 뉴스 묶음"
+  },
+  {
+   "id": "P0102",
+   "kind": "cross_hplt_to_fw2",
+   "stratum": "0.65-0.80",
+   "J": 0.703,
+   "label": "same",
+   "confidence": "high",
+   "why": "동일 블로그 글, 머리 정보 차이"
+  },
+  {
+   "id": "P0103",
+   "kind": "cross_hplt_to_fw2",
+   "stratum": "0.65-0.80",
+   "J": 0.766,
+   "label": "same",
+   "confidence": "high",
+   "why": "동일 숙소 설명, 문구 소폭 차이"
+  },
+  {
+   "id": "P0104",
+   "kind": "cross_hplt_to_fw2",
+   "stratum": "0.65-0.80",
+   "J": 0.758,
+   "label": "same",
+   "confidence": "high",
+   "why": "같은 레포트, 판매자 정보 차이"
+  },
+  {
+   "id": "P0107",
+   "kind": "cross_hplt_to_fw2",
+   "stratum": "0.65-0.80",
+   "J": 0.773,
+   "label": "same",
+   "confidence": "high",
+   "why": "같은 리뷰 글, 머리말 차이"
+  },
+  {
+   "id": "P0108",
+   "kind": "cross_hplt_to_fw2",
+   "stratum": "0.65-0.80",
+   "J": 0.789,
+   "label": "same",
+   "confidence": "high",
+   "why": "같은 게임 쿠폰 글, 소제목 유무 차이"
+  },
+  {
+   "id": "P0109",
+   "kind": "cross_hplt_to_fw2",
+   "stratum": "0.65-0.80",
+   "J": 0.742,
+   "label": "different",
+   "confidence": "high",
+   "why": "주의사항 템플릿만 공통, 게임 설명 다름"
+  },
+  {
+   "id": "P0110",
+   "kind": "cross_hplt_to_fw2",
+   "stratum": "0.65-0.80",
+   "J": 0.781,
+   "label": "partial",
+   "confidence": "low",
+   "why": "앞부분 동일, 뒷부분 내용이 달라 글자 수 차이 큼"
+  },
+  {
+   "id": "P0111",
+   "kind": "cross_hplt_to_fw2",
+   "stratum": "0.65-0.80",
+   "J": 0.773,
+   "label": "same",
+   "confidence": "high",
+   "why": "같은 레포트, 상업 사이트 꼬리말만 다름"
+  },
+  {
+   "id": "P0114",
+   "kind": "cross_hplt_to_fw2",
+   "stratum": "0.65-0.80",
+   "J": 0.734,
+   "label": "same",
+   "confidence": "high",
+   "why": "줄바꿈 위치만 다른 동일 본문"
+  },
+  {
+   "id": "P0116",
+   "kind": "cross_hplt_to_fw2",
+   "stratum": "0.65-0.80",
+   "J": 0.734,
+   "label": "partial",
+   "confidence": "low",
+   "why": "B에 추가 항목 하나 더 있음"
+  },
+  {
+   "id": "P0117",
+   "kind": "cross_hplt_to_fw2",
+   "stratum": "0.65-0.80",
+   "J": 0.734,
+   "label": "same",
+   "confidence": "low",
+   "why": "동일 인터뷰 기사, 일부 캡션 차이"
+  },
+  {
+   "id": "P0118",
+   "kind": "cross_hplt_to_fw2",
+   "stratum": "0.65-0.80",
+   "J": 0.758,
+   "label": "partial",
+   "confidence": "low",
+   "why": "같은 방침의 다른 개정판, 길이와 날짜 다름"
+  },
+  {
+   "id": "P0120",
+   "kind": "cross_hplt_to_fw2",
+   "stratum": "0.65-0.80",
+   "J": 0.766,
+   "label": "same",
+   "confidence": "high",
+   "why": "같은 레포트, 꼬리 목록만 다름"
+  },
+  {
+   "id": "P0121",
+   "kind": "cross_hplt_to_fw2",
+   "stratum": "0.65-0.80",
+   "J": 0.703,
+   "label": "partial",
+   "confidence": "low",
+   "why": "지속가능성 소개문 겹치나 각자 다른 구간"
+  },
+  {
+   "id": "P0122",
+   "kind": "cross_hplt_to_fw2",
+   "stratum": "0.65-0.80",
+   "J": 0.734,
+   "label": "same",
+   "confidence": "high",
+   "why": "동일 호텔 페이지"
+  },
+  {
+   "id": "P0125",
+   "kind": "cross_hplt_to_fw2",
+   "stratum": "0.65-0.80",
+   "J": 0.781,
+   "label": "same",
+   "confidence": "high",
+   "why": "동일 리뷰, 머리글 차이"
+  },
+  {
+   "id": "P0127",
+   "kind": "cross_hplt_to_fw2",
+   "stratum": "0.65-0.80",
+   "J": 0.781,
+   "label": "same",
+   "confidence": "high",
+   "why": "같은 블로그 글, 푸터만 차이"
+  },
+  {
+   "id": "P0130",
+   "kind": "cross_hplt_to_fw2",
+   "stratum": "0.65-0.80",
+   "J": 0.781,
+   "label": "same",
+   "confidence": "high",
+   "why": "제목과 하단 목록만 다름"
+  },
+  {
+   "id": "P0132",
+   "kind": "cross_hplt_to_fw2",
+   "stratum": "0.65-0.80",
+   "J": 0.727,
+   "label": "same",
+   "confidence": "high",
+   "why": "동일 서평, 머리·꼬리 차이"
+  },
+  {
+   "id": "P0138",
+   "kind": "cross_hplt_to_fw2",
+   "stratum": "0.65-0.80",
+   "J": 0.766,
+   "label": "same",
+   "confidence": "high",
+   "why": "같은 팩트체크 기사, 머리글 차이"
+  },
+  {
+   "id": "P0139",
+   "kind": "cross_hplt_to_fw2",
+   "stratum": "0.65-0.80",
+   "J": 0.781,
+   "label": "same",
+   "confidence": "high",
+   "why": "보이는 본문이 동일, 머리말·꼬리말 차이뿐"
+  },
+  {
+   "id": "P0142",
+   "kind": "cross_hplt_to_fw2",
+   "stratum": "0.65-0.80",
+   "J": 0.727,
+   "label": "same",
+   "confidence": "high",
+   "why": "같은 보도자료, 머리말 차이"
+  },
+  {
+   "id": "P0144",
+   "kind": "cross_hplt_to_fw2",
+   "stratum": "0.65-0.80",
+   "J": 0.75,
+   "label": "partial",
+   "confidence": "low",
+   "why": "운세 기사 공유, A에 스팸 문단 추가"
+  },
+  {
+   "id": "P0145",
+   "kind": "cross_hplt_to_fw2",
+   "stratum": "0.65-0.80",
+   "J": 0.766,
+   "label": "partial",
+   "confidence": "low",
+   "why": "A는 본문+댓글, B는 댓글 위주로 보임"
+  },
+  {
+   "id": "P0147",
+   "kind": "cross_hplt_to_fw2",
+   "stratum": "0.65-0.80",
+   "J": 0.742,
+   "label": "same",
+   "confidence": "high",
+   "why": "동일 자료, 꼬리 안내문 차이"
+  },
+  {
+   "id": "P0148",
+   "kind": "cross_hplt_to_fw2",
+   "stratum": "0.65-0.80",
+   "J": 0.703,
+   "label": "same",
+   "confidence": "low",
+   "why": "같은 앵글포이즈 램프 상품 페이지, 구성 차이"
+  },
+  {
+   "id": "P0149",
+   "kind": "cross_hplt_to_fw2",
+   "stratum": "0.65-0.80",
+   "J": 0.68,
+   "label": "same",
+   "confidence": "low",
+   "why": "같은 본문, 스팸 키워드 머리만 다름"
+  },
+  {
+   "id": "P0151",
+   "kind": "cross_hplt_to_fw2",
+   "stratum": "0.65-0.80",
+   "J": 0.789,
+   "label": "same",
+   "confidence": "high",
+   "why": "동일 기사, 제목 반복 여부만 차이"
+  },
+  {
+   "id": "P0153",
+   "kind": "cross_hplt_to_fw2",
+   "stratum": "0.65-0.80",
+   "J": 0.688,
+   "label": "same",
+   "confidence": "high",
+   "why": "동일 기사, 머리글 차이"
+  },
+  {
+   "id": "P0154",
+   "kind": "cross_hplt_to_fw2",
+   "stratum": "0.65-0.80",
+   "J": 0.68,
+   "label": "partial",
+   "confidence": "low",
+   "why": "앞은 같고 뒤 용어 목록이 다름"
+  },
+  {
+   "id": "P0155",
+   "kind": "cross_hplt_to_fw2",
+   "stratum": "0.65-0.80",
+   "J": 0.758,
+   "label": "different",
+   "confidence": "low",
+   "why": "색상 다른 상품, 상세 템플릿 공통"
+  },
+  {
+   "id": "P0156",
+   "kind": "cross_hplt_to_fw2",
+   "stratum": "0.65-0.80",
+   "J": 0.727,
+   "label": "same",
+   "confidence": "low",
+   "why": "보이는 본문이 동일, 머리말·꼬리말 차이뿐"
+  },
+  {
+   "id": "P0159",
+   "kind": "cross_hplt_to_fw2",
+   "stratum": "0.65-0.80",
+   "J": 0.773,
+   "label": "same",
+   "confidence": "high",
+   "why": "동일 성명서, 제목·꼬리 차이"
+  },
+  {
+   "id": "P0160",
+   "kind": "cross_hplt_to_fw2",
+   "stratum": "0.65-0.80",
+   "J": 0.773,
+   "label": "same",
+   "confidence": "high",
+   "why": "같은 기사, 공유 메뉴 차이"
+  },
+  {
+   "id": "P0163",
+   "kind": "cross_hplt_to_fw2",
+   "stratum": "0.65-0.80",
+   "J": 0.75,
+   "label": "same",
+   "confidence": "high",
+   "why": "보이는 본문이 동일, 머리말·꼬리말 차이뿐"
+  },
+  {
+   "id": "P0164",
+   "kind": "cross_hplt_to_fw2",
+   "stratum": "0.65-0.80",
+   "J": 0.695,
+   "label": "partial",
+   "confidence": "low",
+   "why": "머리·꼬리 같으나 글자 수가 1800 차이"
+  },
+  {
+   "id": "P0166",
+   "kind": "cross_hplt_to_fw2",
+   "stratum": "0.65-0.80",
+   "J": 0.742,
+   "label": "same",
+   "confidence": "high",
+   "why": "동일 레포트, 머리·꼬리말만 다름"
+  },
+  {
+   "id": "P0167",
+   "kind": "cross_hplt_to_fw2",
+   "stratum": "0.65-0.80",
+   "J": 0.719,
+   "label": "partial",
+   "confidence": "low",
+   "why": "같은 논문이나 A가 훨씬 길고 끝부분이 다름"
+  },
+  {
+   "id": "P0171",
+   "kind": "cross_hplt_to_fw2",
+   "stratum": "0.65-0.80",
+   "J": 0.75,
+   "label": "same",
+   "confidence": "high",
+   "why": "같은 스니커 리뷰, A에 글목록 꼬리 추가"
+  },
+  {
+   "id": "P0176",
+   "kind": "cross_hplt_to_fw2",
+   "stratum": "0.65-0.80",
+   "J": 0.797,
+   "label": "same",
+   "confidence": "high",
+   "why": "관련글 링크 유무만 다름"
+  },
+  {
+   "id": "P0180",
+   "kind": "cross_hplt_to_fw2",
+   "stratum": "0.65-0.80",
+   "J": 0.797,
+   "label": "same",
+   "confidence": "low",
+   "why": "제시문 동일, B에 문제 지문 추가"
+  },
+  {
+   "id": "P0184",
+   "kind": "cross_hplt_to_fw2",
+   "stratum": "0.65-0.80",
+   "J": 0.773,
+   "label": "same",
+   "confidence": "high",
+   "why": "같은 커비 문서, 정보상자·단어 차이"
+  },
+  {
+   "id": "P0190",
+   "kind": "cross_hplt_to_fw2",
+   "stratum": "0.65-0.80",
+   "J": 0.75,
+   "label": "same",
+   "confidence": "high",
+   "why": "같은 추도식 기사, 링크 텍스트 차이"
+  },
+  {
+   "id": "P0191",
+   "kind": "cross_hplt_to_fw2",
+   "stratum": "0.65-0.80",
+   "J": 0.789,
+   "label": "same",
+   "confidence": "high",
+   "why": "같은 라디오 대담, 머리말 꼬리말 차이"
+  },
+  {
+   "id": "P0192",
+   "kind": "cross_hplt_to_fw2",
+   "stratum": "0.65-0.80",
+   "J": 0.773,
+   "label": "same",
+   "confidence": "high",
+   "why": "상품 표 유무만 다른 같은 설명"
+  },
+  {
+   "id": "P0194",
+   "kind": "cross_hplt_to_fw2",
+   "stratum": "0.65-0.80",
+   "J": 0.773,
+   "label": "same",
+   "confidence": "high",
+   "why": "같은 블로그 글, 꼬리 라이선스 차이"
+  },
+  {
+   "id": "P0197",
+   "kind": "cross_hplt_to_fw2",
+   "stratum": "0.65-0.80",
+   "J": 0.773,
+   "label": "same",
+   "confidence": "high",
+   "why": "동일 문서, B에 참고 항목만 추가"
+  },
+  {
+   "id": "P0198",
+   "kind": "cross_hplt_to_fw2",
+   "stratum": "0.65-0.80",
+   "J": 0.711,
+   "label": "same",
+   "confidence": "high",
+   "why": "같은 희토류 기사, 문단 배치 차이"
+  },
+  {
+   "id": "P0199",
+   "kind": "cross_hplt_to_fw2",
+   "stratum": "0.65-0.80",
+   "J": 0.688,
+   "label": "partial",
+   "confidence": "high",
+   "why": "같은 부고 기사, B에 추가 단락 존재"
+  },
+  {
+   "id": "P0200",
+   "kind": "cross_hplt_to_fw2",
+   "stratum": "0.80-0.90",
+   "J": 0.867,
+   "label": "same",
+   "confidence": "high",
+   "why": "동일 레시피, 링크 추가"
+  },
+  {
+   "id": "P0201",
+   "kind": "cross_hplt_to_fw2",
+   "stratum": "0.80-0.90",
+   "J": 0.859,
+   "label": "same",
+   "confidence": "low",
+   "why": "동일 안내문, 한쪽에 지원대상 표 추가"
+  },
+  {
+   "id": "P0202",
+   "kind": "cross_hplt_to_fw2",
+   "stratum": "0.80-0.90",
+   "J": 0.844,
+   "label": "partial",
+   "confidence": "low",
+   "why": "꼬리 동일하나 앞부분이 서로 다름"
+  },
+  {
+   "id": "P0203",
+   "kind": "cross_hplt_to_fw2",
+   "stratum": "0.80-0.90",
+   "J": 0.836,
+   "label": "same",
+   "confidence": "high",
+   "why": "사진 캡션 유무만 다름"
+  },
+  {
+   "id": "P0204",
+   "kind": "cross_hplt_to_fw2",
+   "stratum": "0.80-0.90",
+   "J": 0.875,
+   "label": "same",
+   "confidence": "high",
+   "why": "같은 카페 후기, 머리말·꼬리 차이"
+  },
+  {
+   "id": "P0205",
+   "kind": "cross_hplt_to_fw2",
+   "stratum": "0.80-0.90",
+   "J": 0.859,
+   "label": "same",
+   "confidence": "high",
+   "why": "보이는 본문이 동일, 머리말·꼬리말 차이뿐"
+  },
+  {
+   "id": "P0206",
+   "kind": "cross_hplt_to_fw2",
+   "stratum": "0.80-0.90",
+   "J": 0.883,
+   "label": "same",
+   "confidence": "high",
+   "why": "같은 포스코에너지 보도자료, B에 리드 추가"
+  },
+  {
+   "id": "P0207",
+   "kind": "cross_hplt_to_fw2",
+   "stratum": "0.80-0.90",
+   "J": 0.898,
+   "label": "same",
+   "confidence": "high",
+   "why": "동일 스팸 본문, 제목 머리만 다름"
+  },
+  {
+   "id": "P0208",
+   "kind": "cross_hplt_to_fw2",
+   "stratum": "0.80-0.90",
+   "J": 0.82,
+   "label": "same",
+   "confidence": "high",
+   "why": "동일 게시물, 조회수만 다름"
+  },
+  {
+   "id": "P0209",
+   "kind": "cross_hplt_to_fw2",
+   "stratum": "0.80-0.90",
+   "J": 0.891,
+   "label": "same",
+   "confidence": "low",
+   "why": "같은 도서 상품 설명, 표 유무 차이"
+  },
+  {
+   "id": "P0210",
+   "kind": "cross_hplt_to_fw2",
+   "stratum": "0.80-0.90",
+   "J": 0.844,
+   "label": "same",
+   "confidence": "high",
+   "why": "동일 기사, 사진설명 유무"
+  },
+  {
+   "id": "P0211",
+   "kind": "cross_hplt_to_fw2",
+   "stratum": "0.80-0.90",
+   "J": 0.867,
+   "label": "same",
+   "confidence": "high",
+   "why": "같은 글, 머리 꼬리 차이"
+  },
+  {
+   "id": "P0212",
+   "kind": "cross_hplt_to_fw2",
+   "stratum": "0.80-0.90",
+   "J": 0.859,
+   "label": "same",
+   "confidence": "high",
+   "why": "같은 검색결과 모음, 형식만 다름"
+  },
+  {
+   "id": "P0213",
+   "kind": "cross_hplt_to_fw2",
+   "stratum": "0.80-0.90",
+   "J": 0.82,
+   "label": "same",
+   "confidence": "high",
+   "why": "동일 블로그 글, 제목과 관련글 차이"
+  },
+  {
+   "id": "P0214",
+   "kind": "cross_hplt_to_fw2",
+   "stratum": "0.80-0.90",
+   "J": 0.859,
+   "label": "same",
+   "confidence": "high",
+   "why": "도입부만 다르고 가사·본문·결말 동일"
+  },
+  {
+   "id": "P0215",
+   "kind": "cross_hplt_to_fw2",
+   "stratum": "0.80-0.90",
+   "J": 0.898,
+   "label": "same",
+   "confidence": "high",
+   "why": "같은 기사, B에 리드 문장"
+  },
+  {
+   "id": "P0216",
+   "kind": "cross_hplt_to_fw2",
+   "stratum": "0.80-0.90",
+   "J": 0.836,
+   "label": "same",
+   "confidence": "low",
+   "why": "같은 보고서 소개, 일부 분량 차이"
+  },
+  {
+   "id": "P0217",
+   "kind": "cross_hplt_to_fw2",
+   "stratum": "0.80-0.90",
+   "J": 0.867,
+   "label": "same",
+   "confidence": "high",
+   "why": "같은 페이지, 기사 목록 표기만 차이"
+  },
+  {
+   "id": "P0218",
+   "kind": "cross_hplt_to_fw2",
+   "stratum": "0.80-0.90",
+   "J": 0.883,
+   "label": "same",
+   "confidence": "high",
+   "why": "머리글·꼬리말 차이뿐"
+  },
+  {
+   "id": "P0219",
+   "kind": "cross_hplt_to_fw2",
+   "stratum": "0.80-0.90",
+   "J": 0.836,
+   "label": "same",
+   "confidence": "high",
+   "why": "보이는 본문이 동일, 머리말·꼬리말 차이뿐"
+  },
+  {
+   "id": "P0220",
+   "kind": "cross_hplt_to_fw2",
+   "stratum": "0.80-0.90",
+   "J": 0.852,
+   "label": "same",
+   "confidence": "high",
+   "why": "동일 블로그 글, 제목과 관련글 차이"
+  },
+  {
+   "id": "P0221",
+   "kind": "cross_hplt_to_fw2",
+   "stratum": "0.80-0.90",
+   "J": 0.82,
+   "label": "same",
+   "confidence": "high",
+   "why": "같은 묵자 문서, A에 정보상자 추가"
+  },
+  {
+   "id": "P0222",
+   "kind": "cross_hplt_to_fw2",
+   "stratum": "0.80-0.90",
+   "J": 0.875,
+   "label": "same",
+   "confidence": "high",
+   "why": "동일 기사, 사진 캡션 차이"
+  },
+  {
+   "id": "P0223",
+   "kind": "cross_hplt_to_fw2",
+   "stratum": "0.80-0.90",
+   "J": 0.836,
+   "label": "same",
+   "confidence": "high",
+   "why": "같은 맛집 글, 사소한 문구 차이"
+  },
+  {
+   "id": "P0224",
+   "kind": "cross_hplt_to_fw2",
+   "stratum": "0.80-0.90",
+   "J": 0.836,
+   "label": "same",
+   "confidence": "high",
+   "why": "보이는 본문이 동일, 머리말·꼬리말 차이뿐"
+  },
+  {
+   "id": "P0225",
+   "kind": "cross_hplt_to_fw2",
+   "stratum": "0.80-0.90",
+   "J": 0.828,
+   "label": "same",
+   "confidence": "high",
+   "why": "같은 기사, 책 제목 표기 유무"
+  },
+  {
+   "id": "P0226",
+   "kind": "cross_hplt_to_fw2",
+   "stratum": "0.80-0.90",
+   "J": 0.883,
+   "label": "same",
+   "confidence": "high",
+   "why": "같은 후기 글, B에 글목록 추가"
+  },
+  {
+   "id": "P0227",
+   "kind": "cross_hplt_to_fw2",
+   "stratum": "0.80-0.90",
+   "J": 0.867,
+   "label": "same",
+   "confidence": "low",
+   "why": "동일 길이, 기사 묶음 순서만 다른 듯"
+  },
+  {
+   "id": "P0228",
+   "kind": "cross_hplt_to_fw2",
+   "stratum": "0.80-0.90",
+   "J": 0.859,
+   "label": "same",
+   "confidence": "high",
+   "why": "동일 기사 본문, 꼬리 부분만 상이"
+  },
+  {
+   "id": "P0229",
+   "kind": "cross_hplt_to_fw2",
+   "stratum": "0.80-0.90",
+   "J": 0.828,
+   "label": "same",
+   "confidence": "low",
+   "why": "같은 글, 꼬리말 다름"
+  },
+  {
+   "id": "P0230",
+   "kind": "cross_hplt_to_fw2",
+   "stratum": "0.80-0.90",
+   "J": 0.875,
+   "label": "same",
+   "confidence": "high",
+   "why": "같은 하니족 여행기, B에 제목 머리글"
+  },
+  {
+   "id": "P0231",
+   "kind": "cross_hplt_to_fw2",
+   "stratum": "0.80-0.90",
+   "J": 0.844,
+   "label": "same",
+   "confidence": "high",
+   "why": "같은 기사, 사진 캡션 유무"
+  },
+  {
+   "id": "P0232",
+   "kind": "cross_hplt_to_fw2",
+   "stratum": "0.80-0.90",
+   "J": 0.859,
+   "label": "same",
+   "confidence": "high",
+   "why": "동일 기사, 꺾쇠 제목 제거 차이"
+  },
+  {
+   "id": "P0233",
+   "kind": "cross_hplt_to_fw2",
+   "stratum": "0.80-0.90",
+   "J": 0.805,
+   "label": "same",
+   "confidence": "high",
+   "why": "같은 블로그, 머리말 차이"
+  },
+  {
+   "id": "P0234",
+   "kind": "cross_hplt_to_fw2",
+   "stratum": "0.80-0.90",
+   "J": 0.852,
+   "label": "same",
+   "confidence": "low",
+   "why": "시작 동일, 끝부분 발췌가 달라 확신 낮음"
+  },
+  {
+   "id": "P0235",
+   "kind": "cross_hplt_to_fw2",
+   "stratum": "0.80-0.90",
+   "J": 0.875,
+   "label": "same",
+   "confidence": "high",
+   "why": "동일 기사, 제목 문단 유무"
+  },
+  {
+   "id": "P0236",
+   "kind": "cross_hplt_to_fw2",
+   "stratum": "0.80-0.90",
+   "J": 0.812,
+   "label": "same",
+   "confidence": "high",
+   "why": "같은 스토브리그 뉴스레터, 안내문 유무"
+  },
+  {
+   "id": "P0237",
+   "kind": "cross_hplt_to_fw2",
+   "stratum": "0.80-0.90",
+   "J": 0.867,
+   "label": "same",
+   "confidence": "low",
+   "why": "보이는 본문이 동일, 머리말·꼬리말 차이뿐"
+  },
+  {
+   "id": "P0238",
+   "kind": "cross_hplt_to_fw2",
+   "stratum": "0.80-0.90",
+   "J": 0.883,
+   "label": "same",
+   "confidence": "high",
+   "why": "동일 스팸 후기글"
+  },
+  {
+   "id": "P0239",
+   "kind": "cross_hplt_to_fw2",
+   "stratum": "0.80-0.90",
+   "J": 0.883,
+   "label": "same",
+   "confidence": "high",
+   "why": "동일 스팸 본문, 제목·단어 일부 치환"
+  },
+  {
+   "id": "P0240",
+   "kind": "cross_hplt_to_fw2",
+   "stratum": "0.80-0.90",
+   "J": 0.828,
+   "label": "same",
+   "confidence": "high",
+   "why": "머리글·꼬리말만 다른 같은 성명서"
+  },
+  {
+   "id": "P0241",
+   "kind": "cross_hplt_to_fw2",
+   "stratum": "0.80-0.90",
+   "J": 0.883,
+   "label": "same",
+   "confidence": "high",
+   "why": "동일 호텔 설명, 안내문구 추가"
+  },
+  {
+   "id": "P0242",
+   "kind": "cross_hplt_to_fw2",
+   "stratum": "0.80-0.90",
+   "J": 0.883,
+   "label": "same",
+   "confidence": "high",
+   "why": "게시판 머리글 외 동일"
+  },
+  {
+   "id": "P0243",
+   "kind": "cross_hplt_to_fw2",
+   "stratum": "0.80-0.90",
+   "J": 0.812,
+   "label": "same",
+   "confidence": "high",
+   "why": "기호 제거와 꼬리말 차이뿐"
+  },
+  {
+   "id": "P0244",
+   "kind": "cross_hplt_to_fw2",
+   "stratum": "0.80-0.90",
+   "J": 0.805,
+   "label": "same",
+   "confidence": "high",
+   "why": "동일 기사, 제목 유무 차이"
+  },
+  {
+   "id": "P0245",
+   "kind": "cross_hplt_to_fw2",
+   "stratum": "0.80-0.90",
+   "J": 0.875,
+   "label": "same",
+   "confidence": "low",
+   "why": "같은 스팸 문서에서 키워드만 치환됨"
+  },
+  {
+   "id": "P0246",
+   "kind": "cross_hplt_to_fw2",
+   "stratum": "0.80-0.90",
+   "J": 0.883,
+   "label": "same",
+   "confidence": "high",
+   "why": "동일 본문"
+  },
+  {
+   "id": "P0247",
+   "kind": "cross_hplt_to_fw2",
+   "stratum": "0.80-0.90",
+   "J": 0.805,
+   "label": "same",
+   "confidence": "high",
+   "why": "보이는 본문이 동일, 머리말·꼬리말 차이뿐"
+  },
+  {
+   "id": "P0248",
+   "kind": "cross_hplt_to_fw2",
+   "stratum": "0.80-0.90",
+   "J": 0.82,
+   "label": "same",
+   "confidence": "high",
+   "why": "동일 위키 문서, 형식 차이"
+  },
+  {
+   "id": "P0249",
+   "kind": "cross_hplt_to_fw2",
+   "stratum": "0.80-0.90",
+   "J": 0.875,
+   "label": "same",
+   "confidence": "high",
+   "why": "보이는 본문이 동일, 머리말·꼬리말 차이뿐"
+  },
+  {
+   "id": "P0250",
+   "kind": "cross_hplt_to_fw2",
+   "stratum": "0.80-0.90",
+   "J": 0.891,
+   "label": "same",
+   "confidence": "high",
+   "why": "동일 기사"
+  },
+  {
+   "id": "P0251",
+   "kind": "cross_hplt_to_fw2",
+   "stratum": "0.80-0.90",
+   "J": 0.867,
+   "label": "same",
+   "confidence": "high",
+   "why": "동일 인사말, 일부 이름 수정"
+  },
+  {
+   "id": "P0252",
+   "kind": "cross_hplt_to_fw2",
+   "stratum": "0.80-0.90",
+   "J": 0.898,
+   "label": "same",
+   "confidence": "high",
+   "why": "같은 소각장 기사, A에 제목 추가"
+  },
+  {
+   "id": "P0253",
+   "kind": "cross_hplt_to_fw2",
+   "stratum": "0.80-0.90",
+   "J": 0.898,
+   "label": "same",
+   "confidence": "high",
+   "why": "동일 기사"
+  },
+  {
+   "id": "P0254",
+   "kind": "cross_hplt_to_fw2",
+   "stratum": "0.80-0.90",
+   "J": 0.82,
+   "label": "same",
+   "confidence": "high",
+   "why": "보이는 본문이 동일, 머리말·꼬리말 차이뿐"
+  },
+  {
+   "id": "P0255",
+   "kind": "cross_hplt_to_fw2",
+   "stratum": "0.80-0.90",
+   "J": 0.828,
+   "label": "same",
+   "confidence": "high",
+   "why": "같은 대출 안내글, 머리글·조회수 차이"
+  },
+  {
+   "id": "P0256",
+   "kind": "cross_hplt_to_fw2",
+   "stratum": "0.80-0.90",
+   "J": 0.836,
+   "label": "same",
+   "confidence": "high",
+   "why": "같은 기사, A에 제목 도입부 추가"
+  },
+  {
+   "id": "P0257",
+   "kind": "cross_hplt_to_fw2",
+   "stratum": "0.80-0.90",
+   "J": 0.875,
+   "label": "same",
+   "confidence": "high",
+   "why": "동일 외무성 대변인 답변, 머리말 차이"
+  },
+  {
+   "id": "P0258",
+   "kind": "cross_hplt_to_fw2",
+   "stratum": "0.80-0.90",
+   "J": 0.898,
+   "label": "same",
+   "confidence": "high",
+   "why": "제목과 하단 목록만 다름"
+  },
+  {
+   "id": "P0259",
+   "kind": "cross_hplt_to_fw2",
+   "stratum": "0.80-0.90",
+   "J": 0.812,
+   "label": "same",
+   "confidence": "high",
+   "why": "동일 방송 대담, 질문 표기 차이"
+  },
+  {
+   "id": "P0260",
+   "kind": "cross_hplt_to_fw2",
+   "stratum": "0.80-0.90",
+   "J": 0.867,
+   "label": "same",
+   "confidence": "high",
+   "why": "보이는 본문이 동일, 머리말·꼬리말 차이뿐"
+  },
+  {
+   "id": "P0261",
+   "kind": "cross_hplt_to_fw2",
+   "stratum": "0.80-0.90",
+   "J": 0.844,
+   "label": "same",
+   "confidence": "high",
+   "why": "소제목·광고 꼬리말 차이뿐"
+  },
+  {
+   "id": "P0262",
+   "kind": "cross_hplt_to_fw2",
+   "stratum": "0.80-0.90",
+   "J": 0.82,
+   "label": "same",
+   "confidence": "high",
+   "why": "같은 사례글, 머리말 꼬리말 차이"
+  },
+  {
+   "id": "P0263",
+   "kind": "cross_hplt_to_fw2",
+   "stratum": "0.80-0.90",
+   "J": 0.875,
+   "label": "same",
+   "confidence": "low",
+   "why": "보이는 본문이 동일, 머리말·꼬리말 차이뿐"
+  },
+  {
+   "id": "P0264",
+   "kind": "cross_hplt_to_fw2",
+   "stratum": "0.80-0.90",
+   "J": 0.883,
+   "label": "same",
+   "confidence": "high",
+   "why": "같은 골프장 페이지, 인코딩 깨짐 차이"
+  },
+  {
+   "id": "P0265",
+   "kind": "cross_hplt_to_fw2",
+   "stratum": "0.80-0.90",
+   "J": 0.891,
+   "label": "same",
+   "confidence": "high",
+   "why": "동일 답변, 머리말 차이"
+  },
+  {
+   "id": "P0266",
+   "kind": "cross_hplt_to_fw2",
+   "stratum": "0.80-0.90",
+   "J": 0.805,
+   "label": "same",
+   "confidence": "low",
+   "why": "같은 출판사 소개, B에 서두 추가"
+  },
+  {
+   "id": "P0267",
+   "kind": "cross_hplt_to_fw2",
+   "stratum": "0.80-0.90",
+   "J": 0.883,
+   "label": "same",
+   "confidence": "high",
+   "why": "같은 연재 기사, 편집자 주 유무"
+  },
+  {
+   "id": "P0268",
+   "kind": "cross_hplt_to_fw2",
+   "stratum": "0.80-0.90",
+   "J": 0.844,
+   "label": "same",
+   "confidence": "high",
+   "why": "같은 위키 문서, 정보상자 유무"
+  },
+  {
+   "id": "P0269",
+   "kind": "cross_hplt_to_fw2",
+   "stratum": "0.80-0.90",
+   "J": 0.875,
+   "label": "same",
+   "confidence": "high",
+   "why": "동일 스팸 글, 키워드만 치환"
+  },
+  {
+   "id": "P0270",
+   "kind": "cross_hplt_to_fw2",
+   "stratum": "0.80-0.90",
+   "J": 0.883,
+   "label": "same",
+   "confidence": "high",
+   "why": "머리글·소제목만 다름"
+  },
+  {
+   "id": "P0271",
+   "kind": "cross_hplt_to_fw2",
+   "stratum": "0.80-0.90",
+   "J": 0.891,
+   "label": "same",
+   "confidence": "high",
+   "why": "같은 기사, A는 첫 문단 누락"
+  },
+  {
+   "id": "P0272",
+   "kind": "cross_hplt_to_fw2",
+   "stratum": "0.80-0.90",
+   "J": 0.867,
+   "label": "same",
+   "confidence": "high",
+   "why": "같은 인터뷰, A에 제목부 추가"
+  },
+  {
+   "id": "P0273",
+   "kind": "cross_hplt_to_fw2",
+   "stratum": "0.80-0.90",
+   "J": 0.867,
+   "label": "same",
+   "confidence": "high",
+   "why": "보이는 본문이 동일, 머리말·꼬리말 차이뿐"
+  },
+  {
+   "id": "P0274",
+   "kind": "cross_hplt_to_fw2",
+   "stratum": "0.80-0.90",
+   "J": 0.867,
+   "label": "same",
+   "confidence": "high",
+   "why": "보이는 본문이 동일, 머리말·꼬리말 차이뿐"
+  },
+  {
+   "id": "P0275",
+   "kind": "cross_hplt_to_fw2",
+   "stratum": "0.80-0.90",
+   "J": 0.805,
+   "label": "same",
+   "confidence": "high",
+   "why": "같은 기사, 꼬리 크레딧 차이"
+  },
+  {
+   "id": "P0276",
+   "kind": "cross_hplt_to_fw2",
+   "stratum": "0.80-0.90",
+   "J": 0.82,
+   "label": "same",
+   "confidence": "high",
+   "why": "같은 위키 글"
+  },
+  {
+   "id": "P0277",
+   "kind": "cross_hplt_to_fw2",
+   "stratum": "0.80-0.90",
+   "J": 0.852,
+   "label": "same",
+   "confidence": "low",
+   "why": "같은 기사, 머리말 구성만 다름"
+  },
+  {
+   "id": "P0278",
+   "kind": "cross_hplt_to_fw2",
+   "stratum": "0.80-0.90",
+   "J": 0.898,
+   "label": "same",
+   "confidence": "high",
+   "why": "동일 보도자료, 첫 문장 유무 차이"
+  },
+  {
+   "id": "P0279",
+   "kind": "cross_hplt_to_fw2",
+   "stratum": "0.80-0.90",
+   "J": 0.875,
+   "label": "same",
+   "confidence": "high",
+   "why": "같은 합정 기사, B에 도입 문단 추가"
+  },
+  {
+   "id": "P0280",
+   "kind": "cross_hplt_to_fw2",
+   "stratum": "0.80-0.90",
+   "J": 0.898,
+   "label": "same",
+   "confidence": "high",
+   "why": "같은 기사"
+  },
+  {
+   "id": "P0281",
+   "kind": "cross_hplt_to_fw2",
+   "stratum": "0.80-0.90",
+   "J": 0.812,
+   "label": "same",
+   "confidence": "high",
+   "why": "동일 글, 꼬리 일부 차이"
+  },
+  {
+   "id": "P0282",
+   "kind": "cross_hplt_to_fw2",
+   "stratum": "0.80-0.90",
+   "J": 0.852,
+   "label": "same",
+   "confidence": "high",
+   "why": "동일 스팸 본문, 단어 일부 치환"
+  },
+  {
+   "id": "P0283",
+   "kind": "cross_hplt_to_fw2",
+   "stratum": "0.80-0.90",
+   "J": 0.805,
+   "label": "partial",
+   "confidence": "low",
+   "why": "개정판 글, 연도와 사이트 수 다름"
+  },
+  {
+   "id": "P0284",
+   "kind": "cross_hplt_to_fw2",
+   "stratum": "0.80-0.90",
+   "J": 0.812,
+   "label": "partial",
+   "confidence": "low",
+   "why": "B에 사례 도입 단락 추가, 나머지 동일"
+  },
+  {
+   "id": "P0285",
+   "kind": "cross_hplt_to_fw2",
+   "stratum": "0.80-0.90",
+   "J": 0.836,
+   "label": "same",
+   "confidence": "high",
+   "why": "동일 상품 설명, 제목 유무"
+  },
+  {
+   "id": "P0286",
+   "kind": "cross_hplt_to_fw2",
+   "stratum": "0.80-0.90",
+   "J": 0.891,
+   "label": "same",
+   "confidence": "high",
+   "why": "헤더 \"Contents\"만 다르고 본문 동일"
+  },
+  {
+   "id": "P0287",
+   "kind": "cross_hplt_to_fw2",
+   "stratum": "0.80-0.90",
+   "J": 0.836,
+   "label": "same",
+   "confidence": "high",
+   "why": "동일 블로그 글, 머리 정보 차이"
+  },
+  {
+   "id": "P0288",
+   "kind": "cross_hplt_to_fw2",
+   "stratum": "0.80-0.90",
+   "J": 0.867,
+   "label": "same",
+   "confidence": "high",
+   "why": "동일 기사, 꺾쇠 표기 차이"
+  },
+  {
+   "id": "P0289",
+   "kind": "cross_hplt_to_fw2",
+   "stratum": "0.80-0.90",
+   "J": 0.883,
+   "label": "same",
+   "confidence": "high",
+   "why": "보이는 본문이 동일, 머리말·꼬리말 차이뿐"
+  },
+  {
+   "id": "P0290",
+   "kind": "cross_hplt_to_fw2",
+   "stratum": "0.80-0.90",
+   "J": 0.82,
+   "label": "same",
+   "confidence": "low",
+   "why": "보이는 본문이 동일, 머리말·꼬리말 차이뿐"
+  },
+  {
+   "id": "P0291",
+   "kind": "cross_hplt_to_fw2",
+   "stratum": "0.80-0.90",
+   "J": 0.805,
+   "label": "same",
+   "confidence": "low",
+   "why": "같은 게시글·답변, 질문 본문 유무 차이"
+  },
+  {
+   "id": "P0292",
+   "kind": "cross_hplt_to_fw2",
+   "stratum": "0.80-0.90",
+   "J": 0.859,
+   "label": "same",
+   "confidence": "high",
+   "why": "보이는 본문이 동일, 머리말·꼬리말 차이뿐"
+  },
+  {
+   "id": "P0293",
+   "kind": "cross_hplt_to_fw2",
+   "stratum": "0.80-0.90",
+   "J": 0.875,
+   "label": "same",
+   "confidence": "high",
+   "why": "동일 기사, 제목 유무 차이"
+  },
+  {
+   "id": "P0294",
+   "kind": "cross_hplt_to_fw2",
+   "stratum": "0.80-0.90",
+   "J": 0.883,
+   "label": "same",
+   "confidence": "low",
+   "why": "같은 스팸 본문, 댓글 유무 차이"
+  },
+  {
+   "id": "P0295",
+   "kind": "cross_hplt_to_fw2",
+   "stratum": "0.80-0.90",
+   "J": 0.828,
+   "label": "same",
+   "confidence": "low",
+   "why": "보이는 본문이 동일, 머리말·꼬리말 차이뿐"
+  },
+  {
+   "id": "P0296",
+   "kind": "cross_hplt_to_fw2",
+   "stratum": "0.80-0.90",
+   "J": 0.852,
+   "label": "same",
+   "confidence": "high",
+   "why": "같은 앱 소개, 업데이트 노트만 다름"
+  },
+  {
+   "id": "P0297",
+   "kind": "cross_hplt_to_fw2",
+   "stratum": "0.80-0.90",
+   "J": 0.852,
+   "label": "same",
+   "confidence": "high",
+   "why": "동일 보도자료, 캡션 차이"
+  },
+  {
+   "id": "P0298",
+   "kind": "cross_hplt_to_fw2",
+   "stratum": "0.80-0.90",
+   "J": 0.891,
+   "label": "same",
+   "confidence": "high",
+   "why": "동일 검색 스니펫 모음, 머리말 추가"
+  },
+  {
+   "id": "P0299",
+   "kind": "cross_hplt_to_fw2",
+   "stratum": "0.80-0.90",
+   "J": 0.875,
+   "label": "same",
+   "confidence": "high",
+   "why": "동일 호텔 설명, 몇 단어 수정"
+  },
+  {
+   "id": "P0300",
+   "kind": "cross_hplt_to_fw2",
+   "stratum": "0.90-1.00",
+   "J": 0.992,
+   "label": "same",
+   "confidence": "high",
+   "why": "같은 LG 보도자료, 제목 줄 유무 차이"
+  },
+  {
+   "id": "P0301",
+   "kind": "cross_hplt_to_fw2",
+   "stratum": "0.90-1.00",
+   "J": 0.93,
+   "label": "same",
+   "confidence": "high",
+   "why": "동일 기사, 꼬리 표기만 다름"
+  },
+  {
+   "id": "P0302",
+   "kind": "cross_hplt_to_fw2",
+   "stratum": "0.90-1.00",
+   "J": 1.0,
+   "label": "same",
+   "confidence": "high",
+   "why": "동일 번역문, 문장부호만 차이"
+  },
+  {
+   "id": "P0303",
+   "kind": "cross_hplt_to_fw2",
+   "stratum": "0.90-1.00",
+   "J": 0.977,
+   "label": "same",
+   "confidence": "high",
+   "why": "머리·꼬리 동일 기사"
+  },
+  {
+   "id": "P0304",
+   "kind": "cross_hplt_to_fw2",
+   "stratum": "0.90-1.00",
+   "J": 1.0,
+   "label": "same",
+   "confidence": "high",
+   "why": "같은 스팸 글, 사소한 문자 차이"
+  },
+  {
+   "id": "P0305",
+   "kind": "cross_hplt_to_fw2",
+   "stratum": "0.90-1.00",
+   "J": 0.992,
+   "label": "same",
+   "confidence": "high",
+   "why": "동일 기사"
+  },
+  {
+   "id": "P0306",
+   "kind": "cross_hplt_to_fw2",
+   "stratum": "0.90-1.00",
+   "J": 0.992,
+   "label": "same",
+   "confidence": "high",
+   "why": "보이는 본문이 동일, 머리말·꼬리말 차이뿐"
+  },
+  {
+   "id": "P0307",
+   "kind": "cross_hplt_to_fw2",
+   "stratum": "0.90-1.00",
+   "J": 0.953,
+   "label": "same",
+   "confidence": "high",
+   "why": "같은 SSD 초기화 글, B에 표 추가"
+  },
+  {
+   "id": "P0308",
+   "kind": "cross_hplt_to_fw2",
+   "stratum": "0.90-1.00",
+   "J": 0.992,
+   "label": "same",
+   "confidence": "high",
+   "why": "같은 슬롯 리뷰 글"
+  },
+  {
+   "id": "P0309",
+   "kind": "cross_hplt_to_fw2",
+   "stratum": "0.90-1.00",
+   "J": 0.93,
+   "label": "same",
+   "confidence": "high",
+   "why": "같은 기사, 스팸 머리글 차이"
+  },
+  {
+   "id": "P0310",
+   "kind": "cross_hplt_to_fw2",
+   "stratum": "0.90-1.00",
+   "J": 0.984,
+   "label": "same",
+   "confidence": "high",
+   "why": "보이는 본문이 동일, 머리말·꼬리말 차이뿐"
+  },
+  {
+   "id": "P0311",
+   "kind": "cross_hplt_to_fw2",
+   "stratum": "0.90-1.00",
+   "J": 0.953,
+   "label": "same",
+   "confidence": "low",
+   "why": "동일 스팸 문구 반복, 순서 차이"
+  },
+  {
+   "id": "P0312",
+   "kind": "cross_hplt_to_fw2",
+   "stratum": "0.90-1.00",
+   "J": 1.0,
+   "label": "same",
+   "confidence": "high",
+   "why": "수료증 문구 외 동일"
+  },
+  {
+   "id": "P0313",
+   "kind": "cross_hplt_to_fw2",
+   "stratum": "0.90-1.00",
+   "J": 0.977,
+   "label": "same",
+   "confidence": "high",
+   "why": "같은 여행 글, 한 단어 차이"
+  },
+  {
+   "id": "P0314",
+   "kind": "cross_hplt_to_fw2",
+   "stratum": "0.90-1.00",
+   "J": 0.938,
+   "label": "same",
+   "confidence": "high",
+   "why": "같은 기사, 머리글 차이"
+  },
+  {
+   "id": "P0315",
+   "kind": "cross_hplt_to_fw2",
+   "stratum": "0.90-1.00",
+   "J": 0.914,
+   "label": "same",
+   "confidence": "high",
+   "why": "보이는 본문이 동일, 머리말·꼬리말 차이뿐"
+  },
+  {
+   "id": "P0316",
+   "kind": "cross_hplt_to_fw2",
+   "stratum": "0.90-1.00",
+   "J": 0.938,
+   "label": "same",
+   "confidence": "high",
+   "why": "같은 인터뷰 기사, 서두와 꼬리말 차이"
+  },
+  {
+   "id": "P0317",
+   "kind": "cross_hplt_to_fw2",
+   "stratum": "0.90-1.00",
+   "J": 0.938,
+   "label": "same",
+   "confidence": "high",
+   "why": "보이는 본문이 동일, 머리말·꼬리말 차이뿐"
+  },
+  {
+   "id": "P0318",
+   "kind": "cross_hplt_to_fw2",
+   "stratum": "0.90-1.00",
+   "J": 0.961,
+   "label": "same",
+   "confidence": "high",
+   "why": "동일 레포트, 메뉴 차이"
+  },
+  {
+   "id": "P0319",
+   "kind": "cross_hplt_to_fw2",
+   "stratum": "0.90-1.00",
+   "J": 0.906,
+   "label": "same",
+   "confidence": "low",
+   "why": "보이는 본문이 동일, 머리말·꼬리말 차이뿐"
+  },
+  {
+   "id": "P0320",
+   "kind": "cross_hplt_to_fw2",
+   "stratum": "0.90-1.00",
+   "J": 1.0,
+   "label": "same",
+   "confidence": "high",
+   "why": "같은 스팸 글, 제목 한 줄 차이"
+  },
+  {
+   "id": "P0321",
+   "kind": "cross_hplt_to_fw2",
+   "stratum": "0.90-1.00",
+   "J": 0.953,
+   "label": "same",
+   "confidence": "high",
+   "why": "머리글 유무만 다름"
+  },
+  {
+   "id": "P0322",
+   "kind": "cross_hplt_to_fw2",
+   "stratum": "0.90-1.00",
+   "J": 0.953,
+   "label": "same",
+   "confidence": "low",
+   "why": "본문 동일, 꼬리말만 다름"
+  },
+  {
+   "id": "P0323",
+   "kind": "cross_hplt_to_fw2",
+   "stratum": "0.90-1.00",
+   "J": 0.906,
+   "label": "same",
+   "confidence": "high",
+   "why": "동일 본문, 저작권 연도만 다름"
+  },
+  {
+   "id": "P0324",
+   "kind": "cross_hplt_to_fw2",
+   "stratum": "0.90-1.00",
+   "J": 0.977,
+   "label": "same",
+   "confidence": "high",
+   "why": "동일 글, 제목 유무 차이"
+  },
+  {
+   "id": "P0325",
+   "kind": "cross_hplt_to_fw2",
+   "stratum": "0.90-1.00",
+   "J": 0.969,
+   "label": "same",
+   "confidence": "high",
+   "why": "같은 블로그 글, 광고 문구 차이"
+  },
+  {
+   "id": "P0326",
+   "kind": "cross_hplt_to_fw2",
+   "stratum": "0.90-1.00",
+   "J": 0.953,
+   "label": "same",
+   "confidence": "high",
+   "why": "사실상 동일"
+  },
+  {
+   "id": "P0327",
+   "kind": "cross_hplt_to_fw2",
+   "stratum": "0.90-1.00",
+   "J": 0.938,
+   "label": "same",
+   "confidence": "high",
+   "why": "동일 책 소개글, 머리말 차이"
+  },
+  {
+   "id": "P0328",
+   "kind": "cross_hplt_to_fw2",
+   "stratum": "0.90-1.00",
+   "J": 0.992,
+   "label": "same",
+   "confidence": "high",
+   "why": "동일 기사"
+  },
+  {
+   "id": "P0329",
+   "kind": "cross_hplt_to_fw2",
+   "stratum": "0.90-1.00",
+   "J": 0.922,
+   "label": "same",
+   "confidence": "high",
+   "why": "같은 호텔 소개, A에 주소 머리글"
+  },
+  {
+   "id": "P0330",
+   "kind": "cross_hplt_to_fw2",
+   "stratum": "0.90-1.00",
+   "J": 0.961,
+   "label": "same",
+   "confidence": "high",
+   "why": "머리글·꼬리말만 다름"
+  },
+  {
+   "id": "P0331",
+   "kind": "cross_hplt_to_fw2",
+   "stratum": "0.90-1.00",
+   "J": 0.969,
+   "label": "same",
+   "confidence": "high",
+   "why": "보이는 본문이 동일, 머리말·꼬리말 차이뿐"
+  },
+  {
+   "id": "P0332",
+   "kind": "cross_hplt_to_fw2",
+   "stratum": "0.90-1.00",
+   "J": 0.984,
+   "label": "same",
+   "confidence": "high",
+   "why": "같은 기사, 사진 캡션 차이"
+  },
+  {
+   "id": "P0333",
+   "kind": "cross_hplt_to_fw2",
+   "stratum": "0.90-1.00",
+   "J": 0.953,
+   "label": "same",
+   "confidence": "high",
+   "why": "동일 레포트 본문, 머리말 차이"
+  },
+  {
+   "id": "P0334",
+   "kind": "cross_hplt_to_fw2",
+   "stratum": "0.90-1.00",
+   "J": 0.961,
+   "label": "same",
+   "confidence": "high",
+   "why": "같은 기사, 캡션 차이"
+  },
+  {
+   "id": "P0335",
+   "kind": "cross_hplt_to_fw2",
+   "stratum": "0.90-1.00",
+   "J": 0.969,
+   "label": "same",
+   "confidence": "high",
+   "why": "동일 기사, 제목 유무"
+  },
+  {
+   "id": "P0336",
+   "kind": "cross_hplt_to_fw2",
+   "stratum": "0.90-1.00",
+   "J": 0.93,
+   "label": "same",
+   "confidence": "high",
+   "why": "저작권 문구 외 동일"
+  },
+  {
+   "id": "P0337",
+   "kind": "cross_hplt_to_fw2",
+   "stratum": "0.90-1.00",
+   "J": 0.961,
+   "label": "same",
+   "confidence": "high",
+   "why": "같은 칼럼, 꺾쇠 표기 차이"
+  },
+  {
+   "id": "P0338",
+   "kind": "cross_hplt_to_fw2",
+   "stratum": "0.90-1.00",
+   "J": 0.922,
+   "label": "same",
+   "confidence": "high",
+   "why": "같은 YTN 기사, 꼬리말 형식 차이"
+  },
+  {
+   "id": "P0339",
+   "kind": "cross_hplt_to_fw2",
+   "stratum": "0.90-1.00",
+   "J": 0.922,
+   "label": "same",
+   "confidence": "high",
+   "why": "동일 블로그 글, 줄바꿈과 꼬리 차이"
+  },
+  {
+   "id": "P0340",
+   "kind": "cross_hplt_to_fw2",
+   "stratum": "0.90-1.00",
+   "J": 0.953,
+   "label": "same",
+   "confidence": "high",
+   "why": "동일 기사"
+  },
+  {
+   "id": "P0341",
+   "kind": "cross_hplt_to_fw2",
+   "stratum": "0.90-1.00",
+   "J": 0.906,
+   "label": "same",
+   "confidence": "high",
+   "why": "같은 책 소개, B에 서지정보 추가"
+  },
+  {
+   "id": "P0342",
+   "kind": "cross_hplt_to_fw2",
+   "stratum": "0.90-1.00",
+   "J": 0.906,
+   "label": "same",
+   "confidence": "high",
+   "why": "문장 몇 줄 차이"
+  },
+  {
+   "id": "P0343",
+   "kind": "cross_hplt_to_fw2",
+   "stratum": "0.90-1.00",
+   "J": 0.953,
+   "label": "same",
+   "confidence": "high",
+   "why": "동일 글, 날짜 머리글 차이"
+  },
+  {
+   "id": "P0344",
+   "kind": "cross_hplt_to_fw2",
+   "stratum": "0.90-1.00",
+   "J": 1.0,
+   "label": "same",
+   "confidence": "high",
+   "why": "동일 스팸글, 머리·꼬리 일치"
+  },
+  {
+   "id": "P0345",
+   "kind": "cross_hplt_to_fw2",
+   "stratum": "0.90-1.00",
+   "J": 1.0,
+   "label": "same",
+   "confidence": "high",
+   "why": "제목어 한 단어만 추가된 스팸"
+  },
+  {
+   "id": "P0346",
+   "kind": "cross_hplt_to_fw2",
+   "stratum": "0.90-1.00",
+   "J": 0.992,
+   "label": "same",
+   "confidence": "high",
+   "why": "머리말 일부만 다른 동일 인터뷰"
+  },
+  {
+   "id": "P0347",
+   "kind": "cross_hplt_to_fw2",
+   "stratum": "0.90-1.00",
+   "J": 0.953,
+   "label": "same",
+   "confidence": "high",
+   "why": "보이는 본문이 동일, 머리말·꼬리말 차이뿐"
+  },
+  {
+   "id": "P0348",
+   "kind": "cross_hplt_to_fw2",
+   "stratum": "0.90-1.00",
+   "J": 0.914,
+   "label": "same",
+   "confidence": "high",
+   "why": "동일 기사, 꼬리에 댓글 차이"
+  },
+  {
+   "id": "P0349",
+   "kind": "cross_hplt_to_fw2",
+   "stratum": "0.90-1.00",
+   "J": 0.977,
+   "label": "same",
+   "confidence": "high",
+   "why": "사실상 동일"
+  },
+  {
+   "id": "P0350",
+   "kind": "cross_hplt_to_fw2",
+   "stratum": "0.90-1.00",
+   "J": 1.0,
+   "label": "same",
+   "confidence": "high",
+   "why": "동일 칼럼 일치"
+  },
+  {
+   "id": "P0351",
+   "kind": "cross_hplt_to_fw2",
+   "stratum": "0.90-1.00",
+   "J": 0.938,
+   "label": "same",
+   "confidence": "high",
+   "why": "보이는 본문이 동일, 머리말·꼬리말 차이뿐"
+  },
+  {
+   "id": "P0352",
+   "kind": "cross_hplt_to_fw2",
+   "stratum": "0.90-1.00",
+   "J": 0.984,
+   "label": "same",
+   "confidence": "high",
+   "why": "같은 블로그 글, 제목줄 유무"
+  },
+  {
+   "id": "P0353",
+   "kind": "cross_hplt_to_fw2",
+   "stratum": "0.90-1.00",
+   "J": 0.969,
+   "label": "same",
+   "confidence": "high",
+   "why": "동일 상품 설명"
+  },
+  {
+   "id": "P0354",
+   "kind": "cross_hplt_to_fw2",
+   "stratum": "0.90-1.00",
+   "J": 0.984,
+   "label": "same",
+   "confidence": "high",
+   "why": "같은 허재 기사, 제목 줄 차이"
+  },
+  {
+   "id": "P0355",
+   "kind": "cross_hplt_to_fw2",
+   "stratum": "0.90-1.00",
+   "J": 0.992,
+   "label": "same",
+   "confidence": "high",
+   "why": "동일 글, 제목 유무 차이"
+  },
+  {
+   "id": "P0356",
+   "kind": "cross_hplt_to_fw2",
+   "stratum": "0.90-1.00",
+   "J": 0.938,
+   "label": "same",
+   "confidence": "high",
+   "why": "동일 블로그 글과 댓글"
+  },
+  {
+   "id": "P0357",
+   "kind": "cross_hplt_to_fw2",
+   "stratum": "0.90-1.00",
+   "J": 0.938,
+   "label": "same",
+   "confidence": "high",
+   "why": "동일 인터뷰 기사"
+  },
+  {
+   "id": "P0358",
+   "kind": "cross_hplt_to_fw2",
+   "stratum": "0.90-1.00",
+   "J": 0.938,
+   "label": "same",
+   "confidence": "high",
+   "why": "동일 설명문"
+  },
+  {
+   "id": "P0359",
+   "kind": "cross_hplt_to_fw2",
+   "stratum": "0.90-1.00",
+   "J": 0.984,
+   "label": "same",
+   "confidence": "high",
+   "why": "보이는 본문이 동일, 머리말·꼬리말 차이뿐"
+  },
+  {
+   "id": "P0360",
+   "kind": "cross_hplt_to_fw2",
+   "stratum": "0.90-1.00",
+   "J": 0.977,
+   "label": "same",
+   "confidence": "high",
+   "why": "동일 기사, 꼬리 차이"
+  },
+  {
+   "id": "P0361",
+   "kind": "cross_hplt_to_fw2",
+   "stratum": "0.90-1.00",
+   "J": 1.0,
+   "label": "same",
+   "confidence": "high",
+   "why": "동일 상품 설명"
+  },
+  {
+   "id": "P0362",
+   "kind": "cross_hplt_to_fw2",
+   "stratum": "0.90-1.00",
+   "J": 0.945,
+   "label": "same",
+   "confidence": "low",
+   "why": "시작 동일, B에 사양표 추가 가능성"
+  },
+  {
+   "id": "P0363",
+   "kind": "cross_hplt_to_fw2",
+   "stratum": "0.90-1.00",
+   "J": 0.961,
+   "label": "same",
+   "confidence": "high",
+   "why": "보이는 본문이 동일, 머리말·꼬리말 차이뿐"
+  },
+  {
+   "id": "P0364",
+   "kind": "cross_hplt_to_fw2",
+   "stratum": "0.90-1.00",
+   "J": 1.0,
+   "label": "same",
+   "confidence": "high",
+   "why": "동일 기사, 꼬리 차이"
+  },
+  {
+   "id": "P0365",
+   "kind": "cross_hplt_to_fw2",
+   "stratum": "0.90-1.00",
+   "J": 0.984,
+   "label": "same",
+   "confidence": "high",
+   "why": "동일 방송 원고, 도입부 유무 차이"
+  },
+  {
+   "id": "P0366",
+   "kind": "cross_hplt_to_fw2",
+   "stratum": "0.90-1.00",
+   "J": 1.0,
+   "label": "same",
+   "confidence": "high",
+   "why": "같은 칼럼, URL 머리 차이"
+  },
+  {
+   "id": "P0367",
+   "kind": "cross_hplt_to_fw2",
+   "stratum": "0.90-1.00",
+   "J": 0.984,
+   "label": "same",
+   "confidence": "high",
+   "why": "인사말 한 줄 외 동일"
+  },
+  {
+   "id": "P0368",
+   "kind": "cross_hplt_to_fw2",
+   "stratum": "0.90-1.00",
+   "J": 0.945,
+   "label": "same",
+   "confidence": "low",
+   "why": "같은 글, 끝부분 약간 다름"
+  },
+  {
+   "id": "P0369",
+   "kind": "cross_hplt_to_fw2",
+   "stratum": "0.90-1.00",
+   "J": 0.914,
+   "label": "same",
+   "confidence": "high",
+   "why": "같은 SKT UAM 기사, 일부 문장 차이"
+  },
+  {
+   "id": "P0370",
+   "kind": "cross_hplt_to_fw2",
+   "stratum": "0.90-1.00",
+   "J": 0.977,
+   "label": "same",
+   "confidence": "low",
+   "why": "같은 블로그 글, 끝부분 발췌 달라 확신 낮음"
+  },
+  {
+   "id": "P0371",
+   "kind": "cross_hplt_to_fw2",
+   "stratum": "0.90-1.00",
+   "J": 0.961,
+   "label": "same",
+   "confidence": "high",
+   "why": "같은 서튼 기사, B에 제목 줄"
+  },
+  {
+   "id": "P0372",
+   "kind": "cross_hplt_to_fw2",
+   "stratum": "0.90-1.00",
+   "J": 0.992,
+   "label": "same",
+   "confidence": "high",
+   "why": "보이는 본문이 동일, 머리말·꼬리말 차이뿐"
+  },
+  {
+   "id": "P0373",
+   "kind": "cross_hplt_to_fw2",
+   "stratum": "0.90-1.00",
+   "J": 0.961,
+   "label": "same",
+   "confidence": "high",
+   "why": "동일 기사, 사진 캡션 차이"
+  },
+  {
+   "id": "P0374",
+   "kind": "cross_hplt_to_fw2",
+   "stratum": "0.90-1.00",
+   "J": 1.0,
+   "label": "same",
+   "confidence": "high",
+   "why": "공백 한 줄 외 동일"
+  },
+  {
+   "id": "P0375",
+   "kind": "cross_hplt_to_fw2",
+   "stratum": "0.90-1.00",
+   "J": 0.953,
+   "label": "same",
+   "confidence": "high",
+   "why": "같은 게임 블로그 글, 잡문자 차이"
+  },
+  {
+   "id": "P0376",
+   "kind": "cross_hplt_to_fw2",
+   "stratum": "0.90-1.00",
+   "J": 0.977,
+   "label": "same",
+   "confidence": "high",
+   "why": "동일 기사, 같은 머리·꼬리"
+  },
+  {
+   "id": "P0377",
+   "kind": "cross_hplt_to_fw2",
+   "stratum": "0.90-1.00",
+   "J": 0.969,
+   "label": "same",
+   "confidence": "high",
+   "why": "같은 안중근 기사, 공백 차이"
+  },
+  {
+   "id": "P0378",
+   "kind": "cross_hplt_to_fw2",
+   "stratum": "0.90-1.00",
+   "J": 0.93,
+   "label": "same",
+   "confidence": "high",
+   "why": "URL 한 줄 외 동일"
+  },
+  {
+   "id": "P0379",
+   "kind": "cross_hplt_to_fw2",
+   "stratum": "0.90-1.00",
+   "J": 0.992,
+   "label": "same",
+   "confidence": "high",
+   "why": "동일 글, 제목 유무 차이"
+  },
+  {
+   "id": "P0380",
+   "kind": "cross_hplt_to_fw2",
+   "stratum": "0.90-1.00",
+   "J": 0.977,
+   "label": "same",
+   "confidence": "high",
+   "why": "같은 인터뷰 기사"
+  },
+  {
+   "id": "P0381",
+   "kind": "cross_hplt_to_fw2",
+   "stratum": "0.90-1.00",
+   "J": 0.945,
+   "label": "same",
+   "confidence": "high",
+   "why": "동일 리뷰, 머리·꼬리 차이"
+  },
+  {
+   "id": "P0382",
+   "kind": "cross_hplt_to_fw2",
+   "stratum": "0.90-1.00",
+   "J": 0.977,
+   "label": "same",
+   "confidence": "high",
+   "why": "동일 본문"
+  },
+  {
+   "id": "P0383",
+   "kind": "cross_hplt_to_fw2",
+   "stratum": "0.90-1.00",
+   "J": 0.961,
+   "label": "same",
+   "confidence": "high",
+   "why": "동일 문서"
+  },
+  {
+   "id": "P0384",
+   "kind": "cross_hplt_to_fw2",
+   "stratum": "0.90-1.00",
+   "J": 0.961,
+   "label": "same",
+   "confidence": "high",
+   "why": "동일 기사, 저작권 꼬리만 다름"
+  },
+  {
+   "id": "P0385",
+   "kind": "cross_hplt_to_fw2",
+   "stratum": "0.90-1.00",
+   "J": 0.977,
+   "label": "same",
+   "confidence": "high",
+   "why": "보이는 본문이 동일, 머리말·꼬리말 차이뿐"
+  },
+  {
+   "id": "P0386",
+   "kind": "cross_hplt_to_fw2",
+   "stratum": "0.90-1.00",
+   "J": 0.906,
+   "label": "same",
+   "confidence": "high",
+   "why": "같은 기사, B에 사진 캡션"
+  },
+  {
+   "id": "P0387",
+   "kind": "cross_hplt_to_fw2",
+   "stratum": "0.90-1.00",
+   "J": 0.953,
+   "label": "same",
+   "confidence": "high",
+   "why": "제목 한 줄 외 동일"
+  },
+  {
+   "id": "P0388",
+   "kind": "cross_hplt_to_fw2",
+   "stratum": "0.90-1.00",
+   "J": 0.984,
+   "label": "same",
+   "confidence": "high",
+   "why": "동일 도서 목록 페이지"
+  },
+  {
+   "id": "P0389",
+   "kind": "cross_hplt_to_fw2",
+   "stratum": "0.90-1.00",
+   "J": 0.992,
+   "label": "same",
+   "confidence": "high",
+   "why": "보이는 본문이 동일, 머리말·꼬리말 차이뿐"
+  },
+  {
+   "id": "P0390",
+   "kind": "cross_hplt_to_fw2",
+   "stratum": "0.90-1.00",
+   "J": 0.945,
+   "label": "same",
+   "confidence": "high",
+   "why": "보이는 본문이 동일, 머리말·꼬리말 차이뿐"
+  },
+  {
+   "id": "P0391",
+   "kind": "cross_hplt_to_fw2",
+   "stratum": "0.90-1.00",
+   "J": 0.93,
+   "label": "same",
+   "confidence": "high",
+   "why": "같은 블로그 글"
+  },
+  {
+   "id": "P0392",
+   "kind": "cross_hplt_to_fw2",
+   "stratum": "0.90-1.00",
+   "J": 0.977,
+   "label": "same",
+   "confidence": "high",
+   "why": "같은 기사 본문"
+  },
+  {
+   "id": "P0393",
+   "kind": "cross_hplt_to_fw2",
+   "stratum": "0.90-1.00",
+   "J": 0.906,
+   "label": "partial",
+   "confidence": "low",
+   "why": "제목·요약·결말 동일하나 본문 도입 기사 다름"
+  },
+  {
+   "id": "P0394",
+   "kind": "cross_hplt_to_fw2",
+   "stratum": "0.90-1.00",
+   "J": 0.992,
+   "label": "same",
+   "confidence": "high",
+   "why": "동일 기사, 이메일 표기만 다름"
+  },
+  {
+   "id": "P0395",
+   "kind": "cross_hplt_to_fw2",
+   "stratum": "0.90-1.00",
+   "J": 0.969,
+   "label": "same",
+   "confidence": "high",
+   "why": "동일 기사, 필자 표기만 다름"
+  },
+  {
+   "id": "P0396",
+   "kind": "cross_hplt_to_fw2",
+   "stratum": "0.90-1.00",
+   "J": 0.969,
+   "label": "same",
+   "confidence": "high",
+   "why": "동일 글, 제목 유무 차이"
+  },
+  {
+   "id": "P0397",
+   "kind": "cross_hplt_to_fw2",
+   "stratum": "0.90-1.00",
+   "J": 0.945,
+   "label": "same",
+   "confidence": "high",
+   "why": "보이는 본문이 동일, 머리말·꼬리말 차이뿐"
+  },
+  {
+   "id": "P0398",
+   "kind": "cross_hplt_to_fw2",
+   "stratum": "0.90-1.00",
+   "J": 0.969,
+   "label": "same",
+   "confidence": "high",
+   "why": "서문 한 줄과 꼬리 문구만 다름"
+  },
+  {
+   "id": "P0399",
+   "kind": "cross_hplt_to_fw2",
+   "stratum": "0.90-1.00",
+   "J": 0.984,
+   "label": "same",
+   "confidence": "high",
+   "why": "동일 게시글"
+  },
+  {
+   "id": "P0400",
+   "kind": "within_hplt",
+   "stratum": "0.80-1.00",
+   "J": 0.984,
+   "label": "same",
+   "confidence": "high",
+   "why": "같은 위키 문서, 표기 약간 차이"
+  },
+  {
+   "id": "P0401",
+   "kind": "within_hplt",
+   "stratum": "0.80-1.00",
+   "J": 0.969,
+   "label": "same",
+   "confidence": "high",
+   "why": "같은 페이지, 말미 후기 문구 언어만 다름"
+  },
+  {
+   "id": "P0402",
+   "kind": "within_hplt",
+   "stratum": "0.80-1.00",
+   "J": 0.938,
+   "label": "same",
+   "confidence": "high",
+   "why": "동일 행사 안내"
+  },
+  {
+   "id": "P0403",
+   "kind": "within_hplt",
+   "stratum": "0.80-1.00",
+   "J": 0.984,
+   "label": "same",
+   "confidence": "high",
+   "why": "조회수만 다름"
+  },
+  {
+   "id": "P0404",
+   "kind": "within_hplt",
+   "stratum": "0.80-1.00",
+   "J": 0.969,
+   "label": "same",
+   "confidence": "high",
+   "why": "보이는 본문이 동일, 머리말·꼬리말 차이뿐"
+  },
+  {
+   "id": "P0405",
+   "kind": "within_hplt",
+   "stratum": "0.80-1.00",
+   "J": 0.992,
+   "label": "same",
+   "confidence": "high",
+   "why": "같은 글, 제목 한 단어 차이"
+  },
+  {
+   "id": "P0406",
+   "kind": "within_hplt",
+   "stratum": "0.80-1.00",
+   "J": 0.836,
+   "label": "same",
+   "confidence": "high",
+   "why": "학원 정보 동일, 출처 표기 몇 글자만 다름"
+  },
+  {
+   "id": "P0407",
+   "kind": "within_hplt",
+   "stratum": "0.80-1.00",
+   "J": 0.938,
+   "label": "same",
+   "confidence": "high",
+   "why": "같은 블로그 글, 날짜 형식만 다름"
+  },
+  {
+   "id": "P0408",
+   "kind": "within_hplt",
+   "stratum": "0.80-1.00",
+   "J": 0.977,
+   "label": "same",
+   "confidence": "high",
+   "why": "동일 블로그 글, 꼬리 차이"
+  },
+  {
+   "id": "P0409",
+   "kind": "within_hplt",
+   "stratum": "0.80-1.00",
+   "J": 0.836,
+   "label": "same",
+   "confidence": "high",
+   "why": "보이는 본문이 동일, 머리말·꼬리말 차이뿐"
+  },
+  {
+   "id": "P0410",
+   "kind": "within_hplt",
+   "stratum": "0.80-1.00",
+   "J": 0.852,
+   "label": "same",
+   "confidence": "high",
+   "why": "동일 칼럼, 머리말 차이"
+  },
+  {
+   "id": "P0411",
+   "kind": "within_hplt",
+   "stratum": "0.80-1.00",
+   "J": 0.898,
+   "label": "same",
+   "confidence": "low",
+   "why": "같은 앨범 소개, 헤더·트랙목록 차이"
+  },
+  {
+   "id": "P0412",
+   "kind": "within_hplt",
+   "stratum": "0.80-1.00",
+   "J": 1.0,
+   "label": "same",
+   "confidence": "high",
+   "why": "보이는 본문이 동일, 머리말·꼬리말 차이뿐"
+  },
+  {
+   "id": "P0413",
+   "kind": "within_hplt",
+   "stratum": "0.80-1.00",
+   "J": 0.812,
+   "label": "same",
+   "confidence": "high",
+   "why": "조회수만 다른 동일 게시글"
+  },
+  {
+   "id": "P0414",
+   "kind": "within_hplt",
+   "stratum": "0.80-1.00",
+   "J": 0.992,
+   "label": "same",
+   "confidence": "high",
+   "why": "동일 연설문, 제목 유무"
+  },
+  {
+   "id": "P0415",
+   "kind": "within_hplt",
+   "stratum": "0.80-1.00",
+   "J": 1.0,
+   "label": "same",
+   "confidence": "high",
+   "why": "동일 칼럼, 필자명 유무"
+  },
+  {
+   "id": "P0416",
+   "kind": "within_hplt",
+   "stratum": "0.80-1.00",
+   "J": 0.891,
+   "label": "same",
+   "confidence": "high",
+   "why": "같은 블로그 글, A에 머리말·태그"
+  },
+  {
+   "id": "P0417",
+   "kind": "within_hplt",
+   "stratum": "0.80-1.00",
+   "J": 0.977,
+   "label": "same",
+   "confidence": "high",
+   "why": "동일 글, 제목 유무 차이"
+  },
+  {
+   "id": "P0418",
+   "kind": "within_hplt",
+   "stratum": "0.80-1.00",
+   "J": 0.969,
+   "label": "same",
+   "confidence": "high",
+   "why": "같은 블로그 글, 카테고리 표기 차이"
+  },
+  {
+   "id": "P0419",
+   "kind": "within_hplt",
+   "stratum": "0.80-1.00",
+   "J": 0.82,
+   "label": "different",
+   "confidence": "high",
+   "why": "서로 다른 반지 상품, 공통 안내문뿐"
+  },
+  {
+   "id": "P0420",
+   "kind": "within_hplt",
+   "stratum": "0.80-1.00",
+   "J": 0.945,
+   "label": "same",
+   "confidence": "high",
+   "why": "동일 블로그 글, 머리·댓글 차이"
+  },
+  {
+   "id": "P0421",
+   "kind": "within_hplt",
+   "stratum": "0.80-1.00",
+   "J": 0.93,
+   "label": "same",
+   "confidence": "high",
+   "why": "같은 레포트 소개, 제목 문구 차이"
+  },
+  {
+   "id": "P0422",
+   "kind": "within_hplt",
+   "stratum": "0.80-1.00",
+   "J": 0.828,
+   "label": "different",
+   "confidence": "high",
+   "why": "원문이 다르고 하단 교재 순위 문구만 공통"
+  },
+  {
+   "id": "P0423",
+   "kind": "within_hplt",
+   "stratum": "0.80-1.00",
+   "J": 0.93,
+   "label": "same",
+   "confidence": "high",
+   "why": "같은 르포, 날짜 형식 차이"
+  },
+  {
+   "id": "P0424",
+   "kind": "within_hplt",
+   "stratum": "0.80-1.00",
+   "J": 0.812,
+   "label": "same",
+   "confidence": "high",
+   "why": "동일 채용 공고, 머리·꼬리 차이"
+  },
+  {
+   "id": "P0425",
+   "kind": "within_hplt",
+   "stratum": "0.80-1.00",
+   "J": 0.977,
+   "label": "same",
+   "confidence": "high",
+   "why": "조회수만 다른 동일 간증"
+  },
+  {
+   "id": "P0426",
+   "kind": "within_hplt",
+   "stratum": "0.80-1.00",
+   "J": 0.82,
+   "label": "same",
+   "confidence": "low",
+   "why": "같은 기사, 말미 댓글/링크 부분만 다름"
+  },
+  {
+   "id": "P0427",
+   "kind": "within_hplt",
+   "stratum": "0.80-1.00",
+   "J": 1.0,
+   "label": "same",
+   "confidence": "high",
+   "why": "보이는 본문이 동일, 머리말·꼬리말 차이뿐"
+  },
+  {
+   "id": "P0428",
+   "kind": "within_hplt",
+   "stratum": "0.80-1.00",
+   "J": 0.977,
+   "label": "same",
+   "confidence": "high",
+   "why": "동일 중고차 광고글"
+  },
+  {
+   "id": "P0429",
+   "kind": "within_hplt",
+   "stratum": "0.80-1.00",
+   "J": 0.945,
+   "label": "same",
+   "confidence": "high",
+   "why": "같은 VOA 기사, A에 리드 문단 추가"
+  },
+  {
+   "id": "P0430",
+   "kind": "within_hplt",
+   "stratum": "0.80-1.00",
+   "J": 0.852,
+   "label": "same",
+   "confidence": "high",
+   "why": "동일 위키 문서"
+  },
+  {
+   "id": "P0431",
+   "kind": "within_hplt",
+   "stratum": "0.80-1.00",
+   "J": 0.867,
+   "label": "different",
+   "confidence": "low",
+   "why": "머리 다름, 꼬리의 회사 소개 문구만 공통"
+  },
+  {
+   "id": "P0432",
+   "kind": "within_hplt",
+   "stratum": "0.80-1.00",
+   "J": 0.984,
+   "label": "same",
+   "confidence": "high",
+   "why": "동일 약품 설명서, 머리말 차이"
+  },
+  {
+   "id": "P0433",
+   "kind": "within_hplt",
+   "stratum": "0.80-1.00",
+   "J": 0.961,
+   "label": "same",
+   "confidence": "high",
+   "why": "동일 기사, 머리말·꼬리만 다름"
+  },
+  {
+   "id": "P0434",
+   "kind": "within_hplt",
+   "stratum": "0.80-1.00",
+   "J": 0.844,
+   "label": "same",
+   "confidence": "high",
+   "why": "제품 정보 머리글만 추가"
+  },
+  {
+   "id": "P0435",
+   "kind": "within_hplt",
+   "stratum": "0.80-1.00",
+   "J": 0.992,
+   "label": "same",
+   "confidence": "high",
+   "why": "동일 블로그 글, 제목 차이"
+  },
+  {
+   "id": "P0436",
+   "kind": "within_hplt",
+   "stratum": "0.80-1.00",
+   "J": 0.859,
+   "label": "same",
+   "confidence": "high",
+   "why": "동일 위키 문서"
+  },
+  {
+   "id": "P0437",
+   "kind": "within_hplt",
+   "stratum": "0.80-1.00",
+   "J": 0.992,
+   "label": "same",
+   "confidence": "high",
+   "why": "동일 칼럼"
+  },
+  {
+   "id": "P0438",
+   "kind": "within_hplt",
+   "stratum": "0.80-1.00",
+   "J": 0.984,
+   "label": "same",
+   "confidence": "high",
+   "why": "제목 유무만 다른 동일 문서"
+  },
+  {
+   "id": "P0439",
+   "kind": "within_hplt",
+   "stratum": "0.80-1.00",
+   "J": 0.828,
+   "label": "different",
+   "confidence": "low",
+   "why": "공통 배송안내 틀뿐, 상품설명 상이"
+  },
+  {
+   "id": "P0440",
+   "kind": "within_hplt",
+   "stratum": "0.80-1.00",
+   "J": 0.836,
+   "label": "same",
+   "confidence": "high",
+   "why": "같은 소설 회차, 머리글과 댓글 차이"
+  },
+  {
+   "id": "P0441",
+   "kind": "within_hplt",
+   "stratum": "0.80-1.00",
+   "J": 0.906,
+   "label": "same",
+   "confidence": "high",
+   "why": "위키 편집 표기만 다름"
+  },
+  {
+   "id": "P0442",
+   "kind": "within_hplt",
+   "stratum": "0.80-1.00",
+   "J": 0.836,
+   "label": "different",
+   "confidence": "high",
+   "why": "서로 다른 논문, 목록 템플릿만 공통"
+  },
+  {
+   "id": "P0443",
+   "kind": "within_hplt",
+   "stratum": "0.80-1.00",
+   "J": 0.812,
+   "label": "same",
+   "confidence": "high",
+   "why": "동일 글, 머리말 차이"
+  },
+  {
+   "id": "P0444",
+   "kind": "within_hplt",
+   "stratum": "0.80-1.00",
+   "J": 0.875,
+   "label": "same",
+   "confidence": "low",
+   "why": "동일 상품페이지, 일부 구간 차이"
+  },
+  {
+   "id": "P0445",
+   "kind": "within_hplt",
+   "stratum": "0.80-1.00",
+   "J": 0.828,
+   "label": "same",
+   "confidence": "high",
+   "why": "같은 F1 기사, B에 도입부만 추가"
+  },
+  {
+   "id": "P0446",
+   "kind": "within_hplt",
+   "stratum": "0.80-1.00",
+   "J": 0.867,
+   "label": "same",
+   "confidence": "high",
+   "why": "같은 위키 문서, 머리 안내문 차이"
+  },
+  {
+   "id": "P0447",
+   "kind": "within_hplt",
+   "stratum": "0.80-1.00",
+   "J": 0.984,
+   "label": "same",
+   "confidence": "high",
+   "why": "같은 여행 블로그 글"
+  },
+  {
+   "id": "P0448",
+   "kind": "within_hplt",
+   "stratum": "0.80-1.00",
+   "J": 0.961,
+   "label": "same",
+   "confidence": "high",
+   "why": "같은 위키 문서, 머리 문구 차이"
+  },
+  {
+   "id": "P0449",
+   "kind": "within_hplt",
+   "stratum": "0.80-1.00",
+   "J": 0.938,
+   "label": "same",
+   "confidence": "high",
+   "why": "같은 블로그 글, 댓글/푸터 차이"
+  },
+  {
+   "id": "P0450",
+   "kind": "within_hplt",
+   "stratum": "0.80-1.00",
+   "J": 0.906,
+   "label": "same",
+   "confidence": "low",
+   "why": "본문 동일 추정, 사이드 글목록 순서 다름"
+  },
+  {
+   "id": "P0451",
+   "kind": "within_hplt",
+   "stratum": "0.80-1.00",
+   "J": 0.93,
+   "label": "same",
+   "confidence": "high",
+   "why": "같은 앱 설명, 앱스토어 꼬리말 차이"
+  },
+  {
+   "id": "P0452",
+   "kind": "within_hplt",
+   "stratum": "0.80-1.00",
+   "J": 0.898,
+   "label": "same",
+   "confidence": "high",
+   "why": "같은 의학 글, B에 키워드 목록 추가"
+  },
+  {
+   "id": "P0453",
+   "kind": "within_hplt",
+   "stratum": "0.80-1.00",
+   "J": 0.836,
+   "label": "same",
+   "confidence": "low",
+   "why": "같은 레포트, B에 다른 목록 앞붙음"
+  },
+  {
+   "id": "P0454",
+   "kind": "within_hplt",
+   "stratum": "0.80-1.00",
+   "J": 0.828,
+   "label": "same",
+   "confidence": "high",
+   "why": "같은 블로그 글, 머리글·댓글 형식 차이"
+  },
+  {
+   "id": "P0455",
+   "kind": "within_hplt",
+   "stratum": "0.80-1.00",
+   "J": 0.875,
+   "label": "same",
+   "confidence": "high",
+   "why": "보이는 본문이 동일, 머리말·꼬리말 차이뿐"
+  },
+  {
+   "id": "P0456",
+   "kind": "within_hplt",
+   "stratum": "0.80-1.00",
+   "J": 0.938,
+   "label": "same",
+   "confidence": "high",
+   "why": "보이는 본문이 동일, 머리말·꼬리말 차이뿐"
+  },
+  {
+   "id": "P0457",
+   "kind": "within_hplt",
+   "stratum": "0.80-1.00",
+   "J": 0.969,
+   "label": "same",
+   "confidence": "high",
+   "why": "조회수만 다른 동일 글"
+  },
+  {
+   "id": "P0458",
+   "kind": "within_hplt",
+   "stratum": "0.80-1.00",
+   "J": 0.984,
+   "label": "same",
+   "confidence": "high",
+   "why": "같은 뉴스타파 기사, 꼬리말 추가"
+  },
+  {
+   "id": "P0459",
+   "kind": "within_hplt",
+   "stratum": "0.80-1.00",
+   "J": 0.805,
+   "label": "different",
+   "confidence": "high",
+   "why": "회사가 다른 약관 틀만 공통"
+  },
+  {
+   "id": "P0460",
+   "kind": "within_hplt",
+   "stratum": "0.80-1.00",
+   "J": 0.992,
+   "label": "same",
+   "confidence": "high",
+   "why": "같은 글, 머리말 몇 글자 차이"
+  },
+  {
+   "id": "P0461",
+   "kind": "within_hplt",
+   "stratum": "0.80-1.00",
+   "J": 0.875,
+   "label": "same",
+   "confidence": "high",
+   "why": "동일 위키 문서"
+  },
+  {
+   "id": "P0462",
+   "kind": "within_hplt",
+   "stratum": "0.80-1.00",
+   "J": 0.938,
+   "label": "same",
+   "confidence": "high",
+   "why": "같은 골프존 기사, 매체명 표기 차이"
+  },
+  {
+   "id": "P0463",
+   "kind": "within_hplt",
+   "stratum": "0.80-1.00",
+   "J": 0.906,
+   "label": "same",
+   "confidence": "high",
+   "why": "줄바꿈·머리글만 다른 같은 기사"
+  },
+  {
+   "id": "P0464",
+   "kind": "within_hplt",
+   "stratum": "0.80-1.00",
+   "J": 0.953,
+   "label": "same",
+   "confidence": "high",
+   "why": "같은 방송 대본, B에 도입 요약"
+  },
+  {
+   "id": "P0465",
+   "kind": "within_hplt",
+   "stratum": "0.80-1.00",
+   "J": 1.0,
+   "label": "same",
+   "confidence": "high",
+   "why": "완전히 동일"
+  },
+  {
+   "id": "P0466",
+   "kind": "within_hplt",
+   "stratum": "0.80-1.00",
+   "J": 0.953,
+   "label": "same",
+   "confidence": "high",
+   "why": "댓글 꼬리말만 추가"
+  },
+  {
+   "id": "P0467",
+   "kind": "within_hplt",
+   "stratum": "0.80-1.00",
+   "J": 0.828,
+   "label": "different",
+   "confidence": "high",
+   "why": "약관 틀만 같고 업체·내용 다름"
+  },
+  {
+   "id": "P0468",
+   "kind": "within_hplt",
+   "stratum": "0.80-1.00",
+   "J": 0.953,
+   "label": "same",
+   "confidence": "high",
+   "why": "동일 블로그 글, 일부 문장 차이"
+  },
+  {
+   "id": "P0469",
+   "kind": "within_hplt",
+   "stratum": "0.80-1.00",
+   "J": 0.859,
+   "label": "same",
+   "confidence": "high",
+   "why": "같은 기사, 제목·메타 차이"
+  },
+  {
+   "id": "P0470",
+   "kind": "within_hplt",
+   "stratum": "0.80-1.00",
+   "J": 1.0,
+   "label": "same",
+   "confidence": "high",
+   "why": "같은 맛집 글, 말미 문구 차이"
+  },
+  {
+   "id": "P0471",
+   "kind": "within_hplt",
+   "stratum": "0.80-1.00",
+   "J": 0.875,
+   "label": "partial",
+   "confidence": "low",
+   "why": "블로그 목록 발췌 일부만 겹침"
+  },
+  {
+   "id": "P0472",
+   "kind": "within_hplt",
+   "stratum": "0.80-1.00",
+   "J": 0.906,
+   "label": "same",
+   "confidence": "high",
+   "why": "조회수만 다른 동일 게시글"
+  },
+  {
+   "id": "P0473",
+   "kind": "within_hplt",
+   "stratum": "0.80-1.00",
+   "J": 0.859,
+   "label": "same",
+   "confidence": "high",
+   "why": "보이는 본문이 동일, 머리말·꼬리말 차이뿐"
+  },
+  {
+   "id": "P0474",
+   "kind": "within_hplt",
+   "stratum": "0.80-1.00",
+   "J": 0.953,
+   "label": "same",
+   "confidence": "high",
+   "why": "같은 식약처 기사, 머리 표기 차이"
+  },
+  {
+   "id": "P0475",
+   "kind": "within_hplt",
+   "stratum": "0.80-1.00",
+   "J": 0.945,
+   "label": "same",
+   "confidence": "high",
+   "why": "같은 육아일기, 머리글 배치 차이"
+  },
+  {
+   "id": "P0476",
+   "kind": "within_hplt",
+   "stratum": "0.80-1.00",
+   "J": 0.984,
+   "label": "same",
+   "confidence": "high",
+   "why": "같은 글, 제목과 관련글 링크 차이"
+  },
+  {
+   "id": "P0477",
+   "kind": "within_hplt",
+   "stratum": "0.80-1.00",
+   "J": 0.961,
+   "label": "same",
+   "confidence": "high",
+   "why": "같은 레포트, 머리말 일부 차이"
+  },
+  {
+   "id": "P0478",
+   "kind": "within_hplt",
+   "stratum": "0.80-1.00",
+   "J": 0.812,
+   "label": "same",
+   "confidence": "high",
+   "why": "같은 블로그 글, 댓글 구간만 다름"
+  },
+  {
+   "id": "P0479",
+   "kind": "within_hplt",
+   "stratum": "0.80-1.00",
+   "J": 0.969,
+   "label": "same",
+   "confidence": "high",
+   "why": "같은 기사, 머리말 차이"
+  },
+  {
+   "id": "P0480",
+   "kind": "within_hplt",
+   "stratum": "0.80-1.00",
+   "J": 0.852,
+   "label": "same",
+   "confidence": "high",
+   "why": "댓글 닉네임 일부만 다름"
+  },
+  {
+   "id": "P0481",
+   "kind": "within_hplt",
+   "stratum": "0.80-1.00",
+   "J": 1.0,
+   "label": "same",
+   "confidence": "high",
+   "why": "같은 블로그 글, B에 제목 머리글"
+  },
+  {
+   "id": "P0482",
+   "kind": "within_hplt",
+   "stratum": "0.80-1.00",
+   "J": 0.852,
+   "label": "same",
+   "confidence": "high",
+   "why": "동일 블로그 글, 댓글 구성 차이"
+  },
+  {
+   "id": "P0483",
+   "kind": "within_hplt",
+   "stratum": "0.80-1.00",
+   "J": 0.82,
+   "label": "same",
+   "confidence": "high",
+   "why": "동일 위키 문서, 표기만 약간 차이"
+  },
+  {
+   "id": "P0484",
+   "kind": "within_hplt",
+   "stratum": "0.80-1.00",
+   "J": 0.961,
+   "label": "same",
+   "confidence": "high",
+   "why": "같은 개인정보취급방침"
+  },
+  {
+   "id": "P0485",
+   "kind": "within_hplt",
+   "stratum": "0.80-1.00",
+   "J": 0.898,
+   "label": "same",
+   "confidence": "low",
+   "why": "같은 기사 묶음, 앞머리 항목만 다름"
+  },
+  {
+   "id": "P0486",
+   "kind": "within_hplt",
+   "stratum": "0.80-1.00",
+   "J": 0.852,
+   "label": "same",
+   "confidence": "high",
+   "why": "위키 문서 판본 차이"
+  },
+  {
+   "id": "P0487",
+   "kind": "within_hplt",
+   "stratum": "0.80-1.00",
+   "J": 1.0,
+   "label": "same",
+   "confidence": "high",
+   "why": "보이는 본문이 동일, 머리말·꼬리말 차이뿐"
+  },
+  {
+   "id": "P0488",
+   "kind": "within_hplt",
+   "stratum": "0.80-1.00",
+   "J": 0.867,
+   "label": "same",
+   "confidence": "high",
+   "why": "제품 설명 동일, 머리말·표 꼬리만 차이"
+  },
+  {
+   "id": "P0489",
+   "kind": "within_hplt",
+   "stratum": "0.80-1.00",
+   "J": 0.992,
+   "label": "same",
+   "confidence": "high",
+   "why": "같은 글, B에 제목 추가"
+  },
+  {
+   "id": "P0490",
+   "kind": "within_hplt",
+   "stratum": "0.80-1.00",
+   "J": 0.945,
+   "label": "same",
+   "confidence": "high",
+   "why": "백과 문서 동일"
+  },
+  {
+   "id": "P0491",
+   "kind": "within_hplt",
+   "stratum": "0.80-1.00",
+   "J": 0.992,
+   "label": "same",
+   "confidence": "high",
+   "why": "동일 강좌 안내"
+  },
+  {
+   "id": "P0492",
+   "kind": "within_hplt",
+   "stratum": "0.80-1.00",
+   "J": 0.961,
+   "label": "same",
+   "confidence": "high",
+   "why": "동일 번역 기사"
+  },
+  {
+   "id": "P0493",
+   "kind": "within_hplt",
+   "stratum": "0.80-1.00",
+   "J": 0.977,
+   "label": "same",
+   "confidence": "high",
+   "why": "제목/본문 라벨만 다른 같은 기사"
+  },
+  {
+   "id": "P0494",
+   "kind": "within_hplt",
+   "stratum": "0.80-1.00",
+   "J": 0.961,
+   "label": "same",
+   "confidence": "high",
+   "why": "제목 머리글 외 동일"
+  },
+  {
+   "id": "P0495",
+   "kind": "within_hplt",
+   "stratum": "0.80-1.00",
+   "J": 0.945,
+   "label": "same",
+   "confidence": "high",
+   "why": "같은 캐딜락 시승기, A에 제목 줄"
+  },
+  {
+   "id": "P0496",
+   "kind": "within_hplt",
+   "stratum": "0.80-1.00",
+   "J": 0.828,
+   "label": "same",
+   "confidence": "high",
+   "why": "조회수 숫자만 다름"
+  },
+  {
+   "id": "P0497",
+   "kind": "within_hplt",
+   "stratum": "0.80-1.00",
+   "J": 0.977,
+   "label": "same",
+   "confidence": "high",
+   "why": "같은 기사, 기자 서명 유무"
+  },
+  {
+   "id": "P0498",
+   "kind": "within_hplt",
+   "stratum": "0.80-1.00",
+   "J": 0.898,
+   "label": "same",
+   "confidence": "high",
+   "why": "같은 픽셀3 라이트 기사, B에 제목"
+  },
+  {
+   "id": "P0499",
+   "kind": "within_hplt",
+   "stratum": "0.80-1.00",
+   "J": 0.93,
+   "label": "same",
+   "confidence": "high",
+   "why": "보이는 본문이 동일, 머리말·꼬리말 차이뿐"
+  }
+ ],
+ "recall": {
+  "replace_2%": {
+   "n": 300,
+   "mean_J": 0.847,
+   "share_J_ge_0_8": 0.897,
+   "share_J_ge_0_5": 1.0,
+   "share_lsh_candidate": 1.0,
+   "share_detected_at_0_8": 0.897
+  },
+  "replace_5%": {
+   "n": 300,
+   "mean_J": 0.645,
+   "share_J_ge_0_8": 0.0,
+   "share_J_ge_0_5": 0.997,
+   "share_lsh_candidate": 1.0,
+   "share_detected_at_0_8": 0.0
+  },
+  "replace_10%": {
+   "n": 300,
+   "mean_J": 0.425,
+   "share_J_ge_0_8": 0.0,
+   "share_J_ge_0_5": 0.083,
+   "share_lsh_candidate": 0.653,
+   "share_detected_at_0_8": 0.0
+  },
+  "replace_20%": {
+   "n": 300,
+   "mean_J": 0.199,
+   "share_J_ge_0_8": 0.0,
+   "share_J_ge_0_5": 0.0,
+   "share_lsh_candidate": 0.033,
+   "share_detected_at_0_8": 0.0
+  },
+  "add_foreign_10%_of_len(split head/tail)": {
+   "n": 300,
+   "mean_J": 0.911,
+   "share_J_ge_0_8": 1.0,
+   "share_J_ge_0_5": 1.0,
+   "share_lsh_candidate": 1.0,
+   "share_detected_at_0_8": 1.0
+  },
+  "add_foreign_25%_of_len(split head/tail)": {
+   "n": 300,
+   "mean_J": 0.798,
+   "share_J_ge_0_8": 0.463,
+   "share_J_ge_0_5": 1.0,
+   "share_lsh_candidate": 1.0,
+   "share_detected_at_0_8": 0.463
+  },
+  "add_foreign_50%_of_len(split head/tail)": {
+   "n": 300,
+   "mean_J": 0.66,
+   "share_J_ge_0_8": 0.0,
+   "share_J_ge_0_5": 1.0,
+   "share_lsh_candidate": 0.997,
+   "share_detected_at_0_8": 0.0
+  },
+  "add_foreign_100%_of_len(split head/tail)": {
+   "n": 300,
+   "mean_J": 0.491,
+   "share_J_ge_0_8": 0.0,
+   "share_J_ge_0_5": 0.467,
+   "share_lsh_candidate": 0.833,
+   "share_detected_at_0_8": 0.0
+  },
+  "add_foreign_200%_of_len(split head/tail)": {
+   "n": 300,
+   "mean_J": 0.324,
+   "share_J_ge_0_8": 0.0,
+   "share_J_ge_0_5": 0.0,
+   "share_lsh_candidate": 0.35,
+   "share_detected_at_0_8": 0.0
+  },
+  "add_fixed_50w_head+tail": {
+   "n": 300,
+   "mean_J": 0.805,
+   "share_J_ge_0_8": 0.56,
+   "share_J_ge_0_5": 1.0,
+   "share_lsh_candidate": 1.0,
+   "share_detected_at_0_8": 0.56
+  },
+  "keep_first_70%": {
+   "n": 300,
+   "mean_J": 0.691,
+   "share_J_ge_0_8": 0.013,
+   "share_J_ge_0_5": 1.0,
+   "share_lsh_candidate": 1.0,
+   "share_detected_at_0_8": 0.013
+  },
+  "keep_first_50%": {
+   "n": 300,
+   "mean_J": 0.486,
+   "share_J_ge_0_8": 0.0,
+   "share_J_ge_0_5": 0.42,
+   "share_lsh_candidate": 0.853,
+   "share_detected_at_0_8": 0.0
+  },
+  "keep_middle_50%": {
+   "n": 300,
+   "mean_J": 0.49,
+   "share_J_ge_0_8": 0.0,
+   "share_J_ge_0_5": 0.457,
+   "share_lsh_candidate": 0.853,
+   "share_detected_at_0_8": 0.0
+  }
+ },
+ "clusters": {
+  "fw2_J0.8": {
+   "docs": 2510569,
+   "clusters": 2510064,
+   "docs_in_multi": 791,
+   "share_docs_in_multi": 0.000315068018445221,
+   "max": 16,
+   "top30": [
+    16,
+    12,
+    12,
+    12,
+    11,
+    11,
+    11,
+    10,
+    10,
+    10,
+    9,
+    9,
+    9,
+    8,
+    8,
+    8,
+    7,
+    7,
+    7,
+    6,
+    6,
+    6,
+    6,
+    6,
+    6,
+    6,
+    5,
+    5,
+    5,
+    5
+   ],
+   "size_hist": {
+    "1": 2509778,
+    "2": 234,
+    "3-4": 22,
+    "5-9": 20,
+    "10-49": 10,
+    "50-199": 0,
+    "200+": 0
+   },
+   "docs_in_size_ge10": 115
+  },
+  "fw2_J0.5": {
+   "docs": 2510569,
+   "clusters": 2483323,
+   "docs_in_multi": 40182,
+   "share_docs_in_multi": 0.01600513668415407,
+   "max": 449,
+   "top30": [
+    449,
+    404,
+    254,
+    207,
+    205,
+    198,
+    192,
+    177,
+    176,
+    147,
+    136,
+    129,
+    121,
+    119,
+    118,
+    117,
+    107,
+    104,
+    103,
+    97,
+    87,
+    84,
+    73,
+    73,
+    66,
+    65,
+    64,
+    63,
+    59,
+    58
+   ],
+   "size_hist": {
+    "1": 2470387,
+    "2": 10766,
+    "3-4": 1251,
+    "5-9": 540,
+    "10-49": 337,
+    "50-199": 37,
+    "200+": 5
+   },
+   "docs_in_size_ge10": 11183
+  },
+  "hplt_J0.8": {
+   "docs": 3455188,
+   "clusters": 3425026,
+   "docs_in_multi": 58983,
+   "share_docs_in_multi": 0.017070851137477902,
+   "max": 48,
+   "top30": [
+    48,
+    24,
+    24,
+    23,
+    22,
+    16,
+    14,
+    10,
+    10,
+    9,
+    8,
+    7,
+    7,
+    7,
+    6,
+    6,
+    6,
+    6,
+    6,
+    6,
+    5,
+    5,
+    5,
+    5,
+    5,
+    5,
+    5,
+    5,
+    4,
+    4
+   ],
+   "size_hist": {
+    "1": 3396205,
+    "2": 27771,
+    "3-4": 1022,
+    "5-9": 19,
+    "10-49": 9,
+    "50-199": 0,
+    "200+": 0
+   },
+   "docs_in_size_ge10": 191
+  },
+  "hplt_J0.5": {
+   "docs": 3455188,
+   "clusters": 3351790,
+   "docs_in_multi": 175451,
+   "share_docs_in_multi": 0.050779002473960895,
+   "max": 1724,
+   "top30": [
+    1724,
+    348,
+    300,
+    293,
+    292,
+    260,
+    250,
+    249,
+    248,
+    225,
+    223,
+    196,
+    168,
+    155,
+    134,
+    133,
+    128,
+    125,
+    121,
+    117,
+    113,
+    110,
+    106,
+    105,
+    98,
+    94,
+    93,
+    91,
+    87,
+    87
+   ],
+   "size_hist": {
+    "1": 3279737,
+    "2": 63329,
+    "3-4": 6776,
+    "5-9": 1310,
+    "10-49": 573,
+    "50-199": 54,
+    "200+": 11
+   },
+   "docs_in_size_ge10": 19073
+  }
+ },
+ "note": "pair texts are not stored; judgments by model subagents from head600+tail200 excerpts, blind to J; clusters are sample-based (FW2 4.6%, HPLT 58 files) with union capped at 300 members per band group"
+}
