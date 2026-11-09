@@ -1,59 +1,23 @@
-"""Parameterised copy of data.filters.check_ko plus the parity gate that keeps it honest.
+"""check_ko with explicit thresholds: a thin wrapper over the production policy object.
 
-check_ko_param(t, KoParams()) must return the same reason string as data.filters.check_ko(t)
-for every input (reason ORDER is part of the behaviour: first failing check wins).
-`parity_mismatches` is the gate; tests and the CLI refuse to report if it finds any.
+Since data/filters.py exposes KoPolicy, the harness no longer keeps a copy of the rule logic, so there
+is no copy to drift. What remains to guard is the harness' own entry point against the legacy
+`check_ko(t, min_chars=, max_chars=)` entry point (`parity_mismatches`); regression protection of the
+defaults themselves is tests/golden/filters_oracle_v1.json.
 
 The per-document sequence of data/clean.py is: norm_ws -> check -> exact_hash dedup -> mask_pii.
-`filter_reason` reproduces the norm_ws -> check part (dedup is cross-document, not measured here).
+`filter_reason` reproduces norm_ws -> check (dedup is cross-document and not measured here).
 """
-import unicodedata
-from dataclasses import dataclass, asdict, replace
+from dataclasses import replace
 
 from data import filters as F
 
-
-@dataclass(frozen=True)
-class KoParams:
-    min_chars: int = 200
-    max_chars: int = 100_000
-    min_hangul: int = 50
-    min_hangul_ratio: float = 0.30
-    max_dup_line_frac: float = 0.30
-    dup_line_min_lines: int = 5        # production: len(lines) > 5
-    max_ngram_rep: float = 0.30
-    min_alnum_ratio: float = 0.50
-    max_bad_encoding_ratio: float = 0.001
-    pre_normalize: str = 'none'        # candidate knob: 'none' (production) | 'nfc'
-
-    def as_dict(self):
-        return asdict(self)
-
-
-DEFAULT = KoParams()
+KoParams = F.KoPolicy
+DEFAULT = F.KO_DEFAULT
 
 
 def check_ko_param(t, p=DEFAULT):
-    """Same control flow as data.filters.check_ko with thresholds taken from `p`."""
-    if p.pre_normalize == 'nfc':
-        t = unicodedata.normalize('NFC', t)
-    elif p.pre_normalize != 'none':
-        raise ValueError('pre_normalize must be none or nfc')
-    n = len(t)
-    if n < p.min_chars: return 'short'
-    if n > p.max_chars: return 'long'
-    nonspace = sum(1 for c in t if not c.isspace())
-    if nonspace == 0: return 'empty'
-    h = len(F.HANGUL.findall(t))
-    if h < p.min_hangul: return 'few_hangul'
-    if h / nonspace < p.min_hangul_ratio: return 'low_hangul_ratio'
-    lines = [l for l in t.split('\n') if l.strip()]
-    if len(lines) > p.dup_line_min_lines and F.dedup_lines_stat(lines) > p.max_dup_line_frac: return 'dup_lines'
-    if F.ngram_rep(t.split()) > p.max_ngram_rep: return 'ngram_rep'
-    alpha = sum(c.isalnum() for c in t)
-    if alpha / n < p.min_alnum_ratio: return 'low_alnum'
-    if '�' in t and t.count('�') / n > p.max_bad_encoding_ratio: return 'bad_encoding'
-    return None
+    return F.check_ko(t, policy=p)
 
 
 def filter_reason(text, p=DEFAULT):
@@ -62,18 +26,17 @@ def filter_reason(text, p=DEFAULT):
 
 
 def parity_mismatches(texts, p=DEFAULT):
-    """Return [(index, production_reason, copy_reason)] for texts where the copy differs.
+    """[(index, legacy_reason, harness_reason)] where the two entry points disagree.
 
-    Only meaningful when `p` equals the defaults; the production function has no knobs
-    other than min_chars/max_chars, which are checked too when they are the only non-default.
-    """
+    Only defined for production-equivalent parameters (defaults plus the two length knobs the legacy
+    signature supports)."""
     only_len = replace(DEFAULT, min_chars=p.min_chars, max_chars=p.max_chars)
     if p != only_len:
         raise ValueError('parity gate only applies to production-equivalent parameters')
     bad = []
     for i, t in enumerate(texts):
-        prod = F.check_ko(t, min_chars=p.min_chars, max_chars=p.max_chars)
+        legacy = F.check_ko(t, min_chars=p.min_chars, max_chars=p.max_chars)
         mine = check_ko_param(t, p)
-        if prod != mine:
-            bad.append((i, prod, mine))
+        if legacy != mine:
+            bad.append((i, legacy, mine))
     return bad

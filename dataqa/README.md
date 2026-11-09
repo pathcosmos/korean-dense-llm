@@ -8,8 +8,9 @@
 | 파일 | 역할 |
 |---|---|
 | `gold.py` | gold 레코드 스키마·검증, 정책 override (`apply_policy`) |
-| `ko_rules.py` | `check_ko`의 파라미터화 복제본 + **패리티 게이트** |
-| `pii_rules.py` | `mask_pii` 재현(순차 적용, 원문 좌표 매핑) + 후보 규칙 + 패리티 게이트 |
+| `ko_rules.py` | `data.filters.KoPolicy`/`check_ko`를 호출하는 얇은 래퍼 (복제본 없음) |
+| `pii_rules.py` | 원문 좌표 매핑 + 프로덕션 `find_pii`/`PiiPolicy` 호출 + 검증 불가 사실에 의존하는 하네스 전용 후보 + 패리티 게이트 |
+| `oracle.py` | `data/filters.py` 기본 동작을 동결하는 골든 오라클 생성 (`tests/golden/filters_oracle_v1.json`) |
 | `metrics.py` | 필터·PII 지표. 분모 0이면 `None`, 합성/실제는 합치지 않음 |
 | `seed_gold.py` | 결정적 합성 seed (`gold/seed_v1.jsonl`, 94건) |
 | `run.py` | `report.json` + `report.md` 생성, 임계값 sweep |
@@ -31,7 +32,7 @@ python -m pytest -q tests/test_dataqa.py
 
 ## 신뢰를 지키는 장치
 
-1. **패리티 게이트.** 임계값을 바꿔 보려면 `check_ko`의 복제본이 필요하지만 복제본은 어긋날 수 있다. 기본 파라미터에서 `check_ko_param`이 `data.filters.check_ko`와 **같은 거절 사유 문자열**을 내는지(검사 순서 포함) gold 전체와 시드 고정 퍼징 텍스트로 검사한다. PII는 `apply`의 마스킹 결과가 `mask_pii(text)`와 바이트 단위로 같은지 검사한다. 하나라도 어긋나면 `run`은 리포트를 쓰지 않고 종료한다.
+1. **복제본 제거 + 골든 오라클.** `data/filters.py`가 `KoPolicy`/`PiiPolicy`를 노출하므로 하네스는 규칙 로직을 복제하지 않는다. 기본값이 리팩터링 전과 **바이트 단위로 같음**은 `tests/golden/filters_oracle_v1.json`(수정 전 코드에서 생성, 합성 seed·시드 고정 퍼징·로컬 파일럿의 거절 사유·해시·마스킹 sha256)이 고정한다. 하네스 전용 PII 후보(접두 허용 목록, 7번째 자리 5-8)만 하네스에 남아 있고, 이 후보들의 마스킹 결과는 `apply`가 `mask_pii`와 같은 순서로 재현하는지 `parity_mismatches`로 검사한다. 하나라도 어긋나면 `run`은 리포트를 쓰지 않고 종료한다.
 2. **파이프라인 순서.** `data/clean.py`의 문서별 순서(`norm_ws → check → exact_hash → mask_pii`)를 따른다. 문서 간 `exact_dup`은 측정하지 않는다.
 3. **분모 규율.** 모든 비율에 분모를 함께 적고, 분모 0은 `None`이다. `ambiguous` 레코드와 span은 precision/recall에서 제외하고 개수만 센다.
 4. **정책 선택 분리.** 정책에 따라 달라지는 라벨(NFD 문서, 코드가 섞인 튜토리얼, 후렴 있는 시)은 `policy_assumption`으로 표시하고 `--policy 이름=keep|reject`로 뒤집는다. 다른 라벨은 건드리지 않는다.
