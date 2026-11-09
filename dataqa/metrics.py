@@ -23,6 +23,14 @@ def prf(tp, fp, fn):
                 precision_den=tp + fp, recall_den=tp + fn)
 
 
+def shown(kind, value):
+    """Text that may be written to a report. Real (non-synthetic) documents can contain genuine personal
+    data, so digits and letters are replaced by '#' / 'x' and only the shape is kept."""
+    if kind == 'synthetic':
+        return value
+    return ''.join('#' if c.isdigit() else 'x' if c.isalpha() else c for c in value)
+
+
 def by_kind(records):
     groups = defaultdict(list)
     for r in records:
@@ -111,7 +119,7 @@ def pii_metrics(records, cfg=pii_rules.PiiConfig()):
                 per_type[g['type']]['overlap'] += hit_any
                 if not hit_any:
                     errors.append(dict(id=r['id'], type='missed_span', span_type=g['type'],
-                                       text=text[g['start']:g['end']]))
+                                       text=shown(kind, text[g['start']:g['end']])))
             for d in dets:
                 if any(_overlap(d, a) for a in amb):
                     ambiguous_hits += 1
@@ -120,7 +128,7 @@ def pii_metrics(records, cfg=pii_rules.PiiConfig()):
                 if not overl:
                     fp += 1
                     errors.append(dict(id=r['id'], type='false_detection', det_type=d['type'],
-                                       text=text[d['start']:d['end']]))
+                                       text=shown(kind, text[d['start']:d['end']])))
                 elif any(g['type'] in pii_rules.FAMILY[d['type']] for g in overl):
                     if any(g['start'] == d['start'] and g['end'] == d['end']
                            and g['type'] in pii_rules.FAMILY[d['type']] for g in overl):
@@ -128,11 +136,11 @@ def pii_metrics(records, cfg=pii_rules.PiiConfig()):
                     else:
                         partial += 1
                         errors.append(dict(id=r['id'], type='partial_span', det_type=d['type'],
-                                           text=text[d['start']:d['end']]))
+                                           text=shown(kind, text[d['start']:d['end']])))
                 else:
                     wrong_type += 1
                     errors.append(dict(id=r['id'], type='wrong_type', det_type=d['type'],
-                                       text=text[d['start']:d['end']]))
+                                       text=shown(kind, text[d['start']:d['end']])))
         det_total = tp + partial + wrong_type + fp
         types = {}
         for t, c in per_type.items():

@@ -5,7 +5,7 @@ import unicodedata
 import unittest
 from pathlib import Path
 
-from dataqa import make_labels, seed_gold, t1_stats
+from dataqa import gold, make_labels, review_sheet, seed_gold, t1_stats
 
 
 def doc(rid, text):
@@ -94,20 +94,21 @@ class T1StatsTest(unittest.TestCase):
             unicodedata.normalize('NFD', base),
             base + ' <|eos|> ' + base[:50],
             base + ' contact firstname.lastname@example.org',
+            base + ' mailto:firstname.lastname@example.org',
             base + ' contact real.person@example.com +82-10-0000-1234',
             'short',
         ]
         c, lengths = t1_stats.scan_group(texts, ['<|eos|>', '<|pad|>'])
-        self.assertEqual(c['docs'], 6)
+        self.assertEqual(c['docs'], 7)
         self.assertEqual(c['not_nfc'], 1)
         self.assertEqual(c['conjoining_jamo'], 1)
         self.assertEqual(c['nfd_rejected'], 1)
         self.assertEqual((c['eos_literal'], c['special_literal_any']), (1, 1))
-        self.assertEqual(c['email_placeholder'], 1)
+        self.assertEqual(c['email_placeholder'], 2)
         self.assertEqual(c['pii_email'], 1)              # the placeholder is not counted as a real address
-        self.assertEqual(c['pii_opt_in_extra'], 1)       # +82 number only the opt-in policy masks
+        self.assertEqual(c['pii_opt_in_differs'], 1)      # +82 number only the opt-in policy masks
         self.assertEqual(c['ko_reject_short'], 1)
-        self.assertEqual(len(lengths), 6)
+        self.assertEqual(len(lengths), 7)
 
     def test_bootstrap_resamples_groups_and_is_deterministic(self):
         groups = [dict(docs=100, a=10), dict(docs=100, a=10), dict(docs=100, a=90)]
@@ -119,6 +120,19 @@ class T1StatsTest(unittest.TestCase):
         self.assertGreater(r['ci95'][1] - r['ci95'][0], 0.1)       # few groups -> wide interval
         same = t1_stats.bootstrap([dict(docs=100, a=7)] * 5, 'a', boots=200, seed=1)
         self.assertEqual(same['ci95'], [0.07, 0.07])
+
+
+class ReviewSheetTest(unittest.TestCase):
+    def test_priorities_and_controls(self):
+        recs = [r for r in gold.loads(Path(__file__).resolve().parents[1].joinpath('dataqa/gold/seed_v1.jsonl').read_text(encoding='utf-8'))]
+        text, n = review_sheet.build(recs, controls=3, seed=1)
+        self.assertEqual(text.count('\n## '), n)
+        first = text.split('\n## ')[1]
+        self.assertIn('rules', first.split('\n')[1])            # rule-vs-label disagreements come first
+        self.assertEqual(text.count('random control'), 3)
+        ids = [line.split()[0] for line in text.split('\n## ')[1:]]
+        self.assertEqual(len(ids), len(set(ids)))                  # each document listed once
+        self.assertEqual(review_sheet.mask_digits('010-1234'), '###-####')
 
 
 if __name__ == '__main__':

@@ -239,6 +239,15 @@ class MetricsTest(unittest.TestCase):
         wide = metrics.pii_metrics(recs, pii_rules.PRESETS['rrn_range_date'])['synthetic']
         self.assertEqual(wide['per_type']['alien_reg']['exact'], wide['per_type']['alien_reg']['n'])
 
+    def test_real_reviewed_error_text_is_masked_but_synthetic_is_not(self):
+        text = seed_gold.prose(random.Random(12), 250) + '\n문의 010-1234-5678 로 연락'
+        base = dict(id='r', text=text, label='keep', tags=[], pii_spans=[])
+        real = metrics.pii_metrics([dict(base, source_kind='real_reviewed')])['real_reviewed']['errors']
+        syn = metrics.pii_metrics([dict(base, source_kind='synthetic')])['synthetic']['errors']
+        self.assertEqual(real[0]['text'], '###-####-####')
+        self.assertEqual(syn[0]['text'], '010-1234-5678')
+        self.assertEqual(metrics.shown('real_reviewed', 'ab@cd.kr 12'), 'xx@xx.xx ##')
+
     def test_ambiguous_span_hits_are_excluded_from_precision(self):
         recs = [r for r in gold.load(SEED_FILE) if r['id'] == 'syn-pii-ambiguous-00']
         m = metrics.pii_metrics(recs)['synthetic']

@@ -11,9 +11,11 @@ Measured per document (on the text as data/clean.py sees it, i.e. after norm_ws 
   special_literal_any   raw text contains a tokenizer special-token string (tokenizer/train_tokenizer.py SPECIAL)
   eos_literal           raw text contains '<|eos|>'
   email_placeholder     text contains the dataset's own placeholder address
+  pii_email             an email-like match that does not contain the placeholder
   pii_default_changed   mask_pii(default) changes the text
   pii_*                 per-kind detections under the default policy
-  pii_opt_in_extra      the opt-in production-safe PiiPolicy masks something the default does not
+  pii_opt_in_differs    the opt-in production-safe PiiPolicy (intl phone, date-checked RRN, no git remotes)
+                        masks a document differently from the default (more OR fewer masks)
   ko_reject_<reason>    check_ko outcome under the default policy
 """
 import argparse
@@ -64,11 +66,11 @@ def scan_group(texts, specials):
         if masked != text:
             c['pii_default_changed'] += 1
         for kind in ('email', 'rrn', 'phone'):
-            spans = [t for t in F.find_pii(text, kind) if text[t[0]:t[1]] != PLACEHOLDER]
+            spans = [t for t in F.find_pii(text, kind) if PLACEHOLDER not in text[t[0]:t[1]]]  # the email regex may swallow neighbouring letters
             if spans:
                 c['pii_' + kind] += 1
         if F.mask_pii(text, SAFE) != masked:
-            c['pii_opt_in_extra'] += 1
+            c['pii_opt_in_differs'] += 1
     return c, lengths
 
 
