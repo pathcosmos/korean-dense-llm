@@ -27,6 +27,10 @@ def reasons_for(rec):
     got = ko_rules.filter_reason(rec['text'])
     if rec.get('ambiguous'):
         why.append('labeller marked ambiguous')
+    pre = rec.get('prereview')
+    if pre and pre['status'] != 'confirmed':
+        votes = ','.join(pre['votes'])
+        why.append(f"pre-review {pre['status']} (reviewers: {votes}; +{len(pre['added_spans'])}/-{len(pre['missing_spans'])} spans)")
     if rec['label'] == 'keep' and got is not None:
         why.append(f'rules reject a keep ({got})')
     if rec['label'] == 'reject' and rec['reject_reason'] in gold.RULE_REASONS and got is None:
@@ -53,7 +57,9 @@ def build(records, controls=8, seed=1, head=700, tail=200):
     rng.shuffle(plain)
     control = [(r, ['random control'], e) for r, _, e in plain[:controls]]
     rank = lambda item: (0 if any('rules reject a keep' in w or 'rules keep a reject' in w for w in item[1]) else
-                         1 if any(w.startswith('removal') for w in item[1]) else 2)
+                         1 if any(w.startswith('pre-review label_flagged') for w in item[1]) else
+                         2 if any(w.startswith('removal') for w in item[1]) else
+                         3 if any(w.startswith('pre-review') for w in item[1]) else 4)
     items = sorted(flagged, key=rank) + control
     out = ['# 검수 시트 (LOCAL ONLY — 실제 웹 텍스트 포함, 커밋·게시 금지)', '',
            f'문서 {len(items)}건 / 전체 {len(records)}건. 각 문서에서 확인할 것: **에이전트 라벨이 맞는가**. 틀리면 문서 id와 고칠 라벨만 알려 주세요.', '']
