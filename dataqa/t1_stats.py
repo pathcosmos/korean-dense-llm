@@ -10,8 +10,8 @@ Measured per document (on the text as data/clean.py sees it, i.e. after norm_ws 
   nfd_rejected          check_ko rejects with few_hangul but passes with pre_normalize=nfc
   special_literal_any   raw text contains a tokenizer special-token string (tokenizer/train_tokenizer.py SPECIAL)
   eos_literal           raw text contains '<|eos|>'
-  email_placeholder     text contains the dataset's own placeholder address
-  pii_email             an email-like match that does not contain the placeholder
+  email_placeholder     text contains an address at a reserved example.com/org/net domain (the dataset's own placeholder)
+  pii_email             an email-like match whose domain is not a reserved placeholder domain
   pii_default_changed   mask_pii(default) changes the text
   pii_*                 per-kind detections under the default policy
   pii_opt_in_differs    the opt-in production-safe PiiPolicy (intl phone, date-checked RRN, no git remotes)
@@ -30,7 +30,11 @@ from pathlib import Path
 from data import filters as F
 from dataqa import real_sample
 
-PLACEHOLDER = 'firstname.lastname@example.org'
+import re
+
+# RFC 2606 reserved domains. FineWeb-2 replaces e-mail addresses with firstname.lastname@example.org and
+# <word>@example.com; both are placeholders, not personal data.
+RESERVED = re.compile(r'@example\.(?:com|org|net)\b', re.I)
 SAFE = F.PiiPolicy(phone='intl', rrn='date_checked', email='no_git')
 JAMO = range(0x1100, 0x1200)
 
@@ -56,7 +60,7 @@ def scan_group(texts, specials):
             c['special_literal_any'] += 1
         if '<|eos|>' in raw:
             c['eos_literal'] += 1
-        if PLACEHOLDER in raw:
+        if RESERVED.search(raw):
             c['email_placeholder'] += 1
         reason = F.check_ko(text)
         c['ko_reject_' + (reason or 'keep')] += 1
@@ -66,7 +70,7 @@ def scan_group(texts, specials):
         if masked != text:
             c['pii_default_changed'] += 1
         for kind in ('email', 'rrn', 'phone'):
-            spans = [t for t in F.find_pii(text, kind) if PLACEHOLDER not in text[t[0]:t[1]]]  # the email regex may swallow neighbouring letters
+            spans = [t for t in F.find_pii(text, kind) if not RESERVED.search(text[t[0]:t[1]])]
             if spans:
                 c['pii_' + kind] += 1
         if F.mask_pii(text, SAFE) != masked:
@@ -128,8 +132,8 @@ ROWS = [
     ('ko_reject_low_alnum', 'low_alnum'), ('ko_reject_bad_encoding', 'bad_encoding'), ('ko_reject_long', 'long'),
     ('not_nfc', 'NFC가 아닌 원문'), ('conjoining_jamo', '분해형(conjoining) 자모 포함'),
     ('nfd_rejected', 'NFD 때문에 거절 (NFC면 통과)'), ('special_literal_any', '특수 토큰 문자열 포함'),
-    ('eos_literal', '<|eos|> 문자열 포함'), ('email_placeholder', '데이터셋 이메일 플레이스홀더 포함'),
-    ('pii_email', '플레이스홀더가 아닌 이메일 형태'), ('pii_phone', '전화번호 형태 (기본 정규식)'),
+    ('eos_literal', '<|eos|> 문자열 포함'), ('email_placeholder', '예약 도메인(example.*) 이메일 플레이스홀더 포함'),
+    ('pii_email', '예약 도메인이 아닌 이메일 형태'), ('pii_phone', '전화번호 형태 (기본 정규식)'),
     ('pii_rrn', '주민번호 형태 (기본 정규식)'), ('pii_default_changed', '기본 마스킹이 문서를 바꿈'),
     ('pii_opt_in_differs', 'opt-in 정책의 마스킹이 기본과 다름')]
 

@@ -95,7 +95,7 @@ class T1StatsTest(unittest.TestCase):
             base + ' <|eos|> ' + base[:50],
             base + ' contact firstname.lastname@example.org',
             base + ' mailto:firstname.lastname@example.org',
-            base + ' contact real.person@example.com +82-10-0000-1234',
+            base + ' contact real.person@naver.com +82-10-0000-1234 and word@example.com',
             'short',
         ]
         c, lengths = t1_stats.scan_group(texts, ['<|eos|>', '<|pad|>'])
@@ -104,8 +104,8 @@ class T1StatsTest(unittest.TestCase):
         self.assertEqual(c['conjoining_jamo'], 1)
         self.assertEqual(c['nfd_rejected'], 1)
         self.assertEqual((c['eos_literal'], c['special_literal_any']), (1, 1))
-        self.assertEqual(c['email_placeholder'], 2)
-        self.assertEqual(c['pii_email'], 1)              # the placeholder is not counted as a real address
+        self.assertEqual(c['email_placeholder'], 3)   # org placeholder x2 + example.com
+        self.assertEqual(c['pii_email'], 1)              # only the naver.com address; reserved domains are placeholders
         self.assertEqual(c['pii_opt_in_differs'], 1)      # +82 number only the opt-in policy masks
         self.assertEqual(c['ko_reject_short'], 1)
         self.assertEqual(len(lengths), 7)
