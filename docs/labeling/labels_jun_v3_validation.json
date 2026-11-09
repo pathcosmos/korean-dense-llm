@@ -1,0 +1,188 @@
+{
+ "D033": {
+  "verdict": "drop",
+  "needs_cleaning": false,
+  "spam_injected": true,
+  "tags": [
+   "광고·상거래"
+  ],
+  "note": "불필요한게 너무 많이 들어가 서로 섞여 학습에 맞지 않다",
+  "t": 1794217230738
+ },
+ "D037": {
+  "verdict": "drop",
+  "needs_cleaning": false,
+  "spam_injected": true,
+  "tags": [
+   "낮은 정보량"
+  ],
+  "note": "쓸데없는 인터넷 페이지 글이다",
+  "t": 1794217713783
+ },
+ "D045": {
+  "verdict": "usable",
+  "needs_cleaning": true,
+  "spam_injected": false,
+  "tags": [],
+  "note": "뉴스 모음 요약",
+  "t": 1794218679512
+ },
+ "D055": {
+  "verdict": "usable",
+  "needs_cleaning": false,
+  "spam_injected": false,
+  "tags": [],
+  "note": "사람의 소아 질병에 대한 설명",
+  "t": 1794218629152
+ },
+ "D062": {
+  "verdict": "usable",
+  "needs_cleaning": false,
+  "spam_injected": false,
+  "tags": [],
+  "note": "역사 요약",
+  "t": 1794217188761
+ },
+ "D064": {
+  "verdict": "drop",
+  "needs_cleaning": false,
+  "spam_injected": false,
+  "tags": [
+   "광고·상거래"
+  ],
+  "note": "광고 글 일부인데 리뷰글들이고 필요없다 이런건",
+  "t": 1794217633185
+ },
+ "D065": {
+  "verdict": "usable",
+  "needs_cleaning": true,
+  "spam_injected": false,
+  "tags": [
+   "광고·상거래"
+  ],
+  "note": "온라인 상품 배송 및 결제 안내",
+  "t": 1794218740322
+ },
+ "D066": {
+  "verdict": "drop",
+  "needs_cleaning": false,
+  "spam_injected": false,
+  "tags": [
+   "보일러플레이트·메뉴"
+  ],
+  "note": "",
+  "t": 1794215161584
+ },
+ "D071": {
+  "verdict": "drop",
+  "needs_cleaning": false,
+  "spam_injected": false,
+  "tags": [
+   "낮은 정보량"
+  ],
+  "note": "영화 설명 단순 캐스팅 및 개봉 국가만 나열 정보령 현저히 적어",
+  "t": 1794218657170
+ },
+ "D072": {
+  "verdict": "usable",
+  "needs_cleaning": false,
+  "spam_injected": false,
+  "tags": [],
+  "note": "개인 블로그 글",
+  "t": 1794217175715
+ },
+ "D079": {
+  "verdict": "usable",
+  "needs_cleaning": true,
+  "spam_injected": false,
+  "tags": [
+   "형식 깨짐(마크업·인코딩)"
+  ],
+  "note": "일부 문장에 잘 쓰지 않는 기호 정제 필요",
+  "t": 1794214816154
+ },
+ "D080": {
+  "verdict": "usable",
+  "needs_cleaning": true,
+  "spam_injected": false,
+  "tags": [
+   "기타"
+  ],
+  "note": "개인적 영화 리뷰 인터넷 글",
+  "t": 1794218720738
+ },
+ "D081": {
+  "verdict": "usable",
+  "needs_cleaning": false,
+  "spam_injected": false,
+  "tags": [],
+  "note": "인물설명",
+  "t": 1794217648336
+ },
+ "D083": {
+  "verdict": "usable",
+  "needs_cleaning": false,
+  "spam_injected": false,
+  "tags": [],
+  "note": "문화재 설명 요약",
+  "t": 1794217665298
+ },
+ "D085": {
+  "verdict": "usable",
+  "needs_cleaning": false,
+  "spam_injected": false,
+  "tags": [
+   "광고·상거래"
+  ],
+  "note": "옷 설명",
+  "t": 1794217094179
+ },
+ "D092": {
+  "verdict": "usable",
+  "needs_cleaning": false,
+  "spam_injected": false,
+  "tags": [],
+  "note": "",
+  "t": 1794214772198
+ },
+ "D109": {
+  "verdict": "usable",
+  "needs_cleaning": false,
+  "spam_injected": false,
+  "tags": [
+   "광고·상거래"
+  ],
+  "note": "구인광고",
+  "t": 1794216797646
+ },
+ "D124": {
+  "verdict": "usable",
+  "needs_cleaning": false,
+  "spam_injected": false,
+  "tags": [
+   "광고·상거래"
+  ],
+  "note": "온라인 상거래 판매자 정보 상세",
+  "t": 1794218691944
+ },
+ "D140": {
+  "verdict": "drop",
+  "needs_cleaning": false,
+  "spam_injected": false,
+  "tags": [
+   "외설·유해"
+  ],
+  "note": "사설 토토 설명 등 불법적 설명인 것 같다",
+  "t": 1794217139136
+ },
+ "D145": {
+  "verdict": "usable",
+  "needs_cleaning": false,
+  "spam_injected": false,
+  "tags": [
+   "광고·상거래"
+  ],
+  "note": "인터넷 소설 혹은 웹툰 소개글",
+  "t": 1794217078153
+ }
+}
