@@ -9,9 +9,11 @@
 | 소스 내·소스 간 exact 중복 | 0건 | 전수 검증 (6절 1) |
 | HPLT 문서 중 FineWeb2에 J≥0.8 쌍이 있는 비율 | 약 23% (구간 18~29%) | 표본 추정 (6절 2) |
 | 같은 비율, J≥0.5 | 약 42% | 표본 추정, 변형·부분 겹침 포함 |
-| 같은 소스 안의 근접 중복 | 연속 15k 문서 구간에서 0~0.007% | 국소 측정, **전체 소스 값 아님** |
-| FineWeb2 ↔ FineWeb-Edu 등 다른 소스와의 중복 | 미측정 | |
-| 학습 split과 eval split 사이의 근접 중복 | 미측정 | 아래 5절 |
+| 같은 소스 안의 근접 중복(J≥0.8) | FineWeb2 약 1% (0.8~1.1%), **HPLT 약 14% (12~17%)** | 1단계 측정 (`DATA_VALUE_ASSESSMENT.md` 15절). 연속 15k 구간의 0~0.007%는 국소 값이라 대표성이 없었다 |
+| FineWeb2→HPLT 방향 교차 중복(J≥0.8) | 약 10.7% (10.0~11.3%) | 1단계 측정 |
+| 위키 문서 중 웹에 사실상 같은 글이 있는 비율(J≥0.8) | FW2 약 1.9%, HPLT 약 4.7% | 1단계 측정, 위키 369,614건 |
+| FineWeb2 ↔ FineWeb-Edu 중복 | 측정하지 않음 | 한국어와 영어 소스라 어절 5-gram이 겹치지 않으므로 측정 대상에서 제외(추론) |
+| eval 문서가 train에 근접 중복을 갖는 비율 | train 문서와 같은 수준: HPLT eval 14%(소스 내)·22%(FW2 train), FW2 eval 10%(HPLT train) | 1단계 측정 (5.3절) |
 
 HPLT 쪽 중복을 거친 곱셈(23% × 28.77B)으로 환산하면 약 6.6B 토큰(한국어 웹의 약 9%)이다. 문서 길이 편향을 반영하지 않은 값이다.
 
@@ -59,7 +61,7 @@ HPLT 쪽 중복을 거친 곱셈(23% × 28.77B)으로 환산하면 약 6.6B 토�
 
 ### 5.3 train/eval 분리
 
-`data/split_manifest.py`의 분리는 동일 본문, 웹 NFC 동등 본문, 코드 저장소 연결 그룹만 같은 쪽으로 보낸다(코드 주석에도 "near-duplicate policy remain separate"). 근접 중복 쌍이 train과 eval에 갈라져 있으면 eval perplexity가 낙관적으로 나온다. 이 크기는 **미측정**이므로 1단계에서 eval 문서를 인덱싱해 train 전체와 대조한다. 중복 제거를 적용하게 되면 클러스터 ID를 split의 그룹 키로 추가해 같은 쪽으로 보내야 한다(현 v1.0.1 split은 바꾸면 held-out이 달라지므로 새 release 에서만 가능).
+`data/split_manifest.py`의 분리는 동일 본문, 웹 NFC 동등 본문, 코드 저장소 연결 그룹만 같은 쪽으로 보낸다(코드 주석에도 "near-duplicate policy remain separate"). 근접 중복 쌍이 train과 eval에 갈라져 있으면 eval perplexity가 낙관적으로 나온다. 이 크기를 1단계에서 측정했다: eval 문서가 train 문서와 같은 비율로 근접 중복을 가진다(J≥0.8 기준 HPLT eval 약 14%가 HPLT train 안에, 약 22%가 FW2 train 안에; FW2 eval 약 10%가 HPLT train 안에; 15절). 분리가 근접 중복을 다루지 않으므로 무작위 1% 추출과 같은 결과다. 이것이 eval perplexity를 얼마나 낙관적으로 만드는지는 미측정이다. 중복 제거를 적용하게 되면 클러스터 ID를 split의 그룹 키로 추가해 같은 쪽으로 보내야 한다(현 v1.0.1 split은 바꾸면 held-out이 달라지므로 새 release 에서만 가능).
 
 ### 5.4 계약·산출물
 
