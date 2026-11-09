@@ -25,7 +25,8 @@ from data import filters as F
 from dataqa import gold, ko_rules, pii_rules
 
 REGISTRY = Path(__file__).resolve().parents[1] / 'docs' / 'data_provenance_v1' / 'source_registry.json'
-SUBSETS = {'fineweb2_ko': 'data/kor_Hang/train', 'hplt_ko': 'kor_Hang', 'wiki_ko': '20231101.ko'}
+# Only fineweb2_ko is verified (columns text,id). hplt_ko / wiki_ko have other column layouts and are NOT supported yet.
+SUBSETS = {'fineweb2_ko': 'data/kor_Hang/train'}
 
 
 def sha(text):

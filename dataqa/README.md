@@ -56,6 +56,7 @@ python -m dataqa.run --gold dataqa/review/real_gold.jsonl --out runs/dataqa/real
 
 - 추출 대상: `docs/data_provenance_v1/source_registry.json`에 고정된 repository와 revision. 샤드·row group·행을 시드로 무작위 추출한다(0번 샤드·0번 row group 편향 방지).
 - **원문은 커밋하지 않는다.** 실제 웹 텍스트에는 실제 개인정보가 있을 수 있다. 커밋 대상은 manifest(repo, revision, file, row_group, row, sha256)와 라벨(오프셋·유형·라벨)뿐이고, 로컬 시트는 Artifact 등 외부에 게시하지 않는다.
+- 지원 소스는 `fineweb2_ko`뿐이다. HPLT와 wiki는 컬럼 구성이 달라 아직 지원하지 않는다(미검증). 소스별 층화 추출이 필요하면 리더 확장이 선행 작업이다.
 - 원 파이프라인이 실제로 받은 25개 샤드가 정확히 어느 것인지는 registry에 개수만 있다. `data/download.py`가 정렬된 목록의 앞 N개를 취하므로 같은 규칙으로 추출하지만 **이 동일성은 가정이다 (불확실)**.
 
 ## 파일럿 결과 (n=20, 에이전트 사전 라벨, 사람 검수 전)
