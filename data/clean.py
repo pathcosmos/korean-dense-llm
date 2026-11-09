@@ -5,8 +5,10 @@ Output: data/clean/<src>/<shard>.parquet with columns [text, h]  + <shard>.stats
 Every output records a signature (input file sha256, lang, filter thresholds, PII policy, filters.py
 sha256, CLEAN_LOGIC_VERSION). A `.done` shard is reused only if its signature equals the current one;
 a different or missing signature (legacy output) raises instead of silently reusing stale results.
---policy takes JSON {"ko": {KoPolicy fields}, "pii": {PiiPolicy fields}}; omitted fields keep the
-historical defaults, which are pinned by tests/golden/filters_oracle_v1.json.
+--policy takes JSON {"ko": {KoPolicy fields}, "pii": {PiiPolicy fields}, "quality": {...}}; omitted fields keep the
+historical defaults, which are pinned by tests/golden/filters_oracle_v1.json. "quality" (ko only, optional) adds the
+FineWeb-2-style datatrove filter of data/quality_fw2.py after check_ko:
+{"engine": "fw2", "config": "path/to/kor_Hang.yml", "language": "kor_Hang"}; its reasons are counted as fw2:<stage>:<reason>.
 """
 import sys, os, glob, json, collections, time, hashlib
 from concurrent.futures import ProcessPoolExecutor, as_completed
@@ -14,6 +16,7 @@ os.environ.setdefault("NUMEXPR_NUM_THREADS", "8")
 import pyarrow as pa, pyarrow.parquet as pq
 sys.path.insert(0, os.path.dirname(__file__))
 from filters import *
+import quality_fw2  # stdlib-only at import time; datatrove is imported lazily when a policy asks for it
 
 import os, sys; sys.path.insert(0, os.path.join(os.path.dirname(os.path.abspath(__file__)), "..")); from common.paths import PROJECT_ROOT, DATA
 ROOT = DATA
@@ -32,21 +35,27 @@ def _sha256(path):
 def signature(lang, input_path, policy=None):
     """Everything the cleaned output depends on, as a dict plus its content id."""
     policy = policy or POLICY
+    quality = policy.get("quality")
     body = dict(
         logic_version=CLEAN_LOGIC_VERSION, lang=lang,
         input=dict(name=os.path.basename(input_path), bytes=os.path.getsize(input_path), sha256=_sha256(input_path)),
         ko_policy=policy["ko"].as_dict(), pii_policy=policy["pii"].as_dict(),
         filters_sha256=_sha256(os.path.join(os.path.dirname(os.path.abspath(__file__)), "filters.py")))
+    if quality:  # only present when used, so default signatures keep their shape
+        body["quality"] = dict(quality, **quality_fw2.environment(quality))
     body["id"] = hashlib.sha256(json.dumps(body, sort_keys=True, separators=(",", ":")).encode()).hexdigest()
     return body
 
 
 def load_policy(path):
     cfg = json.loads(open(path, encoding="utf-8").read())
-    unknown = set(cfg) - {"ko", "pii"}
+    unknown = set(cfg) - {"ko", "pii", "quality"}
     if unknown:
         raise SystemExit(f"unknown policy sections: {sorted(unknown)}")
-    return {"ko": KoPolicy(**cfg.get("ko", {})), "pii": PiiPolicy(**cfg.get("pii", {}))}
+    out = {"ko": KoPolicy(**cfg.get("ko", {})), "pii": PiiPolicy(**cfg.get("pii", {}))}
+    if "quality" in cfg:
+        out["quality"] = quality_fw2.parse_spec(cfg["quality"])
+    return out
 
 
 def work(args):
@@ -71,8 +80,14 @@ def work(args):
         return name, (collections.Counter(stats["counts"]), stats["chars_kept"])
     if os.path.exists(out):
         raise RuntimeError(f"Unmarked output exists; refusing overwrite: {out}")
+    quality = policy.get("quality")
+    if quality and lang != "ko":
+        raise ValueError("quality policy is defined for lang=ko only")
     if lang == "ko":
         chk = lambda text, _p=policy["ko"]: check_ko(text, policy=_p)
+        if quality:
+            fw2 = quality_fw2.get(quality)   # built once per worker process
+            chk = lambda text, _base=chk: _base(text) or fw2.check(text)
     else:
         chk = check_math if lang == "math" else check_en
     pii_policy = policy["pii"]

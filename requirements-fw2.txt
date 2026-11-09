@@ -1,0 +1,5 @@
+# Optional: FineWeb-2-style quality filter (data/quality_fw2.py). Install in a separate environment.
+datatrove==0.10.1
+kiwipiepy==0.21.0
+kiwipiepy_model==0.21.0
+PyYAML>=6,<7
