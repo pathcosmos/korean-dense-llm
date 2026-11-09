@@ -1,0 +1,20 @@
+{"id": "real-9e4d30b72375", "label": "keep", "label_source": "agent_prelabel", "notes": "첫 4줄이 한 번 반복되나 본문은 정상", "pii_spans": [], "reject_reason": null, "tags": ["opinion", "repeated_opening_lines"]}
+{"id": "real-9cd5f44f88a7", "label": "keep", "label_source": "agent_prelabel", "pii_spans": [], "reject_reason": null, "tags": ["legal_decision"]}
+{"id": "real-0cc7660d5c54", "label": "keep", "label_source": "agent_prelabel", "pii_spans": [{"ambiguous": true, "end": 1641, "start": 1611, "type": "email"}], "reject_reason": null, "tags": ["news", "upstream_email_placeholder"]}
+{"id": "real-d4f9d8c7705a", "label": "reject", "label_source": "agent_prelabel", "pii_spans": [], "reject_reason": "short", "tags": ["forum_boilerplate"]}
+{"id": "real-231e3bc9b02b", "label": "keep", "label_source": "agent_prelabel", "pii_spans": [], "reject_reason": null, "tags": ["news"]}
+{"id": "real-5509697c21dc", "label": "keep", "label_source": "agent_prelabel", "pii_spans": [], "reject_reason": null, "tags": ["news", "has_person_name"]}
+{"id": "real-aa12268d2829", "label": "keep", "label_source": "agent_prelabel", "pii_spans": [], "reject_reason": null, "tags": ["local_blog", "has_person_name", "attachment_listing"]}
+{"id": "real-17f93f792ab2", "label": "keep", "label_source": "agent_prelabel", "pii_spans": [{"ambiguous": true, "end": 553, "start": 541, "type": "phone"}, {"ambiguous": true, "end": 602, "start": 572, "type": "email"}], "reject_reason": null, "tags": ["news", "upstream_email_placeholder", "org_contact_phone"]}
+{"id": "real-2d6e351b83f9", "label": "keep", "label_source": "agent_prelabel", "pii_spans": [{"ambiguous": true, "end": 2668, "start": 2638, "type": "email"}], "reject_reason": null, "tags": ["news", "upstream_email_placeholder", "has_person_name"]}
+{"id": "real-b31675404383", "label": "reject", "label_source": "agent_prelabel", "notes": "상품 목록/푸터 위주. 판단이 갈릴 수 있음", "pii_spans": [{"ambiguous": true, "end": 521, "start": 491, "type": "email"}], "reject_reason": "semantic_low_quality", "tags": ["commerce_boilerplate", "upstream_email_placeholder", "has_person_name", "has_address", "has_biz_reg"]}
+{"id": "real-5b383e2f883e", "label": "reject", "label_source": "agent_prelabel", "pii_spans": [], "reject_reason": "short", "tags": ["quiz_page_boilerplate"]}
+{"id": "real-357b6a683f59", "label": "keep", "label_source": "agent_prelabel", "pii_spans": [], "reject_reason": null, "tags": ["research_abstract"]}
+{"id": "real-1563566411b2", "label": "keep", "label_source": "agent_prelabel", "notes": "짧은 상품 설명, 경계 사례", "pii_spans": [], "reject_reason": null, "tags": ["commerce", "product_description"]}
+{"id": "real-ad77a00ce258", "label": "keep", "label_source": "agent_prelabel", "pii_spans": [{"end": 361, "start": 348, "type": "phone"}], "reject_reason": null, "tags": ["forum", "personal_mobile"]}
+{"id": "real-9cd872d03c9e", "label": "keep", "label_source": "agent_prelabel", "pii_spans": [], "reject_reason": null, "tags": ["news"]}
+{"id": "real-4919fafaeb85", "label": "keep", "label_source": "agent_prelabel", "pii_spans": [], "reject_reason": null, "tags": ["news"]}
+{"id": "real-059b7d48900c", "label": "keep", "label_source": "agent_prelabel", "pii_spans": [], "reject_reason": null, "tags": ["notice_board", "has_person_name"]}
+{"id": "real-d95e8aaee59d", "label": "reject", "label_source": "agent_prelabel", "pii_spans": [], "reject_reason": "semantic_low_quality", "tags": ["machine_translated_market_report_spam"]}
+{"id": "real-35a5fa75981a", "label": "keep", "label_source": "agent_prelabel", "pii_spans": [], "reject_reason": null, "tags": ["tutorial", "emoji"]}
+{"ambiguous": true, "id": "real-da62a9ae8013", "label": "keep", "label_source": "agent_prelabel", "notes": "활동 목록과 로그인 안내 혼재, 판단 보류", "pii_spans": [], "reject_reason": null, "tags": ["activity_listing", "login_boilerplate"]}

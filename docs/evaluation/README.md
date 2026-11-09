@@ -82,7 +82,7 @@
 
 ## 5. 피드백 루프
 
-측정→반영→수정 장치는 [FEEDBACK_LOOP_DESIGN.md](FEEDBACK_LOOP_DESIGN.md)에 설계했다. 이 세션에서 실제로 실행할 수 있는 범위(T0, T1 일부)와 불가능한 범위(T2, GPU·데이터 필요)를 구분한다.
+측정→반영→수정 장치는 [FEEDBACK_LOOP_DESIGN.md](FEEDBACK_LOOP_DESIGN.md)에 설계했고, T0 하네스는 [`dataqa/`](../../dataqa/README.md)에 구현했다(신규 모듈, 기존 파일 무수정). 이 세션에서 실제로 실행할 수 있는 범위(T0, T1 일부)와 불가능한 범위(T2, GPU·데이터 필요)를 구분한다.
 
 ## 6. 측정 불가 / 불확실 목록
 
