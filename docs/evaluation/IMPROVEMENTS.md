@@ -16,6 +16,8 @@
 | D4 | 옵트인 `KoPolicy.pre_normalize='nfc'` | `data/filters.py` | 평가 #4(NFD 거부는 재현됨). 그러나 T1에서 NFD 때문에 거절되는 문서가 0/159,965이므로 **기본은 `none`으로 두고 필요성은 입증되지 않음** | 테스트 |
 | D5 | 필터 직접 테스트 신설(이전에는 `check_ko`/`mask_pii`/`norm_ws` 테스트가 없었음), 골든 오라클 | `tests/test_filters.py`, `tests/test_filters_oracle.py` | 평가 #10 | 변이 검사로 임계값 변경이 잡힘을 확인 |
 | D6 | 측정 하네스 `dataqa/` (gold 스키마, 지표, 정책 flip, 임계값 sweep, 실제 샘플링, 군집 통계, 라벨 병합·일치도, 검수 시트) | `dataqa/`, `tests/test_dataqa*.py` | [FEEDBACK_LOOP_DESIGN.md](FEEDBACK_LOOP_DESIGN.md) T0/T1 | 테스트 73개(`test_dataqa*.py`, `test_filters*.py`, `test_clean_signature.py`) |
+| D7 | **코드 루트와 데이터 루트 분리**: 상대 `*.py` 경로가 `PROJECT_ROOT` 아래에 없으면 실행 중인 체크아웃(`CODE_ROOT`)으로 폴백. `PROJECT_ROOT` 아래의 사본이 있으면 그것이 우선이고, 기본 설정(`PROJECT_ROOT`=체크아웃)에서는 동작이 바뀌지 않는다 | `common/data_contracts.py` | 클린 클론에서 `source_audit`/`train_tokenizer`가 `FileNotFoundError`(§8, 확정). `resolve()`를 거치는 코드 해시 위치 약 25곳이 한 번에 해결됨 | 테스트 4개(수정 전 코드에서는 3개 실패). **새 클론에서 코드 심볼릭 링크 없이 재실행**: 감사 rc 0(5,188행 검증), 토크나이저 학습 rc 0(1,018 문서)이며 이전 우회 실행과 수치가 같다. 이 파일의 코드 SHA가 바뀌어 `experiments/code_bindings.json` 17건을 `current_source_exact`에서 `historical_object_exact`(보존된 원본 바이트)로 바꿨고, 남은 268건이 작업 트리와 일치함을 확인했다 |
+| D8 | **FineWeb-2식 한국어 품질 필터 옵트인** (`data/quality_fw2.py`, `clean.py --policy`의 `quality` 섹션). datatrove 3단계를 `fineweb-2-pipeline.py`(커밋 `d0defb24`)와 같은 인자로 구성하고 `check_ko` 다음에 적용. 사유는 `fw2:<단계>:<이유>`로 집계, 설정 파일 sha256·라이브러리 버전이 출력 서명에 들어감. **기본은 꺼져 있고 기본 동작·기본 서명 모양은 그대로** | `data/quality_fw2.py`, `data/clean.py`, `requirements-fw2.txt` | §7: 비-FW2 소스에서 `check_ko`는 FW2식 기준보다 훨씬 관대하고, 의미적 저품질을 FW2가 10/27, `check_ko`가 3/27 포착 | 증거 스크립트 판정과 합성 94건에서 불일치 0, 로컬 실제 100건에서 이전 재구성과 불일치 0. 골든 오라클·변이 검사로 확인. 의존성이 없으면 설치 안내와 함께 실패하고 CI(`requirements-cpu.txt`만 설치)에서는 해당 테스트 6개를 건너뜀 |
 
 사용 예 (옵트인, 기본 동작은 그대로):
 
@@ -61,8 +63,8 @@ python data/clean.py hplt_ko ko 16 --policy policy.json   # 새 출력 트리에
 
 ## 4. 이번 변경이 과거 계약·기록에 미치는 영향
 
-- `data/filters.py`, `data/clean.py`의 코드 SHA가 바뀌었다. 과거 실행의 계약(producer 코드 SHA 묶음)과는 일치하지 않는다. 수정 전 바이트는 `experiments/code/<sha>.py`에 이미 보존되어 있다(`30765d8f8d49…`, `fd12b6694c7f…`).
-- 코드 해시를 강제하는 테스트나 CI 단계는 없다. `experiments/code_bindings.json`은 두 파일을 참조하지 않아(0건) 릴리스 기록의 "현행 소스와 일치" 주장은 깨지지 않는다.
+- `data/filters.py`, `data/clean.py`의 코드 SHA가 바뀌었다. 과거 실행의 계약(producer 코드 SHA 묶음)과는 일치하지 않는다. 수정 전 바이트는 `experiments/code/<sha>.py`에 이미 보존되어 있다(`30765d8f8d49…`, `fd12b6694c7f…`). `common/data_contracts.py`(D7)의 수정 전 바이트(`9b7af55f00…`)도 같은 방식으로 보존되어 있고, 이 파일을 참조하던 릴리스 기록 17건은 보존본을 가리키도록 바꿨다.
+- 코드 해시를 강제하는 테스트나 CI 단계는 없다. `experiments/code_bindings.json`은 `filters.py`·`clean.py`를 참조하지 않아(0건) 영향이 없었고, D7로 바뀐 `data_contracts.py`는 17건을 보존본으로 되돌렸다. 결과적으로 `current_source_exact`는 268건, `historical_object_exact`는 51건이며, `PUBLIC_VALIDATION.md`의 285/34는 2026-11-08 스냅샷이라 고치지 않았다.
 - `tokenize_shards.py`와 `parallel_tokenize.py`는 이번에 **고치지 않았다**. `code_bindings.json`이 두 파일을 "현행 소스와 일치"로 9건 기록하고, 테스트 픽스처가 리터럴 `<\|eos\|>`를 의도적으로 포함하며, T1에서 발생이 0건이라 변경 근거가 부족했다.
 - `release/files.json`(v0.1.1 파일 목록)은 `docs/evaluation/`, `dataqa/`, 새 테스트를 담고 있지 않다. 릴리스 산출물이라 수정하지 않았고, 이를 검증하는 테스트는 없다. 다음 릴리스에서 재생성이 필요하다.
 
@@ -84,11 +86,12 @@ python data/clean.py hplt_ko ko 16 --policy policy.json   # 새 출력 트리에
 | 10 | `clean.py`의 `en`/`math` 임계값은 아직 하드코딩, 코드 정제 secret 패턴이 3계열뿐 | 평가(보고) | 필요 시 `KoPolicy` 방식으로 확장 |
 | 11 | 정리: 바이트 동일 중복 파일(`split_manifest_candidate.py`), finalize v1/v2 포크, `assert`→예외, `atomic_json` 단일화 | 평가 #11 | 이번 범위에서 의도적으로 제외 |
 | 12 | 이름·주소·사업자번호 정책, 데이터 텍스트 재배포 권리 기록 | 이름 포함 비율은 태그 기준이 일관되지 않아 집계하지 않음, 권리 기록은 저장소에 없음 | JUN 결정 사항 |
-| 13 | **코드 루트와 데이터 루트가 분리되지 않음**: `PROJECT_ROOT`를 클론 밖으로 바꾸면 `source_audit.py`(61-62행)와 `train_tokenizer.py`(61행)가 코드 파일 해시를 `resolve()`로 찾다가 `FileNotFoundError` | 클린 클론에서 실행해 확정(§8). 코드 확인 | 재사용성에 가장 큰 단일 결함. `CODE_ROOT`를 `__file__` 기준으로 분리하는 수정이 필요하나 producer 코드 여러 곳(계약 SHA 포함)을 건드려 이번에는 하지 않음. 우회: 코드 디렉터리를 `PROJECT_ROOT` 아래에 심볼릭 링크 |
+| 13 | ~~코드 루트와 데이터 루트가 분리되지 않음~~ | 클린 클론에서 확정(§8) | **완료(D7)**. 새 클론에서 재검증함 |
 | 14 | 진입점 문서와 실제의 불일치: PUBLIC_GUIDE 표의 `data/source_audit.py`, `data/split_inputs.py`는 `__main__`이 없는 라이브러리 모듈. RUNBOOK 0단계 `make_manifest.py --verify`는 `PYTHONPATH` 없이 실행하면 모듈 오류, 지정하면 `data/MANIFEST.json` 부재로 실패한다 | 직접 확인(`__main__` 부재) + 클린 클론 실행 | 릴리스 문서라 `release/files.json`의 해시 검증과 충돌할 수 있어 고치지 않았다. 다음 릴리스에서 정정 |
 | 15 | `scripts/prepare_source_manifest.py`가 6개 소스를 하드코딩해 작은 입력으로 파이프라인을 돌릴 수 없음 | 클린 클론(소스 목록을 바꿔 우회) | 소스 목록을 인자로 |
 | 16 | 실제 데이터 승인 사슬(정책의 evidence·decision)은 클린 클론에서 재현 불가: `docs/data_provenance_v1/evidence/*_pinned_README.md` 6개와 `file_inventory.json`이 저장소에 없음 | 클린 클론 | 의도된 제외로 보이나 재사용 관점에서는 "문서대로 따라 해서 끝까지 갈 수 없음"을 뜻함. 문서에 명시 필요 |
 | 17 | 검증 수치 문서가 스냅샷 | `PUBLIC_VALIDATION`은 284 passed/9 skipped, CI 기록은 258/35, 이 브랜치는 336 passed/36 skipped(클린 클론) | 문서에 날짜가 있어 결함이라기보다 갱신 필요 |
+| 18 | **FW2식 필터를 실제로 켤지의 결정과 비용** (D8로 옵트인은 가능) | 비용 측정: 단일 프로세스 약 9 docs/s (`check_ko` 약 3,000 docs/s, 약 330배 느림). 시간 대부분이 Kiwi 형태소 분석(문서당 중앙값 78ms). **외삽(선형 확장 가정, 검증 안 됨)**: 레지스트리의 최종 문서 수 기준 HPLT 약 2,743만 건은 약 850 코어시간 이상, wiki 약 45.5만 건은 약 14 코어시간 | 켜면 정상 문서를 더 지우고(라벨 67건 중 7) 의미적 저품질을 더 잡는다(27건 중 10). 모델에 이득인지는 학습 ablation(T2)으로만 알 수 있다. 소규모 proxy 학습에서 한국어 벤치마크가 신호를 내는지부터 확인해야 함 |
 
 의도적으로 구현하지 않은 것: 주민번호 검증자리(2020년 번호 체계 변경 이후 발급분에 적용되는지 **불확실**), 전화번호 접두 허용 목록과 7번째 자리 5–8 가정(공식 자료로 검증하지 못함 — 하네스 후보로만 존재).
 
@@ -132,7 +135,7 @@ GitHub에서 브랜치를 새로 클론(HEAD `2e6103f`)해 문서의 검증 명�
 | `pytest tests` | 336 passed, 36 skipped, 0 failed (skip 내역: 두 파일시스템 필요 26, 원본 운영기록 필요 9, 로컬 파일럿 텍스트 부재 1) |
 | `download.py wiki_ko` → `clean.py` → `dedup.py` | 통과. wiki 1샤드(215,966행)에서 174,342건 유지. 서명 기록, 재실행은 재사용, 입력·언어 변경은 거부 |
 | `prepare_source_manifest.py` | 6개 소스 하드코딩이라 소스 목록을 바꿔야 함 |
-| `source_audit`, `train_tokenizer` | `PROJECT_ROOT` 오버라이드 시 `FileNotFoundError`, 코드 심볼릭 링크 우회 후 통과 (#13) |
+| `source_audit`, `train_tokenizer` | `PROJECT_ROOT` 오버라이드 시 `FileNotFoundError`, 코드 심볼릭 링크 우회 후 통과 → **D7로 수정, 새 클론에서 심볼릭 링크 없이 재실행해 통과** (감사 5,188행, 토크나이저 1,018 문서) |
 | `finalize_source_manifest` → `split_manifest` → `tokenize_shards` → `parallel_tokenize` → `build_mix` | 통과 (6,000행 입력, smoke 전용 정책) |
 | 실제 데이터 승인 사슬 | 재현 불가: 증거 파일이 저장소에 없음 (#16) |
 
