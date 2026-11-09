@@ -1,0 +1,42 @@
+{
+ "caveats": [
+  "shards = first N of the sorted listing, N from the registry; equivalence to the original selection is an assumption (불확실)",
+  "document-level rates describe the sampled shards only, not the full corpus",
+  "text is never stored; only counts"
+ ],
+ "schema": 1,
+ "seed": 20261109,
+ "sources": [
+  {
+   "chars_median": 2276,
+   "chars_p90": 15798,
+   "docs": 276625,
+   "rates": {
+    "conjoining_jamo": {
+     "ci95": [
+      3.5159518736507535e-06,
+      2.8127812781278127e-05
+     ],
+     "count": 4,
+     "docs": 276625,
+     "rate": 1.4460009037505648e-05
+    },
+    "not_nfc": {
+     "ci95": [
+      0.00030130341625996904,
+      0.0004880253050158156
+     ],
+     "count": 108,
+     "docs": 276625,
+     "rate": 0.0003904202440126525
+    }
+   },
+   "repo": "codeparrot/github-code",
+   "revision": "b5661e6b17396364b2bcf8e68977b0d28e1ebd19",
+   "row_groups": 30,
+   "shards_considered": 64,
+   "source": "github_code_v1"
+  }
+ ],
+ "unit": "row group (cluster); CIs bootstrap over groups"
+}

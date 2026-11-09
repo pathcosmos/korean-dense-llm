@@ -145,16 +145,20 @@ ROWS = [
 
 def render_markdown(result):
     cols = result['sources']
+    rows = ROWS
+    if not any(k.startswith('ko_reject') for c in cols for k in c['rates']):      # code-only result: Korean filter/PII rows are not measured
+        rows = [r for r in ROWS if r[0] in ('not_nfc', 'conjoining_jamo', 'special_literal_any', 'eos_literal')]
     head = '| 항목 | ' + ' | '.join(f"{c['source']} ({c['docs']:,}문서/{c['row_groups']}그룹)" for c in cols) + ' |'
     out = [f"seed {result['seed']} · 단위: {result['unit']}", '', head, '|---|' + '---|' * len(cols)]
-    for key, label in ROWS:
+    for key, label in rows:
         cells = []
         for c in cols:
             r = c['rates'].get(key)
             cells.append('0' if r is None else f"{r['rate'] * 100:.2f}% [{r['ci95'][0] * 100:.2f}, {r['ci95'][1] * 100:.2f}] (n={r['count']})")
         out.append(f'| {label} | ' + ' | '.join(cells) + ' |')
     out.append('| 문서 길이 중앙값 / p90 (자) | ' + ' | '.join(f"{c['chars_median']:.0f} / {c['chars_p90']}" for c in cols) + ' |')
-    out += ['', '"0"은 표본에서 한 건도 관찰되지 않았다는 뜻이다(전체에 없다는 보증이 아니다).', ''] + [f'- {x}' for x in result['caveats']]
+    out += ['', '"0"은 표본에서 한 건도 관찰되지 않았다는 뜻이다(전체에 없다는 보증이 아니다). 군집 표본에서 0건 관측의 부트스트랩 구간은 퇴화하므로, '
+                'row group 단위 상한은 "관측 0 / G개 그룹"에 대한 rule of three로 읽는다: 95% 상한 ≈ 3/G (그룹 60개면 5%, 40개면 7.5%, 30개면 10%).', ''] + [f'- {x}' for x in result['caveats']]
     return '\n'.join(out) + '\n'
 
 

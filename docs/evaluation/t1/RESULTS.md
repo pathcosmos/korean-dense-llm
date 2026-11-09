@@ -24,7 +24,7 @@ seed 20261109 · 단위: row group (cluster); CIs bootstrap over groups
 | opt-in 정책의 마스킹이 기본과 다름 | 0.35% [0.29, 0.42] (n=212) | 0.45% [0.38, 0.51] (n=267) | 0.05% [0.03, 0.07] (n=18) |
 | 문서 길이 중앙값 / p90 (자) | 995 / 3391 | 1474 / 4245 | 405 / 2544 |
 
-"0"은 표본에서 한 건도 관찰되지 않았다는 뜻이다(전체에 없다는 보증이 아니다).
+"0"은 표본에서 한 건도 관찰되지 않았다는 뜻이다(전체에 없다는 보증이 아니다). 군집 표본에서 0건 관측의 부트스트랩 구간은 퇴화하므로, row group 단위 상한은 "관측 0 / G개 그룹"에 대한 rule of three로 읽는다: 95% 상한 ≈ 3/G (그룹 60개면 5%, 40개면 7.5%, 30개면 10%).
 
 - shards = first N of the sorted listing, N from the registry; equivalence to the original selection is an assumption (불확실)
 - document-level rates describe the sampled shards only, not the full corpus
