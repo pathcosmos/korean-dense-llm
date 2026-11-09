@@ -27,8 +27,11 @@ from dataqa import gold, ko_rules, pii_rules
 REGISTRY = Path(__file__).resolve().parents[1] / 'docs' / 'data_provenance_v1' / 'source_registry.json'
 # Verified against the pinned revisions (all parquet with columns text,id): subset directory and the number
 # of shards the registry says the pipeline kept (data/download.py takes the first N of the sorted listing).
-SUBSETS = {'fineweb2_ko': 'data/kor_Hang/train', 'hplt_ko': 'kor_Hang', 'wiki_ko': '20231101.ko'}
-DEFAULT_SHARDS = {'fineweb2_ko': 25, 'hplt_ko': 464, 'wiki_ko': 3}
+SUBSETS = {'fineweb2_ko': 'data/kor_Hang/train', 'hplt_ko': 'kor_Hang', 'wiki_ko': '20231101.ko', 'github_code_v1': 'data'}
+DEFAULT_SHARDS = {'fineweb2_ko': 25, 'hplt_ko': 464, 'wiki_ko': 3, 'github_code_v1': 64}
+# github_code_v1: registry says "64 evenly spread shards out of 1126" -> data/download.py --spread selection; text column is 'content'.
+SPREAD = {'github_code_v1'}
+TEXT_COLUMN = {'github_code_v1': 'content'}
 
 
 def sha(text):
@@ -80,10 +83,10 @@ class Reader:
     def row_groups(self, path):
         return self.parquet(path).metadata.num_row_groups
 
-    def group(self, path, rg):
-        if (path, rg) not in self.cache:
-            self.cache[(path, rg)] = self.parquet(path).read_row_group(rg, columns=['text', 'id'])
-        return self.cache[(path, rg)]
+    def group(self, path, rg, columns=('text', 'id')):
+        if (path, rg, tuple(columns)) not in self.cache:
+            self.cache[(path, rg, tuple(columns))] = self.parquet(path).read_row_group(rg, columns=list(columns))
+        return self.cache[(path, rg, tuple(columns))]
 
 
 class LazyCounts(dict):
@@ -98,10 +101,14 @@ class LazyCounts(dict):
         return self[shard]
 
 
-def list_shards(repo, revision, subset, limit):
+def list_shards(repo, revision, subset, limit, spread=False):
+    """First `limit` sorted shards, or (spread) the same evenly spaced pick as data/download.py --spread."""
     from huggingface_hub import HfApi
     items = HfApi().list_repo_tree(repo, repo_type='dataset', revision=revision, path_in_repo=subset)
-    return sorted(i.path for i in items if i.path.endswith('.parquet'))[:limit]
+    entries = sorted(i.path for i in items if i.path.endswith('.parquet'))
+    if spread and 1 < limit < len(entries):
+        return [entries[i * (len(entries) - 1) // (limit - 1)] for i in range(limit)]
+    return entries[:limit]
 
 
 def fetch_text(reader, file, rg, row):

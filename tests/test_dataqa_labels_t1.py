@@ -32,6 +32,56 @@ class NeedleTest(unittest.TestCase):
             make_labels.spans_for('abc', [dict(needle='', type='phone')])
 
 
+class DerivedTagsAndReviewTest(unittest.TestCase):
+    def test_ambiguous_spans_imply_tags_regardless_of_what_the_labeller_wrote(self):
+        text = '문의 02-000-1234 또는 press@news.example.kr 그리고 firstname.lastname@example.org 와 word@example.com'
+        pii = [dict(needle='02-000-1234', type='phone', ambiguous=True),
+               dict(needle='press@news.example.kr', type='email', ambiguous=True),
+               dict(needle='firstname.lastname@example.org', type='email', ambiguous=True),
+               dict(needle='word@example.com', type='email', ambiguous=False)]
+        rec = make_labels.build_agent_record('x', doc('x', text), dict(label='keep', pii=pii, tags=['news']))
+        self.assertEqual(rec['tags'], ['news', 'org_contact_email', 'org_contact_phone', 'upstream_email_placeholder'])
+        personal = make_labels.build_agent_record('y', doc('y', text), dict(label='keep', pii=pii[3:]))
+        self.assertEqual(personal['tags'], [])
+
+    LABELS = [dict(id=f'r{i}', label=l, reject_reason=r, pii_spans=[], tags=[], label_source='agent_prelabel:A')
+              for i, (l, r) in enumerate([('keep', None), ('reject', 'semantic_low_quality'), ('keep', None),
+                                          ('reject', 'short'), ('keep', None), ('keep', None)])]
+
+    def test_apply_review_marks_sources_and_reports_agreement(self):
+        review = dict(reviewer='jun', reviewed=['r0', 'r1', 'r2', 'r3'], random_controls=['r0', 'r2'],
+                      corrections={'r1': dict(label='keep', reject_reason=None)})
+        out, rep = make_labels.apply_review(self.LABELS, review)
+        by = {r['id']: r for r in out}
+        self.assertEqual(by['r1']['label'], 'keep')
+        self.assertEqual(by['r1']['label_source'], 'human_review:jun:corrected')
+        self.assertEqual(by['r0']['label_source'], 'human_review:jun:agreed')
+        self.assertEqual(by['r5']['label_source'], 'agent_prelabel:A')            # unreviewed stays untouched
+        self.assertEqual((rep['reviewed'], rep['corrected']), (4, 1))
+        self.assertAlmostEqual(rep['agreement_all_reviewed'], 0.75)
+        self.assertEqual(rep['agreement_random_controls'], 1.0)
+        self.assertIn('biased low', rep['note'])
+        self.assertEqual(self.LABELS[1]['label'], 'reject')                        # input not mutated
+
+    def test_apply_review_validates_and_flips_ambiguous(self):
+        with self.assertRaises(ValueError):
+            make_labels.apply_review(self.LABELS, dict(reviewed=['nope']))
+        with self.assertRaises(ValueError):
+            make_labels.apply_review(self.LABELS, dict(reviewed=['r0'], corrections={'r1': dict(label='keep')}))
+        with self.assertRaises(ValueError):
+            make_labels.apply_review(self.LABELS, dict(reviewed=['r0'], random_controls=['r1']))
+        with self.assertRaises(ValueError):                                         # reject needs a reason
+            make_labels.apply_review(self.LABELS, dict(reviewed=['r0'], corrections={'r0': dict(label='reject')}))
+        out, _ = make_labels.apply_review(self.LABELS, dict(reviewed=['r0'], corrections={'r0': dict(label='keep', ambiguous=True)}))
+        self.assertTrue(out[0]['ambiguous'])
+
+    def test_cohen_kappa(self):
+        self.assertAlmostEqual(make_labels.cohen_kappa([('a', 'a'), ('b', 'b')]), 1.0)
+        self.assertAlmostEqual(make_labels.cohen_kappa([('a', 'b'), ('b', 'a')]), -1.0)
+        self.assertIsNone(make_labels.cohen_kappa([('a', 'a'), ('a', 'a')]))
+        self.assertIsNone(make_labels.cohen_kappa([]))
+
+
 class ConsensusAndKappaTest(unittest.TestCase):
     def build(self, specs, texts):
         with tempfile.TemporaryDirectory() as tmp:

@@ -44,13 +44,14 @@ def special_strings():
     return list(SPECIAL)
 
 
-def scan_group(texts, specials):
+def scan_group(texts, specials, code=False):
+    """code=True: only encoding and special-token facts (Korean filter and PII metrics are meaningless for code)."""
     c = Counter()
     lengths = []
     nfc_policy = F.KoPolicy(pre_normalize='nfc')
     for raw in texts:
         c['docs'] += 1
-        text = F.norm_ws(raw)
+        text = raw if code else F.norm_ws(raw)
         lengths.append(len(text))
         if not unicodedata.is_normalized('NFC', raw):
             c['not_nfc'] += 1
@@ -60,6 +61,8 @@ def scan_group(texts, specials):
             c['special_literal_any'] += 1
         if '<|eos|>' in raw:
             c['eos_literal'] += 1
+        if code:
+            continue
         if RESERVED.search(raw):
             c['email_placeholder'] += 1
         reason = F.check_ko(text)
@@ -110,11 +113,13 @@ def run(strata, seed, out):
     for source, n_groups in strata:
         repo, revision = real_sample.pinned(source)
         reader = real_sample.Reader(repo, revision)
-        shards = real_sample.list_shards(repo, revision, real_sample.SUBSETS[source], real_sample.DEFAULT_SHARDS[source])
+        shards = real_sample.list_shards(repo, revision, real_sample.SUBSETS[source], real_sample.DEFAULT_SHARDS[source],
+                                         spread=source in real_sample.SPREAD)
+        column = real_sample.TEXT_COLUMN.get(source, 'text')
         groups, lengths = [], []
         for item in real_sample.plan(shards, real_sample.LazyCounts(reader), n_groups, seed):
-            table = reader.group(item['file'], item['row_group'])
-            c, ls = scan_group(table.column('text').to_pylist(), specials)
+            table = reader.group(item['file'], item['row_group'], (column,))
+            c, ls = scan_group(table.column(column).to_pylist(), specials, code=source in real_sample.TEXT_COLUMN)
             groups.append(c)
             lengths += ls
             reader.cache.clear()

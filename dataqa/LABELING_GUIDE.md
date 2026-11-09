@@ -25,6 +25,10 @@ JUN이 사전 라벨을 검수할 때와 에이전트가 사전 라벨을 달 �
 - 기관·업체의 공개 연락처(대표번호, 고객센터, 협회 문의 번호): span을 달되 `ambiguous: true`, 태그 `org_contact_phone`.
 - 데이터셋이 이미 치환한 플레이스홀더(예: `firstname.lastname@example.org`): span을 달되 `ambiguous: true`, 태그 `upstream_email_placeholder`.
 - **이름, 주소, 사업자등록번호는 span으로 라벨하지 않는다.** 대신 태그 `has_person_name`, `has_address`, `has_biz_reg`를 단다(정책이 정해지지 않았다).
+  - `has_person_name`은 **사적 개인의 실명**(인터뷰이, 후기·댓글 작성자, 업체 대표·담당자, 일반인)이 나올 때만 단다. 공인(정치인·연예인·위키 인물 항목의 주인공)과 기자 바이라인은 달지 않는다.
+  - 기관·업체의 공개 이메일은 `ambiguous: true` span으로 라벨한다 (`org_contact_email`).
+  - `org_contact_phone`, `org_contact_email`, `upstream_email_placeholder` 태그는 **직접 달지 않는다.** `make_labels`가 ambiguous span에서 자동으로 붙인다(전화 → `org_contact_phone`, 예약 도메인 이메일 → `upstream_email_placeholder`, 그 외 이메일 → `org_contact_email`). 직접 달아도 중복은 합쳐진다.
+  - `has_*` 태그는 이 개정 이전 라벨(prelabel100)에서는 에이전트마다 기준이 달라 집계에 쓰지 않는다.
 - 긴 문서는 시트에 앞뒤 일부만 보인다. 중간은 전체 텍스트 파일에서 직접 검색해 확인한다.
 
 ## 판단이 갈리는 경우
@@ -59,9 +63,27 @@ JUN이 사전 라벨을 검수할 때와 에이전트가 사전 라벨을 달 �
 
 도구: `python -m dataqa.make_labels --sheet <jsonl> --specs spec.json --check`로 needle이 모두 해석되는지 먼저 확인한다.
 
+## `short` 라벨에 대한 주의
+
+`short`는 이 가이드가 프로덕션 임계값(200자)과 같게 정의했다. 따라서 "규칙이 `short`를 모두 잡았다"는 결과는 독립적인 증거가 아니라 정의의 반복이다. 토막글(예: 위키 스텁)을 버릴지는 라벨이 아니라 **정책 결정**이다.
+
 ## 검수 시 보는 법 (JUN)
 
 1. 에이전트 라벨과 현행 필터 판정이 **어긋난 문서**를 먼저 본다.
 2. `ambiguous`와 정책 태그(`has_person_name` 등)가 달린 문서를 본다.
 3. 나머지는 무작위로 몇 건만 확인한다.
-4. 고친 라벨은 `label_source`를 `human_review`로 바꾼다. 에이전트 라벨과의 일치율을 보고한다.
+4. 결과는 커밋된 파일만으로 적용할 수 있다(스크래치패드의 spec이 없어도 된다):
+
+```json
+{"reviewer": "jun",
+ "reviewed": ["real-...", "..."],          // 실제로 확인한 문서 전부 (동의한 것 포함)
+ "random_controls": ["real-...", "..."],   // 그중 검수 시트의 '무작위 대조군'
+ "corrections": {"real-...": {"label": "keep", "reject_reason": null, "ambiguous": false}}}
+```
+
+```bash
+python -m dataqa.make_labels --apply-review review.json --labels dataqa/real/prelabel100_labels_v1.jsonl \
+    --out dataqa/real/prelabel100_labels_v2_human.jsonl --report dataqa/real/prelabel100_review_report_v1.json
+```
+
+   `label_source`는 `human_review:<검수자>:agreed|corrected`가 된다. 일치율은 전체와 **무작위 대조군만**을 따로 보고한다(전체는 의심스러운 문서를 골라 보았으므로 낮게 편향된다). **span과 태그 수정은 이 경로의 범위 밖이다**(원문이 필요하다). 필요하면 `real_sample materialize`로 텍스트를 받아 spec을 새로 만든다.

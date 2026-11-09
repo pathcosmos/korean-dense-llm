@@ -4,8 +4,8 @@
 {"agent": "A", "id": "real-1acf1d912ba2", "label": "reject", "notes": "위키 토막글 200자 미만", "pii_spans": [], "reject_reason": "short", "tags": []}
 {"agent": "A", "id": "real-1cbc90026883", "label": "keep", "notes": "드라마 감상 블로그", "pii_spans": [], "reject_reason": null, "tags": ["blog"]}
 {"agent": "A", "id": "real-2d43266e8404", "label": "keep", "notes": "인터뷰 기사, 앞부분 구절 반복", "pii_spans": [], "reject_reason": null, "tags": ["has_person_name", "repeated_opening_lines"]}
-{"agent": "A", "id": "real-2fa5ca4b7c4f", "label": "keep", "notes": "업체 공지, 담당자 연락처", "pii_spans": [{"end": 265, "start": 252, "type": "phone"}, {"ambiguous": true, "end": 284, "start": 272, "type": "phone"}], "reject_reason": null, "tags": ["commerce", "has_person_name"]}
-{"agent": "A", "id": "real-3356143c94fb", "label": "keep", "notes": "증권 기사, 치환 이메일", "pii_spans": [{"ambiguous": true, "end": 803, "start": 786, "type": "email"}], "reject_reason": null, "tags": ["news"]}
+{"agent": "A", "id": "real-2fa5ca4b7c4f", "label": "keep", "notes": "업체 공지, 담당자 연락처", "pii_spans": [{"end": 265, "start": 252, "type": "phone"}, {"ambiguous": true, "end": 284, "start": 272, "type": "phone"}], "reject_reason": null, "tags": ["commerce", "has_person_name", "org_contact_phone"]}
+{"agent": "A", "id": "real-3356143c94fb", "label": "keep", "notes": "증권 기사, 치환 이메일", "pii_spans": [{"ambiguous": true, "end": 803, "start": 786, "type": "email"}], "reject_reason": null, "tags": ["news", "upstream_email_placeholder"]}
 {"agent": "A", "id": "real-3a0595ec1d06", "label": "reject", "notes": "무의미한 자동생성 문장", "pii_spans": [], "reject_reason": "semantic_low_quality", "tags": []}
 {"agent": "A", "id": "real-40510741adc2", "label": "keep", "pii_spans": [], "reject_reason": null, "tags": ["has_person_name", "wiki"]}
 {"agent": "A", "id": "real-42340b9da427", "label": "keep", "notes": "세미나 후기", "pii_spans": [], "reject_reason": null, "tags": ["event"]}
@@ -13,22 +13,22 @@
 {"agent": "A", "id": "real-48c9dfe78b94", "label": "keep", "notes": "인쇄업체 소개 서술문", "pii_spans": [], "reject_reason": null, "tags": ["commerce"]}
 {"agent": "A", "id": "real-56cc04f6f91b", "label": "reject", "notes": "도박 키워드 삽입 SEO 스팸", "pii_spans": [], "reject_reason": "semantic_low_quality", "tags": []}
 {"agent": "A", "id": "real-5ff44bee707d", "label": "keep", "notes": "기자 이메일", "pii_spans": [{"end": 2530, "start": 2513, "type": "email"}], "reject_reason": null, "tags": ["has_person_name", "news"]}
-{"agent": "A", "id": "real-62a27734a029", "label": "keep", "pii_spans": [{"ambiguous": true, "end": 2050, "start": 2020, "type": "email"}], "reject_reason": null, "tags": ["has_person_name", "news"]}
+{"agent": "A", "id": "real-62a27734a029", "label": "keep", "pii_spans": [{"ambiguous": true, "end": 2050, "start": 2020, "type": "email"}], "reject_reason": null, "tags": ["has_person_name", "news", "upstream_email_placeholder"]}
 {"agent": "A", "id": "real-653f6ace0d2b", "label": "keep", "pii_spans": [], "reject_reason": null, "tags": ["wiki"]}
 {"agent": "A", "id": "real-6c6d8b6b6980", "label": "keep", "notes": "게임 커뮤니티 글", "pii_spans": [], "reject_reason": null, "tags": ["forum"]}
 {"agent": "A", "id": "real-6dfbf32cdbd2", "label": "reject", "notes": "상품 목록과 가격", "pii_spans": [], "reject_reason": "semantic_low_quality", "tags": []}
 {"agent": "A", "id": "real-79abfb3fcbf9", "label": "keep", "notes": "풍수 칼럼, 끝에 관련기사 링크", "pii_spans": [], "reject_reason": null, "tags": ["news"]}
 {"agent": "A", "id": "real-7d373789c988", "label": "reject", "notes": "시험덤프 SEO 키워드를 소설 문장에 삽입", "pii_spans": [], "reject_reason": "semantic_low_quality", "tags": []}
 {"agent": "A", "id": "real-94d050adb6f2", "label": "reject", "notes": "연도 문서 토막글", "pii_spans": [], "reject_reason": "short", "tags": []}
-{"agent": "A", "id": "real-9b4856a3e27f", "label": "keep", "pii_spans": [{"ambiguous": true, "end": 1201, "start": 1184, "type": "email"}], "reject_reason": null, "tags": ["news"]}
+{"agent": "A", "id": "real-9b4856a3e27f", "label": "keep", "pii_spans": [{"ambiguous": true, "end": 1201, "start": 1184, "type": "email"}], "reject_reason": null, "tags": ["news", "upstream_email_placeholder"]}
 {"agent": "A", "id": "real-a1799151a5c7", "label": "reject", "notes": "태그 페이지 글 목록 모음", "pii_spans": [], "reject_reason": "semantic_low_quality", "tags": []}
-{"agent": "A", "id": "real-a8f83b60155f", "label": "keep", "notes": "맛집 후기, 상단 안내문 섞임", "pii_spans": [{"ambiguous": true, "end": 364, "start": 351, "type": "phone"}], "reject_reason": null, "tags": ["blog"]}
+{"agent": "A", "id": "real-a8f83b60155f", "label": "keep", "notes": "맛집 후기, 상단 안내문 섞임", "pii_spans": [{"ambiguous": true, "end": 364, "start": 351, "type": "phone"}], "reject_reason": null, "tags": ["blog", "org_contact_phone"]}
 {"agent": "A", "id": "real-ab69bf3e4dfa", "label": "reject", "notes": "동음이의 문서", "pii_spans": [], "reject_reason": "short", "tags": []}
 {"agent": "A", "id": "real-b8666a7b86eb", "label": "reject", "notes": "제휴 상품 추천 목록", "pii_spans": [], "reject_reason": "semantic_low_quality", "tags": []}
-{"agent": "A", "id": "real-c9352a5181db", "label": "keep", "pii_spans": [{"ambiguous": true, "end": 860, "start": 830, "type": "email"}], "reject_reason": null, "tags": ["has_person_name", "news"]}
-{"agent": "A", "id": "real-cb20ded2be14", "label": "keep", "notes": "맛집 후기, 업체 전화", "pii_spans": [{"ambiguous": true, "end": 1245, "start": 1233, "type": "phone"}, {"ambiguous": true, "end": 3276, "start": 3264, "type": "phone"}, {"ambiguous": true, "end": 4464, "start": 4452, "type": "phone"}, {"ambiguous": true, "end": 4855, "start": 4844, "type": "phone"}], "reject_reason": null, "tags": ["blog", "has_address"]}
+{"agent": "A", "id": "real-c9352a5181db", "label": "keep", "pii_spans": [{"ambiguous": true, "end": 860, "start": 830, "type": "email"}], "reject_reason": null, "tags": ["has_person_name", "news", "upstream_email_placeholder"]}
+{"agent": "A", "id": "real-cb20ded2be14", "label": "keep", "notes": "맛집 후기, 업체 전화", "pii_spans": [{"ambiguous": true, "end": 1245, "start": 1233, "type": "phone"}, {"ambiguous": true, "end": 3276, "start": 3264, "type": "phone"}, {"ambiguous": true, "end": 4464, "start": 4452, "type": "phone"}, {"ambiguous": true, "end": 4855, "start": 4844, "type": "phone"}], "reject_reason": null, "tags": ["blog", "has_address", "org_contact_phone"]}
 {"agent": "A", "id": "real-d3a3d9dab4df", "label": "keep", "pii_spans": [], "reject_reason": null, "tags": ["has_person_name", "wiki"]}
-{"agent": "A", "id": "real-e166e3e25098", "label": "keep", "pii_spans": [{"ambiguous": true, "end": 3026, "start": 3009, "type": "email"}, {"ambiguous": true, "end": 5026, "start": 4996, "type": "email"}], "reject_reason": null, "tags": ["has_person_name", "news"]}
+{"agent": "A", "id": "real-e166e3e25098", "label": "keep", "pii_spans": [{"ambiguous": true, "end": 3026, "start": 3009, "type": "email"}, {"ambiguous": true, "end": 5026, "start": 4996, "type": "email"}], "reject_reason": null, "tags": ["has_person_name", "news", "upstream_email_placeholder"]}
 {"agent": "A", "id": "real-e66cda584c65", "label": "reject", "notes": "단어 무작위 나열", "pii_spans": [], "reject_reason": "semantic_low_quality", "tags": []}
 {"agent": "A", "id": "real-ea225eb3df9b", "label": "keep", "pii_spans": [], "reject_reason": null, "tags": ["has_person_name", "wiki"]}
 {"agent": "B", "id": "real-137a86d14048", "label": "keep", "notes": "기업 보도자료 모음, 문장 있음", "pii_spans": [], "reject_reason": null, "tags": ["news"]}
@@ -65,13 +65,13 @@
 {"agent": "B", "id": "real-fb5308220ea2", "label": "reject", "notes": "중국어 키워드 스팸 페이지", "pii_spans": [], "reject_reason": "semantic_low_quality", "tags": []}
 {"agent": "B", "id": "real-fee84ea1c97a", "label": "reject", "notes": "도박 사이트 SEO 홍보와 댓글 스팸", "pii_spans": [], "reject_reason": "semantic_low_quality", "tags": []}
 {"agent": "C", "id": "real-0f5a0241bb7e", "label": "keep", "notes": "위키 만화 문서, 번역투이나 정상", "pii_spans": [], "reject_reason": null, "tags": ["wiki"]}
-{"agent": "C", "id": "real-0fa2c5547d1b", "label": "reject", "notes": "병원 메뉴 목록과 약관·개인정보방침 상투문", "pii_spans": [{"ambiguous": true, "end": 1765, "start": 1748, "type": "email"}, {"ambiguous": true, "end": 2026, "start": 1996, "type": "email"}, {"ambiguous": true, "end": 9036, "start": 9023, "type": "phone"}, {"ambiguous": true, "end": 9059, "start": 9042, "type": "email"}, {"ambiguous": true, "end": 9314, "start": 9301, "type": "phone"}, {"ambiguous": true, "end": 9370, "start": 9356, "type": "phone"}, {"ambiguous": true, "end": 9424, "start": 9411, "type": "phone"}], "reject_reason": "semantic_low_quality", "tags": ["boilerplate", "has_person_name"]}
+{"agent": "C", "id": "real-0fa2c5547d1b", "label": "reject", "notes": "병원 메뉴 목록과 약관·개인정보방침 상투문", "pii_spans": [{"ambiguous": true, "end": 1765, "start": 1748, "type": "email"}, {"ambiguous": true, "end": 2026, "start": 1996, "type": "email"}, {"ambiguous": true, "end": 9036, "start": 9023, "type": "phone"}, {"ambiguous": true, "end": 9059, "start": 9042, "type": "email"}, {"ambiguous": true, "end": 9314, "start": 9301, "type": "phone"}, {"ambiguous": true, "end": 9370, "start": 9356, "type": "phone"}, {"ambiguous": true, "end": 9424, "start": 9411, "type": "phone"}], "reject_reason": "semantic_low_quality", "tags": ["boilerplate", "has_person_name", "org_contact_phone", "upstream_email_placeholder"]}
 {"agent": "C", "id": "real-137d6dbf34da", "label": "keep", "notes": "짧은 위키 인물 문서", "pii_spans": [], "reject_reason": null, "tags": ["wiki"]}
 {"agent": "C", "id": "real-1b16818d19be", "label": "keep", "notes": "건축 기술 정리", "pii_spans": [], "reject_reason": null, "tags": ["technical"]}
 {"agent": "C", "id": "real-27b1028e3fb3", "label": "keep", "notes": "리포트형 서론", "pii_spans": [], "reject_reason": null, "tags": ["essay"]}
 {"agent": "C", "id": "real-2d43266e8404", "label": "keep", "notes": "여행 매거진 인터뷰", "pii_spans": [], "reject_reason": null, "tags": ["has_person_name", "interview"]}
 {"agent": "C", "id": "real-32a608e4f546", "label": "keep", "notes": "예능 보도자료성 기사", "pii_spans": [], "reject_reason": null, "tags": ["news"]}
-{"agent": "C", "id": "real-3356143c94fb", "label": "keep", "notes": "경제 기사", "pii_spans": [{"ambiguous": true, "end": 803, "start": 786, "type": "email"}], "reject_reason": null, "tags": ["news"]}
+{"agent": "C", "id": "real-3356143c94fb", "label": "keep", "notes": "경제 기사", "pii_spans": [{"ambiguous": true, "end": 803, "start": 786, "type": "email"}], "reject_reason": null, "tags": ["news", "upstream_email_placeholder"]}
 {"agent": "C", "id": "real-337ff64f77dd", "label": "keep", "notes": "언론 비판 블로그 글", "pii_spans": [], "reject_reason": null, "tags": ["blog", "opinion"]}
 {"agent": "C", "id": "real-40510741adc2", "label": "keep", "notes": "위키 인물", "pii_spans": [], "reject_reason": null, "tags": ["wiki"]}
 {"agent": "C", "id": "real-4567ee8b10c0", "label": "keep", "notes": "스타트업 소개 기사", "pii_spans": [], "reject_reason": null, "tags": ["commerce", "has_person_name", "news"]}
@@ -83,7 +83,7 @@
 {"agent": "C", "id": "real-682989f6a7a2", "label": "reject", "notes": "상품 목록 검색 페이지", "pii_spans": [], "reject_reason": "semantic_low_quality", "tags": ["commerce"]}
 {"agent": "C", "id": "real-6c6d8b6b6980", "label": "keep", "notes": "게임 포럼 실험 글", "pii_spans": [], "reject_reason": null, "tags": ["forum", "game"]}
 {"agent": "C", "id": "real-6dfbf32cdbd2", "label": "reject", "notes": "상품명 가격 나열", "pii_spans": [], "reject_reason": "semantic_low_quality", "tags": ["commerce"]}
-{"agent": "C", "id": "real-7140b2b757d3", "label": "keep", "notes": "정치 기사", "pii_spans": [{"ambiguous": true, "end": 893, "start": 863, "type": "email"}], "reject_reason": null, "tags": ["news"]}
+{"agent": "C", "id": "real-7140b2b757d3", "label": "keep", "notes": "정치 기사", "pii_spans": [{"ambiguous": true, "end": 893, "start": 863, "type": "email"}], "reject_reason": null, "tags": ["news", "upstream_email_placeholder"]}
 {"agent": "C", "id": "real-7309a193ba62", "label": "keep", "notes": "영화 위키 문서", "pii_spans": [], "reject_reason": null, "tags": ["wiki"]}
 {"agent": "C", "id": "real-7c1583cc3d8d", "label": "keep", "notes": "영화 소개 글", "pii_spans": [], "reject_reason": null, "tags": ["review"]}
 {"agent": "C", "id": "real-7d373789c988", "label": "reject", "notes": "시험덤프 SEO 스팸에 소설 문장 필러", "pii_spans": [], "reject_reason": "semantic_low_quality", "tags": ["spam"]}
@@ -93,7 +93,7 @@
 {"agent": "C", "id": "real-b332091e068d", "label": "keep", "notes": "치과 정보 글", "pii_spans": [], "reject_reason": null, "tags": ["blog", "health"]}
 {"agent": "C", "id": "real-b385eb5b707b", "label": "keep", "notes": "독후감 서두", "pii_spans": [], "reject_reason": null, "tags": ["essay"]}
 {"agent": "C", "id": "real-b8666a7b86eb", "label": "reject", "notes": "제휴 상품 순위 자동 생성 목록", "pii_spans": [], "reject_reason": "semantic_low_quality", "tags": ["affiliate", "commerce"]}
-{"agent": "C", "id": "real-cb20ded2be14", "label": "keep", "notes": "맛집 여행 블로그 발췌 모음", "pii_spans": [{"ambiguous": true, "end": 1245, "start": 1233, "type": "phone"}, {"ambiguous": true, "end": 3276, "start": 3264, "type": "phone"}, {"ambiguous": true, "end": 4464, "start": 4452, "type": "phone"}, {"ambiguous": true, "end": 4855, "start": 4844, "type": "phone"}], "reject_reason": null, "tags": ["blog", "has_address"]}
+{"agent": "C", "id": "real-cb20ded2be14", "label": "keep", "notes": "맛집 여행 블로그 발췌 모음", "pii_spans": [{"ambiguous": true, "end": 1245, "start": 1233, "type": "phone"}, {"ambiguous": true, "end": 3276, "start": 3264, "type": "phone"}, {"ambiguous": true, "end": 4464, "start": 4452, "type": "phone"}, {"ambiguous": true, "end": 4855, "start": 4844, "type": "phone"}], "reject_reason": null, "tags": ["blog", "has_address", "org_contact_phone"]}
 {"agent": "C", "id": "real-e21e206bb5a4", "label": "keep", "notes": "경제위기 의견 글", "pii_spans": [], "reject_reason": null, "tags": ["blog", "opinion"]}
 {"agent": "C", "id": "real-ea225eb3df9b", "label": "keep", "notes": "연예인 위키 문서", "pii_spans": [], "reject_reason": null, "tags": ["has_person_name", "wiki"]}
 {"agent": "D", "id": "real-0758d882be8b", "label": "reject", "notes": "숙소 예약 페이지의 편의시설 항목 나열", "pii_spans": [], "reject_reason": "semantic_low_quality", "tags": ["commerce", "has_person_name"]}
