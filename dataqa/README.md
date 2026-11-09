@@ -14,7 +14,11 @@
 | `metrics.py` | 필터·PII 지표. 분모 0이면 `None`, 합성/실제는 합치지 않음 |
 | `seed_gold.py` | 결정적 합성 seed (`gold/seed_v1.jsonl`, 94건) |
 | `run.py` | `report.json` + `report.md` 생성, 임계값 sweep |
-| `real_sample.py` | 고정 revision에서 무작위 실제 문서 추출·라벨 결합 (원문은 커밋하지 않음) |
+| `real_sample.py` | 고정 revision에서 무작위·층화 실제 문서 추출·라벨 결합 (FineWeb-2, HPLT, wiki; 원문은 커밋하지 않음) |
+| `t1_stats.py` | 무작위 row group의 모든 행으로 NFC·자모·특수 토큰·PII·필터 판정 통계, row group 단위 부트스트랩 신뢰구간 (`--render`로 표) |
+| `make_labels.py` | needle spec → 오프셋만 남긴 라벨, 겹침 집합 다수결, Fleiss κ |
+| `review_sheet.py` | 사람 검수용 우선순위 시트 생성 (로컬 전용) |
+| `LABELING_GUIDE.md` | 라벨 기준 (에이전트와 사람이 같은 기준을 쓰기 위함) |
 | `real/` | 실제 샘플 manifest와 라벨 (텍스트 없음) |
 
 ## 사용법
@@ -76,7 +80,26 @@ python -m dataqa.run --gold dataqa/review/real_gold.jsonl --out runs/dataqa/real
 
 비정상 가정이 많은 소표본이다. 위 표로 필터의 정밀도·재현율이나 PII 발생률을 주장할 수 없다. 이 파일럿은 워크플로가 동작함과 JUN이 어디를 봐야 하는지를 보여 주는 용도다.
 
-## 사람 검수에서 볼 것 (파일럿 기준)
+## 100건 사전 라벨 (층화, 블라인드)
+
+```bash
+python -m dataqa.real_sample sample --strata fineweb2_ko:40,hplt_ko:40,wiki_ko:20 --seed 20261109 \
+    --manifest dataqa/real/prelabel100_manifest_v1.jsonl --sheet-dir dataqa/review100 --head 1800 --tail 400
+# 에이전트(또는 사람)가 spec JSON 작성 → needle 해석 확인 후 병합
+python -m dataqa.make_labels --sheet dataqa/review100/sheet.jsonl --specs spec_A.json spec_B.json ... \
+    --out dataqa/real/prelabel100_labels_v1.jsonl --agent-out dataqa/real/prelabel100_agent_labels_v1.jsonl \
+    --agreement dataqa/real/prelabel100_agreement_v1.json
+python -m dataqa.real_sample materialize --manifest dataqa/real/prelabel100_manifest_v1.jsonl \
+    --labels dataqa/real/prelabel100_labels_v1.jsonl --out dataqa/review100/real_gold100.jsonl
+python -m dataqa.run --gold dataqa/review100/real_gold100.jsonl --out runs/dataqa/real100
+python -m dataqa.review_sheet --gold dataqa/review100/real_gold100.jsonl --out dataqa/review100/review_for_jun.md
+```
+
+- 에이전트 4명이 소스별 층화 100건을 **현행 필터 판정을 보지 않고** 라벨했고, 10건은 4명 모두 라벨했다(배정은 `real/prelabel100_assignment_v1.json`).
+- 결과와 해석 한계는 [docs/evaluation/IMPROVEMENTS.md](../docs/evaluation/IMPROVEMENTS.md) §3. 겹침 10건의 κ=1.0은 독립 평가자 간 신뢰도 증거가 아니다.
+- `real_gold100.jsonl`과 검수 시트에는 원문이 들어 있어 로컬에만 둔다(`.git/info/exclude`에 `dataqa/review100/` 추가).
+
+## 사람 검수에서 볼 것 (20건 파일럿 기준)
 
 로컬 시트 `dataqa/review/review.md`에서 아래 문서만 보면 된다. 규칙과 사전 라벨이 일치한 나머지는 무작위 대조군으로 몇 건만 훑으면 충분하다.
 

@@ -51,6 +51,8 @@
 | 12 | registry가 가리키는 `evidence/*.md` 등이 저장소에 없어 CLI 일부는 클린 clone에서 실행할 수 없고 해시는 독립 검증 불가(측정 불가). 이메일·`pathcosmos` 계정·`runs/…` 경로가 코드에 박혀 있다. | 보고 |
 | 13 | 한국어 토크나이저 품질 측정이 얇다. 카테고리별 chars/bytes per token과 baseline 대비 상대 효율 게이트만 있고 어절당 fertility, NFD 자모 probe, 외부 토크나이저 비교가 없다. f5 결과에 실측 파일이 없어 실제 한국어 수치는 측정 불가. vocab 65536은 uint16에 여유 ID가 0이다(3중 가드는 확인). | 보고 |
 
+**후속 조치 (2026-11-09)**: 위 발견 중 #2(`clean.py` 서명), #3(PII 옵트인 정책), #4(NFD 옵트인), #10(필터 직접 테스트)은 소스를 고쳤고, #4와 #5는 T1 측정(16만 문서)으로 영향이 거의 없음이 확인되어 우선순위를 낮췄다. 상세와 열린 항목은 [IMPROVEMENTS.md](IMPROVEMENTS.md), 측정 표는 [t1/RESULTS.md](t1/RESULTS.md). 가장 큰 새 발견은 의미적 저품질 문서를 규칙 필터가 거의 못 잡는다는 점이다(에이전트 라벨 기준, 검수 전).
+
 강점(근거는 `evidence/`): 크래시 재개와 변조 거부(dedup, 토큰화 shard, 업로드 receipt), sha 결합 리뷰 게이트, 코드 정제의 byte-preserving 정책과 `POLICY_HASH`, 샘플러 결정성(`default_rng([seed,step,rank,micro])`), 합성/실제 분모를 분리 보고하는 probe 철학, 한계를 숨기지 않는 문서 서술.
 
 ## 3. 비교군 대조
