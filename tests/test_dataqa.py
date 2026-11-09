@@ -7,7 +7,7 @@ import unittest
 from unittest import mock
 
 from data import filters as F
-from dataqa import gold, ko_rules, metrics, pii_rules, real_sample, run, seed_gold
+from dataqa import gold, ko_rules, metrics, oracle, pii_rules, real_sample, run, seed_gold
 
 ROOT = Path(__file__).resolve().parents[1]
 SEED_FILE = ROOT / 'dataqa' / 'gold' / 'seed_v1.jsonl'
@@ -19,20 +19,8 @@ def make(rid='a', text='x', label='keep', **kw):
     return r
 
 
-def fuzz_texts(n=1500, seed=7):
-    rng = random.Random(seed)
-    alphabet = list('가나다라마바사아자차카타파하') + list('abcdefgh') + list('0123456789') + list(' \n\n-.@') + ['�', '한', '글']
-    out = []
-    for _ in range(n):
-        length = rng.choice([0, 5, 50, 199, 200, 201, 400, 900])
-        out.append(''.join(rng.choice(alphabet) for _ in range(length)))
-    return out
-
-
-def pii_fuzz(n=1500, seed=11):
-    rng = random.Random(seed)
-    parts = ['010', '-', ' ', '+82', '82', '0', '900101', '1', '5', '1234', '5678', 'a', '@', 'example.com', '.', '(02)', '\n']
-    return [''.join(rng.choice(parts) for _ in range(rng.randint(1, 14))) for _ in range(n)]
+fuzz_texts = oracle.fuzz_ko_texts
+pii_fuzz = oracle.fuzz_pii_texts
 
 
 class GoldTest(unittest.TestCase):
