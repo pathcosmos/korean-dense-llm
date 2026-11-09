@@ -5,7 +5,7 @@ import unicodedata
 import unittest
 from pathlib import Path
 
-from dataqa import gold, make_labels, review_sheet, seed_gold, t1_stats
+from dataqa import gold, make_labels, review_sheet, seed_gold, semantic_probe, t1_stats
 
 
 def doc(rid, text):
@@ -191,6 +191,29 @@ class ReviewSheetTest(unittest.TestCase):
         ids = [line.split()[0] for line in text.split('\n## ')[1:]]
         self.assertEqual(len(ids), len(set(ids)))                  # each document listed once
         self.assertEqual(review_sheet.mask_digits('010-1234'), '###-####')
+
+
+class SemanticProbeTest(unittest.TestCase):
+    def test_auc_known_values(self):
+        self.assertEqual(semantic_probe.auc([1, 2, 3, 4], [0, 0, 1, 1]), 1.0)
+        self.assertEqual(semantic_probe.auc([4, 3, 2, 1], [0, 0, 1, 1]), 0.0)
+        self.assertEqual(semantic_probe.auc([1, 1, 1, 1], [0, 0, 1, 1]), 0.5)
+        self.assertIsNone(semantic_probe.auc([1, 2], [1, 1]))
+
+    def test_probe_detects_an_obvious_signal_and_excludes_rule_rejects(self):
+        rng = random.Random(3)
+        recs = []
+        for i in range(14):
+            recs.append(dict(id=f'k{i}', text=seed_gold.prose(rng, 400), label='keep', reject_reason=None, source_kind='synthetic'))
+            junk = '\n'.join(f'product{j} {rng.randint(1000, 9999)}원 buy now' for j in range(30))
+            recs.append(dict(id=f'j{i}', text=junk, label='reject', reject_reason='semantic_low_quality', source_kind='synthetic'))
+        recs.append(dict(id='s', text='short', label='reject', reject_reason='short', source_kind='synthetic'))
+        recs.append(dict(id='a', text='amb', label='keep', reject_reason=None, ambiguous=True, source_kind='synthetic'))
+        out = semantic_probe.probe(recs, boots=40)
+        self.assertEqual((out['n'], out['semantic_low_quality'], out['keep']), (28, 14, 14))     # short + ambiguous excluded
+        self.assertGreater(out['per_feature'][out['best_single_feature']]['auc'], 0.95)
+        self.assertGreater(out['loo_logistic']['l2=10.0']['auc'], 0.9)
+        self.assertEqual(set(out['per_feature']), set(semantic_probe.NAMES))
 
 
 if __name__ == '__main__':

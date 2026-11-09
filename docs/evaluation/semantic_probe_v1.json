@@ -1,0 +1,101 @@
+{
+ "best_single_feature": "ascii_alpha_frac",
+ "caveats": [
+  "labels are model-made unless the gold is human-reviewed; n is small",
+  "a weak result means cheap structural features are weak, not that a learned filter cannot work"
+ ],
+ "keep": 67,
+ "loo_logistic": {
+  "l2=1.0": {
+   "auc": 0.6246545052515202,
+   "junk_caught_at_90pct_keep_retention": 7,
+   "junk_total": 27
+  },
+  "l2=10.0": {
+   "auc": 0.6683250414593698,
+   "junk_caught_at_90pct_keep_retention": 7,
+   "junk_total": 27
+  }
+ },
+ "n": 94,
+ "per_feature": {
+  "ascii_alpha_frac": {
+   "auc": 0.7042564953012714,
+   "ci95": [
+    0.583710407239819,
+    0.8150452488687783
+   ]
+  },
+  "digit_frac": {
+   "auc": 0.542841348811498,
+   "ci95": [
+    0.4111990950226244,
+    0.6542207792207793
+   ]
+  },
+  "hangul_frac": {
+   "auc": 0.33996683250414594,
+   "ci95": [
+    0.21507246376811595,
+    0.4732142857142857
+   ]
+  },
+  "lines_per_1k": {
+   "auc": 0.41459369817578773,
+   "ci95": [
+    0.27700972862263185,
+    0.5426470588235294
+   ]
+  },
+  "log_chars": {
+   "auc": 0.5793255942509674,
+   "ci95": [
+    0.4593698175787728,
+    0.6983225108225108
+   ]
+  },
+  "mean_word_len": {
+   "auc": 0.6097291321171918,
+   "ci95": [
+    0.4797747055811572,
+    0.7305039787798409
+   ]
+  },
+  "median_line_chars": {
+   "auc": 0.5453289110005528,
+   "ci95": [
+    0.4102878138395591,
+    0.6730237700386954
+   ]
+  },
+  "sentence_end_frac": {
+   "auc": 0.3609729132117192,
+   "ci95": [
+    0.22604166666666667,
+    0.4941824862216779
+   ]
+  },
+  "short_line_frac": {
+   "auc": 0.4729132117191819,
+   "ci95": [
+    0.32891246684350134,
+    0.6241071428571429
+   ]
+  },
+  "unique_word_ratio": {
+   "auc": 0.3714759535655058,
+   "ci95": [
+    0.23755656108597284,
+    0.5067873303167421
+   ]
+  },
+  "urls_per_1k": {
+   "auc": 0.548922056384743,
+   "ci95": [
+    0.4857142857142857,
+    0.625
+   ]
+  }
+ },
+ "semantic_low_quality": 27
+}
