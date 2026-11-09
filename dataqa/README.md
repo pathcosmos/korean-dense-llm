@@ -17,7 +17,8 @@
 | `real_sample.py` | 고정 revision에서 무작위·층화 실제 문서 추출·라벨 결합 (FineWeb-2, HPLT, wiki; 원문은 커밋하지 않음) |
 | `t1_stats.py` | 무작위 row group의 모든 행으로 NFC·자모·특수 토큰·PII·필터 판정 통계, row group 단위 부트스트랩 신뢰구간 (`--render`로 표) |
 | `make_labels.py` | needle spec → 오프셋만 남긴 라벨, 겹침 집합 다수결, Fleiss κ |
-| `review_sheet.py` | 사람 검수용 우선순위 시트 생성 (로컬 전용) |
+| `review_sheet.py` | 사람 검수용 우선순위 시트 생성 (로컬 전용). 사전 검수 플래그도 표시 |
+| `prereview.py` | 사람이 아직 보지 않은 라벨의 2차 독립 사전 검수: 블라인드 검수자 판정을 기존 라벨과 비교해 `confirmed`/`label_flagged`/`span_flagged`를 기록(라벨은 바꾸지 않음) |
 | `LABELING_GUIDE.md` | 라벨 기준 (에이전트와 사람이 같은 기준을 쓰기 위함) |
 | `real/` | 실제 샘플 manifest와 라벨 (텍스트 없음) |
 

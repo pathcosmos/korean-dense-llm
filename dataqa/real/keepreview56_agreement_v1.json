@@ -1,0 +1,18 @@
+{
+ "categories": [
+  "keep",
+  "reject",
+  "ambiguous"
+ ],
+ "documents": 100,
+ "fleiss_kappa_label": 0.6505460218408741,
+ "labelled": 56,
+ "note": "kappa is undefined (null) when overlap docs have unequal rater counts or all raters always agree on one category",
+ "overlap_documents": 56,
+ "raters_per_overlap_doc": {
+  "2": 56
+ },
+ "reject_reason_disagreements": 0,
+ "unanimous_overlap": 54,
+ "unlabelled": 44
+}

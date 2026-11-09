@@ -1,0 +1,15 @@
+{
+ "fleiss_kappa_reviewers": 0.6505460218408741,
+ "note": "reviewers are fresh contexts of the same model family as the original labellers; agreement is weak evidence of correctness, disagreement is a useful flag. Labels were NOT changed.",
+ "original_vs_reviewers_category_agreement": 0.9285714285714286,
+ "reviewed_documents": 56,
+ "reviewer_pair_category_agreement": 0.9642857142857143,
+ "reviewers_per_document": {
+  "2": 56
+ },
+ "statuses": {
+  "confirmed": 50,
+  "label_flagged": 4,
+  "span_flagged": 2
+ }
+}
