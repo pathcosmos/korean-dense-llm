@@ -25,8 +25,10 @@ from data import filters as F
 from dataqa import gold, ko_rules, pii_rules
 
 REGISTRY = Path(__file__).resolve().parents[1] / 'docs' / 'data_provenance_v1' / 'source_registry.json'
-# Only fineweb2_ko is verified (columns text,id). hplt_ko / wiki_ko have other column layouts and are NOT supported yet.
-SUBSETS = {'fineweb2_ko': 'data/kor_Hang/train'}
+# Verified against the pinned revisions (all parquet with columns text,id): subset directory and the number
+# of shards the registry says the pipeline kept (data/download.py takes the first N of the sorted listing).
+SUBSETS = {'fineweb2_ko': 'data/kor_Hang/train', 'hplt_ko': 'kor_Hang', 'wiki_ko': '20231101.ko'}
+DEFAULT_SHARDS = {'fineweb2_ko': 25, 'hplt_ko': 464, 'wiki_ko': 3}
 
 
 def sha(text):
@@ -47,15 +49,19 @@ def plan(shards, rg_counts, n, seed):
     """
     rng = random.Random(seed)
     seen, out = set(), []
-    if n > sum(rg_counts[s] for s in shards):
+    if type(rg_counts) is dict and n > sum(rg_counts[s] for s in shards):   # lazy mappings are not summed
         raise ValueError('more documents requested than row groups available')
-    while len(out) < n:
+    for _ in range(1_000_000):
+        if len(out) >= n:
+            break
         shard = rng.choice(shards)
         rg = rng.randrange(rg_counts[shard])
         if (shard, rg) in seen:
             continue
         seen.add((shard, rg))
         out.append(dict(file=shard, row_group=rg, row_draw=rng.random()))
+    if len(out) < n:
+        raise ValueError('could not draw enough distinct row groups')
     return out
 
 
@@ -80,6 +86,18 @@ class Reader:
         return self.cache[(path, rg)]
 
 
+class LazyCounts(dict):
+    """Row-group counts read from Parquet footers only for shards that are actually drawn."""
+
+    def __init__(self, reader):
+        super().__init__()
+        self.reader = reader
+
+    def __missing__(self, shard):
+        self[shard] = self.reader.row_groups(shard)
+        return self[shard]
+
+
 def list_shards(repo, revision, subset, limit):
     from huggingface_hub import HfApi
     items = HfApi().list_repo_tree(repo, repo_type='dataset', revision=revision, path_in_repo=subset)
@@ -102,7 +120,7 @@ def render_sheet(entries, texts, head=1200, tail=300):
     out = ['# real-sample review sheet (LOCAL ONLY — contains raw web text, do not commit or publish)', '']
     for e in entries:
         t = texts[e['id']]
-        out += [f"## {e['id']}  ({len(t)} chars)", '',
+        out += [f"## {e['id']}  ({e.get('source', '?')}, {len(t)} chars{', TRUNCATED: middle omitted' if len(t) > head + tail else ''})", '',
                 f"- current filter: `{e['current_filter']}`",
                 f"- baseline PII detections: {[(d['type'], t[d['start']:d['end']]) for d in e['baseline_pii']]}",
                 f"- candidate (loose) PII detections: {[(d['type'], t[d['start']:d['end']]) for d in e['candidate_pii']]}",
@@ -110,29 +128,43 @@ def render_sheet(entries, texts, head=1200, tail=300):
     return '\n'.join(out)
 
 
+def parse_strata(spec, default_source, default_n):
+    if not spec:
+        return [(default_source, default_n)]
+    out = []
+    for part in spec.split(','):
+        src, _, k = part.partition(':')
+        if src not in SUBSETS or not k.isdigit() or int(k) < 1:
+            raise SystemExit(f'--strata expects source:count pairs from {sorted(SUBSETS)}, got {part!r}')
+        out.append((src, int(k)))
+    return out
+
+
 def cmd_sample(a):
-    repo, revision = pinned(a.source)
-    reader = Reader(repo, revision)
-    shards = list_shards(repo, revision, SUBSETS[a.source], a.shards)
-    counts = {s: reader.row_groups(s) for s in shards}
     manifest, entries, texts = [], [], {}
-    for item in plan(shards, counts, a.n, a.seed):
-        group = reader.group(item['file'], item['row_group'])
-        row = int(item['row_draw'] * group.num_rows)
-        raw, doc_id = fetch_text(reader, item['file'], item['row_group'], row)
-        text = F.norm_ws(raw)
-        rid = 'real-' + sha(f"{repo}@{revision}/{item['file']}#{item['row_group']}.{row}")[:12]
-        manifest.append(dict(id=rid, source=a.source, repo=repo, revision=revision, file=item['file'],
-                             row_group=item['row_group'], row=row, doc_id=doc_id,
-                             raw_sha256=sha(raw), text_sha256=sha(text), n_chars=len(text),
-                             sampling=dict(seed=a.seed, shards_considered=len(shards))))
-        entries.append(review_entry(rid, text))
-        texts[rid] = text
+    for source, n in parse_strata(a.strata, a.source, a.n):
+        repo, revision = pinned(source)
+        reader = Reader(repo, revision)
+        limit = a.shards or DEFAULT_SHARDS[source]
+        shards = list_shards(repo, revision, SUBSETS[source], limit)
+        counts = LazyCounts(reader)
+        for item in plan(shards, counts, n, a.seed):
+            group = reader.group(item['file'], item['row_group'])
+            row = int(item['row_draw'] * group.num_rows)
+            raw, doc_id = fetch_text(reader, item['file'], item['row_group'], row)
+            text = F.norm_ws(raw)
+            rid = 'real-' + sha(f"{repo}@{revision}/{item['file']}#{item['row_group']}.{row}")[:12]
+            manifest.append(dict(id=rid, source=source, repo=repo, revision=revision, file=item['file'],
+                                 row_group=item['row_group'], row=row, doc_id=doc_id,
+                                 raw_sha256=sha(raw), text_sha256=sha(text), n_chars=len(text),
+                                 sampling=dict(seed=a.seed, shards_considered=len(shards), stratum=source)))
+            entries.append(dict(review_entry(rid, text), source=source, truncated=len(text) > a.head + a.tail))
+            texts[rid] = text
     Path(a.manifest).parent.mkdir(parents=True, exist_ok=True)
     Path(a.manifest).write_text('\n'.join(json.dumps(m, ensure_ascii=False, sort_keys=True) for m in manifest) + '\n', encoding='utf-8')
     sheet = Path(a.sheet_dir)
     sheet.mkdir(parents=True, exist_ok=True)
-    (sheet / 'review.md').write_text(render_sheet(entries, texts), encoding='utf-8')
+    (sheet / 'review.md').write_text(render_sheet(entries, texts, a.head, a.tail), encoding='utf-8')
     (sheet / 'sheet.jsonl').write_text('\n'.join(json.dumps(dict(e, text=texts[e['id']]), ensure_ascii=False) for e in entries) + '\n', encoding='utf-8')
     print(f'{len(manifest)} documents -> manifest {a.manifest}; LOCAL sheet in {sheet}/ (keep out of git)')
 
@@ -166,8 +198,11 @@ def main(argv=None):
     s = sub.add_parser('sample')
     s.add_argument('--source', choices=sorted(SUBSETS), default='fineweb2_ko')
     s.add_argument('--n', type=int, default=20)
+    s.add_argument('--strata', help='e.g. fineweb2_ko:40,hplt_ko:40,wiki_ko:20 (overrides --source/--n)')
     s.add_argument('--seed', type=int, default=1)
-    s.add_argument('--shards', type=int, default=25, help='first N sorted shards (assumption, see module doc)')
+    s.add_argument('--shards', type=int, help='first N sorted shards (default: the registry count per source; assumption, see module doc)')
+    s.add_argument('--head', type=int, default=1200, help='chars of each document shown at the start of the review sheet')
+    s.add_argument('--tail', type=int, default=300, help='chars shown at the end')
     s.add_argument('--manifest', default='dataqa/real/pilot_manifest_v1.jsonl')
     s.add_argument('--sheet-dir', default='dataqa/review')
     s.set_defaults(fn=cmd_sample)
