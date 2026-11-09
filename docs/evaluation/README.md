@@ -1,5 +1,7 @@
 # 데이터 처리 소스 가치 평가
 
+> **최종 요약은 [FINAL_SUMMARY.md](FINAL_SUMMARY.md).** 이 문서는 계층별 평가의 원본이다.
+
 평가 기준일: 2026-11-09. 대상: `data/`, `common/data_contracts.py`, `tokenizer/`, `train/data.py`, 데이터 관련 `scripts/`, 관련 `docs/`와 `tests/`.
 평가 방식: 계층별 정적 읽기 + CPU 합성 입력 실험 + 비교군 소스 확인. 저장소 코드는 수정하지 않았다.
 
