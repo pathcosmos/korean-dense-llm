@@ -1,6 +1,6 @@
 # 토큰화·학습 입력 계층 평가 (읽기 전용)
 
-대상 저장소: /home/user/korean-dense-llm. 저장소 파일은 수정하지 않았고, 실험은 scratchpad/syn 에서만 수행했다. PYTHONDONTWRITEBYTECODE=1 로 실행했으며 전체 테스트 스위트는 실행하지 않았다.
+대상 저장소: /home/user/korean-dense-llm. 저장소 파일은 수정하지 않았고, 실험은 임시 디렉터리(스크립트 미보존, 저장소에서 재현 불가) 에서만 수행했다. PYTHONDONTWRITEBYTECODE=1 로 실행했으며 전체 테스트 스위트는 실행하지 않았다.
 
 ## 점수표
 | 축 | 점수 | 한 줄 근거 |

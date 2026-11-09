@@ -1,6 +1,6 @@
 # 수집·출처·계약·배포 계층 평가 (read-only)
 
-대상 repo: /home/user/korean-dense-llm (HEAD aef52f1). 저장소 파일은 수정하지 않았다. 임시 프로브는 scratchpad 아래 probe.py, probe2.py에만 있다.
+대상 repo: /home/user/korean-dense-llm (HEAD aef52f1). 저장소 파일은 수정하지 않았다. 임시 프로브는 evidence/scripts/probe.py, probe2.py에만 있다.
 실행한 것: 관련 pytest 11개 파일 (34 passed, 2 skipped), 합성 입력 프로브 2개 (CPU, 네트워크 없음).
 실행하지 않은 것: download.py, upload_public_corpus.py, supervise_corpus_upload.py, consolidate_public_corpus.py, finalize_public_corpus*.py (읽기만 함).
 라인 번호는 파일 내 줄 번호이고 `파일:줄` 형식이다.
@@ -32,7 +32,7 @@
 
 ### 2.1 contract 프리미티브의 정확성과 범용성 (common/data_contracts.py)
 
-프로브 결과는 `scratchpad/probe.py`로 얻었다.
+프로브 결과는 `evidence/scripts/probe.py`로 얻었다.
 
 **identity (data_contracts.py:37-38)**
 - 정확하다. sort_keys, 압축 separators, ensure_ascii=False 조합이라 키 순서에 불변이다 (프로브 true).

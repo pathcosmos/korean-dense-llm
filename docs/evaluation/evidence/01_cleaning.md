@@ -1,7 +1,7 @@
 # 정제(cleaning) 계층 평가 — /home/user/korean-dense-llm
 
 평가 방식: 읽기 전용. 저장소 추적 파일은 수정하지 않았다(`git status --short` 출력 없음). `__pycache__`는 gitignore 대상이며 생성 시점이 이 세션과 겹친다. 내가 import하지 않은 `build_mix` 바이트코드도 있어 생성 주체는 불확실하다.
-실행 스크립트는 모두 `.../scratchpad/exp1.py ~ exp8.py`이며 `/tmp/claude-0/venv/bin/python -I`로 실행했다.
+실행 스크립트는 모두 `evidence/scripts/exp1.py ~ exp8.py`이며 `python -I`로 실행했다.
 - 합성 입력은 시드 고정 난수 한글 음절 단어로 만들었다. 실제 웹 코퍼스 분포는 측정하지 않았으므로, 아래 오탐/미탐은 "이런 입력에서 이렇게 동작한다"는 존재 증명이다. 실제 발생 빈도는 **측정 불가**다.
 - 실행해 통과를 확인한 테스트: `tests.test_clean_streaming`, `test_code_clean`, `test_math_filter` (6개 OK), `tests.test_data_readiness` (4개 OK).
 - exp1에는 `KO*N` 반복 입력이 `ngram_rep`을 건드려 결과가 오염된 사례가 있다. 이 보고서는 exp2~exp8의 결과만 인용한다.
@@ -128,7 +128,7 @@
 | `AKIA`+16자, `ghp_`+36자, `RSA/PKCS8 PRIVATE KEY` | 거부(`secret_pattern`) |
 | `ASIA…`(STS), AWS secret access key 40자, `github_pat_…`, `gho_…`, Slack `xoxb-…`, Stripe `sk_live_…`, OpenAI `sk-…`, Google `AIza…`, **`ENCRYPTED PRIVATE KEY`, `PGP PRIVATE KEY BLOCK`**, `password = "…"`, DB URL 자격증명, JWT | **전부 통과(미탐)** |
 | `-----BEGIN PUBLIC KEY-----` | 통과(정상) |
-| 문서 예시 키 `AKIAIOSFODNN7EXAMPLE`, 정규식 설명 주석 속 `-----BEGIN RSA PRIVATE KEY-----` | 거부(오탐 성격. 파일 단위 삭제라 영향은 보수적) |
+| 문서 예시 키 `AKIA…EXAMPLE (AWS 문서 예시 키)`, 정규식 설명 주석 속 `-----BEGIN RSA PRIVATE KEY-----` | 거부(오탐 성격. 파일 단위 삭제라 영향은 보수적) |
 
 업계 관행(예: StarCoder 계열의 detect-secrets + 엔트로피 기반 탐지)에 비하면 범위가 좁다. 이 비교는 내 사전 지식이며 이번 세션에서 검증하지 않았다. README/`CODE_DATA_PLAN.md:51`도 "실제 secret/PII 탐지 범위 검증은 후속"이라고 인정한다.
 
