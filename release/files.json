@@ -1,6 +1,6 @@
 {
-  "version": "0.1.1",
-  "scope": "All tracked source-release files except this self-referential manifest",
+  "version": "main-after-v0.1.1",
+  "scope": "All tracked files in this main snapshot except this self-referential manifest; v0.1.1 remains available via its immutable tag",
   "files": [
     {
       "path": ".github/workflows/cpu.yml",
@@ -24,13 +24,13 @@
     },
     {
       "path": "README.en.md",
-      "bytes": 9247,
-      "sha256": "618ac4336047ecbfdd46979094cf6c5cc9202dec0e8132e66b6b5651fdd3ee1d"
+      "bytes": 9582,
+      "sha256": "5feb36b0f88152a8646f548c43acfc6cc385a1c269d8191f51b2b76403531ea6"
     },
     {
       "path": "README.md",
-      "bytes": 15121,
-      "sha256": "add65ef3b8bda3b4710dfd062c252fc5585743c6cbdb5a902ff2da8e63e0b4f1"
+      "bytes": 15435,
+      "sha256": "80d9bd1bd4ae41b7c9df2f7c17ebdf706fcb772e99490120bd4f70910ee8d396"
     },
     {
       "path": "cards/README.ar.md",
@@ -328,6 +328,11 @@
       "sha256": "c03d276bd500616ba25b5d33906e6f47c7887620ee33686c039cd3e6b06a386f"
     },
     {
+      "path": "docs/deployment/gguf-validation.md",
+      "bytes": 1467,
+      "sha256": "25ae51b0f1db3ca0a7fd9dc1bb2120b08d3e7c0cd0ce9b4bfcfe9193d63974d0"
+    },
+    {
       "path": "docs/multilingual/manifest.json",
       "bytes": 1231,
       "sha256": "688c23da22e4c1d4938a2618ed39dafb747ad6f858293f224de838b4c3898a9b"
@@ -341,6 +346,11 @@
       "path": "docs/multilingual/validation.json",
       "bytes": 306,
       "sha256": "f7095e51d4317a18e9b5b0b8e45690385666a1e2fb92b4147ff0240c3ec6d4e1"
+    },
+    {
+      "path": "docs/results/pretraining-progress.md",
+      "bytes": 2117,
+      "sha256": "90210ac88f563463c9df1908147f634af4a85aba4a955268eb3c93d08fd0139e"
     },
     {
       "path": "docs/reviews/frankenstallm/acceptance_cases.json",
@@ -1709,8 +1719,8 @@
     },
     {
       "path": "requirements-cpu.txt",
-      "bytes": 224,
-      "sha256": "4e4e9d17838dc4107f8e22080773f7c90f89057dfa4cd9fe42ea631dde7e0628"
+      "bytes": 244,
+      "sha256": "9529a5a0f45dc90b206caa9e69d63606dfe891e5bf1f0e4c27e9b0fa84d61776"
     },
     {
       "path": "requirements.txt",
@@ -1931,6 +1941,16 @@
       "path": "scripts/observe_rehearsal.py",
       "bytes": 11744,
       "sha256": "fc903410c6400ac5bfa7e3597b57695891838c6653a3f2ca96135ae5d783c636"
+    },
+    {
+      "path": "scripts/ollama_gguf_structure.py",
+      "bytes": 3216,
+      "sha256": "ec99e658fa98d15ec16bfb768209f4753ce7b12e550d9cb8b2a98b1c11c1f2df"
+    },
+    {
+      "path": "scripts/ollama_gguf_tensor_values.py",
+      "bytes": 3753,
+      "sha256": "499cae3438ae2d54ac1fd43f89ce3b402013d3c390e55317e45f61da6ec1bf41"
     },
     {
       "path": "scripts/parallel_job_support.py",
@@ -2446,6 +2466,16 @@
       "path": "tests/test_native_training_inputs.py",
       "bytes": 3009,
       "sha256": "0fdd34f06da274073bf39586afd54a69e311a4efe81191ba41a44b2d509d62ab"
+    },
+    {
+      "path": "tests/test_ollama_gguf_structure.py",
+      "bytes": 2414,
+      "sha256": "0d9305dc9adb637f5608c4084a283ee578b987c461aeca02a643458876a2fbae"
+    },
+    {
+      "path": "tests/test_ollama_gguf_tensor_values.py",
+      "bytes": 2376,
+      "sha256": "5cd115fc28feb403e6c8a2aed1e883c01b54d26cfccc1b7f78ea7e51b32d156e"
     },
     {
       "path": "tests/test_parallel_tokenize.py",

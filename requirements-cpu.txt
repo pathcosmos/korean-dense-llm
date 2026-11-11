@@ -1,5 +1,6 @@
 # Install a supported PyTorch wheel separately; see README and the measured environment.
 numpy>=1.26,<3
+safetensors>=0.5,<1
 pyarrow>=19,<20
 tokenizers>=0.21,<0.23
 xxhash>=3.5,<4
